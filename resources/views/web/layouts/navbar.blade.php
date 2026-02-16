@@ -1,7 +1,7 @@
 <!-- Top Bar -->
 <div class="top-bar py-2 px-4 fixed w-full z-50 top-0">
     <div class="max-w-7xl mx-auto flex justify-between items-center text-sm">
-        <div>Genyra Group Global</div>
+        <div>Genyra Group</div>
         <div class="hidden md:block">East Africa Healthcare Solutions</div>
     </div>
 </div>

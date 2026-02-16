@@ -41,9 +41,9 @@
                       ENABLING HEALTHCARE INNOVATION
                   </div>
                   <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-8 leading-tight">
-                      <span>Transforming</span> 
-                      <span>Healthcare Across</span>
-                      <span>East Africa</span>
+                      <span>Building Solutions</span> 
+                      <span>Transforming</span>
+                      <span>Healthcare</span>
                   </h1>
                   <a href="#about" class="btn-primary">
                       Learn more
@@ -61,7 +61,7 @@
                       ENABLING HEALTHCARE INNOVATION
                   </div>
                   <h1 class="text-3xl md:text-3xl md:text-4xl font-bold text-gray-700 mb-6 leading-tight">
-                      Transforming Healthcare Across East Africa
+                      Building Solutions | Transforming Healthcare
                   </h1>
                   <a href="#about" class="btn-primary">
                       Learn more
