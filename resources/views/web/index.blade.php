@@ -60,7 +60,7 @@
                   <div class="category-label mb-4 text-gray-800">
                       ENABLING HEALTHCARE INNOVATION
                   </div>
-                  <h1 class="text-3xl md:text-4xl font-bold text-gray-700 mb-6 leading-tight">
+                  <h1 class="text-3xl md:text-3xl md:text-4xl font-bold text-gray-700 mb-6 leading-tight">
                       Transforming Healthcare Across East Africa
                   </h1>
                   <a href="#about" class="btn-primary">
@@ -71,11 +71,11 @@
       </div>
   </section>
 
-<section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+<section id="solutions" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
     <div class="max-w-7xl mx-auto">
         <!-- Optional Header -->
         <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-700 mb-4 text-left md:text-center">Our Solutions</h2>
+            <h2 class="text-3xl md:text-3xl md:text-4xl font-bold text-gray-700 mb-4 text-left md:text-center">Our Solutions</h2>
             <p class="text-md text-gray-600 text-left md:text-center">Comprehensive healthcare solutions across East Africa</p>
         </div>
 
@@ -571,13 +571,13 @@
 
 
 <!-- Why Choose Us Section -->
-<section class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+<section id="why-choose-us" class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
     <div class="max-w-7xl mx-auto">
         
         <!-- Section Header -->
         <div class="max-w-3xl mb-20">
             <div class="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-4">WHY CHOOSE US</div>
-            <h2 class="text-5xl md:text-6xl font-bold text-gray-700 mb-6 leading-tight">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-700 mb-6 leading-tight">
                 Your Trusted Healthcare Partner
             </h2>
             <p class="text-xl text-gray-600 leading-relaxed">
@@ -589,7 +589,7 @@
         <div class="grid md:grid-cols-2 gap-16 items-center mb-32">
             <div>
                 <div class="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-6">COMPREHENSIVE PORTFOLIO</div>
-                <h3 class="text-4xl font-bold text-gray-700 mb-6 leading-tight">
+                <h3 class="text-3xl font-bold text-gray-700 mb-6 leading-tight">
                     One-stop shop for all healthcare needs
                 </h3>
                 <p class="text-lg text-gray-600 leading-relaxed mb-8">
@@ -614,7 +614,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="relative h-[500px] rounded overflow-hidden">
+            <div class="relative h-64 md:h-[500px] rounded overflow-hidden">
                 <img src="https://images.pexels.com/photos/6129507/pexels-photo-6129507.jpeg?auto=compress&cs=tinysrgb&w=1200" 
                      alt="Comprehensive Healthcare Solutions" 
                      class="w-full h-full object-cover">
@@ -623,14 +623,14 @@
 
         <!-- Feature 2 - Technical Expertise -->
         <div class="grid md:grid-cols-2 gap-16 items-center mb-32">
-            <div class="relative h-[500px] rounded overflow-hidden order-2 md:order-1">
+            <div class="relative h-64 md:h-[500px] rounded overflow-hidden order-2 md:order-1">
                 <img src="https://images.pexels.com/photos/3938023/pexels-photo-3938023.jpeg?auto=compress&cs=tinysrgb&w=1200" 
                      alt="Expert Team" 
                      class="w-full h-full object-cover">
             </div>
             <div class="order-1 md:order-2">
                 <div class="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-6">TECHNICAL EXPERTISE</div>
-                <h3 class="text-4xl font-bold text-gray-700 mb-6 leading-tight">
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-700 mb-6 leading-tight">
                     50+ qualified professionals
                 </h3>
                 <p class="text-lg text-gray-600 leading-relaxed mb-8">
@@ -661,7 +661,7 @@
         <div class="grid md:grid-cols-2 gap-16 items-center mb-32">
             <div>
                 <div class="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-6">QUALITY ASSURANCE</div>
-                <h3 class="text-4xl font-bold text-gray-700 mb-6 leading-tight">
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-700 mb-6 leading-tight">
                     ISO-certified processes ensuring excellence
                 </h3>
                 <p class="text-lg text-gray-600 leading-relaxed mb-8">
@@ -703,7 +703,7 @@
                     </div>
                 </div>
             </div>
-            <div class="relative h-[500px] rounded overflow-hidden">
+            <div class="relative h-64 md:h-[500px] rounded overflow-hidden">
                 <img src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=1200" 
                      alt="Quality Assurance" 
                      class="w-full h-full object-cover">
@@ -712,14 +712,14 @@
 
         <!-- Feature 4 - Rapid Response & Support -->
         <div class="grid md:grid-cols-2 gap-16 items-center mb-32">
-            <div class="relative h-[500px] rounded overflow-hidden order-2 md:order-1">
+            <div class="relative h-64 md:h-[500px] rounded overflow-hidden order-2 md:order-1">
                 <img src="https://images.pexels.com/photos/6129043/pexels-photo-6129043.jpeg?auto=compress&cs=tinysrgb&w=1200" 
                      alt="24/7 Support" 
                      class="w-full h-full object-cover">
             </div>
             <div class="order-1 md:order-2">
                 <div class="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-6">RAPID RESPONSE</div>
-                <h3 class="text-4xl font-bold text-gray-700 mb-6 leading-tight">
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-700 mb-6 leading-tight">
                     24/7 technical support hotline
                 </h3>
                 <p class="text-lg text-gray-600 leading-relaxed mb-8">
@@ -756,7 +756,7 @@
         <div class="grid md:grid-cols-2 gap-16 items-center mb-32">
             <div>
                 <div class="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-6">ACCREDITED CALIBRATION</div>
-                <h3 class="text-4xl font-bold text-gray-700 mb-6 leading-tight">
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-700 mb-6 leading-tight">
                     ISO/IEC 17025 accredited laboratory
                 </h3>
                 <p class="text-lg text-gray-600 leading-relaxed mb-8">
@@ -783,7 +783,7 @@
                     </div>
                 </div>
             </div>
-            <div class="relative h-[500px] rounded overflow-hidden">
+            <div class="relative h-64 md:h-[500px] rounded overflow-hidden">
                 <img src="https://images.pexels.com/photos/4225880/pexels-photo-4225880.jpeg?auto=compress&cs=tinysrgb&w=1200" 
                      alt="Calibration Services" 
                      class="w-full h-full object-cover">

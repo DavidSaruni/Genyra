@@ -49,6 +49,13 @@
     z-index: 10;
     box-shadow: none;
 }
+
+/* Active nav link styling */
+.nav-link.active {
+    color: #2563eb;
+    font-weight: 600;
+    border-bottom: 2px solid #2563eb;
+}
 </style>
 
 <body class="bg-white text-gray-900">

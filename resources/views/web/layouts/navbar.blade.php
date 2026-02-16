@@ -32,6 +32,7 @@
                     </div>
                 </div>
                 <a href="#solutions" class="nav-link">Solutions</a>
+                <a href="#why-choose-us" class="nav-link">Why Choose Us</a>
                 <a href="#business-lines" class="nav-link">Business Lines</a>
                 <a href="#projects" class="nav-link">Projects</a>
             </div>
@@ -130,6 +131,7 @@
 
             <!-- Other Menu Items -->
             <a href="#solutions" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Solutions</a>
+            <a href="#why-choose-us" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Why Choose Us</a>
             <a href="#business-lines" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Business Lines</a>
             <a href="#projects" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Projects</a>
             <a href="#contact" class="block px-4 py-4 text-blue-600 font-medium hover:bg-blue-50 rounded-lg transition-colors">Contact</a>

@@ -405,3 +405,51 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
+<script>
+// Active nav link tracking
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+    
+    // Function to update active link
+    function updateActiveLink() {
+        const scrollPosition = window.scrollY;
+        
+        navLinks.forEach(link => {
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                const sectionTop = targetSection.offsetTop - 100;
+                const sectionBottom = sectionTop + targetSection.offsetHeight;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                }
+            }
+        });
+    }
+    
+    // Handle direct link clicks
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                // Remove active class from all links
+                navLinks.forEach(l => l.classList.remove('active'));
+                // Add active class to clicked link
+                this.classList.add('active');
+            }
+        });
+    });
+    
+    // Update active link on scroll
+    window.addEventListener('scroll', updateActiveLink);
+    
+    // Initial check
+    updateActiveLink();
+});
+</script>
