@@ -569,4 +569,316 @@
     </div>
 </section>
 
+
+<!-- Why Choose Us Section -->
+<section class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+        
+        <!-- Section Header -->
+        <div class="max-w-3xl mb-20">
+            <div class="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-4">WHY CHOOSE US</div>
+            <h2 class="text-5xl md:text-6xl font-bold text-gray-700 mb-6 leading-tight">
+                Your Trusted Healthcare Partner
+            </h2>
+            <p class="text-xl text-gray-600 leading-relaxed">
+                Delivering excellence through innovation, quality, and commitment across East Africa
+            </p>
+        </div>
+
+        <!-- Feature 1 - Comprehensive Portfolio -->
+        <div class="grid md:grid-cols-2 gap-16 items-center mb-32">
+            <div>
+                <div class="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-6">COMPREHENSIVE PORTFOLIO</div>
+                <h3 class="text-4xl font-bold text-gray-700 mb-6 leading-tight">
+                    One-stop shop for all healthcare needs
+                </h3>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                    One-stop shop for all healthcare needs across four specialized business divisions
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">BioSciences & Laboratory Solutions</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">MedTech Solutions & Equipment</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">Health Systems Planning & Advisory</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">Metrology & Calibration Services</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="relative h-[500px] rounded overflow-hidden">
+                <img src="https://images.pexels.com/photos/6129507/pexels-photo-6129507.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+                     alt="Comprehensive Healthcare Solutions" 
+                     class="w-full h-full object-cover">
+            </div>
+        </div>
+
+        <!-- Feature 2 - Technical Expertise -->
+        <div class="grid md:grid-cols-2 gap-16 items-center mb-32">
+            <div class="relative h-[500px] rounded overflow-hidden order-2 md:order-1">
+                <img src="https://images.pexels.com/photos/3938023/pexels-photo-3938023.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+                     alt="Expert Team" 
+                     class="w-full h-full object-cover">
+            </div>
+            <div class="order-1 md:order-2">
+                <div class="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-6">TECHNICAL EXPERTISE</div>
+                <h3 class="text-4xl font-bold text-gray-700 mb-6 leading-tight">
+                    50+ qualified professionals
+                </h3>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                    50+ qualified engineers, scientists, and IT professionals with extensive industry experience
+                </p>
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <div class="text-4xl font-bold text-blue-600 mb-2">50+</div>
+                        <div class="text-sm text-gray-600 uppercase tracking-wider">Skilled Professionals</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-blue-600 mb-2">8+</div>
+                        <div class="text-sm text-gray-600 uppercase tracking-wider">Years Experience</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-blue-600 mb-2">6</div>
+                        <div class="text-sm text-gray-600 uppercase tracking-wider">Countries Served</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-blue-600 mb-2">50+</div>
+                        <div class="text-sm text-gray-600 uppercase tracking-wider">Healthcare Facilities</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature 3 - Quality Assurance -->
+        <div class="grid md:grid-cols-2 gap-16 items-center mb-32">
+            <div>
+                <div class="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-6">QUALITY ASSURANCE</div>
+                <h3 class="text-4xl font-bold text-gray-700 mb-6 leading-tight">
+                    ISO-certified processes ensuring excellence
+                </h3>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                    ISO-certified processes ensuring consistent quality in products and services
+                </p>
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-blue-100 rounded flex items-center justify-center flex-shrink-0 mr-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-700 mb-1">ISO 9001:2015</h4>
+                            <p class="text-gray-600">Quality Management System certification</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-blue-100 rounded flex items-center justify-center flex-shrink-0 mr-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-700 mb-1">ISO/IEC 17025:2017</h4>
+                            <p class="text-gray-600">Calibration laboratory accreditation</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-blue-100 rounded flex items-center justify-center flex-shrink-0 mr-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-700 mb-1">ISO 13485:2016</h4>
+                            <p class="text-gray-600">Medical devices quality management</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative h-[500px] rounded overflow-hidden">
+                <img src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+                     alt="Quality Assurance" 
+                     class="w-full h-full object-cover">
+            </div>
+        </div>
+
+        <!-- Feature 4 - Rapid Response & Support -->
+        <div class="grid md:grid-cols-2 gap-16 items-center mb-32">
+            <div class="relative h-[500px] rounded overflow-hidden order-2 md:order-1">
+                <img src="https://images.pexels.com/photos/6129043/pexels-photo-6129043.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+                     alt="24/7 Support" 
+                     class="w-full h-full object-cover">
+            </div>
+            <div class="order-1 md:order-2">
+                <div class="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-6">RAPID RESPONSE</div>
+                <h3 class="text-4xl font-bold text-gray-700 mb-6 leading-tight">
+                    24/7 technical support hotline
+                </h3>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                    24/7 technical support hotline with guaranteed response times for critical equipment
+                </p>
+                <div class="mb-8">
+                    <div class="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-4">NATIONWIDE COVERAGE</div>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Comprehensive user training, technical documentation, and ongoing application support
+                    </p>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4"></div>
+                        <span class="text-gray-700">Guaranteed response times</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4"></div>
+                        <span class="text-gray-700">Comprehensive user training</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4"></div>
+                        <span class="text-gray-700">Technical documentation</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4"></div>
+                        <span class="text-gray-700">Ongoing application support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature 5 - Accredited Calibration -->
+        <div class="grid md:grid-cols-2 gap-16 items-center mb-32">
+            <div>
+                <div class="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-6">ACCREDITED CALIBRATION</div>
+                <h3 class="text-4xl font-bold text-gray-700 mb-6 leading-tight">
+                    ISO/IEC 17025 accredited laboratory
+                </h3>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                    ISO/IEC 17025 accredited calibration laboratory with NIST/UKAS traceable standards
+                </p>
+                <div class="bg-white p-8 rounded-lg border border-gray-200">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <div class="text-sm text-gray-500 mb-2">Calibration Standards</div>
+                            <div class="font-bold text-gray-700">NIST/UKAS Traceable</div>
+                        </div>
+                        <div>
+                            <div class="text-sm text-gray-500 mb-2">Accreditation</div>
+                            <div class="font-bold text-gray-700">ISO/IEC 17025:2017</div>
+                        </div>
+                        <div>
+                            <div class="text-sm text-gray-500 mb-2">Calibration Types</div>
+                            <div class="font-bold text-gray-700">Temperature, Pressure, Volume, Mass</div>
+                        </div>
+                        <div>
+                            <div class="text-sm text-gray-500 mb-2">Service Coverage</div>
+                            <div class="font-bold text-gray-700">East Africa Wide</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative h-[500px] rounded overflow-hidden">
+                <img src="https://images.pexels.com/photos/4225880/pexels-photo-4225880.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+                     alt="Calibration Services" 
+                     class="w-full h-full object-cover">
+            </div>
+        </div>
+
+        <!-- More Reasons -->
+        <div class="mb-32">
+            <h3 class="text-3xl font-bold text-gray-700 mb-12">More Reasons to Choose Genyra</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Card 1: Value for Money -->
+                <div class="bg-white overflow-hidden group cursor-pointer flex flex-col hover:shadow-md transition-shadow duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/6129237/pexels-photo-6129237.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                             alt="Value for Money" 
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold text-gray-700 mb-3">Value for Money</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed flex-grow">
+                            Competitive pricing with flexible payment terms, leasing options, and trade-in programs
+                        </p>
+                        <div class="flex justify-end mt-4">
+                            <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Long-term Partnership -->
+                <div class="bg-white overflow-hidden group cursor-pointer flex flex-col hover:shadow-md transition-shadow duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                             alt="Long-term Partnership" 
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold text-gray-700 mb-3">Long-term Partnership</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed flex-grow">
+                            Average client retention rate >85% with many 10+ year relationships
+                        </p>
+                        <div class="flex justify-end mt-4">
+                            <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Innovation Focus -->
+                <div class="bg-white overflow-hidden group cursor-pointer flex flex-col hover:shadow-md transition-shadow duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/7089401/pexels-photo-7089401.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                             alt="Innovation Focus" 
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold text-gray-700 mb-3">Innovation Focus</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed flex-grow">
+                            Continuous investment in new technologies and solutions to meet evolving needs
+                        </p>
+                        <div class="flex justify-end mt-4">
+                            <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Local Presence, Global Standards -->
+                <div class="bg-white overflow-hidden group cursor-pointer flex flex-col hover:shadow-md transition-shadow duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/8460157/pexels-photo-8460157.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                             alt="Local Presence Global Standards" 
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold text-gray-700 mb-3">Local Presence, Global Standards</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed flex-grow">
+                            International quality standards with understanding of local context and requirements
+                        </p>
+                        <div class="flex justify-end mt-4">
+                            <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
 @endsection
