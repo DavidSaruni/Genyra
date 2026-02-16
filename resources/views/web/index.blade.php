@@ -817,7 +817,7 @@
 
                 <!-- Card 2: Long-term Partnership -->
                 <div class="bg-white overflow-hidden group cursor-pointer flex flex-col hover:shadow-md transition-shadow duration-300">
-                    <div class="relative h-48 overflow-hidden">
+                    <div class="relative h-full md:h-48 overflow-hidden">
                         <img src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=600" 
                              alt="Long-term Partnership" 
                              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
@@ -837,7 +837,7 @@
 
                 <!-- Card 3: Innovation Focus -->
                 <div class="bg-white overflow-hidden group cursor-pointer flex flex-col hover:shadow-md transition-shadow duration-300">
-                    <div class="relative h-48 overflow-hidden">
+                    <div class="relative h-full md:h-48 overflow-hidden">
                         <img src="https://images.pexels.com/photos/7089401/pexels-photo-7089401.jpeg?auto=compress&cs=tinysrgb&w=600" 
                              alt="Innovation Focus" 
                              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
@@ -857,7 +857,7 @@
 
                 <!-- Card 4: Local Presence, Global Standards -->
                 <div class="bg-white overflow-hidden group cursor-pointer flex flex-col hover:shadow-md transition-shadow duration-300">
-                    <div class="relative h-48 overflow-hidden">
+                    <div class="relative h-full md:h-48 overflow-hidden">
                         <img src="https://images.pexels.com/photos/8460157/pexels-photo-8460157.jpeg?auto=compress&cs=tinysrgb&w=600" 
                              alt="Local Presence Global Standards" 
                              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
