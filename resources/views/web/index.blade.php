@@ -575,7 +575,7 @@
     <div class="max-w-7xl mx-auto">
         
         <!-- Section Header -->
-        <div class="max-w-3xl mb-20">
+        <div class="max-w-3xl mb-[15px]">
             <div class="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-4">WHY CHOOSE US</div>
             <h2 class="text-4xl md:text-5xl font-bold text-gray-700 mb-6 leading-tight">
                 Your Trusted Healthcare Partner
