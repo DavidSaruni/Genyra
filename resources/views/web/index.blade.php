@@ -61,7 +61,11 @@
                       ENABLING HEALTHCARE INNOVATION
                   </div>
                   <h1 class="text-3xl md:text-3xl md:text-4xl font-bold text-gray-700 mb-6 leading-tight">
-                      Building Solutions | Transforming Healthcare
+                        <span class="text-[#22235a]">Building Solutions</span> 
+                        <span class="text-white">•</span>
+                        <span class="text-white">Transforming</span>
+                        <span class="text-white">•</span>
+                        <span class="text-cyan-400">Healthcare</span>
                   </h1>
                   <a href="#about" class="btn-primary">
                       Learn more
