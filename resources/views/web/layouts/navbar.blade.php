@@ -2,7 +2,13 @@
 <div class="top-bar py-2 px-4 fixed w-full z-50 top-0">
     <div class="max-w-7xl mx-auto flex justify-between items-center text-sm">
         <div>Genyra Group</div>
-        <div class="hidden md:block">East Africa Healthcare Solutions</div>
+        <div class="hidden md:flex items-center space-x-2 font-extrabold">
+            <span class="text-blue-600 font-medium">Think</span>
+            <span class="text-white">•</span>
+            <span class="text-sky-500 font-medium">Innovate</span>
+            <span class="text-white">•</span>
+            <span class="text-blue-600 font-medium">Solve</span>
+        </div>
     </div>
 </div>
 
@@ -22,7 +28,7 @@
             </div>
 
             <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center w-full space-x-8">
+            <div class="hidden md:flex items-center space-x-8 text-sm">
                 <div class="relative">
                     <div class="nav-link flex items-center gap-1 cursor-pointer pl-4" id="aboutToggle">
                         About us
@@ -33,7 +39,7 @@
                 </div>
                 <a href="#solutions" class="nav-link">Solutions</a>
                 <a href="#why-choose-us" class="nav-link">Why Choose Us</a>
-                <a href="#business-lines" class="nav-link">Business Lines</a>
+                <a href="#business-lines" class="nav-link">Business Units</a>
                 <a href="#projects" class="nav-link">Projects</a>
             </div>
             
@@ -66,7 +72,7 @@
                 </svg>
             </button>
             
-            <div class="grid grid-cols-3 gap-8">
+            <div class="grid grid-cols-4 gap-8">
                 <div>
                     <h3 class="text-xs font-bold uppercase tracking-widest text-gray-900 mb-4 pb-2 border-b-2 border-gray-200">Who We Are</h3>
                     <ul class="space-y-3">
@@ -92,6 +98,15 @@
                         <li><a href="#projects" class="text-gray-600 text-sm transition-all hover:text-blue-600 hover:translate-x-1 inline-block">Case Studies</a></li>
                         <li><a href="#contact" class="text-gray-600 text-sm transition-all hover:text-blue-600 hover:translate-x-1 inline-block">Careers</a></li>
                         <li><a href="#contact" class="text-gray-600 text-sm transition-all hover:text-blue-600 hover:translate-x-1 inline-block">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-gray-900 mb-4 pb-2 border-b-2 border-gray-200">Accreditation</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-gray-600 text-sm transition-all hover:text-blue-600 hover:translate-x-1 inline-block">ISO Certifications</a></li>
+                        <li><a href="#about" class="text-gray-600 text-sm transition-all hover:text-blue-600 hover:translate-x-1 inline-block">Industry Standards</a></li>
+                        <li><a href="#about" class="text-gray-600 text-sm transition-all hover:text-blue-600 hover:translate-x-1 inline-block">Compliance</a></li>
+                        <li><a href="#about" class="text-gray-600 text-sm transition-all hover:text-blue-600 hover:translate-x-1 inline-block">Awards & Recognition</a></li>
                     </ul>
                 </div>
             </div>
@@ -132,7 +147,7 @@
             <!-- Other Menu Items -->
             <a href="#solutions" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Solutions</a>
             <a href="#why-choose-us" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Why Choose Us</a>
-            <a href="#business-lines" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Business Lines</a>
+            <a href="#business-lines" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Business Units</a>
             <a href="#projects" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Projects</a>
             <a href="#contact" class="block px-4 py-4 text-blue-600 font-medium hover:bg-blue-50 rounded-lg transition-colors">Contact</a>
         </div>
@@ -188,6 +203,17 @@
                     <a href="#projects" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Case Studies</a>
                     <a href="#contact" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Careers</a>
                     <a href="#contact" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Contact Us</a>
+                </div>
+            </div>
+
+            <!-- Accreditation Section -->
+            <div class="mb-8">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4 px-4">Accreditation</h3>
+                <div class="space-y-1">
+                    <a href="#about" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">ISO Certifications</a>
+                    <a href="#about" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Industry Standards</a>
+                    <a href="#about" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Compliance</a>
+                    <a href="#about" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Awards & Recognition</a>
                 </div>
             </div>
         </div>

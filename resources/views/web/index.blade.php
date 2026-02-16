@@ -34,23 +34,23 @@
       </div>
       
       <!-- Hero Content -->
-      <div class="hero-content absolute inset-0 flex items-center">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full lg:mt-32">
-              <div class="max-w-3xl fade-in-up">
-                  <div class="category-label mb-4">
-                      ENABLING HEALTHCARE INNOVATION
-                  </div>
-                  <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-8 leading-tight">
-                      <span>Building Solutions</span> 
-                      <span>Transforming</span>
-                      <span>Healthcare</span>
-                  </h1>
-                  <a href="#about" class="btn-primary">
-                      Learn more
-                  </a>
-              </div>
-          </div>
-      </div>
+<div class="hero-content absolute inset-0 flex items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full lg:mt-32">
+        <div class="max-w-3xl fade-in-up">
+            <div class="category-label mb-4">
+                ENABLING HEALTHCARE INNOVATION
+            </div>
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-8 leading-tight">
+                <span class="text-[#22235a]">Building Solutions</span> 
+                <span class="text-white">Transforming</span>
+                <span class="text-cyan-400">Healthcare</span>
+            </h1>
+            <a href="#about" class="btn-primary">
+                Learn more
+            </a>
+        </div>
+    </div>
+</div>
   </section>
 
   <section class="hidden" id="small-hero-content">
@@ -76,7 +76,7 @@
         <!-- Optional Header -->
         <div class="text-center mb-12">
             <h2 class="text-3xl md:text-3xl md:text-4xl font-bold text-gray-700 mb-4 text-left md:text-center">Our Solutions</h2>
-            <p class="text-md text-gray-600 text-left md:text-center">Comprehensive healthcare solutions across East Africa</p>
+            <p class="text-md text-gray-600 text-left md:text-center">We Design & Deploy Solutions That Shape Healthcare In East Africa and Beyond</p>
         </div>
 
         <!-- Icon Grid - 3 on mobile, 5 on tablet, 10 on desktop -->
@@ -298,7 +298,7 @@
                     Leading Healthcare Solutions Provider in East Africa
                 </h2>
                 <p class="text-md text-gray-600 mb-6 leading-relaxed">
-                    Genyra Group is East Africa's leading provider of comprehensive healthcare solutions, specializing in laboratory equipment, medical devices, health information systems, and metrology services. Established with a vision to transform healthcare delivery through innovation and excellence, we serve hospitals, research institutions, diagnostic laboratories, pharmaceutical companies, and healthcare facilities across the region.
+                    Genyra Group is East Africa's leading provider of healthcare solutions, specializing in laboratory equipment & consumables, general medical supplies, healthcare strategic planning & systems development and calibration services. Established with a vision to transform healthcare delivery through innovation and excellence, we serve hospitals, research institutions, diagnostic laboratories, pharmaceutical companies, and healthcare facilities across the region.
                 </p>
                 <p class="text-md text-gray-600 mb-8 leading-relaxed">
                     With a proven track record of successful implementations and a commitment to quality, Genyra Group has positioned itself as a trusted partner for healthcare organizations seeking to enhance patient care, improve operational efficiency, and achieve regulatory compliance.
@@ -396,7 +396,7 @@
 
               <!-- MedTech Solutions -->
               <div class="bg-white rounded-lg overflow-hidden shadow-lg card-hover">
-                  <img src="https://images.pexels.com/photos/356040/pexels-photo-356040.jpeg?auto=compress&cs=tinysrgb&w=800" alt="MedTech" class="w-full h-64 object-cover" onerror="this.src='https://via.placeholder.com/800x400/10b981/ffffff?text=MedTech'">
+                  <img src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="MedTech" class="w-full h-64 object-cover" onerror="this.src='https://via.placeholder.com/800x400/10b981/ffffff?text=MedTech'">
                   <div class="p-8">
                       <div class="category-label mb-3">SMART TECHNOLOGIES FOR BETTER HEALTH</div>
                       <h3 class="text-2xl font-bold mb-4 text-gray-700">MedTech Solutions</h3>
@@ -432,7 +432,7 @@
 
               <!-- Metrology & Calibration -->
               <div class="bg-white rounded-lg overflow-hidden shadow-lg card-hover">
-                  <img src="https://images.pexels.com/photos/4226881/pexels-photo-4226881.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Calibration" class="w-full h-64 object-cover" onerror="this.src='https://via.placeholder.com/800x400/f97316/ffffff?text=Metrology'">
+                  <img src="https://images.pexels.com/photos/3938022/pexels-photo-3938022.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Calibration" class="w-full h-64 object-cover" onerror="this.src='https://via.placeholder.com/800x400/f97316/ffffff?text=Metrology'">
                   <div class="p-8">
                       <div class="category-label mb-3">PRECISION YOU CAN TRUST</div>
                       <h3 class="text-2xl font-bold mb-4 text-gray-700">Metrology & Calibration Services</h3>
