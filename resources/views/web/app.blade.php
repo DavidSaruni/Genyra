@@ -69,69 +69,6 @@
     @yield('body')
 </div>
 
-    <!-- Contact Section -->
-    <!-- <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-16">
-                <div>
-                    <div class="category-label mb-4">GET IN TOUCH</div>
-                    <h2 class="text-4xl font-bold mb-8 text-gray-900">Contact Information</h2>
-                    
-                    <div class="space-y-6">
-                        <div>
-                            <h3 class="font-bold text-lg mb-2">Head Office</h3>
-                            <p class="text-gray-600">P.O. Box 43844, 00100<br/>Nairobi, Kenya</p>
-                        </div>
-                        
-                        <div>
-                            <h3 class="font-bold text-lg mb-2">Phone</h3>
-                            <p class="text-gray-600">+254 705 435 438</p>
-                        </div>
-                        
-                        <div>
-                            <h3 class="font-bold text-lg mb-2">Email</h3>
-                            <p class="text-gray-600">
-                                General: info@genyragroup.com<br/>
-                                Sales: sales@genyragroup.com<br/>
-                                Support: support@genyragroup.com
-                            </p>
-                        </div>
-                        
-                        <div>
-                            <h3 class="font-bold text-lg mb-2">Business Hours</h3>
-                            <p class="text-gray-600">
-                                Monday - Friday: 8:00 AM - 5:00 PM<br/>
-                                Saturday: 9:00 AM - 1:00 PM
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div>
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <h3 class="text-2xl font-bold mb-6">Send us a Message</h3>
-                        <form class="space-y-4">
-                            <div>
-                                <input type="text" placeholder="Your Name" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500">
-                            </div>
-                            <div>
-                                <input type="email" placeholder="Your Email" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500">
-                            </div>
-                            <div>
-                                <input type="tel" placeholder="Phone Number" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500">
-                            </div>
-                            <div>
-                                <textarea rows="4" placeholder="Your Message" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500"></textarea>
-                            </div>
-                            <button type="submit" class="btn-primary w-full">
-                                Send Message
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
 <!-- footer -->
 @include('web.layouts.footer')

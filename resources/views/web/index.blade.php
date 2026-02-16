@@ -218,7 +218,7 @@
 </section>
 
 <!-- Featured Highlights Section  -->
-<section class="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+<section class="py-12 px-4 sm:px-6 lg:px-8 bg-white">
     <div class="max-w-7xl mx-auto">
         <div class="grid md:grid-cols-3 gap-2" id="highlightGrid">
             
@@ -289,7 +289,7 @@
 
 
 <!-- About Section -->
-<section id="about" class="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+<section id="about" class="py-12 px-4 sm:px-6 lg:px-8 bg-white">
     <div class="max-w-7xl mx-auto">
         <div class="grid md:grid-cols-2 gap-16 items-stretch">
             <div class="flex flex-col justify-center">
@@ -452,7 +452,7 @@
   </section>
 
 <!-- Projects Section -->
-<section id="projects" class="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+<section id="projects" class="py-12 px-4 sm:px-6 lg:px-8 bg-white">
     <div class="max-w-7xl mx-auto">
         <!-- Header -->
         <div class="mb-16">
@@ -571,7 +571,7 @@
 
 
 <!-- Why Choose Us Section -->
-<section id="why-choose-us" class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+<section id="why-choose-us" class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
     <div class="max-w-7xl mx-auto">
         
         <!-- Section Header -->
@@ -580,7 +580,7 @@
             <h2 class="text-4xl md:text-5xl font-bold text-gray-700 mb-6 leading-tight">
                 Your Trusted Healthcare Partner
             </h2>
-            <p class="text-xl text-gray-600 leading-relaxed">
+            <p class="text-md md:text-xl text-gray-600 leading-relaxed">
                 Delivering excellence through innovation, quality, and commitment across East Africa
             </p>
         </div>
@@ -880,5 +880,200 @@
 
     </div>
 </section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50">
+    <div class="max-w-7xl mx-auto">
+          <!-- Section Header -->
+        <div class="max-w-3xl mb-[15px]">
+            <div class="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-4"> Get In Touch</div>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-700 mb-6 leading-tight">
+                Contact Us
+            </h2>
+            <p class="text-md md:text-xl text-gray-600 leading-relaxed">
+                We are ready to assist you with your healthcare solutions needs
+            </p>
+        </div>
+
+
+        <div class="grid lg:grid-cols-2 gap-12">
+            <!-- Contact Information -->
+            <div class="space-y-8">
+                <!-- Head Office -->
+                <div class="bg-white p-6 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2 text-gray-700">Head Office</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                P.O. Box 43844, 00100<br/>
+                                Nairobi, Kenya
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="bg-white p-6 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2 text-gray-700">Telephone</h3>
+                            <p class="text-gray-600">
+                                <span class="font-semibold">Main:</span> <a href="tel:+254705435438" class="hover:text-blue-600 transition-colors">+254 705 435 438</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="bg-white p-6 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="w-full">
+                            <h3 class="font-bold text-lg mb-3 text-gray-700">Email Addresses</h3>
+                            <div class="space-y-2 text-gray-600">
+                                <p><span class="font-semibold">General:</span> <a href="mailto:info@genyragroup.com" class="hover:text-blue-600 transition-colors">info@genyragroup.com</a></p>
+                                <p><span class="font-semibold">Sales:</span> <a href="mailto:sales@genyragroup.com" class="hover:text-blue-600 transition-colors">sales@genyragroup.com</a></p>
+                                <p><span class="font-semibold">Support:</span> <a href="mailto:support@genyragroup.com" class="hover:text-blue-600 transition-colors">support@genyragroup.com</a></p>
+                                <p><span class="font-semibold">Calibration:</span> <a href="mailto:calibration@genyragroup.com" class="hover:text-blue-600 transition-colors">calibration@genyragroup.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Hours -->
+                <div class="bg-white p-6 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-3 text-gray-700">Business Hours</h3>
+                            <div class="text-gray-600 space-y-1">
+                                <p><span class="font-semibold">Monday - Friday:</span> 8:00 AM - 5:00 PM</p>
+                                <p><span class="font-semibold">Saturday:</span> 9:00 AM - 1:00 PM</p>
+                                <p><span class="font-semibold">Sunday & Public Holidays:</span> Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="bg-white p-6 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+                            </svg>
+                        </div>
+                        <div class="w-full">
+                            <h3 class="font-bold text-lg mb-3 text-gray-700">Social Media</h3>
+                            <div class="flex space-x-4">
+                                <a href="https://linkedin.com/company/genyra-group" target="_blank" class="w-10 h-10 bg-gray-100 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors group">
+                                    <svg class="w-5 h-5 text-gray-600 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://twitter.com/genyragroup" target="_blank" class="w-10 h-10 bg-gray-100 hover:bg-blue-400 rounded-lg flex items-center justify-center transition-colors group">
+                                    <svg class="w-5 h-5 text-gray-600 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://facebook.com/genyraGroupBank" target="_blank" class="w-10 h-10 bg-gray-100 hover:bg-blue-700 rounded-lg flex items-center justify-center transition-colors group">
+                                    <svg class="w-5 h-5 text-gray-600 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div>
+                <div class="bg-white p-8 lg:p-10 rounded-xl shadow-md">
+                    <h3 class="text-3xl font-bold mb-2 text-gray-700">Send us a Message</h3>
+                    <p class="text-gray-600 mb-8">Fill out the form below and we'll get back to you as soon as possible</p>
+                    
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Your Name *</label>
+                            <input type="text" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                                   placeholder="John Doe">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
+                            <input type="email" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                                   placeholder="john@example.com">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                                   placeholder="+254 700 000 000">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Subject</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
+                                <option>General Inquiry</option>
+                                <option>Request Quotation</option>
+                                <option>Technical Support</option>
+                                <option>Calibration Services</option>
+                                <option>Partnership Opportunity</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Your Message *</label>
+                            <textarea rows="5" required 
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
+                                      placeholder="Tell us how we can help you..."></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-blue-600 text-white font-semibold py-4 px-6 rounded-lg hover:bg-blue-700 transform hover:scale-[1.02] transition-all shadow-lg hover:shadow-xl flex items-center justify-center">
+                            <span>Send Message</span>
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </button>
+                    </form>
+                    
+                    <div class="mt-8 pt-8 border-t border-gray-200">
+                        <p class="text-center text-sm text-gray-600">
+                            <strong>Need immediate assistance?</strong><br/>
+                            Call us at <a href="tel:+254705435438" class="text-blue-600 hover:underline font-semibold">+254 705 435 438</a> or email 
+                            <a href="mailto:sales@genyragroup.com" class="text-blue-600 hover:underline font-semibold">sales@genyragroup.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 @endsection
