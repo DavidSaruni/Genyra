@@ -573,7 +573,7 @@
                 <a 
                 href="{{ route('projects') }}"
                     id="loadMoreBtn"
-                    class="group relative flex items-center gap-4 border border-gray-900 px-12 py-5 text-sm font-semibold uppercase tracking-widest text-gray-900 hover:text-white transition-all duration-300 overflow-hidden">
+                    class="group relative flex items-center gap-4 border border-gray-900 px-6 md:px-12 py-5 text-sm font-semibold uppercase tracking-widest text-gray-900 hover:text-white transition-all duration-300 overflow-hidden">
                     <span class="absolute inset-0 bg-gray-900 -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0"></span>
                     <span class="relative z-10">Load More Projects</span>
                     <svg class="relative z-10 w-5 h-5 transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
