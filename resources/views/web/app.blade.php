@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        @yield('title','Genyra Group - Healthcare Solutions Across East Africa')
+        @yield('title','genyra Group - Building Solutions | Transforming Healthcare ')
     </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.jpeg') }}">
