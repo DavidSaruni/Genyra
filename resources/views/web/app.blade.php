@@ -50,6 +50,23 @@
     box-shadow: none;
 }
 
+/* Client card blur effect - same as highlight cards */
+.client-card {
+    filter: blur(0px) brightness(1);
+    box-shadow: none;
+}
+
+#clientsGrid:has(.client-card:hover) .client-card:not(:hover) {
+    filter: blur(1.5px) brightness(0.75);
+    box-shadow: none;
+}
+
+#clientsGrid .client-card:hover {
+    filter: blur(0px) brightness(1.05);
+    z-index: 10;
+    box-shadow: none;
+}
+
 /* Active nav link styling */
 .nav-link.active {
     color: #2563eb;

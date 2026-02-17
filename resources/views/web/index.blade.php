@@ -370,9 +370,9 @@
       <div class="max-w-7xl mx-auto">
           <div class="text-center mb-16">
               <div class="category-label mb-4 text-left md:text-center">OUR EXPERTISE</div>
-              <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-700 text-left md:text-center" >Business Lines</h2>
+              <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-700 text-left md:text-center" >Strategic Business Units</h2>
               <p class="text-xl text-gray-600 max-w-3xl mx-auto text-left md:text-center">
-                  Comprehensive healthcare solutions tailored to meet diverse needs
+                  At genyra, we bring together a diverse portfolio of businesses to create forward-looking solutions that strengthen healthcare delivery, improve outcomes, and drive sustainable system performance.
               </p>
           </div>
           
@@ -876,6 +876,223 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Our Clients Section -->
+<section id="our-clients" class="py-12 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-7xl mx-auto">
+
+        <!-- Section Header -->
+        <div class="max-w-3xl mb-20">
+            <div class="text-xs font-semibold uppercase tracking-widest text-[#1BA0D8] mb-4">OUR CLIENTS</div>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-700 mb-6 leading-tight">
+                Trusted by Leading Healthcare Institutions
+            </h2>
+            <p class="text-xl text-gray-600 leading-relaxed">
+                Partnering with hospitals, research institutions, laboratories & healthcare facilities across East Africa and Beyond
+            </p>
+        </div>
+
+        <!-- Zeiss Style Image Cards Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-2 mb-20" id="clientsGrid">
+
+            <!-- Card 1: National & County Hospitals - Hospital building/ward -->
+            <div class="client-card relative h-[420px] overflow-hidden group cursor-pointer">
+                <img src="https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=800"
+                     alt="National and County Referral Hospitals"
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/10 group-hover:from-black/90 group-hover:via-black/60 transition-all duration-500"></div>
+                <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-[#1BA0D8] mb-2" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">CLIENT CATEGORY</span>
+                    <h3 class="text-2xl font-bold leading-tight mb-3" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
+                        National & County Referral Hospitals
+                    </h3>
+                    <p class="text-sm text-gray-200 leading-relaxed" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">
+                        Leading referral hospitals and county healthcare facilities across Kenya and East Africa
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2: Private Healthcare - Modern private hospital interior -->
+            <div class="client-card relative h-[420px] overflow-hidden group cursor-pointer">
+                <img src="https://images.pexels.com/photos/668300/pexels-photo-668300.jpeg?auto=compress&cs=tinysrgb&w=800"
+                     alt="Private Healthcare Facilities"
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/10 group-hover:from-black/90 group-hover:via-black/60 transition-all duration-500"></div>
+                <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-[#1BA0D8] mb-2" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">CLIENT CATEGORY</span>
+                    <h3 class="text-2xl font-bold leading-tight mb-3" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
+                        Private Healthcare Facilities
+                    </h3>
+                    <div class="space-y-1">
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
+                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Aga Khan University Hospital</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
+                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Nairobi Hospital</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
+                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">MP Shah Hospital</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
+                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Gertrude's Children's Hospital</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Research Institutions - Scientists in research lab -->
+            <div class="client-card relative h-[420px] overflow-hidden group cursor-pointer">
+                <img src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=800"
+                     alt="Research Institutions"
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/10 group-hover:from-black/90 group-hover:via-black/60 transition-all duration-500"></div>
+                <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-[#1BA0D8] mb-2" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">CLIENT CATEGORY</span>
+                    <h3 class="text-2xl font-bold leading-tight mb-3" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
+                        Research Institutions
+                    </h3>
+                    <div class="space-y-1">
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
+                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">KEMRI</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
+                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">ILRI</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
+                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">ICRAF</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
+                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Universities & Research Centers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Diagnostic Laboratories - Lab technician with diagnostic equipment -->
+            <div class="client-card relative h-[420px] overflow-hidden group cursor-pointer">
+                <img src="https://images.pexels.com/photos/954585/pexels-photo-954585.jpeg?auto=compress&cs=tinysrgb&w=800"
+                     alt="Diagnostic Laboratories"
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/10 group-hover:from-black/90 group-hover:via-black/60 transition-all duration-500"></div>
+                <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-[#1BA0D8] mb-2" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">CLIENT CATEGORY</span>
+                    <h3 class="text-2xl font-bold leading-tight mb-3" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
+                        Diagnostic Laboratories
+                    </h3>
+                    <div class="space-y-1">
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
+                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Lancet Kenya</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
+                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Pathologists Lancet</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
+                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Independent Laboratories</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
+                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Hospital Laboratories</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: Pharmaceutical Companies - Pharma manufacturing/pills -->
+            <div class="client-card relative h-[420px] overflow-hidden group cursor-pointer">
+                <img src="https://images.pexels.com/photos/360622/pexels-photo-360622.jpeg?auto=compress&cs=tinysrgb&w=800"
+                     alt="Pharmaceutical Companies"
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/10 group-hover:from-black/90 group-hover:via-black/60 transition-all duration-500"></div>
+                <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-[#1BA0D8] mb-2" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">CLIENT CATEGORY</span>
+                    <h3 class="text-2xl font-bold leading-tight mb-3" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
+                        Pharmaceutical Companies
+                    </h3>
+                    <div class="space-y-1">
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
+                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Manufacturing Facilities</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
+                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Quality Control Laboratories</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
+                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">R&D Centers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6: Blood & Academic - Blood donation/transfusion -->
+            <div class="client-card relative h-[420px] overflow-hidden group cursor-pointer">
+                <img src="https://images.pexels.com/photos/6823561/pexels-photo-6823561.jpeg?auto=compress&cs=tinysrgb&w=800"
+                     alt="Blood Transfusion and Academic Institutions"
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/10 group-hover:from-black/90 group-hover:via-black/60 transition-all duration-500"></div>
+                <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-[#1BA0D8] mb-2" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">CLIENT CATEGORY</span>
+                    <h3 class="text-2xl font-bold leading-tight mb-3" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
+                        Blood & Academic Institutions
+                    </h3>
+                    <div class="space-y-1">
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
+                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Kenya National Blood Transfusion Service</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
+                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Regional Blood Banks</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
+                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">University Teaching Hospitals</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
+                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Medical Schools & Training Institutions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Stats Bar -->
+        <div class="grid md:grid-cols-4 gap-0 border border-gray-200">
+            <div class="p-10 text-center border-r border-gray-200">
+                <div class="text-5xl font-bold text-[#2B3E7E] mb-2">50+</div>
+                <div class="text-sm uppercase tracking-widest text-gray-500">Healthcare Facilities</div>
+            </div>
+            <div class="p-10 text-center border-r border-gray-200">
+                <div class="text-5xl font-bold text-[#1BA0D8] mb-2">6</div>
+                <div class="text-sm uppercase tracking-widest text-gray-500">Countries Served</div>
+            </div>
+            <div class="p-10 text-center border-r border-gray-200">
+                <div class="text-5xl font-bold text-[#2B3E7E] mb-2">95%+</div>
+                <div class="text-sm uppercase tracking-widest text-gray-500">Client Retention Rate</div>
+            </div>
+            <div class="p-10 text-center">
+                <div class="text-5xl font-bold text-[#1BA0D8] mb-2">9+</div>
+                <div class="text-sm uppercase tracking-widest text-gray-500">Year Relationships</div>
             </div>
         </div>
 

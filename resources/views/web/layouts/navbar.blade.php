@@ -14,10 +14,10 @@
 
 <!-- Main Navigation -->
 <nav class="main-nav fixed w-full z-50 top-8 transition-all duration-300 bg-white" id="mainNav">
-    <div class="max-w-7xl mx-auto px-1 sm:px-6 lg:px-8 py-2 md:py-0">
+    <div class="max-w-7xl mx-auto px-1 sm:px-6 lg:px-8 py-1 md:py-0">
         <div class="flex justify-between items-center h-20">
             <!-- Logo -->
-            <div class="w-40 h-40 md:w-64 md:h-64 rounded-full overflow-hidden flex-shrink-0">
+            <div class="w-32 h-32 md:w-64 md:h-64 rounded-full overflow-hidden flex-shrink-0">
                 <a href="{{ route('home') }}">
                     <img 
                     src="{{ asset('images/logo.jpeg') }}" 
@@ -41,6 +41,7 @@
                 <a href="#why-choose-us" class="nav-link">Why Choose Us</a>
                 <a href="#business-lines" class="nav-link">Business Units</a>
                 <a href="#projects" class="nav-link">Projects</a>
+                <a href="#our-clients" class="nav-link">Our Clients</a>
             </div>
             
             <!-- Right side -->
@@ -149,6 +150,7 @@
             <a href="#why-choose-us" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Why Choose Us</a>
             <a href="#business-lines" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Business Units</a>
             <a href="#projects" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Projects</a>
+            <a href="#our-clients" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Our Clients</a>
             <a href="#contact" class="block px-4 py-4 text-blue-600 font-medium hover:bg-blue-50 rounded-lg transition-colors">Contact</a>
         </div>
     </div>

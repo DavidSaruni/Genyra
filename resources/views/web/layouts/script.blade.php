@@ -407,6 +407,36 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <script>
+// Client cards focus effect - same as highlight cards
+document.addEventListener('DOMContentLoaded', function() {
+    const clientCards = document.querySelectorAll('.client-card');
+    const clientsGrid = document.getElementById('clientsGrid');
+    
+    clientCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            clientCards.forEach(otherCard => {
+                if (otherCard !== card) {
+                    otherCard.style.filter = 'blur(1.5px) brightness(0.75)';
+                    otherCard.style.boxShadow = 'none';
+                }
+            });
+            card.style.filter = 'blur(0px) brightness(1.05)';
+            card.style.zIndex = '10';
+            card.style.boxShadow = 'none';
+        });
+    });
+    
+    clientsGrid.addEventListener('mouseleave', function() {
+        clientCards.forEach(card => {
+            card.style.filter = 'blur(0px) brightness(1)';
+            card.style.zIndex = '1';
+            card.style.boxShadow = 'none';
+        });
+    });
+});
+</script>
+
+<script>
 // Active nav link tracking
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
