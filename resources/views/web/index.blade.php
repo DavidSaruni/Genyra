@@ -1231,42 +1231,48 @@
                     <h3 class="text-3xl font-bold mb-2 text-gray-700">Send us a Message</h3>
                     <p class="text-gray-600 mb-8">Fill out the form below and we'll get back to you as soon as possible</p>
                     
-                    <form class="space-y-6">
+                    <form class="space-y-6" method="post" action="{{ route('contact.submit') }}">
+                        @csrf
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2">Your Name *</label>
-                            <input type="text" required 
+                            <input type="text" name="name"  
+                            value="{{ old('name') }}"
                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                                    placeholder="John Doe">
                         </div>
                         
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
-                            <input type="email" required 
+                            <input type="email" name="email"  
+                            value="{{ old('email') }}"
                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                                    placeholder="john@example.com">
                         </div>
                         
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
-                            <input type="tel" 
+                            <input type="tel" name="phone"
+                            value="{{ old('phone') }}"
                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                                    placeholder="+254 700 000 000">
                         </div>
                         
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2">Subject</label>
-                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
-                                <option>General Inquiry</option>
-                                <option>Request Quotation</option>
-                                <option>Technical Support</option>
-                                <option>Calibration Services</option>
-                                <option>Partnership Opportunity</option>
+                            <select name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
+                                <option value="">Select Subject</option>
+                                <option value="General Inquiry" {{ old('subject') == 'General Inquiry' ? 'selected' : '' }}>General Inquiry</option>
+                                <option value="Request Quotation" {{ old('subject') == 'Request Quotation' ? 'selected' : '' }}>Request Quotation</option>
+                                <option value="Technical Support" {{ old('subject') == 'Technical Support' ? 'selected' : '' }}>Technical Support</option>
+                                <option value="Calibration Services" {{ old('subject') == 'Calibration Services' ? 'selected' : '' }}>Calibration Services</option>
+                                <option value="Partnership Opportunity" {{ old('subject') == 'Partnership Opportunity' ? 'selected' : '' }}>Partnership Opportunity</option>
                             </select>
                         </div>
                         
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2">Your Message *</label>
-                            <textarea rows="5" required 
+                            <textarea rows="5" name="message" 
+                            value="{{ old('message') }}"
                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
                                       placeholder="Tell us how we can help you..."></textarea>
                         </div>
