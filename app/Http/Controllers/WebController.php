@@ -27,10 +27,8 @@ class WebController extends Controller
         ]);
         
         if($validated){
-            // try to send email to admin
             try{
-                // i want to send to two emails,to two department emails
-                Mail::to(['laytonmatheka@gmail.com','executivedirector@genyragroup.com','info@genyragroup.com'])->send(new ContactMail($validated));
+                Mail::to(['executivedirector@genyragroup.com','info@genyragroup.com'])->send(new ContactMail($validated));
                 Contact::create($validated);
             }
             catch(\Exception $e){
