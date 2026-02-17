@@ -17,7 +17,7 @@
     <div class="max-w-7xl mx-auto px-1 sm:px-6 lg:px-8 py-2 md:py-0">
         <div class="flex justify-between items-center h-20">
             <!-- Logo -->
-            <div class="w-64 h-64 rounded-full overflow-hidden">
+            <div class="w-40 h-40 md:w-64 md:h-64 rounded-full overflow-hidden flex-shrink-0">
                 <a href="{{ route('home') }}">
                     <img 
                     src="{{ asset('images/logo.jpeg') }}" 

@@ -61,11 +61,8 @@
                       ENABLING HEALTHCARE INNOVATION
                   </div>
                   <h1 class="text-3xl md:text-3xl md:text-4xl font-bold text-gray-700 mb-6 leading-tight">
-                        <span class="text-[#22235a]">Building Solutions</span> 
-                        <span class="text-white">•</span>
-                        <span class="text-gray-700">Transforming</span>
-                        <span class="text-white">•</span>
-                        <span class="text-cyan-400">Healthcare</span>
+                        <span class="text-[#22235a] font-extrabold">Building Solutions</span> <br>
+                        <span class="text-gray-700 italic text-xl">Transforming Healthcare</span>
                   </h1>
                   <a href="#about" class="btn-primary">
                       Learn more
@@ -80,7 +77,7 @@
         <!-- Optional Header -->
         <div class="text-center mb-12">
             <h2 class="text-3xl md:text-3xl md:text-4xl font-bold text-gray-700 mb-4 text-left md:text-center">Our Solutions</h2>
-            <p class="text-md text-gray-600 text-left md:text-center">We Design & Deploy Solutions That Shape Healthcare In East Africa and Beyond</p>
+            <p class="text-md text-gray-600 text-left md:text-center">We design, deploy & maintain solutions that shape healthcare in East Africa and beyond</p>
         </div>
 
         <!-- Icon Grid - 3 on mobile, 5 on tablet, 10 on desktop -->
