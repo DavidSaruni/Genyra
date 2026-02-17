@@ -29,7 +29,7 @@ class ContactMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Contact Mail',
+            subject: $this->content['subject'] ?? 'Enquiry from website contact form',
         );
     }
 
@@ -45,7 +45,7 @@ class ContactMail extends Mailable
 
 
     function build(){
-        return $this->subject('New Contact Message')
+        return $this->subject($this->content['subject'] ?? 'Enquiry from website contact form')
         ->replyTo($this->content['email'], $this->content['name'])
         ->markdown('mails.contact', [
             'contact' => $this->content
