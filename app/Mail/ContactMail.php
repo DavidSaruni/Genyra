@@ -47,7 +47,7 @@ class ContactMail extends Mailable
     function build(){
         return $this->subject($this->content['subject'] ?? 'Enquiry from website contact form')
         ->replyTo($this->content['email'], $this->content['name'])
-        ->markdown('mails.contact', [
+        ->view('mails.contact', [
             'contact' => $this->content
         ]);
     }

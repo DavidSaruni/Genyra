@@ -562,11 +562,52 @@
         </div>
         
         <!-- Discover More Button -->
-        <div class="text-center mt-12">
-            <a href="{{ route('projects') }}" class="inline-block bg-blue-600 text-white px-10 py-4 rounded font-semibold text-base hover:bg-blue-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                Discover more
-            </a>
+        <section class="pb-4 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="border-t border-gray-200 mb-16"></div>
+
+            <div class="flex flex-col items-center justify-center">
+
+                <!-- Load More Button -->
+                <a 
+                href="{{ route('projects') }}"
+                    id="loadMoreBtn"
+                    class="group relative flex items-center gap-4 border border-gray-900 px-12 py-5 text-sm font-semibold uppercase tracking-widest text-gray-900 hover:text-white transition-all duration-300 overflow-hidden">
+                    <span class="absolute inset-0 bg-gray-900 -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0"></span>
+                    <span class="relative z-10">Load More Projects</span>
+                    <svg class="relative z-10 w-5 h-5 transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+</a>
+
+                <!-- Loading Spinner -->
+                <div id="loadingSpinner" class="hidden mt-8 flex-col items-center gap-4">
+                    <div class="w-8 h-8 border-2 border-gray-200 border-t-[#1BA0D8] rounded-full animate-spin"></div>
+                    <p class="text-sm text-gray-400 uppercase tracking-widest">Loading projects...</p>
+                </div>
+
+                <!-- All Loaded Message -->
+                <div id="allLoadedMsg" class="hidden mt-8 flex-col items-center gap-3">
+                    <div class="w-12 h-12 bg-[#1BA0D8] rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                    <p class="text-sm text-gray-500 uppercase tracking-widest">All Projects Loaded</p>
+                </div>
+
+                <!-- View All Link -->
+                <a href="{{ route('projects') }}" class="mt-8 flex items-center gap-2 text-sm text-gray-400 hover:text-[#1BA0D8] transition-colors duration-300 uppercase tracking-widest">
+                    <span>View All Projects</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+
+            </div>
         </div>
+    </section>
     </div>
 </section>
 
