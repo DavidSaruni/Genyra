@@ -189,7 +189,7 @@
                         <!-- Single Large Notice Poster -->
                         <div class="md:p-6">
                             <div class="group cursor-pointer">
-                                <div class="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                                <div class="relative overflow-hidden md:rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                                     <div class="relative w-full aspect-[3/4]">
                                         <img src="{{ asset('images/genyraposter.png') }}"
                                             alt="Notice Poster"
