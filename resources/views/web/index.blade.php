@@ -72,7 +72,154 @@
       </div>
   </section>
 
-<section id="solutions" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+
+  <!-- News & Updates and Noticeboard Section -->
+<section id="news-notices" class="pt-24 mb-16 bg-gray-50 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-3 gap-8">
+            
+            <!-- News & Updates Column (2 columns) -->
+            <div class="lg:col-span-2">
+                <div class="mb-8">
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <div class="category-label mb-2">STAY INFORMED</div>
+                            <h2 class="text-3xl md:text-4xl font-bold text-gray-700">News & Updates</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Large News Item (Full 2 columns) -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 mb-8">
+                    <div class="grid md:grid-cols-2 gap-0">
+                        <!-- Image Section -->
+                        <div class="relative h-80 md:h-auto overflow-hidden">
+                            <img src="https://images.pexels.com/photos/3938022/pexels-photo-3938022.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                                 alt="News" 
+                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+                                 onerror="this.src='https://via.placeholder.com/800x400/1e40af/ffffff?text=News'">
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-blue-600 text-white px-3 py-1 rounded text-xs font-bold uppercase">
+                                    News & Updates
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <!-- Content Section -->
+                        <div class="p-8 flex flex-col justify-center">
+                            <div class="flex items-center space-x-3 mb-3">
+                                <span class="text-xs text-gray-500">February 17, 2026</span>
+                                <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+                                <span class="text-xs text-gray-500">Genyra Group</span>
+                            </div>
+                            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight hover:text-blue-700 transition-colors">
+                                New Laboratory Equipment Shipment Arrives at County Hospital
+                            </h3>
+                            <p class="text-gray-600 text-base mb-6 leading-relaxed">
+                                Genyra Group successfully deployed state-of-the-art laboratory equipment to enhance diagnostic capabilities and improve patient care outcomes across the region.
+                            </p>
+                            <a href="#" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 w-fit">
+                                Read more
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+        <!-- Discover More Button -->
+    <section class="pb-4 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="border-t border-gray-200 mb-16"></div>
+
+            <div class="flex flex-col items-center justify-center">
+
+                <!-- Load More Button -->
+                <a 
+                href=""
+                    id="loadMoreBtn"
+                    class="group relative flex items-center gap-4 border border-blue-900 px-6 md:px-12 py-5 text-sm font-semibold uppercase tracking-widest text-gray-900 hover:text-white transition-all duration-300 overflow-hidden">
+                    <span class="absolute inset-0 bg-blue-900 -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0"></span>
+                    <span class="relative z-10">Load More News</span>
+                    <svg class="relative z-10 w-5 h-5 transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+
+                <!-- Loading Spinner -->
+                <div id="loadingSpinner" class="hidden mt-8 flex-col items-center gap-4">
+                    <div class="w-8 h-8 border-2 border-gray-200 border-t-[#1BA0D8] rounded-full animate-spin"></div>
+                    <p class="text-sm text-gray-400 uppercase tracking-widest">Loading news...</p>
+                </div>
+
+                <!-- All Loaded Message -->
+                <div id="allLoadedMsg" class="hidden mt-8 flex-col items-center gap-3">
+                    <div class="w-12 h-12 bg-[#1BA0D8] rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                    <p class="text-sm text-gray-500 uppercase tracking-widest">All News Loaded</p>
+                </div>
+
+                <!-- View All Link -->
+                <a href="" class="mt-8 flex items-center gap-2 text-sm text-gray-400 hover:text-[#1BA0D8] transition-colors duration-300 uppercase tracking-widest">
+                    <span>View All News</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+
+            </div>
+        </div>
+    </section>
+            </div>
+
+            <!-- genyra Notice Board Column (1 column) -->
+            <div>
+                <div class="sticky top-8">
+                    <div class="bg-gradient-to-br from-blue-500 to-blue-500 text-white rounded-t-xl px-6 py-2 shadow-lg">
+                        <h2 class="text-2xl font-bold mb-1">genyra Group Notice Board</h2>
+                        <p class="text-blue-100 text-sm">Important announcements & updates</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-b-xl shadow-lg overflow-hidden">
+                        <!-- Single Large Notice Poster -->
+                        <div class="p-6">
+                            <div class="group cursor-pointer">
+                                <div class="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                                    <div class="relative w-full aspect-[3/4]">
+                                        <img src="{{ asset('images/genyraposter.png') }}"
+                                            alt="Notice Poster"
+                                            class="absolute inset-0 w-full h-full object-cover">
+                                    </div>
+
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <div class="absolute bottom-0 left-0 right-0 p-4">
+                                            <p class="text-white text-sm font-semibold">Click to view details</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- View All Notices Button -->
+                        <div class="p-6 bg-gray-50 border-t border-gray-200">
+                            <a href="/notices" class="block w-full text-center px-4 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl">
+                                View All Notices
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="solutions" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
     <div class="max-w-7xl mx-auto">
         <!-- Optional Header -->
         <div class="text-center mb-12">
@@ -293,7 +440,7 @@
 <section id="about" class="py-12 px-4 sm:px-6 lg:px-8 bg-white">
     <div class="max-w-7xl mx-auto">
         <div class="grid md:grid-cols-2 gap-16 items-stretch">
-            <div class="flex flex-col justify-center">
+            <div class="flex flex-col">
                 <div class="category-label mb-4">ABOUT GENYRA GROUP</div>
                 <h2 class="text-3xl md:text-5xl font-bold mb-6 text-gray-700">
                     Leading Healthcare Solutions Provider in East Africa
@@ -311,9 +458,9 @@
             
             <!-- Image with Overlay -->
             <div class="relative h-full min-h-[500px] rounded-lg overflow-hidden group">
-                <img src="https://images.pexels.com/photos/3938023/pexels-photo-3938023.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+                <img src="{{ asset('images/about.jpeg') }}" 
                      alt="Laboratory" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                     class="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105" 
                      onerror="this.src='https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=1200'">
                 
                 <!-- Gradient Overlay -->
@@ -562,7 +709,7 @@
         </div>
         
         <!-- Discover More Button -->
-        <section class="pb-4 px-4 sm:px-6 lg:px-8 bg-white">
+    <section class="pb-4 px-4 sm:px-6 lg:px-8 bg-white">
         <div class="max-w-7xl mx-auto">
             
             <div class="border-t border-gray-200 mb-16"></div>
