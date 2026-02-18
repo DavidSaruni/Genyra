@@ -138,7 +138,7 @@
 
                 <!-- Load More Button -->
                 <a 
-                href=""
+                href="{{ route('news') }}"
                     id="loadMoreBtn"
                     class="group relative flex items-center gap-4 border border-blue-900 px-6 md:px-12 py-5 text-sm font-semibold uppercase tracking-widest text-gray-900 hover:text-white transition-all duration-300 overflow-hidden">
                     <span class="absolute inset-0 bg-blue-900 -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0"></span>
@@ -165,7 +165,7 @@
                 </div>
 
                 <!-- View All Link -->
-                <a href="" class="mt-8 flex items-center gap-2 text-sm text-gray-400 hover:text-[#1BA0D8] transition-colors duration-300 uppercase tracking-widest">
+                <a href="{{ route('news') }}" class="mt-8 flex items-center gap-2 text-sm text-gray-400 hover:text-[#1BA0D8] transition-colors duration-300 uppercase tracking-widest">
                     <span>View All News</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -187,7 +187,7 @@
                     
                     <div class="bg-white rounded-b-xl shadow-lg overflow-hidden">
                         <!-- Single Large Notice Poster -->
-                        <div class="md:p-6">
+                        <div class="md:p-4">
                             <div class="group cursor-pointer">
                                 <div class="relative overflow-hidden md:rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                                     <div class="relative w-full aspect-[3/4]">

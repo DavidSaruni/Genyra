@@ -46,4 +46,9 @@ class WebController extends Controller
     public function projects(){
         return view('web.projects');
     }
+
+    public function news(){
+        return view('web.news');
+    }
+    
 }
