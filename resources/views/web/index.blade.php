@@ -112,10 +112,10 @@
                                 <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
                                 <span class="text-xs text-gray-500">Genyra Group</span>
                             </div>
-                            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight hover:text-blue-700 transition-colors">
+                            <h3 class="text-xl md:text-3xl font-bold text-gray-700 mb-4 leading-tight hover:text-blue-700 transition-colors">
                                 New Laboratory Equipment Shipment Arrives at County Hospital
                             </h3>
-                            <p class="text-gray-600 text-base mb-6 leading-relaxed">
+                            <p class="text-gray-600 text-sm mb-6 leading-relaxed">
                                 Genyra Group successfully deployed state-of-the-art laboratory equipment to enhance diagnostic capabilities and improve patient care outcomes across the region.
                             </p>
                             <a href="#" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 w-fit">
