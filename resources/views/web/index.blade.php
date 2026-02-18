@@ -568,7 +568,7 @@
                       <div class="category-label mb-3">Medical Technology & Device Solutions</div>
                       <h3 class="text-2xl font-bold mb-4 text-gray-700">MedTech Solutions</h3>
                       <p class="text-gray-600 mb-6">
-                          Genyra MedTech delivers end-to-end medical technology solutions — from device selection and procurement to deployment, user training, and post-market support. We work with hospitals, clinics, and health programmes to ensure the right technology is in the right hands, functioning optimally, and aligned with clinical and operational needs.
+                          Genyra MedTech delivers end-to-end medical technology solutions from device selection and procurement to deployment, user training, and post-market support. We work with hospitals, clinics, and health programmes to ensure the right technology is in the right hands, functioning optimally, and aligned with clinical and operational needs.
                       </p>
                       <ul class="space-y-4">
                     <li class="flex items-start">
@@ -642,7 +642,7 @@
                       <div class="category-label mb-3">Precision Measurement & Instrument Assurance</div>
                       <h3 class="text-2xl font-bold mb-4 text-gray-700">Metrology & Calibration Services</h3>
                       <p class="text-gray-600 mb-6">
-                          Genyra Metrology & Calibration Services is built on a fundamental truth: accurate measurement is the foundation of safe and effective healthcare. We provide professional calibration, verification, and measurement assurance services for medical, laboratory, and industrial instruments — ensuring that every reading is trustworthy, traceable, and compliant.
+                          Genyra Metrology & Calibration Services is built on a fundamental truth: accurate measurement is the foundation of safe and effective healthcare. We provide professional calibration, verification, and measurement assurance services for medical, laboratory, and industrial instruments ensuring that every reading is trustworthy, traceable, and compliant.
                       </p>
                       <ul class="space-y-4">
                     <li class="flex items-start">
