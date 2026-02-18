@@ -37,11 +37,13 @@
                         </svg>
                     </div>
                 </div>
-                <a href="#solutions" class="nav-link">Solutions</a>
-                <a href="#why-choose-us" class="nav-link">Why Choose Us</a>
-                <a href="#business-lines" class="nav-link">Business Units</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#our-clients" class="nav-link">Our Clients</a>
+                <a href="{{ request()->is('/') ? '#solutions' : url('/#solutions') }}" class="nav-link">
+                    Solutions
+                </a>
+                <a href="{{ request()->is('/') ? '#why-choose-us' : url('/#why-choose-us') }}" class="nav-link">Why Choose Us</a>
+                <a href="{{ request()->is('/') ? '#business-lines' : url('/#business-lines') }}" class="nav-link">Business Units</a>
+                <a href="{{ request()->is('/') ? '#projects' : url('/#projects') }}" class="nav-link">Projects</a>
+                <a href="{{ request()->is('/') ? '#our-clients' : url('/#our-clients') }}" class="nav-link">Our Clients</a>
             </div>
             
             <!-- Right side -->
@@ -146,12 +148,12 @@
             </button>
 
             <!-- Other Menu Items -->
-            <a href="#solutions" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Solutions</a>
-            <a href="#why-choose-us" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Why Choose Us</a>
-            <a href="#business-lines" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Business Units</a>
-            <a href="#projects" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Projects</a>
-            <a href="#our-clients" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Our Clients</a>
-            <a href="#contact" class="block px-4 py-4 text-blue-600 font-medium hover:bg-blue-50 rounded-lg transition-colors">Contact</a>
+            <a href="{{ request()->is('/') ? '#solutions' : url('/#solutions') }}" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Solutions</a>
+            <a href="{{ request()->is('/') ? '#why-choose-us' : url('/#why-choose-us') }}" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Why Choose Us</a>
+            <a href="{{ request()->is('/') ? '#business-lines' : url('/#business-lines') }}" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Business Units</a>
+            <a href="{{ request()->is('/') ? '#projects' : url('/#projects') }}" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Projects</a>
+            <a href="{{ request()->is('/') ? '#our-clients' : url('/#our-clients') }}" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Our Clients</a>
+            <a href="{{ request()->is('/') ? '#contact' : url('/#contact') }}" class="block px-4 py-4 text-blue-600 font-medium hover:bg-blue-50 rounded-lg transition-colors">Contact</a>
         </div>
     </div>
 

@@ -50,5 +50,9 @@ class WebController extends Controller
     public function news(){
         return view('web.news');
     }
-    
+
+    public function newsReadMore(){
+        return view('web.newsReadMore');
+    }
+
 }
