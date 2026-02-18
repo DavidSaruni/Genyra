@@ -187,7 +187,7 @@
                     
                     <div class="bg-white rounded-b-xl shadow-lg overflow-hidden">
                         <!-- Single Large Notice Poster -->
-                        <div class="p-6">
+                        <div class="md:p-6">
                             <div class="group cursor-pointer">
                                 <div class="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                                     <div class="relative w-full aspect-[3/4]">
