@@ -528,17 +528,36 @@
               <div class="bg-white rounded-lg overflow-hidden shadow-lg card-hover">
                   <img src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=800" alt="BioSciences" class="w-full h-64 object-cover" onerror="this.src='https://via.placeholder.com/800x400/3b82f6/ffffff?text=BioSciences'">
                   <div class="p-8">
-                      <div class="category-label mb-3">DISCOVERY • DIAGNOSTICS • TRANSLATION</div>
+                      <div class="category-label mb-3">Life Sciences Research & Applied Biology</div>
                       <h3 class="text-2xl font-bold mb-4 text-gray-700">BioSciences</h3>
                       <p class="text-gray-600 mb-6">
-                          Advanced laboratory testing, research sample analysis, translational research support, and clinical trials.
+                          Genyra BioSciences is where discovery meets application. We bridge the gap between fundamental biological research and real-world health outcomes advancing knowledge in molecular biology, microbiology, genomics, and applied life sciences. Our work underpins the science behind better diagnostics, safer products, and more effective therapies.
                       </p>
-                      <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center">
-                          Learn more
-                          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                          </svg>
-                      </a>
+                      <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">Applied biological research & laboratory sciences</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">Microbiology, genomics & molecular diagnostics support</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">Biosafety & biosecurity advisory</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">Research design, data analysis & scientific consulting</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">Capacity building & scientific training programmes</span>
+                    </li>
+                      </ul>
+                        <a  class="text-sm font-semibold border border-blue-800 bg-blue-900 text-white py-4 px-6 inline-flex items-center mt-6 rounded-sm">
+                            Science that translates into health impact
+                        </a>
                   </div>
               </div>
 
@@ -546,17 +565,36 @@
               <div class="bg-white rounded-lg overflow-hidden shadow-lg card-hover">
                   <img src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="MedTech" class="w-full h-64 object-cover" onerror="this.src='https://via.placeholder.com/800x400/10b981/ffffff?text=MedTech'">
                   <div class="p-8">
-                      <div class="category-label mb-3">SMART TECHNOLOGIES FOR BETTER HEALTH</div>
+                      <div class="category-label mb-3">Medical Technology & Device Solutions</div>
                       <h3 class="text-2xl font-bold mb-4 text-gray-700">MedTech Solutions</h3>
                       <p class="text-gray-600 mb-6">
-                          Diagnostic equipment, point-of-care testing, digital health tools, and comprehensive medical supplies.
+                          Genyra MedTech delivers end-to-end medical technology solutions — from device selection and procurement to deployment, user training, and post-market support. We work with hospitals, clinics, and health programmes to ensure the right technology is in the right hands, functioning optimally, and aligned with clinical and operational needs.
                       </p>
-                      <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center">
-                          Learn more
-                          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                          </svg>
-                      </a>
+                      <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">Medical device supply, sourcing & procurement advisory</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">Technology needs assessment & health technology evaluation</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">Biomedical equipment management & lifecycle support</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">Installation, commissioning & user training</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">Maintenance programme design & technical support</span>
+                    </li>
+                      </ul>
+                        <a  class="text-sm font-semibold border border-blue-800 bg-blue-900 text-white py-4 px-2 inline-flex items-center mt-6 rounded-sm">
+                            Technology that serves people, not just processes
+                        </a>
                   </div>
               </div>
 
@@ -564,17 +602,36 @@
               <div class="bg-white rounded-lg overflow-hidden shadow-lg card-hover">
                   <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Planning" class="w-full h-64 object-cover" onerror="this.src='https://via.placeholder.com/800x400/8b5cf6/ffffff?text=Health+Systems'">
                   <div class="p-8">
-                      <div class="category-label mb-3">RESILIENT COMPLIANT SYSTEMS</div>
+                      <div class="category-label mb-3">Strategic Planning · Quality Management Systems</div>
                       <h3 class="text-2xl font-bold mb-4 text-gray-700">Health Systems Planning & Advisory</h3>
                       <p class="text-gray-600 mb-6">
-                          Strategic planning, quality management systems, laboratory accreditation, and health policy advisory.
+                          Genyra Health Systems Planning & Advisory empowers health institutions and organisations with the strategic intelligence and quality frameworks they need to perform at their best. We partner with governments, health authorities, NGOs, and private sector actors to design robust health systems, develop strategic plans, and embed quality cultures that endure.
                       </p>
-                      <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center">
-                          Learn more
-                          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                          </svg>
-                      </a>
+                      <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">Health sector strategic planning & institutional strengthening</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">Quality Management Systems (QMS) design & implementation</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">ISO standards alignment & accreditation readiness</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">Health policy advisory & programme design</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">Monitoring, evaluation & performance improvement frameworks</span>
+                    </li>
+                      </ul>
+                        <a  class="text-sm font-semibold border border-blue-800 bg-blue-900 text-white py-4 px-2 inline-flex items-center mt-6 rounded-sm">
+                            Governance that makes health systems work
+                        </a>
                   </div>
               </div>
 
@@ -582,17 +639,36 @@
               <div class="bg-white rounded-lg overflow-hidden shadow-lg card-hover">
                   <img src="https://images.pexels.com/photos/3938022/pexels-photo-3938022.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Calibration" class="w-full h-64 object-cover" onerror="this.src='https://via.placeholder.com/800x400/f97316/ffffff?text=Metrology'">
                   <div class="p-8">
-                      <div class="category-label mb-3">PRECISION YOU CAN TRUST</div>
+                      <div class="category-label mb-3">Precision Measurement & Instrument Assurance</div>
                       <h3 class="text-2xl font-bold mb-4 text-gray-700">Metrology & Calibration Services</h3>
                       <p class="text-gray-600 mb-6">
-                          ISO/IEC 17025 accredited calibration, measurement verification, and equipment performance audits.
+                          Genyra Metrology & Calibration Services is built on a fundamental truth: accurate measurement is the foundation of safe and effective healthcare. We provide professional calibration, verification, and measurement assurance services for medical, laboratory, and industrial instruments — ensuring that every reading is trustworthy, traceable, and compliant.
                       </p>
-                      <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center">
-                          Learn more
-                          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                          </svg>
-                      </a>
+                      <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">Calibration of medical, laboratory & industrial instruments</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">Measurement traceability to national & international standards</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">Preventive maintenance & performance verification</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">Calibration programme management & scheduling</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">Compliance with ISO 17025 & regulatory requirements</span>
+                    </li>
+                      </ul>
+                        <a  class="text-sm font-semibold border border-blue-800 bg-blue-900 text-white py-4 px-2 inline-flex items-center mt-6 rounded-sm">
+                            Precision you can trust every time
+                        </a>
                   </div>
               </div>
           </div>
