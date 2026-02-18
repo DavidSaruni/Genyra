@@ -371,7 +371,7 @@
           <div class="text-center mb-16">
               <div class="category-label mb-4 text-left md:text-center">OUR EXPERTISE</div>
               <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-700 text-left md:text-center" >Strategic Business Units</h2>
-              <p class="text-xl text-gray-600 max-w-3xl mx-auto text-left md:text-center">
+              <p class="text-md text-gray-600 text-left md:text-center">
                   At genyra, we bring together a diverse portfolio of businesses to create forward-looking solutions that strengthen healthcare delivery, improve outcomes, and drive sustainable system performance.
               </p>
           </div>

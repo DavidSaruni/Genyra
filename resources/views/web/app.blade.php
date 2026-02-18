@@ -62,6 +62,7 @@
     box-shadow: none;
 }
 
+
 #clientsGrid .client-card:hover {
     filter: blur(0px) brightness(1.05);
     z-index: 10;
