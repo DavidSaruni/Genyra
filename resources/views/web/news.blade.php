@@ -350,7 +350,7 @@
         {{-- Card 1 --}}
         <div class="grid grid-cols-1 sm:grid-cols-[220px_1fr] gap-0 bg-white rounded overflow-hidden shadow-[0_1px_4px_rgba(0,0,0,0.07)] transition-all duration-300 border-l-3 border-l-transparent hover:shadow-[0_8px_28px_rgba(30,58,110,0.13)] hover:-translate-y-0.5 hover:border-l-[#00a0c6] animate-fade-up animate-delay-1">
           <div class="overflow-hidden">
-            <img src="https://images.pexels.com/photos/3938022/pexels-photo-3938022.jpeg?auto=compress&cs=tinysrgb&w=440" alt="Laboratory Equipment" class="w-full h-40 object-cover block transition-transform duration-400 hover:scale-105" />
+            <img src="https://images.pexels.com/photos/3938022/pexels-photo-3938022.jpeg?auto=compress&cs=tinysrgb&w=440" alt="Laboratory Equipment" class="w-full h-64 md:h-40 object-cover block transition-transform duration-400 hover:scale-105" />
           </div>
           <div class="p-5 flex flex-col justify-between">
             <div>
@@ -376,7 +376,7 @@
         {{-- Card 2 --}}
         <div class="grid grid-cols-1 sm:grid-cols-[220px_1fr] gap-0 bg-white rounded overflow-hidden shadow-[0_1px_4px_rgba(0,0,0,0.07)] transition-all duration-300 border-l-3 border-l-transparent hover:shadow-[0_8px_28px_rgba(30,58,110,0.13)] hover:-translate-y-0.5 hover:border-l-[#00a0c6] animate-fade-up animate-delay-2">
           <div class="overflow-hidden">
-            <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=440" alt="Digital Health" class="w-full h-40 object-cover block transition-transform duration-400 hover:scale-105" />
+            <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=440" alt="Digital Health" class="w-full h-64 md:h-40 object-cover block transition-transform duration-400 hover:scale-105" />
           </div>
           <div class="p-5 flex flex-col justify-between">
             <div>
@@ -402,7 +402,7 @@
         {{-- Card 3 --}}
         <div class="grid grid-cols-1 sm:grid-cols-[220px_1fr] gap-0 bg-white rounded overflow-hidden shadow-[0_1px_4px_rgba(0,0,0,0.07)] transition-all duration-300 border-l-3 border-l-transparent hover:shadow-[0_8px_28px_rgba(30,58,110,0.13)] hover:-translate-y-0.5 hover:border-l-[#00a0c6] animate-fade-up animate-delay-3">
           <div class="overflow-hidden">
-            <img src="https://images.pexels.com/photos/4225880/pexels-photo-4225880.jpeg?auto=compress&cs=tinysrgb&w=440" alt="Calibration" class="w-full h-40 object-cover block transition-transform duration-400 hover:scale-105" />
+            <img src="https://images.pexels.com/photos/4225880/pexels-photo-4225880.jpeg?auto=compress&cs=tinysrgb&w=440" alt="Calibration" class="w-full h-64 md:h-40 object-cover block transition-transform duration-400 hover:scale-105" />
           </div>
           <div class="p-5 flex flex-col justify-between">
             <div>
@@ -428,7 +428,7 @@
         {{-- Card 4 --}}
         <div class="grid grid-cols-1 sm:grid-cols-[220px_1fr] gap-0 bg-white rounded overflow-hidden shadow-[0_1px_4px_rgba(0,0,0,0.07)] transition-all duration-300 border-l-3 border-l-transparent hover:shadow-[0_8px_28px_rgba(30,58,110,0.13)] hover:-translate-y-0.5 hover:border-l-[#00a0c6] animate-fade-up animate-delay-4">
           <div class="overflow-hidden">
-            <img src="https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=440" alt="ISO Certification" class="w-full h-40 object-cover block transition-transform duration-400 hover:scale-105" />
+            <img src="https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=440" alt="ISO Certification" class="w-full h-64 md:h-40 object-cover block transition-transform duration-400 hover:scale-105" />
           </div>
           <div class="p-5 flex flex-col justify-between">
             <div>
@@ -454,7 +454,7 @@
         {{-- Card 5 --}}
         <div class="grid grid-cols-1 sm:grid-cols-[220px_1fr] gap-0 bg-white rounded overflow-hidden shadow-[0_1px_4px_rgba(0,0,0,0.07)] transition-all duration-300 border-l-3 border-l-transparent hover:shadow-[0_8px_28px_rgba(30,58,110,0.13)] hover:-translate-y-0.5 hover:border-l-[#00a0c6] animate-fade-up animate-delay-5">
           <div class="overflow-hidden">
-            <img src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=440" alt="BioSciences" class="w-full h-40 object-cover block transition-transform duration-400 hover:scale-105" />
+            <img src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=440" alt="BioSciences" class="w-full h-64 md:h-40 object-cover block transition-transform duration-400 hover:scale-105" />
           </div>
           <div class="p-5 flex flex-col justify-between">
             <div>
@@ -480,7 +480,7 @@
         {{-- Card 6 --}}
         <div class="grid grid-cols-1 sm:grid-cols-[220px_1fr] gap-0 bg-white rounded overflow-hidden shadow-[0_1px_4px_rgba(0,0,0,0.07)] transition-all duration-300 border-l-3 border-l-transparent hover:shadow-[0_8px_28px_rgba(30,58,110,0.13)] hover:-translate-y-0.5 hover:border-l-[#00a0c6] animate-fade-up animate-delay-6">
           <div class="overflow-hidden">
-            <img src="https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=440" alt="Lab Setup" class="w-full h-40 object-cover block transition-transform duration-400 hover:scale-105" />
+            <img src="https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=440" alt="Lab Setup" class="w-full h-64 md:h-40 object-cover block transition-transform duration-400 hover:scale-105" />
           </div>
           <div class="p-5 flex flex-col justify-between">
             <div>
