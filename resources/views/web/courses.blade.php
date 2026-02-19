@@ -106,9 +106,9 @@
           <div class="category-label mb-3">Who should attend</div>
           <div class="text-[12px] leading-[1.55] text-[#1a1510]">Nurses, clinical officers, medical laboratory technicians, public health officers, and healthcare workers seeking foundational microbiology literacy.</div>
           <div class="flex flex-wrap gap-1.5 mt-3.5">
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">3 Days</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">Beginner</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">Lab + Theory</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">3 Days</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">Beginner</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">Lab + Theory</span>
           </div>
         </div>
       </div>
@@ -125,9 +125,9 @@
           <div class="category-label mb-3">Who should attend</div>
           <div class="text-[12px] leading-[1.55] text-[#1a1510]">Laboratory scientists, research assistants, environmental health officers, hospital infection control staff, and biosafety officers.</div>
           <div class="flex flex-wrap gap-1.5 mt-3.5">
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">2 Days</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">All Levels</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">Practical</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">2 Days</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">All Levels</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">Practical</span>
           </div>
         </div>
       </div>
@@ -144,9 +144,9 @@
           <div class="category-label mb-3">Who should attend</div>
           <div class="text-[12px] leading-[1.55] text-[#1a1510]">Laboratory scientists, clinicians, public health specialists, and researchers with at least a basic science background interested in molecular tools.</div>
           <div class="flex flex-wrap gap-1.5 mt-3.5">
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">4 Days</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">Intermediate</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">Theory + Demo</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">4 Days</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">Intermediate</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">Theory + Demo</span>
           </div>
         </div>
       </div>
@@ -163,9 +163,9 @@
           <div class="category-label mb-3">Who should attend</div>
           <div class="text-[12px] leading-[1.55] text-[#1a1510]">Health researchers, postgraduate students, clinical trials staff, programme evaluators, and anyone initiating or managing scientific studies.</div>
           <div class="flex flex-wrap gap-1.5 mt-3.5">
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">5 Days</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">Intermediate</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">Workshops</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">5 Days</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">Intermediate</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">Workshops</span>
           </div>
         </div>
       </div>
@@ -182,9 +182,9 @@
           <div class="category-label mb-3">Who should attend</div>
           <div class="text-[12px] leading-[1.55] text-[#1a1510]">Public health officers, veterinarians, environmental scientists, epidemiologists, and policymakers in health, agriculture, and environment sectors.</div>
           <div class="flex flex-wrap gap-1.5 mt-3.5">
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">3 Days</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">All Levels</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">Multi-Sector</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">3 Days</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">All Levels</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">Multi-Sector</span>
           </div>
         </div>
       </div>
@@ -216,9 +216,9 @@
           <div class="category-label mb-3">Who should attend</div>
           <div class="text-[12px] leading-[1.55] text-[#1a1510]">Biomedical engineers, hospital administrators, health facility managers, procurement officers, and clinical engineers at all career levels.</div>
           <div class="flex flex-wrap gap-1.5 mt-3.5">
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">4 Days</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Foundational</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Practical Tools</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">4 Days</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Foundational</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Practical Tools</span>
           </div>
         </div>
       </div>
@@ -235,9 +235,9 @@
           <div class="category-label mb-3">Who should attend</div>
           <div class="text-[12px] leading-[1.55] text-[#1a1510]">Regulatory affairs professionals, device manufacturers, procurement specialists, quality assurance staff, and health technology assessors.</div>
           <div class="flex flex-wrap gap-1.5 mt-3.5">
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">3 Days</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Intermediate</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Regulatory</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">3 Days</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Intermediate</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Regulatory</span>
           </div>
         </div>
       </div>
@@ -254,9 +254,9 @@
           <div class="category-label mb-3">Who should attend</div>
           <div class="text-[12px] leading-[1.55] text-[#1a1510]">Hospital procurement teams, health economists, clinical engineers, health ministry officials, and insurance/reimbursement professionals.</div>
           <div class="flex flex-wrap gap-1.5 mt-3.5">
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">3 Days</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Intermediate</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Decision-Making</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">3 Days</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Intermediate</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Decision-Making</span>
           </div>
         </div>
       </div>
@@ -273,9 +273,9 @@
           <div class="category-label mb-3">Who should attend</div>
           <div class="text-[12px] leading-[1.55] text-[#1a1510]">Clinicians, health informaticians, hospital managers, policymakers, and technology enthusiasts in health and life sciences.</div>
           <div class="flex flex-wrap gap-1.5 mt-3.5">
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">2 Days</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">All Levels</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Strategic</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">2 Days</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">All Levels</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Strategic</span>
           </div>
         </div>
       </div>
@@ -292,9 +292,9 @@
           <div class="category-label mb-3">Who should attend</div>
           <div class="text-[12px] leading-[1.55] text-[#1a1510]">Nurses, clinical officers, ICU/theatre technicians, ward managers, and any clinical staff who regularly operate electromedical equipment.</div>
           <div class="flex flex-wrap gap-1.5 mt-3.5">
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">2 Days</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Practical</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Patient Safety</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">2 Days</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Practical</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Patient Safety</span>
           </div>
         </div>
       </div>
@@ -326,9 +326,9 @@
           <div class="category-label mb-3">Who should attend</div>
           <div class="text-[12px] leading-[1.55] text-[#1a1510]">Senior health managers, medical superintendents, department heads, public health directors, NGO programme leads, and county/district health officers.</div>
           <div class="flex flex-wrap gap-1.5 mt-3.5">
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">5 Days</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">Leadership</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">Facilitated</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">5 Days</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">Leadership</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">Facilitated</span>
           </div>
         </div>
       </div>
@@ -345,9 +345,9 @@
           <div class="category-label mb-3">Who should attend</div>
           <div class="text-[12px] leading-[1.55] text-[#1a1510]">Quality managers, laboratory managers, hospital quality teams, health facility administrators, and compliance officers.</div>
           <div class="flex flex-wrap gap-1.5 mt-3.5">
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">5 Days</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">ISO-Aligned</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">Intermediate</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">5 Days</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">ISO-Aligned</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">Intermediate</span>
           </div>
         </div>
       </div>
@@ -364,9 +364,9 @@
           <div class="category-label mb-3">Who should attend</div>
           <div class="text-[12px] leading-[1.55] text-[#1a1510]">Quality officers, laboratory supervisors, compliance managers, and staff designated as internal auditors in health or laboratory facilities.</div>
           <div class="flex flex-wrap gap-1.5 mt-3.5">
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">3 Days</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">Practical</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">ISO 19011</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">3 Days</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">Practical</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">ISO 19011</span>
           </div>
         </div>
       </div>
@@ -383,9 +383,9 @@
           <div class="category-label mb-3">Who should attend</div>
           <div class="text-[12px] leading-[1.55] text-[#1a1510]">Clinical officers, nurses, hospital quality teams, risk managers, patient safety champions, and clinical governance staff.</div>
           <div class="flex flex-wrap gap-1.5 mt-3.5">
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">3 Days</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">WHO-Aligned</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">All Clinicals</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">3 Days</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">WHO-Aligned</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">All Clinicals</span>
           </div>
         </div>
       </div>
@@ -402,9 +402,9 @@
           <div class="category-label mb-3">Who should attend</div>
           <div class="text-[12px] leading-[1.55] text-[#1a1510]">Public health practitioners, health ministry officials, development partners, NGO health programme staff, and health system researchers.</div>
           <div class="flex flex-wrap gap-1.5 mt-3.5">
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">4 Days</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">WHO Framework</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">Applied</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">4 Days</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">WHO Framework</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">Applied</span>
           </div>
         </div>
       </div>
@@ -436,9 +436,9 @@
           <div class="category-label mb-3">Who should attend</div>
           <div class="text-[12px] leading-[1.55] text-[#1a1510]">Laboratory technicians, clinical engineers, quality officers, biomedical staff, and technicians encountering measurement and calibration tasks in their roles.</div>
           <div class="flex flex-wrap gap-1.5 mt-3.5">
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">2 Days</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">Foundational</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">Theory + Practice</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">2 Days</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">Foundational</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">Theory + Practice</span>
           </div>
         </div>
       </div>
@@ -455,9 +455,9 @@
           <div class="category-label mb-3">Who should attend</div>
           <div class="text-[12px] leading-[1.55] text-[#1a1510]">Biomedical engineers, clinical engineers, technical staff in medical device departments, and quality assurance personnel in healthcare facilities.</div>
           <div class="flex flex-wrap gap-1.5 mt-3.5">
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">4 Days</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">Hands-On</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">ISO 17025</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">4 Days</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">Hands-On</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">ISO 17025</span>
           </div>
         </div>
       </div>
@@ -474,9 +474,9 @@
           <div class="category-label mb-3">Who should attend</div>
           <div class="text-[12px] leading-[1.55] text-[#1a1510]">Laboratory scientists, quality managers in pharmaceutical or clinical labs, regulatory compliance staff, and validation engineers.</div>
           <div class="flex flex-wrap gap-1.5 mt-3.5">
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">3 Days</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">Intermediate</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">IQ/OQ/PQ</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">3 Days</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">Intermediate</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">IQ/OQ/PQ</span>
           </div>
         </div>
       </div>
@@ -493,9 +493,9 @@
           <div class="category-label mb-3">Who should attend</div>
           <div class="text-[12px] leading-[1.55] text-[#1a1510]">Calibration laboratory staff, metrologists, quality assurance professionals, and technical managers preparing for ISO 17025 accreditation.</div>
           <div class="flex flex-wrap gap-1.5 mt-3.5">
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">3 Days</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">GUM Framework</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">Advanced</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">3 Days</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">GUM Framework</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">Advanced</span>
           </div>
         </div>
       </div>
@@ -512,9 +512,9 @@
           <div class="category-label mb-3">Who should attend</div>
           <div class="text-[12px] leading-[1.55] text-[#1a1510]">Laboratory managers, technical managers, quality managers, and staff of calibration, testing, or measurement laboratories pursuing or maintaining ISO 17025 accreditation.</div>
           <div class="flex flex-wrap gap-1.5 mt-3.5">
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">5 Days</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">ISO 17025</span>
-            <span class="font-mono text-[9px] px-2 py-0.5 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">Accreditation</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">5 Days</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">ISO 17025</span>
+            <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">Accreditation</span>
           </div>
         </div>
       </div>
