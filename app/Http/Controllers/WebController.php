@@ -55,4 +55,9 @@ class WebController extends Controller
         return view('web.newsReadMore');
     }
 
+
+    public function courses(){
+        return view('web.courses');
+    }
+
 }
