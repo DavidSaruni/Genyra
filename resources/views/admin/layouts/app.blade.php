@@ -45,6 +45,12 @@
                 <a href="{{ route('admin.news.index') }}" class="block py-3 px-4 hover:bg-genyra-primary transition-colors {{ request()->routeIs('admin.news.*') ? 'bg-genyra-primary border-l-4 border-genyra-accent' : '' }}">
                     <i class="fas fa-newspaper mr-3"></i> News Management
                 </a>
+                <a href="{{ route('admin.contacts.index') }}" class="block py-3 px-4 hover:bg-genyra-primary transition-colors {{ request()->routeIs('admin.contacts.*') ? 'bg-genyra-primary border-l-4 border-genyra-accent' : '' }}">
+                    <i class="fas fa-envelope mr-3"></i> Contact Messages
+                    @if($unreadCount = \App\Models\Contact::whereNull('read_at')->count())
+                        <span class="ml-auto bg-red-500 text-white text-xs px-2 py-1 rounded-full">{{ $unreadCount }}</span>
+                    @endif
+                </a>
             </nav>
         </aside>
 

@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\WebController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -28,4 +29,7 @@ Route::post('/admin/logout', [AuthController::class, 'logout'])->name('admin.log
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/',[AdminController::class,'index'])->name( 'index');
     Route::resource('news', NewsController::class);
+    Route::resource('contacts', ContactController::class)->except(['create', 'store', 'update', 'edit']);
+    Route::get('contacts/{contact}/reply', [ContactController::class, 'reply'])->name('contacts.reply');
+    Route::post('contacts/{contact}/reply', [ContactController::class, 'sendReply'])->name('contacts.send-reply');
 });

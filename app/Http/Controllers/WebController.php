@@ -30,7 +30,7 @@ class WebController extends Controller
         
         if($validated){
             try{
-                Mail::to('executivedirector@genyragroup.com')->send(new ContactMail($validated));
+                Mail::to('laytonmatheka@gmail.com')->send(new ContactMail($validated));
                 Contact::create($validated);
             }
             catch(\Exception $e){
