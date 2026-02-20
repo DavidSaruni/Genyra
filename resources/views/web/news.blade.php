@@ -8,18 +8,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const navLinks = document.querySelectorAll('nav a, header a, [class*="nav"] a, [id*="nav"] a');
-    navLinks.forEach(function (link) {
-      const href = link.getAttribute('href');
-      if (href && href.startsWith('#') && href.length > 1) {
-        link.setAttribute('href', '/' + href);
-      }
-    });
-  });
-</script>
-
 <style>
   body, * {
     font-family: 'Inter', sans-serif !important;
@@ -206,7 +194,7 @@
     padding: 0.15rem 0.55rem;
   }
 
-  /* Filter tags in drawer (same as filter-btn style but larger touch targets) */
+  /* Filter tags in drawer */
   .drawer-filter-tags {
     display: flex;
     flex-wrap: wrap;
@@ -230,6 +218,13 @@
     background: #1e3a6e;
     color: #fff;
     border-color: #1e3a6e;
+  }
+
+  /* Active desktop filter tab */
+  .filter-btn.active {
+    background: #1e3a6e !important;
+    color: #fff !important;
+    border-color: #1e3a6e !important;
   }
 </style>
 
@@ -263,30 +258,17 @@
   {{-- Drawer Body --}}
   <div class="drawer-body">
 
-    {{-- Search --}}
-    <div>
-      <div class="drawer-section-title">Search News</div>
-      <div class="drawer-search-wrap">
-        <input type="text" placeholder="Search news..." id="drawer-search-input" />
-        <button aria-label="Search">
-          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242 1.398a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/>
-          </svg>
-        </button>
-      </div>
-    </div>
 
-    {{-- Quick Filter Tags --}}
     <div>
       <div class="drawer-section-title">Filter by Topic</div>
       <div class="drawer-filter-tags">
-        <button class="drawer-filter-tag active" data-category="all">All News</button>
+        <button class="drawer-filter-tag" data-category="">All News</button>
         <button class="drawer-filter-tag" data-category="biosciences">BioSciences</button>
-        <button class="drawer-filter-tag" data-category="medtech">MedTech</button>
-        <button class="drawer-filter-tag" data-category="calibration">Calibration</button>
+        <button class="drawer-filter-tag" data-category="medtech-solutions">MedTech</button>
+        <button class="drawer-filter-tag" data-category="calibration-metrology">Calibration</button>
         <button class="drawer-filter-tag" data-category="partnerships">Partnerships</button>
-        <button class="drawer-filter-tag" data-category="health-systems">Health Systems</button>
-        <button class="drawer-filter-tag" data-category="quality">Quality &amp; Compliance</button>
+        <button class="drawer-filter-tag" data-category="health-systems-advisory">Health Systems</button>
+        <button class="drawer-filter-tag" data-category="quality-compliance">Quality &amp; Compliance</button>
       </div>
     </div>
 
@@ -294,16 +276,12 @@
     <div>
       <div class="drawer-section-title">Categories</div>
       <div class="drawer-cat-list">
-        <a href="#">MedTech Solutions <span class="badge">24</span></a>
-        <a href="#">BioSciences <span class="badge">18</span></a>
-        <a href="#">Calibration &amp; Metrology <span class="badge">15</span></a>
-        <a href="#">Health Systems Advisory <span class="badge">20</span></a>
-        <a href="#">Quality &amp; Compliance <span class="badge">12</span></a>
-        <a href="#">Partnerships <span class="badge">10</span></a>
-        <a href="#">Digital Health <span class="badge">9</span></a>
-        <a href="#">Regional Coverage <span class="badge">8</span></a>
-        <a href="#">Awards &amp; Recognition <span class="badge">6</span></a>
-        <a href="#">Company News <span class="badge">14</span></a>
+        @foreach($categories as $category)
+          <a href="{{ url()->current() }}?category={{ $category->slug }}">
+            <span>{{ $category->name }}</span>
+            <span class="badge">{{ $category->news()->where('status', 'published')->count() }}</span>
+          </a>
+        @endforeach
       </div>
     </div>
 
@@ -332,240 +310,106 @@
           All Filters &amp; Categories →
         </button>
 
-        {{-- Filter tabs (always visible) --}}
+        {{-- Filter tabs — labels and slugs are hardcoded to match your DB exactly --}}
         <div class="flex flex-wrap gap-2">
-          <button class="filter-btn px-3.5 py-1.5 border border-[#c8dce8] rounded text-xs font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#1e3a6e] hover:text-white hover:border-[#1e3a6e] tracking-wide">All News</button>
-          <button class="filter-btn px-3.5 py-1.5 border border-[#c8dce8] rounded text-xs font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#1e3a6e] hover:text-white hover:border-[#1e3a6e] tracking-wide">BioSciences</button>
-          <button class="filter-btn px-3.5 py-1.5 border border-[#c8dce8] rounded text-xs font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#1e3a6e] hover:text-white hover:border-[#1e3a6e] tracking-wide">MedTech</button>
-          <button class="filter-btn px-3.5 py-1.5 border border-[#c8dce8] rounded text-xs font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#1e3a6e] hover:text-white hover:border-[#1e3a6e] tracking-wide">Calibration</button>
-          <button class="filter-btn px-3.5 py-1.5 border border-[#c8dce8] rounded text-xs font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#1e3a6e] hover:text-white hover:border-[#1e3a6e] tracking-wide">Partnerships</button>
-          <button class="filter-btn px-3.5 py-1.5 border border-[#c8dce8] rounded text-xs font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#1e3a6e] hover:text-white hover:border-[#1e3a6e] tracking-wide">Health Systems</button>
-          <button class="filter-btn px-3.5 py-1.5 border border-[#c8dce8] rounded text-xs font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#1e3a6e] hover:text-white hover:border-[#1e3a6e] tracking-wide">Quality &amp; Compliance</button>
+          <button class="filter-btn px-3.5 py-1.5 border border-[#c8dce8] rounded text-xs font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#1e3a6e] hover:text-white hover:border-[#1e3a6e] tracking-wide" data-category="">All News</button>
+          <button class="filter-btn px-3.5 py-1.5 border border-[#c8dce8] rounded text-xs font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#1e3a6e] hover:text-white hover:border-[#1e3a6e] tracking-wide" data-category="biosciences">BioSciences</button>
+          <button class="filter-btn px-3.5 py-1.5 border border-[#c8dce8] rounded text-xs font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#1e3a6e] hover:text-white hover:border-[#1e3a6e] tracking-wide" data-category="medtech-solutions">MedTech</button>
+          <button class="filter-btn px-3.5 py-1.5 border border-[#c8dce8] rounded text-xs font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#1e3a6e] hover:text-white hover:border-[#1e3a6e] tracking-wide" data-category="calibration-metrology">Calibration</button>
+          <button class="filter-btn px-3.5 py-1.5 border border-[#c8dce8] rounded text-xs font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#1e3a6e] hover:text-white hover:border-[#1e3a6e] tracking-wide" data-category="partnerships">Partnerships</button>
+          <button class="filter-btn px-3.5 py-1.5 border border-[#c8dce8] rounded text-xs font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#1e3a6e] hover:text-white hover:border-[#1e3a6e] tracking-wide" data-category="health-systems-advisory">Health Systems</button>
+          <button class="filter-btn px-3.5 py-1.5 border border-[#c8dce8] rounded text-xs font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#1e3a6e] hover:text-white hover:border-[#1e3a6e] tracking-wide" data-category="quality-compliance">Quality &amp; Compliance</button>
         </div>
       </div>
 
       {{-- News Cards --}}
       <div class="flex flex-col gap-5">
-
-        {{-- Card 1 --}}
-        <div class="grid grid-cols-1 sm:grid-cols-[220px_1fr] gap-0 bg-white rounded overflow-hidden shadow-[0_1px_4px_rgba(0,0,0,0.07)] transition-all duration-300 border-l-3 border-l-transparent hover:shadow-[0_8px_28px_rgba(30,58,110,0.13)] hover:-translate-y-0.5 hover:border-l-[#00a0c6] animate-fade-up animate-delay-1">
-          <div class="overflow-hidden">
-            <img src="https://images.pexels.com/photos/3938022/pexels-photo-3938022.jpeg?auto=compress&cs=tinysrgb&w=440" alt="Laboratory Equipment" class="w-full h-64 md:h-40 object-cover block transition-transform duration-400 hover:scale-105" />
-          </div>
-          <div class="p-5 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-3 mb-2">
-                <span class="inline-block text-[0.65rem] font-semibold tracking-wider uppercase text-[#00a0c6] py-0.5 border-b-[1.5px] border-[#00a0c6]">MedTech</span>
-                <span class="text-[0.72rem] text-[#6b7280] font-normal">17 February 2026</span>
+        @forelse($news as $article)
+          <div class="grid grid-cols-1 sm:grid-cols-[220px_1fr] gap-0 bg-white rounded overflow-hidden shadow-[0_1px_4px_rgba(0,0,0,0.07)] transition-all duration-300 border-l-3 border-l-transparent hover:shadow-[0_8px_28px_rgba(30,58,110,0.13)] hover:-translate-y-0.5 hover:border-l-[#00a0c6] animate-fade-up">
+            <div class="overflow-hidden">
+              @if($article->main_image)
+                <img src="{{ asset('storage/' . $article->main_image) }}" alt="{{ $article->title }}" class="w-full h-64 md:h-40 object-cover block transition-transform duration-400 hover:scale-105" />
+              @else
+                <img src="https://images.pexels.com/photos/3938022/pexels-photo-3938022.jpeg?auto=compress&cs=tinysrgb&w=440" alt="News" class="w-full h-64 md:h-40 object-cover block transition-transform duration-400 hover:scale-105" />
+              @endif
+            </div>
+            <div class="p-5 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-3 mb-2">
+                  @if($article->categories->count() > 0)
+                    <span class="inline-block text-[0.65rem] font-semibold tracking-wider uppercase text-[#00a0c6] py-0.5 border-b-[1.5px] border-[#00a0c6]">{{ $article->categories->first()->name }}</span>
+                  @endif
+                  <span class="text-[0.72rem] text-[#6b7280] font-normal">{{ $article->published_at->format('d F Y') }}</span>
+                </div>
+                <h2 class="text-xl font-semibold leading-6 text-[#1e3a6e] mb-2 transition-colors group-hover:text-[#00a0c6]">
+                  <a href="{{ route('news.readmore', $article->slug) }}" class="no-underline text-inherit hover:text-[#00a0c6] transition-colors">{{ $article->title }}</a>
+                </h2>
+                <p class="text-sm text-[#6b7280] leading-relaxed font-normal line-clamp-2">
+                  {{ $article->excerpt }}
+                </p>
               </div>
-              <h2 class="text-xl font-semibold leading-6 text-[#1e3a6e] mb-2 transition-colors group-hover:text-[#00a0c6]">
-                <a href="#" class="no-underline text-inherit hover:text-[#00a0c6] transition-colors">New Laboratory Equipment Shipment Arrives at County Hospital</a>
-              </h2>
-              <p class="text-sm text-[#6b7280] leading-relaxed font-normal line-clamp-2">
-                Genyra Group successfully deployed state-of-the-art laboratory equipment to enhance diagnostic capabilities and improve patient care outcomes across the region.
-              </p>
-            </div>
-            <div class="mt-3">
-              <a href="{{ route('news.readmore') }}" class="text-xs font-semibold text-[#00a0c6] tracking-wider uppercase inline-flex items-center gap-1 no-underline transition-all hover:gap-2 hover:text-[#0077b6]">
-                Read more <span>→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {{-- Card 2 --}}
-        <div class="grid grid-cols-1 sm:grid-cols-[220px_1fr] gap-0 bg-white rounded overflow-hidden shadow-[0_1px_4px_rgba(0,0,0,0.07)] transition-all duration-300 border-l-3 border-l-transparent hover:shadow-[0_8px_28px_rgba(30,58,110,0.13)] hover:-translate-y-0.5 hover:border-l-[#00a0c6] animate-fade-up animate-delay-2">
-          <div class="overflow-hidden">
-            <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=440" alt="Digital Health" class="w-full h-64 md:h-40 object-cover block transition-transform duration-400 hover:scale-105" />
-          </div>
-          <div class="p-5 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-3 mb-2">
-                <span class="inline-block text-[0.65rem] font-semibold tracking-wider uppercase text-[#00a0c6] py-0.5 border-b-[1.5px] border-[#00a0c6]">Health Systems</span>
-                <span class="text-[0.72rem] text-[#6b7280] font-normal">10 February 2026</span>
+              <div class="mt-3">
+                <a href="{{ route('news.readmore', $article->slug) }}" class="text-xs font-semibold text-[#00a0c6] tracking-wider uppercase inline-flex items-center gap-1 no-underline transition-all hover:gap-2 hover:text-[#0077b6]">
+                  Read more <span>→</span>
+                </a>
               </div>
-              <h2 class="text-xl font-semibold leading-6 text-[#1e3a6e] mb-2 transition-colors">
-                <a href="#" class="no-underline text-inherit hover:text-[#00a0c6] transition-colors">Integrated HIS/LIS Successfully Deployed Across 300-Bed Hospital Network</a>
-              </h2>
-              <p class="text-sm text-[#6b7280] leading-relaxed font-normal line-clamp-2">
-                Genyra Group completed the rollout of a fully integrated Health Information System and Laboratory Information System for a major hospital network, improving operational efficiency and data management.
-              </p>
-            </div>
-            <div class="mt-3">
-              <a href="{{ route('news.readmore') }}" class="text-xs font-semibold text-[#00a0c6] tracking-wider uppercase inline-flex items-center gap-1 no-underline transition-all hover:gap-2 hover:text-[#0077b6]">
-                Read more <span>→</span>
-              </a>
             </div>
           </div>
-        </div>
-
-        {{-- Card 3 --}}
-        <div class="grid grid-cols-1 sm:grid-cols-[220px_1fr] gap-0 bg-white rounded overflow-hidden shadow-[0_1px_4px_rgba(0,0,0,0.07)] transition-all duration-300 border-l-3 border-l-transparent hover:shadow-[0_8px_28px_rgba(30,58,110,0.13)] hover:-translate-y-0.5 hover:border-l-[#00a0c6] animate-fade-up animate-delay-3">
-          <div class="overflow-hidden">
-            <img src="https://images.pexels.com/photos/4225880/pexels-photo-4225880.jpeg?auto=compress&cs=tinysrgb&w=440" alt="Calibration" class="w-full h-64 md:h-40 object-cover block transition-transform duration-400 hover:scale-105" />
+        @empty
+          <div class="text-center py-12">
+            <p class="text-gray-500 text-lg">No news articles found.</p>
           </div>
-          <div class="p-5 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-3 mb-2">
-                <span class="inline-block text-[0.65rem] font-semibold tracking-wider uppercase text-[#00a0c6] py-0.5 border-b-[1.5px] border-[#00a0c6]">Calibration</span>
-                <span class="text-[0.72rem] text-[#6b7280] font-normal">3 February 2026</span>
-              </div>
-              <h2 class="text-xl font-semibold leading-6 text-[#1e3a6e] mb-2 transition-colors">
-                <a href="#" class="no-underline text-inherit hover:text-[#00a0c6] transition-colors">Genyra Metrology Lab Achieves ISO/IEC 17025:2017 Accreditation Renewal</a>
-              </h2>
-              <p class="text-sm text-[#6b7280] leading-relaxed font-normal line-clamp-2">
-                Our calibration laboratory has successfully renewed its ISO/IEC 17025:2017 accreditation, reinforcing our commitment to precision measurement and NIST/UKAS-traceable calibration services across East Africa.
-              </p>
-            </div>
-            <div class="mt-3">
-              <a href="{{ route('news.readmore') }}" class="text-xs font-semibold text-[#00a0c6] tracking-wider uppercase inline-flex items-center gap-1 no-underline transition-all hover:gap-2 hover:text-[#0077b6]">
-                Read more <span>→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {{-- Card 4 --}}
-        <div class="grid grid-cols-1 sm:grid-cols-[220px_1fr] gap-0 bg-white rounded overflow-hidden shadow-[0_1px_4px_rgba(0,0,0,0.07)] transition-all duration-300 border-l-3 border-l-transparent hover:shadow-[0_8px_28px_rgba(30,58,110,0.13)] hover:-translate-y-0.5 hover:border-l-[#00a0c6] animate-fade-up animate-delay-4">
-          <div class="overflow-hidden">
-            <img src="https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=440" alt="ISO Certification" class="w-full h-64 md:h-40 object-cover block transition-transform duration-400 hover:scale-105" />
-          </div>
-          <div class="p-5 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-3 mb-2">
-                <span class="inline-block text-[0.65rem] font-semibold tracking-wider uppercase text-[#00a0c6] py-0.5 border-b-[1.5px] border-[#00a0c6]">Quality &amp; Compliance</span>
-                <span class="text-[0.72rem] text-[#6b7280] font-normal">27 January 2026</span>
-              </div>
-              <h2 class="text-xl font-semibold leading-6 text-[#1e3a6e] mb-2 transition-colors">
-                <a href="#" class="no-underline text-inherit hover:text-[#00a0c6] transition-colors">Genyra Group Attains ISO 13485:2016 Certification for Medical Devices Quality Management</a>
-              </h2>
-              <p class="text-sm text-[#6b7280] leading-relaxed font-normal line-clamp-2">
-                Genyra Group has been awarded ISO 13485:2016 certification, underscoring its rigorous quality management systems for medical devices and reinforcing its trusted position as a healthcare solutions provider.
-              </p>
-            </div>
-            <div class="mt-3">
-              <a href="{{ route('news.readmore') }}" class="text-xs font-semibold text-[#00a0c6] tracking-wider uppercase inline-flex items-center gap-1 no-underline transition-all hover:gap-2 hover:text-[#0077b6]">
-                Read more <span>→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {{-- Card 5 --}}
-        <div class="grid grid-cols-1 sm:grid-cols-[220px_1fr] gap-0 bg-white rounded overflow-hidden shadow-[0_1px_4px_rgba(0,0,0,0.07)] transition-all duration-300 border-l-3 border-l-transparent hover:shadow-[0_8px_28px_rgba(30,58,110,0.13)] hover:-translate-y-0.5 hover:border-l-[#00a0c6] animate-fade-up animate-delay-5">
-          <div class="overflow-hidden">
-            <img src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=440" alt="BioSciences" class="w-full h-64 md:h-40 object-cover block transition-transform duration-400 hover:scale-105" />
-          </div>
-          <div class="p-5 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-3 mb-2">
-                <span class="inline-block text-[0.65rem] font-semibold tracking-wider uppercase text-[#00a0c6] py-0.5 border-b-[1.5px] border-[#00a0c6]">BioSciences</span>
-                <span class="text-[0.72rem] text-[#6b7280] font-normal">20 January 2026</span>
-              </div>
-              <h2 class="text-xl font-semibold leading-6 text-[#1e3a6e] mb-2 transition-colors">
-                <a href="#" class="no-underline text-inherit hover:text-[#00a0c6] transition-colors">Genyra BioSciences Supports KEMRI in Translational Research Sample Analysis Initiative</a>
-              </h2>
-              <p class="text-sm text-[#6b7280] leading-relaxed font-normal line-clamp-2">
-                Genyra BioSciences partnered with KEMRI to deliver advanced laboratory testing and translational research support, contributing to improved public health surveillance capacity in Kenya.
-              </p>
-            </div>
-            <div class="mt-3">
-              <a href="{{ route('news.readmore') }}" class="text-xs font-semibold text-[#00a0c6] tracking-wider uppercase inline-flex items-center gap-1 no-underline transition-all hover:gap-2 hover:text-[#0077b6]">
-                Read more <span>→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {{-- Card 6 --}}
-        <div class="grid grid-cols-1 sm:grid-cols-[220px_1fr] gap-0 bg-white rounded overflow-hidden shadow-[0_1px_4px_rgba(0,0,0,0.07)] transition-all duration-300 border-l-3 border-l-transparent hover:shadow-[0_8px_28px_rgba(30,58,110,0.13)] hover:-translate-y-0.5 hover:border-l-[#00a0c6] animate-fade-up animate-delay-6">
-          <div class="overflow-hidden">
-            <img src="https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=440" alt="Lab Setup" class="w-full h-64 md:h-40 object-cover block transition-transform duration-400 hover:scale-105" />
-          </div>
-          <div class="p-5 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-3 mb-2">
-                <span class="inline-block text-[0.65rem] font-semibold tracking-wider uppercase text-[#00a0c6] py-0.5 border-b-[1.5px] border-[#00a0c6]">Partnerships</span>
-                <span class="text-[0.72rem] text-[#6b7280] font-normal">10 January 2026</span>
-              </div>
-              <h2 class="text-xl font-semibold leading-6 text-[#1e3a6e] mb-2 transition-colors">
-                <a href="#" class="no-underline text-inherit hover:text-[#00a0c6] transition-colors">Complete Turn-Key Laboratory Setup Delivered for Level 5 County Referral Hospital</a>
-              </h2>
-              <p class="text-sm text-[#6b7280] leading-relaxed font-normal line-clamp-2">
-                Genyra Group completed a comprehensive turn-key laboratory setup covering equipment supply, installation, staff training, and ongoing maintenance support for a Level 5 County Referral Hospital.
-              </p>
-            </div>
-            <div class="mt-3">
-              <a href="{{ route('news.readmore') }}" class="text-xs font-semibold text-[#00a0c6] tracking-wider uppercase inline-flex items-center gap-1 no-underline transition-all hover:gap-2 hover:text-[#0077b6]">
-                Read more <span>→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>{{-- /news cards --}}
+        @endforelse
+      </div>
 
       {{-- Pagination --}}
-      <div class="flex items-center gap-1 mt-8">
-        <button class="page-btn w-[34px] h-[34px] flex items-center justify-center border border-[#c8dce8] rounded text-[0.8rem] font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#00a0c6] hover:text-white hover:border-[#00a0c6] [&.active]:bg-[#00a0c6] [&.active]:text-white [&.active]:border-[#00a0c6] active">1</button>
-        <button class="page-btn w-[34px] h-[34px] flex items-center justify-center border border-[#c8dce8] rounded text-[0.8rem] font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#00a0c6] hover:text-white hover:border-[#00a0c6]">2</button>
-        <button class="page-btn w-[34px] h-[34px] flex items-center justify-center border border-[#c8dce8] rounded text-[0.8rem] font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#00a0c6] hover:text-white hover:border-[#00a0c6]">3</button>
-        <button class="page-btn w-[34px] h-[34px] flex items-center justify-center border border-[#c8dce8] rounded text-[0.8rem] font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#00a0c6] hover:text-white hover:border-[#00a0c6]">4</button>
-        <button class="page-btn w-[34px] h-[34px] flex items-center justify-center border border-[#c8dce8] rounded text-[0.8rem] font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#00a0c6] hover:text-white hover:border-[#00a0c6]">5</button>
-        <span class="px-2 text-sm text-[#9ca3af]">…</span>
-        <button class="page-btn w-[34px] h-[34px] flex items-center justify-center border border-[#c8dce8] rounded text-[0.8rem] font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#00a0c6] hover:text-white hover:border-[#00a0c6]">10</button>
-        <button class="page-btn px-3.5 h-[34px] flex items-center justify-center border border-[#c8dce8] rounded text-xs font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#00a0c6] hover:text-white hover:border-[#00a0c6]">Next ›</button>
-      </div>
+      @if($news->hasPages())
+        <div class="flex items-center gap-1 mt-8">
+          {{-- Prev --}}
+          @if($news->onFirstPage())
+            <span class="page-btn px-3.5 h-[34px] flex items-center justify-center border border-[#c8dce8] rounded text-xs font-medium text-[#c8dce8] bg-white cursor-not-allowed">‹ Prev</span>
+          @else
+            <a href="{{ $news->previousPageUrl() }}" class="page-btn px-3.5 h-[34px] flex items-center justify-center border border-[#c8dce8] rounded text-xs font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#00a0c6] hover:text-white hover:border-[#00a0c6] no-underline">‹ Prev</a>
+          @endif
+
+          {{-- Page numbers --}}
+          @foreach($news->getUrlRange(1, $news->lastPage()) as $page => $url)
+            @if($page == $news->currentPage())
+              <span class="page-btn w-[34px] h-[34px] flex items-center justify-center border border-[#00a0c6] rounded text-[0.8rem] font-medium bg-[#00a0c6] text-white">{{ $page }}</span>
+            @elseif($page == 1 || $page == $news->lastPage() || abs($page - $news->currentPage()) <= 2)
+              <a href="{{ $url }}" class="page-btn w-[34px] h-[34px] flex items-center justify-center border border-[#c8dce8] rounded text-[0.8rem] font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#00a0c6] hover:text-white hover:border-[#00a0c6] no-underline">{{ $page }}</a>
+            @elseif($page == 2 && $news->currentPage() > 4)
+              <span class="px-1 text-sm text-[#9ca3af]">…</span>
+            @elseif($page == $news->lastPage() - 1 && $news->currentPage() < $news->lastPage() - 3)
+              <span class="px-1 text-sm text-[#9ca3af]">…</span>
+            @endif
+          @endforeach
+
+          {{-- Next --}}
+          @if($news->hasMorePages())
+            <a href="{{ $news->nextPageUrl() }}" class="page-btn px-3.5 h-[34px] flex items-center justify-center border border-[#c8dce8] rounded text-xs font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#00a0c6] hover:text-white hover:border-[#00a0c6] no-underline">Next ›</a>
+          @else
+            <span class="page-btn px-3.5 h-[34px] flex items-center justify-center border border-[#c8dce8] rounded text-xs font-medium text-[#c8dce8] bg-white cursor-not-allowed">Next ›</span>
+          @endif
+        </div>
+      @endif
 
     </main>
 
     {{-- ── RIGHT: Sidebar (desktop only) ── --}}
     <aside class="hidden lg:flex w-64 flex-shrink-0 flex-col gap-5">
 
-      {{-- Search --}}
-      <div class="border-[1.5px] border-[#c8dce8] rounded flex overflow-hidden transition-colors bg-white focus-within:border-[#00a0c6]">
-        <input type="text" placeholder="Search news..." class="flex-1 px-3 py-2 text-[12px] border-none outline-none bg-transparent text-black placeholder:text-[#bbb]" />
-        <button class="bg-[#1e3a6e] text-white border-none px-3.5 cursor-pointer transition-colors hover:bg-[#00a0c6] flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="flex-shrink-0">
-            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242 1.398a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/>
-          </svg>
-        </button>
-      </div>
 
-      {{-- Categories --}}
+
+      {{-- Categories — real anchor links, highlighted when active --}}
       <div class="bg-white rounded shadow-[0_1px_4px_rgba(0,0,0,0.07)] overflow-hidden">
         <div class="bg-[#1e3a6e] text-white text-[0.78rem] font-semibold tracking-wider uppercase px-4 py-2.5 border-b-3 border-[#00a0c6]">Categories</div>
         <div>
-          <a href="#" class="flex justify-between items-center px-4 py-2 border-b border-[#f0f4f8] text-[0.82rem] font-normal text-[#374151] cursor-pointer transition-all no-underline hover:bg-[#eaf6fb] hover:text-[#1e3a6e] last:border-b-0">
-            <span>MedTech Solutions</span><span class="text-[0.7rem] font-medium bg-[#eaf6fb] text-[#0077b6] rounded-full px-2 py-0.5">24</span>
-          </a>
-          <a href="#" class="flex justify-between items-center px-4 py-2 border-b border-[#f0f4f8] text-[0.82rem] font-normal text-[#374151] cursor-pointer transition-all no-underline hover:bg-[#eaf6fb] hover:text-[#1e3a6e] last:border-b-0">
-            <span>BioSciences</span><span class="text-[0.7rem] font-medium bg-[#eaf6fb] text-[#0077b6] rounded-full px-2 py-0.5">18</span>
-          </a>
-          <a href="#" class="flex justify-between items-center px-4 py-2 border-b border-[#f0f4f8] text-[0.82rem] font-normal text-[#374151] cursor-pointer transition-all no-underline hover:bg-[#eaf6fb] hover:text-[#1e3a6e] last:border-b-0">
-            <span>Calibration &amp; Metrology</span><span class="text-[0.7rem] font-medium bg-[#eaf6fb] text-[#0077b6] rounded-full px-2 py-0.5">15</span>
-          </a>
-          <a href="#" class="flex justify-between items-center px-4 py-2 border-b border-[#f0f4f8] text-[0.82rem] font-normal text-[#374151] cursor-pointer transition-all no-underline hover:bg-[#eaf6fb] hover:text-[#1e3a6e] last:border-b-0">
-            <span>Health Systems Advisory</span><span class="text-[0.7rem] font-medium bg-[#eaf6fb] text-[#0077b6] rounded-full px-2 py-0.5">20</span>
-          </a>
-          <a href="#" class="flex justify-between items-center px-4 py-2 border-b border-[#f0f4f8] text-[0.82rem] font-normal text-[#374151] cursor-pointer transition-all no-underline hover:bg-[#eaf6fb] hover:text-[#1e3a6e] last:border-b-0">
-            <span>Quality &amp; Compliance</span><span class="text-[0.7rem] font-medium bg-[#eaf6fb] text-[#0077b6] rounded-full px-2 py-0.5">12</span>
-          </a>
-          <a href="#" class="flex justify-between items-center px-4 py-2 border-b border-[#f0f4f8] text-[0.82rem] font-normal text-[#374151] cursor-pointer transition-all no-underline hover:bg-[#eaf6fb] hover:text-[#1e3a6e] last:border-b-0">
-            <span>Partnerships</span><span class="text-[0.7rem] font-medium bg-[#eaf6fb] text-[#0077b6] rounded-full px-2 py-0.5">10</span>
-          </a>
-          <a href="#" class="flex justify-between items-center px-4 py-2 border-b border-[#f0f4f8] text-[0.82rem] font-normal text-[#374151] cursor-pointer transition-all no-underline hover:bg-[#eaf6fb] hover:text-[#1e3a6e] last:border-b-0">
-            <span>Digital Health</span><span class="text-[0.7rem] font-medium bg-[#eaf6fb] text-[#0077b6] rounded-full px-2 py-0.5">9</span>
-          </a>
-          <a href="#" class="flex justify-between items-center px-4 py-2 border-b border-[#f0f4f8] text-[0.82rem] font-normal text-[#374151] cursor-pointer transition-all no-underline hover:bg-[#eaf6fb] hover:text-[#1e3a6e] last:border-b-0">
-            <span>Regional Coverage</span><span class="text-[0.7rem] font-medium bg-[#eaf6fb] text-[#0077b6] rounded-full px-2 py-0.5">8</span>
-          </a>
-          <a href="#" class="flex justify-between items-center px-4 py-2 border-b border-[#f0f4f8] text-[0.82rem] font-normal text-[#374151] cursor-pointer transition-all no-underline hover:bg-[#eaf6fb] hover:text-[#1e3a6e] last:border-b-0">
-            <span>Awards &amp; Recognition</span><span class="text-[0.7rem] font-medium bg-[#eaf6fb] text-[#0077b6] rounded-full px-2 py-0.5">6</span>
-          </a>
-          <a href="#" class="flex justify-between items-center px-4 py-2 border-b border-[#f0f4f8] text-[0.82rem] font-normal text-[#374151] cursor-pointer transition-all no-underline hover:bg-[#eaf6fb] hover:text-[#1e3a6e] last:border-b-0">
-            <span>Company News</span><span class="text-[0.7rem] font-medium bg-[#eaf6fb] text-[#0077b6] rounded-full px-2 py-0.5">14</span>
-          </a>
+          @foreach($categories as $category)
+            <a href="{{ url()->current() }}?category={{ $category->slug }}" class="flex justify-between items-center px-4 py-2 border-b border-[#f0f4f8] text-[0.82rem] font-normal text-[#374151] cursor-pointer transition-all no-underline hover:bg-[#eaf6fb] hover:text-[#1e3a6e] last:border-b-0 {{ request('category') === $category->slug ? 'bg-[#eaf6fb] text-[#1e3a6e] font-semibold' : '' }}">
+              <span>{{ $category->name }}</span><span class="text-[0.7rem] font-medium bg-[#eaf6fb] text-[#0077b6] rounded-full px-2 py-0.5">{{ $category->news()->where('status', 'published')->count() }}</span>
+            </a>
+          @endforeach
         </div>
       </div>
 
@@ -673,20 +517,115 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
 
-    // ── Drawer open/close ──
-    const drawer    = document.getElementById('mobile-filter-drawer');
-    const overlay   = document.getElementById('drawer-overlay');
-    const openBtn   = document.getElementById('all-filters-btn');
-    const closeBtn  = document.getElementById('drawer-close-btn');
+    // ── Central navigate function ──
+    // Builds the URL correctly, always resets page to 1
+    function navigate(category, search) {
+      var url = new URL(window.location.href);
+      url.searchParams.delete('page');
+
+      if (category !== undefined) {
+        if (category === '') {
+          url.searchParams.delete('category');
+        } else {
+          url.searchParams.set('category', category);
+        }
+      }
+      if (search !== undefined) {
+        if (search.trim() === '') {
+          url.searchParams.delete('search');
+        } else {
+          url.searchParams.set('search', search.trim());
+        }
+      }
+      window.location.href = url.toString();
+    }
+
+    // ── Desktop filter tabs — clears search when filtering by category ──
+    document.querySelectorAll('.filter-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var url = new URL(window.location.href);
+        url.searchParams.delete('page');
+        url.searchParams.delete('search');
+        if (this.dataset.category === '') {
+          url.searchParams.delete('category');
+        } else {
+          url.searchParams.set('category', this.dataset.category);
+        }
+        window.location.href = url.toString();
+      });
+    });
+
+    // ── Drawer quick-filter tags — also clears search ──
+    document.querySelectorAll('.drawer-filter-tag').forEach(function (tag) {
+      tag.addEventListener('click', function () {
+        var url = new URL(window.location.href);
+        url.searchParams.delete('page');
+        url.searchParams.delete('search');
+        if (this.dataset.category === '') {
+          url.searchParams.delete('category');
+        } else {
+          url.searchParams.set('category', this.dataset.category);
+        }
+        window.location.href = url.toString();
+      });
+    });
+
+    // ── Desktop sidebar search: Enter key or button click ──
+    var desktopInput     = document.getElementById('desktop-search-input');
+    var desktopSearchBtn = document.getElementById('desktop-search-btn');
+
+    if (desktopInput) {
+      desktopInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') navigate(undefined, this.value);
+      });
+    }
+    if (desktopSearchBtn) {
+      desktopSearchBtn.addEventListener('click', function () {
+        if (desktopInput) navigate(undefined, desktopInput.value);
+      });
+    }
+
+    // ── Drawer search: Enter key or button click ──
+    var drawerInput     = document.getElementById('drawer-search-input');
+    var drawerSearchBtn = document.getElementById('drawer-search-btn');
+
+    if (drawerInput) {
+      drawerInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') navigate(undefined, this.value);
+      });
+    }
+    if (drawerSearchBtn) {
+      drawerSearchBtn.addEventListener('click', function () {
+        if (drawerInput) navigate(undefined, drawerInput.value);
+      });
+    }
+
+    // ── Highlight active tab & drawer tag on page load ──
+    var currentCategory = new URLSearchParams(window.location.search).get('category') || '';
+
+    document.querySelectorAll('.filter-btn').forEach(function (btn) {
+      if (btn.dataset.category === currentCategory) {
+        btn.classList.add('active');
+      }
+    });
+    document.querySelectorAll('.drawer-filter-tag').forEach(function (tag) {
+      if (tag.dataset.category === currentCategory) {
+        tag.classList.add('active');
+      }
+    });
+
+    // ── Drawer open / close ──
+    var drawer   = document.getElementById('mobile-filter-drawer');
+    var overlay  = document.getElementById('drawer-overlay');
+    var openBtn  = document.getElementById('all-filters-btn');
+    var closeBtn = document.getElementById('drawer-close-btn');
 
     function openDrawer() {
       drawer.classList.add('open');
       overlay.classList.add('open');
       document.body.style.overflow = 'hidden';
-      // Focus search input for accessibility
-      setTimeout(() => {
-        const inp = document.getElementById('drawer-search-input');
-        if (inp) inp.focus();
+      setTimeout(function () {
+        if (drawerInput) drawerInput.focus();
       }, 350);
     }
 
@@ -700,56 +639,16 @@
     if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
     if (overlay)  overlay.addEventListener('click', closeDrawer);
 
-    // Close on Escape key
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') closeDrawer();
     });
 
-    // ── Drawer filter tags: sync active state with main filter tabs ──
-    const drawerTags  = document.querySelectorAll('.drawer-filter-tag');
-    const mainBtns    = document.querySelectorAll('.filter-btn');
-
-    drawerTags.forEach(tag => {
-      tag.addEventListener('click', () => {
-        drawerTags.forEach(t => t.classList.remove('active'));
-        tag.classList.add('active');
-
-        // Mirror selection on main tabs if label matches
-        const label = tag.textContent.trim().toLowerCase();
-        mainBtns.forEach(btn => {
-          const btnLabel = btn.textContent.trim().toLowerCase();
-          btn.classList.toggle('active', btnLabel === label || (label === 'all news' && btnLabel === 'all news'));
-        });
-
-        // Close drawer after a short delay so user sees selection
-        setTimeout(closeDrawer, 260);
-      });
-    });
-
-    // ── Main filter tab active state ──
-    const firstFilterBtn = document.querySelector('.filter-btn');
-    if (firstFilterBtn) firstFilterBtn.classList.add('active');
-
-    mainBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        mainBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        // Mirror to drawer tags
-        const label = btn.textContent.trim().toLowerCase();
-        drawerTags.forEach(tag => {
-          tag.classList.toggle('active', tag.textContent.trim().toLowerCase() === label);
-        });
-      });
-    });
-
-    // ── Pagination active state ──
-    document.querySelectorAll('.page-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        if (btn.textContent.trim() === 'Next ›') return;
-        document.querySelectorAll('.page-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-      });
+    // ── Fix nav hash links ──
+    document.querySelectorAll('nav a, header a, [class*="nav"] a, [id*="nav"] a').forEach(function (link) {
+      var href = link.getAttribute('href');
+      if (href && href.startsWith('#') && href.length > 1) {
+        link.setAttribute('href', '/' + href);
+      }
     });
 
   });
