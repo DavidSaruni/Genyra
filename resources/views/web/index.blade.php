@@ -880,7 +880,7 @@
                 </ul>
             </div>
             <div class="relative h-64 md:h-[500px] rounded overflow-hidden">
-                <img src="https://images.pexels.com/photos/6129507/pexels-photo-6129507.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+                <img src="{{ asset('images/2.jpeg') }}" 
                      alt="Comprehensive Healthcare Solutions" 
                      class="w-full h-full object-cover">
             </div>
@@ -888,8 +888,8 @@
 
         <!-- Feature 2 - Technical Expertise -->
         <div class="grid md:grid-cols-2 gap-16 items-center mb-32">
-            <div class="relative h-64 md:h-[500px] rounded overflow-hidden order-2 md:order-1">
-                <img src="https://images.pexels.com/photos/3938023/pexels-photo-3938023.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+            <div class="relative h-96 md:h-[600px] rounded overflow-hidden order-2 md:order-1">
+                <img src="{{ asset('images/1.jpeg') }}" 
                      alt="Expert Team" 
                      class="w-full h-full object-cover">
             </div>
