@@ -6,6 +6,7 @@ use App\Mail\ContactMail;
 use App\Models\Category;
 use App\Models\Contact;
 use App\Models\News;
+use App\Models\Poster;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
@@ -15,7 +16,8 @@ class WebController extends Controller
     //
     public function index()
     {
-        return view(view: 'web.index');
+        $poster = Poster::getActive();
+        return view('web.index', compact('poster'));
     }
 
     public function contactPost(Request $request)

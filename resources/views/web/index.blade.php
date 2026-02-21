@@ -188,21 +188,28 @@
                     <div class="bg-white rounded-b-xl shadow-lg overflow-hidden">
                         <!-- Single Large Notice Poster -->
                         <div class="md:p-4">
+                            @if($poster)
                             <div class="group cursor-pointer">
                                 <div class="relative overflow-hidden md:rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                                     <div class="relative w-full aspect-[3/4]">
-                                        <img src="{{ asset('images/genyraposter.png') }}"
-                                            alt="Notice Poster"
+                                        <img src="{{ $poster->image_url }}"
+                                            alt="{{ $poster->title }}"
                                             class="absolute inset-0 w-full h-full object-cover">
                                     </div>
 
                                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                         <div class="absolute bottom-0 left-0 right-0 p-4">
-                                            <p class="text-white text-sm font-semibold">Click to view details</p>
+                                            <p class="text-white text-sm font-semibold">{{ $poster->title }}</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            @else
+                            <!-- add text for no poster -->
+                            <div class="text-center p-4">
+                                <p class="text-gray-500">No notices available</p>
+                            </div>
+                            @endif
                         </div>
 
                         <!-- View All Notices Button -->

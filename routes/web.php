@@ -5,6 +5,7 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\WebController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PosterController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -32,4 +33,5 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::resource('contacts', ContactController::class)->except(['create', 'store', 'update', 'edit']);
     Route::get('contacts/{contact}/reply', [ContactController::class, 'reply'])->name('contacts.reply');
     Route::post('contacts/{contact}/reply', [ContactController::class, 'sendReply'])->name('contacts.send-reply');
+    Route::resource('posters', PosterController::class)->except(['show']);
 });
