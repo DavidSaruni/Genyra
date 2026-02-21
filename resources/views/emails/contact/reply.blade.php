@@ -22,7 +22,6 @@ Best regards,<br>
 The Genyra Group Team<br>
 {{ config('app.url') }}
 
-<x-mail::button :url="config('app.url')">
 Visit Our Website
 </x-mail::button>
 </x-mail::message>
