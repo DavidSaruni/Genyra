@@ -3,11 +3,11 @@
     <div class="max-w-7xl mx-auto flex justify-between items-center text-sm">
         <div>Genyra Group</div>
         <div class="items-center space-x-2 font-extrabold">
-            <span class="text-blue-600 font-medium">Think</span>
+            <span class="text-white md:text-blue-600 font-medium">Think</span>
             <span class="text-white">•</span>
-            <span class="text-sky-500 font-medium">Innovate</span>
+            <span class="text-whiter md:text-sky-500 font-medium">Innovate</span>
             <span class="text-white">•</span>
-            <span class="text-blue-600 font-medium">Solve</span>
+            <span class="text-white md:text-blue-600 font-medium">Solve</span>
         </div>
     </div>
 </div>
