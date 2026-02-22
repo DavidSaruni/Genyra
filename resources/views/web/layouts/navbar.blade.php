@@ -2,7 +2,7 @@
 <div class="top-bar py-2 px-4 fixed w-full z-50 top-0">
     <div class="max-w-7xl mx-auto flex justify-between items-center text-sm">
         <div>Genyra Group</div>
-        <div class="hidden md:flex items-center space-x-2 font-extrabold">
+        <div class="items-center space-x-2 font-extrabold">
             <span class="text-blue-600 font-medium">Think</span>
             <span class="text-white">•</span>
             <span class="text-sky-500 font-medium">Innovate</span>
@@ -69,8 +69,8 @@
                                     Governance
                                 </h3>
                                 <ul class="space-y-3">
-                                    <li><a href="#about" class="text-gray-600 text-sm hover:text-blue-600">Board of Directors</a></li>
-                                    <li><a href="#about" class="text-gray-600 text-sm hover:text-blue-600">Management Team</a></li>
+                                    <li><a href="{{ route('directors') }}" class="text-gray-600 text-sm hover:text-blue-600">Board of Directors</a></li>
+                                    <li><a href="{{ route('management') }}" class="text-gray-600 text-sm hover:text-blue-600">Management Team</a></li>
                                 </ul>
                             </div>
 

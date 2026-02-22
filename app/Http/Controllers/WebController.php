@@ -134,5 +134,13 @@ class WebController extends Controller
     public function strategicDirection(){
         return view('web.strategicDirection');
     }
+    
+    public function directors(){
+        return view('web.directors');
+    }
+
+    public function management(){
+        return view('web.management');
+    }
 
 }

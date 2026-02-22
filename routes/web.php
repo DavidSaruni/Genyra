@@ -24,6 +24,11 @@ Route::get('/vission-mission',[WebController::class,'vissionMission'])->name( 'v
 Route::get('/values',[WebController::class,'values'])->name( 'values');
 // strategic direction
 Route::get('/strategic-direction',[WebController::class,'strategicDirection'])->name( 'strategic-direction');
+// directors
+Route::get('/directors',[WebController::class,'directors'])->name( 'directors');
+// management
+Route::get('/management',[WebController::class,'management'])->name( 'management');
+
 
 
 // Default login route for Laravel auth middleware
