@@ -184,8 +184,8 @@
             <div class="mb-8">
                 <h3 class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4 px-4">Governance</h3>
                 <div class="space-y-1">
-                    <a href="{{ route('board-of-directors') }}" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Board of Directors</a>
-                    <a href="{{ route('management-team') }}" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Management Team</a>
+                    <a href="" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Board of Directors</a>
+                    <a href="" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Management Team</a>
                 </div>
             </div>
             
