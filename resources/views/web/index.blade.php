@@ -1358,7 +1358,7 @@
                 <div class="text-sm uppercase tracking-widest text-gray-500">Countries Served</div>
             </div>
             <div class="p-10 text-center border-r border-gray-200">
-                <div class="text-5xl font-bold text-[#2B3E7E] mb-2">95%+</div>
+                <div class="text-5xl font-bold text-[#2B3E7E] mb-2">85%+</div>
                 <div class="text-sm uppercase tracking-widest text-gray-500">Client Retention Rate</div>
             </div>
             <div class="p-10 text-center">

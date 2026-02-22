@@ -119,4 +119,20 @@ class WebController extends Controller
         return view('web.courses');
     }
 
+    public function ourStory(){
+        return view('web.ourStory');
+    }
+
+    public function vissionMission(){
+        return view('web.vissionMission');
+    }
+
+    public function values(){
+        return view('web.values');
+    }
+
+    public function strategicDirection(){
+        return view('web.strategicDirection');
+    }
+
 }

@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Contact Messages - Genyra Admin')
+@section('title', 'Contact Messages')
 
 @section('content')
 <div class="max-w-7xl mx-auto">

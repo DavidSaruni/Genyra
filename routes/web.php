@@ -16,6 +16,16 @@ Route::get('/news/{slug}',[WebController::class,'newsReadMore'])->name( 'news.re
 Route::post('/contact',[WebController::class,'contactPost'])->name( 'contact.submit');
 Route::get('/courses',[WebController::class,'courses'])->name( 'courses');
 
+// our story
+Route::get('/our-story',[WebController::class,'ourStory'])->name( 'our-story');
+// vission mission
+Route::get('/vission-mission',[WebController::class,'vissionMission'])->name( 'vission-mission');
+// values
+Route::get('/values',[WebController::class,'values'])->name( 'values');
+// strategic direction
+Route::get('/strategic-direction',[WebController::class,'strategicDirection'])->name( 'strategic-direction');
+
+
 // Default login route for Laravel auth middleware
 Route::get('/login', function() {
     return redirect()->route('admin.login');
@@ -35,3 +45,5 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::post('contacts/{contact}/reply', [ContactController::class, 'sendReply'])->name('contacts.send-reply');
     Route::resource('posters', PosterController::class)->except(['show']);
 });
+
+

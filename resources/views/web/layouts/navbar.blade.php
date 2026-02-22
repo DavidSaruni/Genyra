@@ -30,26 +30,73 @@
             <!-- Desktop Menu -->
             <div class="hidden md:flex items-center space-x-8 text-sm">
                 <div class="relative">
-                    <div class="nav-link flex items-center gap-1 cursor-pointer pl-4" id="aboutToggle">
-                        About us
-                        <svg class="w-4 h-4 transition-transform duration-300" id="aboutArrow" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M19 9l-7 7-7-7z"/>
+                <!-- Toggle -->
+                <div class="nav-link flex items-center gap-1 cursor-pointer pl-4" id="aboutToggle">
+                    ABOUT US
+                    <svg class="w-4 h-4 transition-transform duration-300" id="aboutArrow" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 9l-7 7-7-7z"/>
+                    </svg>
+                </div>
+                <!-- Dropdown -->
+                <div id="aboutDropdown"
+                    class="absolute left-0 top-full mt-8 w-[700px] bg-white shadow-2xl rounded-xl
+                            opacity-0 invisible translate-y-2
+                            transition-all duration-300 ease-in-out z-50">
+
+                    <!-- Close Button -->
+                    <button id="dropdownClose"
+                            class="absolute top-4 right-4 p-2 text-gray-600 hover:text-gray-900 transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"/>
                         </svg>
+                    </button>
+
+                    <div class="p-8">
+                        <div class="grid grid-cols-3 gap-8">
+                            <div>
+                                <h3 class="text-xs font-bold uppercase tracking-widest text-gray-900 mb-4 pb-2 border-b">
+                                    About
+                                </h3>
+                                <ul class="space-y-3">
+                                    <li><a href="{{ route('our-story') }}" class="text-gray-600 text-sm hover:text-blue-600">Our Story</a></li>
+                                    <li><a href="{{ route('vission-mission') }}" class="text-gray-600 text-sm hover:text-blue-600">Vision & Mission</a></li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h3 class="text-xs font-bold uppercase tracking-widest text-gray-900 mb-4 pb-2 border-b">
+                                    Governance
+                                </h3>
+                                <ul class="space-y-3">
+                                    <li><a href="#about" class="text-gray-600 text-sm hover:text-blue-600">Board of Directors</a></li>
+                                    <li><a href="#about" class="text-gray-600 text-sm hover:text-blue-600">Management Team</a></li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h3 class="text-xs font-bold uppercase tracking-widest text-gray-900 mb-4 pb-2 border-b">
+                                    Company
+                                </h3>
+                                <ul class="space-y-3">
+                                    <li><a href="{{ route('values') }}" class="text-gray-600 text-sm hover:text-blue-600">Our Values</a></li>
+                                    <li><a href="{{ route('strategic-direction') }}" class="text-gray-600 text-sm hover:text-blue-600">Strategic Direction</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <a href="{{ request()->is('/') ? '#solutions' : url('/#solutions') }}" class="nav-link">
-                    Solutions
-                </a>
-                <a href="{{ request()->is('/') ? '#why-choose-us' : url('/#why-choose-us') }}" class="nav-link">Why Choose Us</a>
-                <a href="{{ request()->is('/') ? '#business-lines' : url('/#business-lines') }}" class="nav-link">Business Units</a>
-                <a href="{{ request()->is('/') ? '#projects' : url('/#projects') }}" class="nav-link">Projects</a>
-                <a href="{{ request()->is('/') ? '#our-clients' : url('/#our-clients') }}" class="nav-link">Our Clients</a>
-                <a href="{{ route('courses') }}" class="{{ request()->routeIs('courses') ? 'text-blue-800 font-bold' : 'nav-link' }}">Courses</a>
+            </div>
+                <a href="{{ request()->is('/') ? '#why-choose-us' : url('/#why-choose-us') }}" class="nav-link">WHY CHOOSE US</a>
+                <a href="{{ request()->is('/') ? '#business-lines' : url('/#business-lines') }}" class="nav-link">WHAT WE DO</a>
+                <a href="{{ route('courses') }}" class="{{ request()->routeIs('courses') ? 'text-blue-800 font-bold' : 'nav-link' }}">GENYRA ACADEMY</a>
+
+
             </div>
             
             <!-- Right side -->
             <div class="hidden md:flex items-center space-x-6">
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#contact" class="nav-link">CONTACT</a>
                 <button class="text-gray-700 hover:text-blue-600">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
@@ -66,56 +113,7 @@
         </div>
     </div>
 
-    <!-- Full Width Dropdown - slides from top -->
-    <div id="aboutDropdown" class="absolute left-0 right-0 w-full bg-white shadow-lg overflow-hidden transition-all duration-500 ease-in-out opacity-0 invisible" style="max-height: 0; top: 100%;">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <!-- Close button -->
-            <button id="dropdownClose" class="absolute top-6 right-8 p-2 text-gray-600 hover:text-gray-900 transition-colors">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
-            
-            <div class="grid grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xs font-bold uppercase tracking-widest text-gray-900 mb-4 pb-2 border-b-2 border-gray-200">Who We Are</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#about" class="text-gray-600 text-sm transition-all hover:text-blue-600 hover:translate-x-1 inline-block">Our Story</a></li>
-                        <li><a href="#about" class="text-gray-600 text-sm transition-all hover:text-blue-600 hover:translate-x-1 inline-block">Mission & Vision</a></li>
-                        <li><a href="#about" class="text-gray-600 text-sm transition-all hover:text-blue-600 hover:translate-x-1 inline-block">Our Values</a></li>
-                        <li><a href="#about" class="text-gray-600 text-sm transition-all hover:text-blue-600 hover:translate-x-1 inline-block">Leadership Team</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xs font-bold uppercase tracking-widest text-gray-900 mb-4 pb-2 border-b-2 border-gray-200">Our Work</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#business-lines" class="text-gray-600 text-sm transition-all hover:text-blue-600 hover:translate-x-1 inline-block">Healthcare Innovation</a></li>
-                        <li><a href="#business-lines" class="text-gray-600 text-sm transition-all hover:text-blue-600 hover:translate-x-1 inline-block">Clinical Excellence</a></li>
-                        <li><a href="#business-lines" class="text-gray-600 text-sm transition-all hover:text-blue-600 hover:translate-x-1 inline-block">Regional Impact</a></li>
-                        <li><a href="#solutions" class="text-gray-600 text-sm transition-all hover:text-blue-600 hover:translate-x-1 inline-block">Solutions Overview</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xs font-bold uppercase tracking-widest text-gray-900 mb-4 pb-2 border-b-2 border-gray-200">Get Involved</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#contact" class="text-gray-600 text-sm transition-all hover:text-blue-600 hover:translate-x-1 inline-block">Partners</a></li>
-                        <li><a href="#projects" class="text-gray-600 text-sm transition-all hover:text-blue-600 hover:translate-x-1 inline-block">Case Studies</a></li>
-                        <li><a href="#contact" class="text-gray-600 text-sm transition-all hover:text-blue-600 hover:translate-x-1 inline-block">Careers</a></li>
-                        <li><a href="#contact" class="text-gray-600 text-sm transition-all hover:text-blue-600 hover:translate-x-1 inline-block">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xs font-bold uppercase tracking-widest text-gray-900 mb-4 pb-2 border-b-2 border-gray-200">Accreditation</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#about" class="text-gray-600 text-sm transition-all hover:text-blue-600 hover:translate-x-1 inline-block">ISO Certifications</a></li>
-                        <li><a href="#about" class="text-gray-600 text-sm transition-all hover:text-blue-600 hover:translate-x-1 inline-block">Industry Standards</a></li>
-                        <li><a href="#about" class="text-gray-600 text-sm transition-all hover:text-blue-600 hover:translate-x-1 inline-block">Compliance</a></li>
-                        <li><a href="#about" class="text-gray-600 text-sm transition-all hover:text-blue-600 hover:translate-x-1 inline-block">Awards & Recognition</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden transition-opacity duration-300 opacity-0 invisible"></div>
@@ -142,21 +140,18 @@
         <div class="px-4 py-6">
             <!-- About Us Button -->
             <button id="mobile-about-toggle" class="w-full flex items-center justify-between px-4 py-4 text-left text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">
-                <span>About us</span>
+                <span>ABOUT US</span>
                 <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
             </button>
 
             <!-- Other Menu Items -->
-            <a href="{{ request()->is('/') ? '#solutions' : url('/#solutions') }}" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Solutions</a>
-            <a href="{{ request()->is('/') ? '#why-choose-us' : url('/#why-choose-us') }}" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Why Choose Us</a>
-            <a href="{{ request()->is('/') ? '#business-lines' : url('/#business-lines') }}" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Business Units</a>
-            <a href="{{ request()->is('/') ? '#projects' : url('/#projects') }}" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Projects</a>
+            <a href="{{ request()->is('/') ? '#why-choose-us' : url('/#why-choose-us') }}" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">WHY CHOOSE US</a>
+            <a href="{{ request()->is('/') ? '#business-lines' : url('/#business-lines') }}" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">WHAT WE DO</a>
             <!-- courses -->
-            <a href="{{ route('courses') }}" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Courses</a>
-            <a href="{{ request()->is('/') ? '#our-clients' : url('/#our-clients') }}" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">Our Clients</a>
-            <a href="{{ request()->is('/') ? '#contact' : url('/#contact') }}" class="block px-4 py-4 text-blue-600 font-medium hover:bg-blue-50 rounded-lg transition-colors">Contact</a>
+            <a href="{{ route('courses') }}" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">GENYRA ACADEMY</a>
+            <a href="{{ request()->is('/') ? '#contact' : url('/#contact') }}" class="block px-4 py-4 text-blue-600 font-medium hover:bg-blue-50 rounded-lg transition-colors">CONTACT</a>
         </div>
     </div>
 
@@ -180,47 +175,30 @@
 
         <!-- Submenu Content -->
         <div class="px-4 py-6">
-            <!-- Who We Are Section -->
+            <!-- About Section -->
             <div class="mb-8">
-                <h3 class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4 px-4">Who We Are</h3>
+                <h3 class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4 px-4">About</h3>
                 <div class="space-y-1">
                     <a href="#about" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Our Story</a>
-                    <a href="#about" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Mission & Vision</a>
+                    <a href="#about" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Vision & Mission</a>
+                </div>
+            </div>
+            
+            <!-- Governance Section -->
+            <div class="mb-8">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4 px-4">Governance</h3>
+                <div class="space-y-1">
+                    <a href="#about" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Board of Directors</a>
+                    <a href="#about" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Management Team</a>
+                </div>
+            </div>
+            
+            <!-- Company Section -->
+            <div class="mb-8">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4 px-4">Company</h3>
+                <div class="space-y-1">
                     <a href="#about" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Our Values</a>
-                    <a href="#about" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Leadership Team</a>
-                </div>
-            </div>
-
-            <!-- Our Work Section -->
-            <div class="mb-8">
-                <h3 class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4 px-4">Our Work</h3>
-                <div class="space-y-1">
-                    <a href="#business-lines" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Healthcare Innovation</a>
-                    <a href="#business-lines" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Clinical Excellence</a>
-                    <a href="#business-lines" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Regional Impact</a>
-                    <a href="#solutions" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Solutions Overview</a>
-                </div>
-            </div>
-
-            <!-- Get Involved Section -->
-            <div class="mb-8">
-                <h3 class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4 px-4">Get Involved</h3>
-                <div class="space-y-1">
-                    <a href="#contact" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Partners</a>
-                    <a href="#projects" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Case Studies</a>
-                    <a href="#contact" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Careers</a>
-                    <a href="#contact" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Contact Us</a>
-                </div>
-            </div>
-
-            <!-- Accreditation Section -->
-            <div class="mb-8">
-                <h3 class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4 px-4">Accreditation</h3>
-                <div class="space-y-1">
-                    <a href="#about" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">ISO Certifications</a>
-                    <a href="#about" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Industry Standards</a>
-                    <a href="#about" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Compliance</a>
-                    <a href="#about" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Awards & Recognition</a>
+                    <a href="#about" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Strategic Direction</a>
                 </div>
             </div>
         </div>

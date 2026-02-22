@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Posters - Genyra Admin')
+@section('title', 'Posters')
 
 @section('content')
 <div class="max-w-7xl mx-auto">
