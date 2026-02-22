@@ -75,7 +75,7 @@
     @foreach([
       [
         'Regional Expansion',
-        'Deepening presence across Kenya, Uganda, Tanzania, Rwanda, South Sudan, and Ethiopia — with service centres, regional offices, and local teams equipped to respond fast.',
+        'Deepening presence across Kenya, Uganda, Tanzania, Rwanda, South Sudan, and Ethiopia with service centres, regional offices, and local teams equipped to respond fast.',
       ],
       [
         'Technology & Innovation',
@@ -87,7 +87,7 @@
       ],
       [
         'Workforce Development',
-        'Training 500+ healthcare professionals annually — building local capacity and ensuring sustainable, long-term impact beyond equipment supply.',
+        'Training 500+ healthcare professionals annually building local capacity and ensuring sustainable, long-term impact beyond equipment supply.',
       ],
       [
         'Strategic Partnerships',
@@ -113,12 +113,12 @@
     </div>
     <div class="divide-y divide-[#f0f4f8]">
       @foreach([
-        ['2025', 'Complete laboratory setup for Level 5 County Hospital — 50+ equipment installations.'],
+        ['2025', 'Complete laboratory setup for Level 5 County Hospital 50+ equipment installations.'],
         ['2024', 'HIS/LIS integration for 300-bed hospital across 5 satellite clinics.'],
         ['2024', 'ISO/IEC 17025 accreditation support delivered for 3 hospital laboratories.'],
-        ['2023', 'Laboratory automation project — hematology and chemistry analyzers with middleware.'],
+        ['2023', 'Laboratory automation project hematology and chemistry analyzers with middleware.'],
         ['Ongoing', 'Annual maintenance contracts covering 50+ healthcare facilities nationwide.'],
-        ['Ongoing', 'Capacity building programs — 500+ healthcare professionals trained annually.'],
+        ['Ongoing', 'Capacity building programs 500+ healthcare professionals trained annually.'],
       ] as [$year, $desc])
       <div class="flex items-start gap-5 px-6 py-4">
         <span class="text-sm font-bold text-[#00a0c6] font-mono w-14 flex-shrink-0 pt-0.5">{{ $year }}</span>
@@ -131,7 +131,7 @@
   {{-- CTA --}}
   <div class="bg-[#1e3a6e] rounded overflow-hidden px-8 py-8 text-center">
     <h2 class="text-white text-lg font-bold mb-2">Partner With Us</h2>
-    <p class="text-white/60 text-sm mb-5 max-w-xl mx-auto">Whether you're a hospital, research institution, or government facility — let's build a better healthcare system together.</p>
+    <p class="text-white/60 text-sm mb-5 max-w-xl mx-auto">Whether you're a hospital, research institution, or government facility let's build a better healthcare system together.</p>
     <a href="{{ url('/#contact') }}" class="inline-block px-6 py-2.5 bg-[#00a0c6] text-white text-sm font-semibold rounded no-underline hover:bg-[#0090b5] transition-colors tracking-wide">
       Get in Touch →
     </a>

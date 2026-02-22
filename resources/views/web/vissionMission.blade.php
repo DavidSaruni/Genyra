@@ -42,7 +42,7 @@
           To be the most trusted and preferred partner for healthcare solutions in Africa.
         </p>
         <p class="text-[0.88rem] text-[#6b7280] leading-relaxed mt-3">
-          We aspire to set the standard for healthcare excellence across the continent — connecting world-class technology with the realities of African healthcare systems, and building lasting impact for the communities we serve.
+          We aspire to set the standard for healthcare excellence across the continent connecting world-class technology with the realities of African healthcare systems, and building lasting impact for the communities we serve.
         </p>
       </div>
     </div>
@@ -65,7 +65,7 @@
           To deliver innovative, reliable, and world-class healthcare solutions that improve patient outcomes, advance scientific research, and enhance operational efficiency.
         </p>
         <p class="text-[0.88rem] text-[#6b7280] leading-relaxed mt-3">
-          Every day our teams work across four specialized business Units — BioSciences, MedTech Solutions, Health Systems Advisory, and Metrology &amp; Calibration — to ensure healthcare facilities across East Africa are equipped, accredited, and operating at their best.
+          Every day our teams work across four specialized business Units BioSciences, MedTech Solutions, Health Systems Advisory, and Metrology &amp; Calibration to ensure healthcare facilities across East Africa are equipped, accredited, and operating at their best.
         </p>
       </div>
     </div>

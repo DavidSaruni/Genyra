@@ -37,7 +37,7 @@
     </p>
   </div>
 
-  {{-- ── Chairman & Secretary/CEO — Featured ── --}}
+  {{-- ── Chairman & Secretary/CEO Featured ── --}}
   <div>
     <div class="bg-[#1e3a6e] rounded-t px-6 py-4 border-b-4 border-[#00a0c6]">
       <h2 class="text-white font-bold text-[0.95rem] tracking-wider uppercase m-0">Executive Board</h2>

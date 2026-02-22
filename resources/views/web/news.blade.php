@@ -58,7 +58,7 @@
     pointer-events: auto;
   }
 
-  /* "All Filters" trigger — visible only on small screens */
+  /* "All Filters" trigger visible only on small screens */
   #all-filters-btn {
     display: none;
   }
@@ -298,7 +298,7 @@
       {{-- "All Filters" trigger (mobile only) + Filter tabs --}}
       <div class="mb-7">
 
-        {{-- Mobile: All Filters button — shown above tabs on small screens --}}
+        {{-- Mobile: All Filters button shown above tabs on small screens --}}
         <button
           id="all-filters-btn"
           aria-label="Open all filters"
@@ -310,7 +310,7 @@
           All Filters &amp; Categories →
         </button>
 
-        {{-- Filter tabs — labels and slugs are hardcoded to match your DB exactly --}}
+        {{-- Filter tabs labels and slugs are hardcoded to match your DB exactly --}}
         <div class="flex flex-wrap gap-2">
           <button class="filter-btn px-3.5 py-1.5 border border-[#c8dce8] rounded text-xs font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#1e3a6e] hover:text-white hover:border-[#1e3a6e] tracking-wide" data-category="">All News</button>
           <button class="filter-btn px-3.5 py-1.5 border border-[#c8dce8] rounded text-xs font-medium cursor-pointer transition-all text-[#1e3a6e] bg-white hover:bg-[#1e3a6e] hover:text-white hover:border-[#1e3a6e] tracking-wide" data-category="biosciences">BioSciences</button>
@@ -401,7 +401,7 @@
 
 
 
-      {{-- Categories — real anchor links, highlighted when active --}}
+      {{-- Categories real anchor links, highlighted when active --}}
       <div class="bg-white rounded shadow-[0_1px_4px_rgba(0,0,0,0.07)] overflow-hidden">
         <div class="bg-[#1e3a6e] text-white text-[0.78rem] font-semibold tracking-wider uppercase px-4 py-2.5 border-b-3 border-[#00a0c6]">Categories</div>
         <div>
@@ -540,7 +540,7 @@
       window.location.href = url.toString();
     }
 
-    // ── Desktop filter tabs — clears search when filtering by category ──
+    // ── Desktop filter tabs clears search when filtering by category ──
     document.querySelectorAll('.filter-btn').forEach(function (btn) {
       btn.addEventListener('click', function () {
         var url = new URL(window.location.href);
@@ -555,7 +555,7 @@
       });
     });
 
-    // ── Drawer quick-filter tags — also clears search ──
+    // ── Drawer quick-filter tags also clears search ──
     document.querySelectorAll('.drawer-filter-tag').forEach(function (tag) {
       tag.addEventListener('click', function () {
         var url = new URL(window.location.href);

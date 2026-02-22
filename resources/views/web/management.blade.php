@@ -141,7 +141,7 @@ function photoPlaceholder($color = '#1e3a6e', $size = 'md') {
     </div>
   </div>
 
-  {{-- ── Corporate Shared Services (department strip — no individuals) ── --}}
+  {{-- ── Corporate Shared Services (department strip no individuals) ── --}}
   <div class="bg-white rounded shadow-[0_1px_6px_rgba(0,0,0,0.08)] overflow-hidden">
     <div class="bg-[#455a64] px-6 py-4 border-b-4 border-[#00a0c6]">
       <h2 class="text-white font-bold text-[0.95rem] tracking-wider uppercase m-0">Corporate Shared Services</h2>

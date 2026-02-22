@@ -30,7 +30,7 @@
 <section class="relative z-[5] bg-white px-6 lg:px-20 py-12 border-b-2 border-black/20 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-15 items-center">
   <div>
     <p class="text-md text-gray-600 mb-6 leading-relaxed">
-      Genyra Group's training programmes are designed for <strong class="text-[#1a1510] font-medium">working professionals</strong> seeking to deepen expertise, earn recognised competencies, or stay current in rapidly evolving fields. Our short courses are <strong class="text-[#1a1510] font-medium">practical, evidence-based, and tightly aligned</strong> with industry standards and regulatory frameworks — delivered by seasoned practitioners across our four business pillars.
+      Genyra Group's training programmes are designed for <strong class="text-[#1a1510] font-medium">working professionals</strong> seeking to deepen expertise, earn recognised competencies, or stay current in rapidly evolving fields. Our short courses are <strong class="text-[#1a1510] font-medium">practical, evidence-based, and tightly aligned</strong> with industry standards and regulatory frameworks delivered by seasoned practitioners across our four business pillars.
     </p>
   </div>
   <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
@@ -100,7 +100,7 @@
         <div class="p-7 pb-5 flex-1 flex flex-col">
           <div class="font-mono text-[9.5px] tracking-[0.25em] text-[#00A0C6] mb-3 uppercase">GBS-101</div>
           <div class="text-xl font-bold mb-4 text-gray-700">Fundamentals of Medical Microbiology for Health Professionals</div>
-          <div class="text-gray-600 mb-6">A rigorous introduction to clinical and diagnostic microbiology — covering bacteria, fungi, viruses, and parasites in the context of human health. Participants learn infection pathways, specimen handling, laboratory safety, and the interpretation of microbiological reports in clinical decision-making.</div>
+          <div class="text-gray-600 mb-6">A rigorous introduction to clinical and diagnostic microbiology covering bacteria, fungi, viruses, and parasites in the context of human health. Participants learn infection pathways, specimen handling, laboratory safety, and the interpretation of microbiological reports in clinical decision-making.</div>
         </div>
         <div class="px-7 py-3.5 bg-[#f0ede8] border-t border-black/10">
           <div class="category-label mb-3">Who should attend</div>
@@ -157,7 +157,7 @@
         <div class="p-7 pb-5 flex-1 flex flex-col">
           <div class="font-mono text-[9.5px] tracking-[0.25em] text-[#00A0C6] mb-3 uppercase">GBS-104</div>
           <div class="text-xl font-bold mb-4 text-gray-700">Scientific Research Design & Data Integrity</div>
-          <div class="text-gray-600 mb-6">A hands-on course covering the end-to-end research process — from formulating a research question and choosing study designs, to collecting data ethically and ensuring analytical rigour. Special emphasis is placed on Good Research Practice (GRP), research ethics, and documentation standards in health and life sciences.</div>
+          <div class="text-gray-600 mb-6">A hands-on course covering the end-to-end research process from formulating a research question and choosing study designs, to collecting data ethically and ensuring analytical rigour. Special emphasis is placed on Good Research Practice (GRP), research ethics, and documentation standards in health and life sciences.</div>
         </div>
         <div class="px-7 py-3.5 bg-[#f0ede8] border-t border-black/10">
           <div class="category-label mb-3">Who should attend</div>
@@ -210,7 +210,7 @@
         <div class="p-7 pb-5 flex-1 flex flex-col">
           <div class="font-mono text-[9.5px] tracking-[0.25em] text-[#1E3A6E] mb-3 uppercase">GMT-101</div>
           <div class="text-xl font-bold mb-4 text-gray-700">Healthcare Technology Management Essentials</div>
-          <div class="text-gray-600 mb-6">An essential primer for anyone responsible for managing medical equipment in health facilities. Covers the full equipment lifecycle — from needs assessment and procurement through to acceptance testing, preventive maintenance planning, and decommissioning — with practical tools and checklists.</div>
+          <div class="text-gray-600 mb-6">An essential primer for anyone responsible for managing medical equipment in health facilities. Covers the full equipment lifecycle from needs assessment and procurement through to acceptance testing, preventive maintenance planning, and decommissioning with practical tools and checklists.</div>
         </div>
         <div class="px-7 py-3.5 bg-[#f0ede8] border-t border-black/10">
           <div class="category-label mb-3">Who should attend</div>
@@ -229,7 +229,7 @@
         <div class="p-7 pb-5 flex-1 flex flex-col">
           <div class="font-mono text-[9.5px] tracking-[0.25em] text-[#1E3A6E] mb-3 uppercase">GMT-102</div>
           <div class="text-xl font-bold mb-4 text-gray-700">Medical Device Regulation & Market Authorisation</div>
-          <div class="text-gray-600 mb-6">Navigates the complex landscape of medical device regulatory frameworks — covering national regulatory pathways, CE marking, WHO prequalification, post-market surveillance obligations, and adverse event reporting. Participants gain the knowledge to achieve and maintain market authorisation for medical devices.</div>
+          <div class="text-gray-600 mb-6">Navigates the complex landscape of medical device regulatory frameworks covering national regulatory pathways, CE marking, WHO prequalification, post-market surveillance obligations, and adverse event reporting. Participants gain the knowledge to achieve and maintain market authorisation for medical devices.</div>
         </div>
         <div class="px-7 py-3.5 bg-[#f0ede8] border-t border-black/10">
           <div class="category-label mb-3">Who should attend</div>
@@ -248,7 +248,7 @@
         <div class="p-7 pb-5 flex-1 flex flex-col">
           <div class="font-mono text-[9.5px] tracking-[0.25em] text-[#1E3A6E] mb-3 uppercase">GMT-103</div>
           <div class="text-xl font-bold mb-4 text-gray-700">Health Technology Assessment (HTA): Evidence-Based Procurement</div>
-          <div class="text-gray-600 mb-6">Introduces participants to HTA methodologies used to inform purchasing decisions for medical technologies. The course covers cost-effectiveness analysis, clinical evidence evaluation, burden of disease considerations, and stakeholder analysis — empowering procurement teams to invest wisely in medical technology.</div>
+          <div class="text-gray-600 mb-6">Introduces participants to HTA methodologies used to inform purchasing decisions for medical technologies. The course covers cost-effectiveness analysis, clinical evidence evaluation, burden of disease considerations, and stakeholder analysis empowering procurement teams to invest wisely in medical technology.</div>
         </div>
         <div class="px-7 py-3.5 bg-[#f0ede8] border-t border-black/10">
           <div class="category-label mb-3">Who should attend</div>
@@ -267,7 +267,7 @@
         <div class="p-7 pb-5 flex-1 flex flex-col">
           <div class="font-mono text-[9.5px] tracking-[0.25em] text-[#1E3A6E] mb-3 uppercase">GMT-104</div>
           <div class="text-xl font-bold mb-4 text-gray-700">Digital Health & Emerging Medical Technologies</div>
-          <div class="text-gray-600 mb-6">A forward-looking survey of transformative technologies reshaping healthcare delivery — from AI-assisted diagnostics and electronic health records to telehealth platforms, wearables, and point-of-care technologies. Participants explore both the promise and governance challenges of digital health in resource-variable settings.</div>
+          <div class="text-gray-600 mb-6">A forward-looking survey of transformative technologies reshaping healthcare delivery from AI-assisted diagnostics and electronic health records to telehealth platforms, wearables, and point-of-care technologies. Participants explore both the promise and governance challenges of digital health in resource-variable settings.</div>
         </div>
         <div class="px-7 py-3.5 bg-[#f0ede8] border-t border-black/10">
           <div class="category-label mb-3">Who should attend</div>
@@ -320,7 +320,7 @@
         <div class="p-7 pb-5 flex-1 flex flex-col">
           <div class="font-mono text-[9.5px] tracking-[0.25em] text-[#0077B6] mb-3 uppercase">GHS-101</div>
           <div class="text-xl font-bold mb-4 text-gray-700">Strategic Planning for Health Institutions</div>
-          <div class="text-gray-600 mb-6">Equips health leaders with the tools to develop, implement, and monitor strategic plans for hospitals, health programmes, and government health units. The course covers situational analysis, stakeholder mapping, theory of change, balanced scorecards, and results-based frameworks — with real-plan case studies throughout.</div>
+          <div class="text-gray-600 mb-6">Equips health leaders with the tools to develop, implement, and monitor strategic plans for hospitals, health programmes, and government health units. The course covers situational analysis, stakeholder mapping, theory of change, balanced scorecards, and results-based frameworks with real-plan case studies throughout.</div>
         </div>
         <div class="px-7 py-3.5 bg-[#f0ede8] border-t border-black/10">
           <div class="category-label mb-3">Who should attend</div>
@@ -358,7 +358,7 @@
         <div class="p-7 pb-5 flex-1 flex flex-col">
           <div class="font-mono text-[9.5px] tracking-[0.25em] text-[#0077B6] mb-3 uppercase">GHS-103</div>
           <div class="text-xl font-bold mb-4 text-gray-700">Internal Audit Skills for Health & Laboratory Settings</div>
-          <div class="text-gray-600 mb-6">Develops practical internal audit competencies in participants — from audit planning and checklist development to conducting interviews, writing non-conformity reports, and following up on corrective actions. Taught within a health and laboratory quality systems context, fully aligned with ISO audit requirements.</div>
+          <div class="text-gray-600 mb-6">Develops practical internal audit competencies in participants from audit planning and checklist development to conducting interviews, writing non-conformity reports, and following up on corrective actions. Taught within a health and laboratory quality systems context, fully aligned with ISO audit requirements.</div>
         </div>
         <div class="px-7 py-3.5 bg-[#f0ede8] border-t border-black/10">
           <div class="category-label mb-3">Who should attend</div>
@@ -430,7 +430,7 @@
         <div class="p-7 pb-5 flex-1 flex flex-col">
           <div class="font-mono text-[9.5px] tracking-[0.25em] text-[#008BA3] mb-3 uppercase">GMC-101</div>
           <div class="text-xl font-bold mb-4 text-gray-700">Fundamentals of Metrology & Measurement Science</div>
-          <div class="text-gray-600 mb-6">Introduces the science of measurement — covering measurement units (SI system), measurement uncertainty, traceability, accuracy vs. precision, and the principles underpinning reliable metrology. Participants gain a conceptual and practical foundation applicable to clinical, laboratory, and industrial measurement contexts.</div>
+          <div class="text-gray-600 mb-6">Introduces the science of measurement covering measurement units (SI system), measurement uncertainty, traceability, accuracy vs. precision, and the principles underpinning reliable metrology. Participants gain a conceptual and practical foundation applicable to clinical, laboratory, and industrial measurement contexts.</div>
         </div>
         <div class="px-7 py-3.5 bg-[#f0ede8] border-t border-black/10">
           <div class="category-label mb-3">Who should attend</div>
@@ -449,7 +449,7 @@
         <div class="p-7 pb-5 flex-1 flex flex-col">
           <div class="font-mono text-[9.5px] tracking-[0.25em] text-[#008BA3] mb-3 uppercase">GMC-102</div>
           <div class="text-xl font-bold mb-4 text-gray-700">Medical Instrument Calibration: Principles & Practice</div>
-          <div class="text-gray-600 mb-6">A practical course on calibrating the most common medical instruments — including thermometers, sphygmomanometers, weighing scales, infusion pumps, and patient monitors. Covers calibration procedures, reference standards, tolerance limits, and documentation requirements in line with ISO 17025 and regulatory norms.</div>
+          <div class="text-gray-600 mb-6">A practical course on calibrating the most common medical instruments including thermometers, sphygmomanometers, weighing scales, infusion pumps, and patient monitors. Covers calibration procedures, reference standards, tolerance limits, and documentation requirements in line with ISO 17025 and regulatory norms.</div>
         </div>
         <div class="px-7 py-3.5 bg-[#f0ede8] border-t border-black/10">
           <div class="category-label mb-3">Who should attend</div>
@@ -487,7 +487,7 @@
         <div class="p-7 pb-5 flex-1 flex flex-col">
           <div class="font-mono text-[9.5px] tracking-[0.25em] text-[#008BA3] mb-3 uppercase">GMC-104</div>
           <div class="text-xl font-bold mb-4 text-gray-700">Measurement Uncertainty Estimation & Reporting</div>
-          <div class="text-gray-600 mb-6">Provides a thorough grounding in the GUM (Guide to the Expression of Uncertainty in Measurement) framework. Participants learn to identify uncertainty sources, construct uncertainty budgets, and correctly report expanded uncertainty in calibration certificates and test reports — a critical skill for ISO 17025 compliance.</div>
+          <div class="text-gray-600 mb-6">Provides a thorough grounding in the GUM (Guide to the Expression of Uncertainty in Measurement) framework. Participants learn to identify uncertainty sources, construct uncertainty budgets, and correctly report expanded uncertainty in calibration certificates and test reports a critical skill for ISO 17025 compliance.</div>
         </div>
         <div class="px-7 py-3.5 bg-[#f0ede8] border-t border-black/10">
           <div class="category-label mb-3">Who should attend</div>

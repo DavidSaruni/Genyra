@@ -63,7 +63,7 @@
         ['2022', 'Calibration and validation of 200+ equipment units across 10 facilities. ISO/IEC 17025 accreditation achieved.'],
         ['2023', 'ICU equipment supply for COVID-19 response; laboratory automation projects rolled out region-wide.'],
         ['2024', 'HIS/LIS implementation for 300-bed hospital; ISO accreditation support for 3 hospital laboratories.'],
-        ['2025', 'Complete laboratory setup for Level 5 County Hospital — 50+ equipment installations. Ongoing maintenance contracts with 50+ facilities.'],
+        ['2025', 'Complete laboratory setup for Level 5 County Hospital 50+ equipment installations. Ongoing maintenance contracts with 50+ facilities.'],
       ] as [$year, $desc])
       <div class="flex items-start gap-5 px-6 py-5">
         <span class="text-[0.85rem] font-bold text-[#00a0c6] font-mono w-10 flex-shrink-0 pt-0.5">{{ $year }}</span>
