@@ -26,7 +26,7 @@
 
   {{-- Intro --}}
   <div class="bg-white rounded shadow-[0_1px_6px_rgba(0,0,0,0.08)] px-8 py-7">
-    <p class="text-[0.93rem] text-[#4b5563] leading-relaxed max-w-2xl">
+    <p class="text-md text-[#4b5563] leading-relaxed max-w-2xl">
       Our values are the foundation of everything we do at Genyra Group — guiding how we work with clients, partners, and each other every single day.
     </p>
   </div>
