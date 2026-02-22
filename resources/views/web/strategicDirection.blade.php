@@ -42,29 +42,29 @@
       @foreach([
         [
           'BioSciences',
-          'Discovery. Diagnostics. Translation.',
-          'Advanced laboratory testing, research sample analysis, biobanking, contract laboratory services, translational research support, reagent validation, and clinical trials.',
+          'Life Sciences Research & Applied Biology',
+          'Genyra BioSciences is where discovery meets application. We bridge the gap between fundamental biological research and real-world health outcomes advancing knowledge in molecular biology, microbiology, genomics, and applied life sciences. Our work underpins the science behind better diagnostics, safer products, and more effective therapies.',
         ],
         [
           'MedTech Solutions',
-          'Smart technologies for better health outcomes.',
-          'Supply of diagnostic and biomedical equipment, point-of-care testing, digital health tools (LIMS, EMRs, AI diagnostics), consumables, reagents, PPE distribution, and preventive health solutions.',
+          'Medical Technology & Device Solutions',
+          'Genyra MedTech delivers end-to-end medical technology solutions from device selection and procurement to deployment, user training, and post-market support. We work with hospitals, clinics, and health programmes to ensure the right technology is in the right hands, functioning optimally, and aligned with clinical and operational needs.',
         ],
         [
           'Health Systems Planning & Advisory',
-          'Designing resilient, compliant, and people-centered health systems.',
-          'Health systems strategic planning, Quality Management Systems (ISO 9001, ISO 15189, ISO 17025), laboratory accreditation, biosafety, biosecurity, risk management, and health policy advisory.',
+          'Strategic Planning · Quality Management Systems',
+          'Genyra Health Systems Planning & Advisory empowers health institutions and organisations with the strategic intelligence and quality frameworks they need to perform at their best. We partner with governments, health authorities, NGOs, and private sector actors to design robust health systems, develop strategic plans, and embed quality cultures that endure.',
         ],
         [
           'Metrology & Calibration Services',
-          'Precision you can trust.',
-          'Calibration of laboratory and medical equipment, measurement verification and validation, ISO/IEC 17025 advisory, environmental monitoring, and equipment performance audits.',
+          'Precision Measurement & Instrument Assurance',
+          'Genyra Metrology & Calibration Services is built on a fundamental truth: accurate measurement is the foundation of safe and effective healthcare. We provide professional calibration, verification, and measurement assurance services for medical, laboratory, and industrial instruments ensuring that every reading is trustworthy, traceable, and compliant.',
         ],
       ] as [$title, $tagline, $desc])
       <div class="p-6 lg:p-8">
         <p class="text-[0.68rem] font-semibold tracking-widest uppercase text-[#00a0c6] mb-1">{{ $tagline }}</p>
         <h3 class="font-bold text-[#1e3a6e] text-[0.95rem] mb-2">{{ $title }}</h3>
-        <p class="text-[0.82rem] text-[#6b7280] leading-relaxed">{{ $desc }}</p>
+        <p class="text-sm text-[#6b7280] leading-relaxed">{{ $desc }}</p>
       </div>
       @endforeach
     </div>
@@ -121,7 +121,7 @@
         ['Ongoing', 'Capacity building programs — 500+ healthcare professionals trained annually.'],
       ] as [$year, $desc])
       <div class="flex items-start gap-5 px-6 py-4">
-        <span class="text-[0.82rem] font-bold text-[#00a0c6] font-mono w-14 flex-shrink-0 pt-0.5">{{ $year }}</span>
+        <span class="text-sm font-bold text-[#00a0c6] font-mono w-14 flex-shrink-0 pt-0.5">{{ $year }}</span>
         <p class="text-[0.87rem] text-[#4b5563] leading-relaxed">{{ $desc }}</p>
       </div>
       @endforeach

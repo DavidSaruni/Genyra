@@ -540,6 +540,7 @@
                       <p class="text-gray-600 mb-6">
                           Genyra BioSciences is where discovery meets application. We bridge the gap between fundamental biological research and real-world health outcomes advancing knowledge in molecular biology, microbiology, genomics, and applied life sciences. Our work underpins the science behind better diagnostics, safer products, and more effective therapies.
                       </p>
+                      <p class="category-label mb-3">Core Capabilities</p>
                       <ul class="space-y-4">
                     <li class="flex items-start">
                         <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
@@ -577,6 +578,7 @@
                       <p class="text-gray-600 mb-6">
                           Genyra MedTech delivers end-to-end medical technology solutions from device selection and procurement to deployment, user training, and post-market support. We work with hospitals, clinics, and health programmes to ensure the right technology is in the right hands, functioning optimally, and aligned with clinical and operational needs.
                       </p>
+                      <p class="category-label mb-3">Core Capabilities</p>
                       <ul class="space-y-4">
                     <li class="flex items-start">
                         <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
@@ -614,6 +616,7 @@
                       <p class="text-gray-600 mb-6">
                           Genyra Health Systems Planning & Advisory empowers health institutions and organisations with the strategic intelligence and quality frameworks they need to perform at their best. We partner with governments, health authorities, NGOs, and private sector actors to design robust health systems, develop strategic plans, and embed quality cultures that endure.
                       </p>
+                      <p class="category-label mb-3">Core Capabilities</p>
                       <ul class="space-y-4">
                     <li class="flex items-start">
                         <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
@@ -651,6 +654,7 @@
                       <p class="text-gray-600 mb-6">
                           Genyra Metrology & Calibration Services is built on a fundamental truth: accurate measurement is the foundation of safe and effective healthcare. We provide professional calibration, verification, and measurement assurance services for medical, laboratory, and industrial instruments ensuring that every reading is trustworthy, traceable, and compliant.
                       </p>
+                      <p class="category-label mb-3">Core Capabilities</p>
                       <ul class="space-y-4">
                     <li class="flex items-start">
                         <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
