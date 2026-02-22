@@ -72,7 +72,7 @@
         </svg>
       </div>
       <h3 class="font-bold text-[#1e3a6e] text-[0.95rem] mb-2">{{ $title }}</h3>
-      <p class="text-[0.82rem] text-[#6b7280] leading-relaxed">{{ $desc }}</p>
+      <p class="text-sm text-[#6b7280] leading-relaxed">{{ $desc }}</p>
     </div>
     @endforeach
   </div>
