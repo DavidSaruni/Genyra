@@ -132,7 +132,7 @@
     </div>
 
     <!-- Recent Posters -->
-    <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+    <div class="bg-white rounded-lg shadow-sm border border-gray-200 mb-10">
         <div class="p-6 border-b border-gray-200">
             <div class="flex justify-between items-center">
                 <h3 class="text-lg font-semibold text-gray-800">Recent Posters</h3>
