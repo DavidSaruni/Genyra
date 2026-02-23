@@ -8,7 +8,7 @@
 <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.5rem;">
     <div>
         <h1 style="font-size:1.1rem; font-weight:700; color:#0f172a; margin:0;">News Articles</h1>
-        <p style="font-size:0.78rem; color:#64748b; margin:0.2rem 0 0;">Manage and publish your news content</p>
+        <p style="font-size:0.96rem; color:#64748b; margin:0.2rem 0 0;">Manage and publish your news content</p>
     </div>
     <a href="{{ route('admin.news.create') }}"
        style="display:inline-flex; align-items:center; gap:0.4rem; padding:0.55rem 1rem; background:#1e3a6e; color:#fff; font-size:0.8rem; font-weight:600; border-radius:6px; text-decoration:none; transition:background 0.15s;"
@@ -23,7 +23,7 @@
 {{-- Table --}}
 <div style="background:#fff; border-radius:8px; border:1px solid #e2e8f0; box-shadow:0 1px 4px rgba(0,0,0,0.05); overflow:hidden;">
     <div style="overflow-x:auto;">
-        <table style="width:100%; border-collapse:collapse; font-size:0.82rem;">
+        <table style="width:100%; border-collapse:collapse; font-size:0.96rem;">
             <thead>
                 <tr style="background:#f8fafc; border-bottom:1px solid #e2e8f0;">
                     <th style="padding:0.75rem 1.25rem; text-align:left; font-size:0.68rem; font-weight:700; color:#64748b; text-transform:uppercase; letter-spacing:0.08em;">Article</th>
@@ -60,11 +60,11 @@
                                 <span style="display:inline-flex; align-items:center; gap:0.35rem; padding:0.25rem 0.65rem; background:#fffbeb; color:#b45309; border:1px solid #fde68a; border-radius:99px; font-size:0.7rem; font-weight:600;">
                                     <span style="width:6px; height:6px; border-radius:50%; background:#f59e0b;"></span> Draft
                                 </span>
-                            @endif
+                            @endif  
                         </td>
 
                         {{-- Published date --}}
-                        <td style="padding:0.9rem 1.25rem; white-space:nowrap; font-size:0.78rem; color:#64748b;">
+                        <td style="padding:0.9rem 1.25rem; white-space:nowrap; font-size:0.96rem; color:#64748b;">
                             @if($article->published_at)
                                 {{ $article->published_at->format('M d, Y') }}
                             @else
@@ -73,7 +73,7 @@
                         </td>
 
                         {{-- Created --}}
-                        <td style="padding:0.9rem 1.25rem; white-space:nowrap; font-size:0.78rem; color:#64748b;">
+                        <td style="padding:0.9rem 1.25rem; white-space:nowrap; font-size:0.96rem; color:#64748b;">
                             {{ $article->created_at->format('M d, Y') }}
                         </td>
 
@@ -132,7 +132,7 @@
                                 </div>
                                 <p style="font-weight:600; color:#64748b; font-size:0.85rem; margin:0;">No news articles found.</p>
                                 <a href="{{ route('admin.news.create') }}"
-                                   style="font-size:0.78rem; color:#1e3a6e; font-weight:500; text-decoration:none;"
+                                   style="font-size:0.96rem; color:#1e3a6e; font-weight:500; text-decoration:none;"
                                    onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
                                     Create your first article →
                                 </a>

@@ -26,7 +26,7 @@ class NewsController extends Controller
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'excerpt' => 'nullable|string|max:500',
-            'content' => 'required|string',
+            'content' => 'required',
             'main_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'image_2' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'image_3' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
@@ -82,7 +82,7 @@ class NewsController extends Controller
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'excerpt' => 'nullable|string|max:500',
-            'content' => 'required|string',
+            'content' => 'required',
             'main_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'image_2' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'image_3' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',

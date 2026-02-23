@@ -242,11 +242,21 @@
             }
         });
 
-        var initialContent = document.getElementById('content').value;
-        if (initialContent) quill.root.innerHTML = initialContent;
+        var contentInput = document.getElementById('content');
 
+        // Restore old() value on validation failure
+        if (contentInput.value) {
+            quill.root.innerHTML = contentInput.value;
+        }
+
+        // Keep hidden input in sync on every keystroke
+        quill.on('text-change', function () {
+            contentInput.value = quill.root.innerHTML;
+        });
+
+        // Belt-and-suspenders: also set on submit
         document.querySelector('form').addEventListener('submit', function () {
-            document.getElementById('content').value = quill.root.innerHTML;
+            contentInput.value = quill.root.innerHTML;
         });
     });
 </script>

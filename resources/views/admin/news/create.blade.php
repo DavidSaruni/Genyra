@@ -199,29 +199,39 @@
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        var quill = new Quill('#editor', {
-            theme: 'snow',
-            placeholder: 'Write the full news article content here...',
-            modules: {
-                toolbar: [
-                    [{ header: [1, 2, 3, false] }],
-                    ['bold', 'italic', 'underline'],
-                    ['blockquote'],
-                    [{ list: 'ordered' }, { list: 'bullet' }],
-                    [{ align: [] }],
-                    ['link'],
-                    ['clean']
-                ]
-            }
-        });
-
-        var initialContent = document.getElementById('content').value;
-        if (initialContent) quill.root.innerHTML = initialContent;
-
-        document.querySelector('form').addEventListener('submit', function () {
-            document.getElementById('content').value = quill.root.innerHTML;
-        });
+    var quill = new Quill('#editor', {
+        theme: 'snow',
+        placeholder: 'Write the full news article content here...',
+        modules: {
+            toolbar: [
+                [{ header: [1, 2, 3, false] }],
+                ['bold', 'italic', 'underline'],
+                ['blockquote'],
+                [{ list: 'ordered' }, { list: 'bullet' }],
+                [{ align: [] }],
+                ['link'],
+                ['clean']
+            ]
+        }
     });
+
+    var contentInput = document.getElementById('content');
+
+    // Restore old() value on validation failure
+    if (contentInput.value) {
+        quill.root.innerHTML = contentInput.value;
+    }
+
+    // Keep hidden input in sync on every keystroke
+    quill.on('text-change', function () {
+        contentInput.value = quill.root.innerHTML;
+    });
+
+    // Belt-and-suspenders: also set on submit
+    document.querySelector('form').addEventListener('submit', function () {
+        contentInput.value = quill.root.innerHTML;
+    });
+});
 </script>
 
 @endsection

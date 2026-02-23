@@ -114,22 +114,6 @@
                                 <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
-
-                        <!-- Active Status -->
-                        <div>
-                            <label class="flex items-center">
-                                <input type="checkbox" 
-                                       id="is_active" 
-                                       name="is_active" 
-                                       value="1"
-                                       {{ $poster->is_active ? 'checked' : '' }}
-                                       class="rounded border-gray-300 text-genyra-primary focus:ring-genyra-primary">
-                                <span class="ml-2 text-sm text-gray-700">Make this poster active</span>
-                            </label>
-                            <p class="mt-1 text-xs text-gray-500">
-                                Only one poster can be active at a time. Checking this will deactivate all other posters.
-                            </p>
-                        </div>
                     </div>
                 </div>
 
