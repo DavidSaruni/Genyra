@@ -1,28 +1,81 @@
 @extends('web.app')
 
-@section('title', 'Short Courses & Professional Training - Genyra Group')
+@section('title', 'Professional Training Programmes - Genyra Academy')
 
 @section('body')
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
 
+<style>
+  * {
+    font-family: 'DM Sans', sans-serif !important;
+  }
+  .font-cormorant {
+    font-family: 'Cormorant Garamond', serif !important;
+  }
+  .font-mono {
+    font-family: 'DM Mono', monospace !important;
+  }
 
-{{-- Header --}}
-<header class="relative z-10 bg-[#1E3A6E] mt-28 px-6 lg:px-20 py-12 lg:py-13 grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 items-end">
-  <div>
-    <div class="font-cormorant text-[2rem] lg:text-[2.25rem] tracking-[0.14em] text-[#f0ece4] uppercase leading-none">
-      GEN<span class="text-[#00A0C6]">Y</span>RA <span class="italic">Group</span>
-    </div>
-    <div class="font-mono text-[9px] tracking-[0.35em] text-white/85 mt-2 uppercase">
-      Advancing Life · Precision · Systems
-    </div>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animate-course-card {
+    animation: fadeIn 0.45s ease both;
+  }
+
+  .category-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.3em;
+    color: #6b5f52;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+</style>
+
+{{-- Hero Section with Academy Image --}}
+<header class="relative z-10 mt-28 overflow-hidden py-8 md:py-16">
+  {{-- Background Image --}}
+  <div class="absolute inset-0 z-0">
+    <img src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=1920" 
+         alt="Genyra Academy" 
+         class="w-full h-full object-cover">
+    {{-- Dark Overlay --}}
+    <div class="absolute inset-0 bg-gradient-to-r from-[#1E3A6E]/95 to-[#1E3A6E]/85"></div>
   </div>
-  <div class="text-left lg:text-right">
-    <h1 class="font-cormorant text-[2.25rem] lg:text-[2.625rem] text-[#f0ece4] leading-tight">
-      Short Courses<br>& <em class="italic text-[#00A0C6]">Professional Training</em>
-    </h1>
-    <p class="font-mono text-[9px] tracking-[0.3em] text-white/85 mt-2.5 uppercase">
-      Continuing Education Catalogue · 2025
-    </p>
+
+  {{-- Content --}}
+  <div class="relative z-10 px-6 lg:px-20 py-12 lg:py-13">
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 items-end">
+      
+      <div>
+        <div class="font-cormorant text-[2rem] lg:text-[2.25rem] tracking-[0.14em] text-[#f0ece4] uppercase leading-none">
+          GEN<span class="text-[#00A0C6]">Y</span>RA <span class="italic">Academy</span>
+        </div>
+        <div class="font-mono text-[9px] tracking-[0.35em] text-white/85 mt-2 uppercase">
+          Empowering Minds · Inspiring Excellence · Shaping Futures
+        </div>
+      </div>
+      
+      <div class="text-left lg:text-right">
+        <h1 class="font-cormorant text-[2.25rem] lg:text-[2.625rem] text-[#f0ece4] leading-tight">
+          Short Courses<br>& <em class="italic text-[#00A0C6]">Professional Training</em>
+        </h1>
+        <p class="font-mono text-[9px] tracking-[0.3em] text-white/85 mt-2.5 uppercase">
+          Continuing Education Catalogue · 2025
+        </p>
+      </div>
+      
+    </div>
   </div>
 </header>
 
@@ -57,26 +110,10 @@
 <div class="relative z-[5] bg-[#f0ede8] px-6 lg:px-20 py-6 border-b border-black/20 flex items-center gap-3 flex-wrap">
   <span class="font-mono text-[9px] tracking-[0.3em] text-[#6b5f52] uppercase mr-2 whitespace-nowrap">Filter by pillar</span>
   <button class="filter-btn px-4 py-2 rounded border border-black/20 bg-transparent font-sans text-[12.5px] text-[#6b5f52] cursor-pointer transition-all hover:bg-white hover:text-[#1a1510] whitespace-nowrap tracking-wider" data-filter="all">All Courses</button>
-  <button class="filter-btn px-4 py-2 rounded border border-black/20 bg-transparent font-sans text-[12.5px] text-[#6b5f52] cursor-pointer transition-all hover:bg-white hover:text-[#1a1510] whitespace-nowrap tracking-wider" data-filter="biosciences">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="inline-block w-4 h-4 mr-1 -mt-0.5">
-    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 110-16 8 8 0 010 16zm-.75-13a.75.75 0 011.5 0v3h3a.75.75 0 010 1.5h-3v3a.75.75 0 01-1.5 0v-3h-3a.75.75 0 010-1.5h3V7z"/>
-    </svg>  
-  BioSciences</button>
-  <button class="filter-btn px-4 py-2 rounded border border-black/20 bg-transparent font-sans text-[12.5px] text-[#6b5f52] cursor-pointer transition-all hover:bg-white hover:text-[#1a1510] whitespace-nowrap tracking-wider" data-filter="medtech">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="inline-block w-4 h-4 mr-1 -mt-0.5">
-      <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 110-16 8 8 0 010 16zm-.75-13a.75.75 0 011.5 0v3h3a.75.75 0 010 1.5h-3v3a.75.75 0 01-1.5 0v-3h-3a.75.75 0 010-1.5h3V7z"/>
-    </svg>
-    MedTech</button>
-    <button class="filter-btn px-4 py-2 rounded border border-black/20 bg-transparent font-sans text-[12.5px] text-[#6b5f52] cursor-pointer transition-all hover:bg-white hover:text-[#1a1510] whitespace-nowrap tracking-wider" data-filter="health-systems">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="inline-block w-4 h-4 mr-1 -mt-0.5">
-      <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 110-16 8 8 0 010 16zm-.75-13a.75.75 0 011.5 0v3h3a.75.75 0 010 1.5h-3v3a.75.75 0 01-1.5 0v-3h-3a.75.75 0 010-1.5h3V7z"/>
-    </svg>    
-    Health Systems Planning</button>
-    <button class="filter-btn px-4 py-2 rounded border border-black/20 bg-transparent font-sans text-[12.5px] text-[#6b5f52] cursor-pointer transition-all hover:bg-white hover:text-[#1a1510] whitespace-nowrap tracking-wider" data-filter="metrology">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="inline-block w-4 h-4 mr-1 -mt-0.5">
-          <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 110-16 8 8 0 010 16zm-.75-13a.75.75 0 011.5 0v3h3a.75.75 0 010 1.5h-3v3a.75.75 0 01-1.5 0v-3h-3a.75.75 0 010-1.5h3V7z"/>
-        </svg>
-    Metrology &amp; Calibration</button>
+  <button class="filter-btn px-4 py-2 rounded border border-black/20 bg-transparent font-sans text-[12.5px] text-[#6b5f52] cursor-pointer transition-all hover:bg-white hover:text-[#1a1510] whitespace-nowrap tracking-wider" data-filter="biosciences">BioSciences</button>
+  <button class="filter-btn px-4 py-2 rounded border border-black/20 bg-transparent font-sans text-[12.5px] text-[#6b5f52] cursor-pointer transition-all hover:bg-white hover:text-[#1a1510] whitespace-nowrap tracking-wider" data-filter="medtech">MedTech</button>
+  <button class="filter-btn px-4 py-2 rounded border border-black/20 bg-transparent font-sans text-[12.5px] text-[#6b5f52] cursor-pointer transition-all hover:bg-white hover:text-[#1a1510] whitespace-nowrap tracking-wider" data-filter="health-systems">Health Systems Planning</button>
+  <button class="filter-btn px-4 py-2 rounded border border-black/20 bg-transparent font-sans text-[12.5px] text-[#6b5f52] cursor-pointer transition-all hover:bg-white hover:text-[#1a1510] whitespace-nowrap tracking-wider" data-filter="metrology">Metrology &amp; Calibration</button>
 </div>
 
 {{-- Catalogue --}}
@@ -553,7 +590,6 @@
     </div>
   </div>
 </section>
-
 
 <script>
   // Filter functionality
