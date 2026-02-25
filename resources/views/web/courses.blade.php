@@ -46,8 +46,8 @@
 <header class="relative z-10 mt-28 overflow-hidden py-8 md:py-16">
   {{-- Background Image --}}
   <div class="absolute inset-0 z-0">
-    <img src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=1920" 
-         alt="Genyra Academy" 
+    <img src="https://images.pexels.com/photos/8617742/pexels-photo-8617742.jpeg?auto=compress&cs=tinysrgb&w=1920" 
+         alt="Genyra Academy Medical Training" 
          class="w-full h-full object-cover">
     {{-- Dark Overlay --}}
     <div class="absolute inset-0 bg-gradient-to-r from-[#1E3A6E]/95 to-[#1E3A6E]/85"></div>
