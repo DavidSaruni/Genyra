@@ -111,7 +111,7 @@
     margin-bottom: 0.25rem;
     opacity: 0.75;
   }
-  .who-text {
+  .who-text text-gray-700 {
     font-size: 0.72rem;
     line-height: 1.55;
     color: var(--ink);
@@ -312,15 +312,15 @@
         <div class="card-band" style="background:linear-gradient(135deg, #00A0C6 0%, #0077a0 100%); color:#fff;">
           {!! $icons['bio'] !!}
           <div class="code-pill" style="color:#fff; border-color:rgba(255,255,255,0.5);">{{ $code }}</div>
-          <p class="text-sm md:text-md font-bold" style="line-height:1.3; margin:0; color:#fff; position:relative; z-index:1; padding-right:3rem;">{{ $title }}</p>
+          <p class="text-sm md:text-md text-gray-700 font-bold" style="line-height:1.3; margin:0; color:#fff; position:relative; z-index:1; padding-right:3rem;">{{ $title }}</p>
         </div>
         <div class="card-body">
-          <p class="text-sm md:text-md">{{ $desc }}</p>
+          <p class="text-sm md:text-md text-gray-700">{{ $desc }}</p>
         </div>
         <div class="card-footer">
           <div>
             <p class="who-label text-blue-500">Who should attend</p>
-            <p class="who-text">{{ $who }}</p>
+            <p class="who-text text-gray-700">{{ $who }}</p>
           </div>
           <div class="tags-row">
             @foreach($tags as $tag)
@@ -366,12 +366,12 @@
           <p style="font-size:0.85rem; font-weight:700; line-height:1.3; margin:0; color:#fff; position:relative; z-index:1; padding-right:3rem;">{{ $title }}</p>
         </div>
         <div class="card-body">
-          <p class="text-sm md:text-md">{{ $desc }}</p>
+          <p class="text-sm md:text-md text-gray-700">{{ $desc }}</p>
         </div>
         <div class="card-footer">
           <div>
             <p class="who-label text-blue-500">Who should attend</p>
-            <p class="who-text">{{ $who }}</p>
+            <p class="who-text text-gray-700">{{ $who }}</p>
           </div>
           <div class="tags-row">
             @foreach($tags as $tag)
@@ -417,12 +417,12 @@
           <p style="font-size:0.85rem; font-weight:700; line-height:1.3; margin:0; color:#fff; position:relative; z-index:1; padding-right:3rem;">{{ $title }}</p>
         </div>
         <div class="card-body">
-          <p class="text-sm md:text-md">{{ $desc }}</p>
+          <p class="text-sm md:text-md text-gray-700">{{ $desc }}</p>
         </div>
         <div class="card-footer">
           <div>
             <p class="who-label text-blue-500">Who should attend</p>
-            <p class="who-text">{{ $who }}</p>
+            <p class="who-text text-gray-700">{{ $who }}</p>
           </div>
           <div class="tags-row">
             @foreach($tags as $tag)
@@ -468,12 +468,12 @@
           <p style="font-size:0.85rem; font-weight:700; line-height:1.3; margin:0; color:#fff; position:relative; z-index:1; padding-right:3rem;">{{ $title }}</p>
         </div>
         <div class="card-body">
-          <p class="text-sm md:text-md">{{ $desc }}</p>
+          <p class="text-sm md:text-md text-gray-700">{{ $desc }}</p>
         </div>
         <div class="card-footer">
           <div>
             <p class="who-label text-blue-500">Who should attend</p>
-            <p class="who-text">{{ $who }}</p>
+            <p class="who-text text-gray-700">{{ $who }}</p>
           </div>
           <div class="tags-row">
             @foreach($tags as $tag)
