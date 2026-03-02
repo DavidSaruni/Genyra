@@ -40,20 +40,52 @@
     text-transform: uppercase;
     opacity: 0.7;
   }
+
+  .enrol-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 100%;
+    padding: 0.55rem 1rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: all 0.15s;
+    border: 1.5px solid transparent;
+  }
+
+  .academy-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.7rem;
+    background: rgba(0,160,198,0.12);
+    border: 1px solid rgba(0,160,198,0.3);
+    border-radius: 99px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #00A0C6;
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+  .academy-badge:hover {
+    background: rgba(0,160,198,0.2);
+  }
 </style>
 
 {{-- Hero Section with Academy Image --}}
 <header class="relative z-10 mt-28 overflow-hidden py-8 md:py-16">
-  {{-- Background Image --}}
   <div class="absolute inset-0 z-0">
     <img src="https://images.pexels.com/photos/8617742/pexels-photo-8617742.jpeg?auto=compress&cs=tinysrgb&w=1920" 
          alt="Genyra Academy Medical Training" 
          class="w-full h-full object-cover">
-    {{-- Dark Overlay --}}
     <div class="absolute inset-0 bg-gradient-to-r from-[#1E3A6E]/95 to-[#1E3A6E]/85"></div>
   </div>
 
-  {{-- Content --}}
   <div class="relative z-10 px-6 lg:px-20 py-12 lg:py-13">
     <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 items-end">
       
@@ -73,6 +105,13 @@
         <p class="font-mono text-[9px] tracking-[0.3em] text-white/85 mt-2.5 uppercase">
           Continuing Education Catalogue · 2025
         </p>
+        <a href="https://dexomed.co.ke" target="_blank" class="academy-badge mt-4 inline-flex">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+            <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+          </svg>
+          Visit Genyra Academy Platform
+        </a>
       </div>
       
     </div>
@@ -131,7 +170,7 @@
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
       
-      {{-- Course GBS-101 --}}
+      {{-- GBS-101 --}}
       <div class="animate-course-card bg-white border border-black/20 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] flex flex-col">
         <div class="h-1 bg-[#00A0C6]"></div>
         <div class="p-7 pb-5 flex-1 flex flex-col">
@@ -147,10 +186,14 @@
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">Beginner</span>
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">Lab + Theory</span>
           </div>
+          <a href="https://dexomed.co.ke/course/view.php?id=3" target="_blank" class="enrol-btn" style="background:#1E3A6E; color:#fff;" onmouseover="this.style.background='#00A0C6'" onmouseout="this.style.background='#1E3A6E'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+            Enrol on Genyra Academy
+          </a>
         </div>
       </div>
 
-      {{-- Course GBS-102 --}}
+      {{-- GBS-102 --}}
       <div class="animate-course-card bg-white border border-black/20 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] flex flex-col">
         <div class="h-1 bg-[#00A0C6]"></div>
         <div class="p-7 pb-5 flex-1 flex flex-col">
@@ -166,10 +209,14 @@
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">All Levels</span>
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">Practical</span>
           </div>
+          <a href="https://dexomed.co.ke/course/view.php?id=2" target="_blank" class="enrol-btn" style="background:#1E3A6E; color:#fff;" onmouseover="this.style.background='#00A0C6'" onmouseout="this.style.background='#1E3A6E'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+            Enrol on Genyra Academy
+          </a>
         </div>
       </div>
 
-      {{-- Course GBS-103 --}}
+      {{-- GBS-103 --}}
       <div class="animate-course-card bg-white border border-black/20 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] flex flex-col">
         <div class="h-1 bg-[#00A0C6]"></div>
         <div class="p-7 pb-5 flex-1 flex flex-col">
@@ -185,10 +232,14 @@
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">Intermediate</span>
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">Theory + Demo</span>
           </div>
+          <a href="https://dexomed.co.ke/course/view.php?id=4" target="_blank" class="enrol-btn" style="background:#1E3A6E; color:#fff;" onmouseover="this.style.background='#00A0C6'" onmouseout="this.style.background='#1E3A6E'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+            Enrol on Genyra Academy
+          </a>
         </div>
       </div>
 
-      {{-- Course GBS-104 --}}
+      {{-- GBS-104 --}}
       <div class="animate-course-card bg-white border border-black/20 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] flex flex-col">
         <div class="h-1 bg-[#00A0C6]"></div>
         <div class="p-7 pb-5 flex-1 flex flex-col">
@@ -204,10 +255,14 @@
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">Intermediate</span>
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">Workshops</span>
           </div>
+          <a href="https://dexomed.co.ke" target="_blank" class="enrol-btn" style="background:#1E3A6E; color:#fff;" onmouseover="this.style.background='#00A0C6'" onmouseout="this.style.background='#1E3A6E'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+            Enrol on Genyra Academy
+          </a>
         </div>
       </div>
 
-      {{-- Course GBS-105 --}}
+      {{-- GBS-105 --}}
       <div class="animate-course-card bg-white border border-black/20 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] flex flex-col">
         <div class="h-1 bg-[#00A0C6]"></div>
         <div class="p-7 pb-5 flex-1 flex flex-col">
@@ -223,6 +278,10 @@
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">All Levels</span>
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#00A0C6] text-[#00A0C6] tracking-wider uppercase opacity-75">Multi-Sector</span>
           </div>
+          <a href="https://dexomed.co.ke" target="_blank" class="enrol-btn" style="background:#1E3A6E; color:#fff;" onmouseover="this.style.background='#00A0C6'" onmouseout="this.style.background='#1E3A6E'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+            Enrol on Genyra Academy
+          </a>
         </div>
       </div>
 
@@ -240,8 +299,8 @@
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
-      
-      {{-- Course GMT-101 --}}
+
+      {{-- GMT-101 --}}
       <div class="animate-course-card bg-white border border-black/20 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] flex flex-col">
         <div class="h-1 bg-[#1E3A6E]"></div>
         <div class="p-7 pb-5 flex-1 flex flex-col">
@@ -257,10 +316,14 @@
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Foundational</span>
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Practical Tools</span>
           </div>
+          <a href="https://dexomed.co.ke/course/view.php?id=5" target="_blank" class="enrol-btn" style="background:#1E3A6E; color:#fff;" onmouseover="this.style.background='#00A0C6'" onmouseout="this.style.background='#1E3A6E'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+            Enrol on Genyra Academy
+          </a>
         </div>
       </div>
 
-      {{-- Course GMT-102 --}}
+      {{-- GMT-102 --}}
       <div class="animate-course-card bg-white border border-black/20 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] flex flex-col">
         <div class="h-1 bg-[#1E3A6E]"></div>
         <div class="p-7 pb-5 flex-1 flex flex-col">
@@ -276,10 +339,14 @@
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Intermediate</span>
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Regulatory</span>
           </div>
+          <a href="https://dexomed.co.ke" target="_blank" class="enrol-btn" style="background:#1E3A6E; color:#fff;" onmouseover="this.style.background='#00A0C6'" onmouseout="this.style.background='#1E3A6E'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+            Enrol on Genyra Academy
+          </a>
         </div>
       </div>
 
-      {{-- Course GMT-103 --}}
+      {{-- GMT-103 --}}
       <div class="animate-course-card bg-white border border-black/20 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] flex flex-col">
         <div class="h-1 bg-[#1E3A6E]"></div>
         <div class="p-7 pb-5 flex-1 flex flex-col">
@@ -295,10 +362,14 @@
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Intermediate</span>
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Decision-Making</span>
           </div>
+          <a href="https://dexomed.co.ke" target="_blank" class="enrol-btn" style="background:#1E3A6E; color:#fff;" onmouseover="this.style.background='#00A0C6'" onmouseout="this.style.background='#1E3A6E'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+            Enrol on Genyra Academy
+          </a>
         </div>
       </div>
 
-      {{-- Course GMT-104 --}}
+      {{-- GMT-104 --}}
       <div class="animate-course-card bg-white border border-black/20 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] flex flex-col">
         <div class="h-1 bg-[#1E3A6E]"></div>
         <div class="p-7 pb-5 flex-1 flex flex-col">
@@ -314,10 +385,14 @@
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">All Levels</span>
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Strategic</span>
           </div>
+          <a href="https://dexomed.co.ke" target="_blank" class="enrol-btn" style="background:#1E3A6E; color:#fff;" onmouseover="this.style.background='#00A0C6'" onmouseout="this.style.background='#1E3A6E'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+            Enrol on Genyra Academy
+          </a>
         </div>
       </div>
 
-      {{-- Course GMT-105 --}}
+      {{-- GMT-105 --}}
       <div class="animate-course-card bg-white border border-black/20 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] flex flex-col">
         <div class="h-1 bg-[#1E3A6E]"></div>
         <div class="p-7 pb-5 flex-1 flex flex-col">
@@ -333,6 +408,10 @@
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Practical</span>
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#1E3A6E] text-[#1E3A6E] tracking-wider uppercase opacity-75">Patient Safety</span>
           </div>
+          <a href="https://dexomed.co.ke" target="_blank" class="enrol-btn" style="background:#1E3A6E; color:#fff;" onmouseover="this.style.background='#00A0C6'" onmouseout="this.style.background='#1E3A6E'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+            Enrol on Genyra Academy
+          </a>
         </div>
       </div>
 
@@ -350,8 +429,8 @@
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
-      
-      {{-- Course GHS-101 --}}
+
+      {{-- GHS-101 --}}
       <div class="animate-course-card bg-white border border-black/20 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] flex flex-col">
         <div class="h-1 bg-[#0077B6]"></div>
         <div class="p-7 pb-5 flex-1 flex flex-col">
@@ -367,10 +446,14 @@
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">Leadership</span>
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">Facilitated</span>
           </div>
+          <a href="https://dexomed.co.ke" target="_blank" class="enrol-btn" style="background:#1E3A6E; color:#fff;" onmouseover="this.style.background='#00A0C6'" onmouseout="this.style.background='#1E3A6E'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+            Enrol on Genyra Academy
+          </a>
         </div>
       </div>
 
-      {{-- Course GHS-102 --}}
+      {{-- GHS-102 --}}
       <div class="animate-course-card bg-white border border-black/20 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] flex flex-col">
         <div class="h-1 bg-[#0077B6]"></div>
         <div class="p-7 pb-5 flex-1 flex flex-col">
@@ -386,10 +469,14 @@
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">ISO-Aligned</span>
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">Intermediate</span>
           </div>
+          <a href="https://dexomed.co.ke" target="_blank" class="enrol-btn" style="background:#1E3A6E; color:#fff;" onmouseover="this.style.background='#00A0C6'" onmouseout="this.style.background='#1E3A6E'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+            Enrol on Genyra Academy
+          </a>
         </div>
       </div>
 
-      {{-- Course GHS-103 --}}
+      {{-- GHS-103 --}}
       <div class="animate-course-card bg-white border border-black/20 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] flex flex-col">
         <div class="h-1 bg-[#0077B6]"></div>
         <div class="p-7 pb-5 flex-1 flex flex-col">
@@ -405,10 +492,14 @@
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">Practical</span>
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">ISO 19011</span>
           </div>
+          <a href="https://dexomed.co.ke" target="_blank" class="enrol-btn" style="background:#1E3A6E; color:#fff;" onmouseover="this.style.background='#00A0C6'" onmouseout="this.style.background='#1E3A6E'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+            Enrol on Genyra Academy
+          </a>
         </div>
       </div>
 
-      {{-- Course GHS-104 --}}
+      {{-- GHS-104 --}}
       <div class="animate-course-card bg-white border border-black/20 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] flex flex-col">
         <div class="h-1 bg-[#0077B6]"></div>
         <div class="p-7 pb-5 flex-1 flex flex-col">
@@ -424,10 +515,14 @@
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">WHO-Aligned</span>
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">All Clinicals</span>
           </div>
+          <a href="https://dexomed.co.ke" target="_blank" class="enrol-btn" style="background:#1E3A6E; color:#fff;" onmouseover="this.style.background='#00A0C6'" onmouseout="this.style.background='#1E3A6E'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+            Enrol on Genyra Academy
+          </a>
         </div>
       </div>
 
-      {{-- Course GHS-105 --}}
+      {{-- GHS-105 --}}
       <div class="animate-course-card bg-white border border-black/20 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] flex flex-col">
         <div class="h-1 bg-[#0077B6]"></div>
         <div class="p-7 pb-5 flex-1 flex flex-col">
@@ -443,6 +538,10 @@
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">WHO Framework</span>
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#0077B6] text-[#0077B6] tracking-wider uppercase opacity-75">Applied</span>
           </div>
+          <a href="https://dexomed.co.ke" target="_blank" class="enrol-btn" style="background:#1E3A6E; color:#fff;" onmouseover="this.style.background='#00A0C6'" onmouseout="this.style.background='#1E3A6E'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+            Enrol on Genyra Academy
+          </a>
         </div>
       </div>
 
@@ -460,8 +559,8 @@
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
-      
-      {{-- Course GMC-101 --}}
+
+      {{-- GMC-101 --}}
       <div class="animate-course-card bg-white border border-black/20 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] flex flex-col">
         <div class="h-1 bg-[#008BA3]"></div>
         <div class="p-7 pb-5 flex-1 flex flex-col">
@@ -477,10 +576,14 @@
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">Foundational</span>
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">Theory + Practice</span>
           </div>
+          <a href="https://dexomed.co.ke" target="_blank" class="enrol-btn" style="background:#1E3A6E; color:#fff;" onmouseover="this.style.background='#00A0C6'" onmouseout="this.style.background='#1E3A6E'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+            Enrol on Genyra Academy
+          </a>
         </div>
       </div>
 
-      {{-- Course GMC-102 --}}
+      {{-- GMC-102 --}}
       <div class="animate-course-card bg-white border border-black/20 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] flex flex-col">
         <div class="h-1 bg-[#008BA3]"></div>
         <div class="p-7 pb-5 flex-1 flex flex-col">
@@ -496,10 +599,14 @@
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">Hands-On</span>
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">ISO 17025</span>
           </div>
+          <a href="https://dexomed.co.ke" target="_blank" class="enrol-btn" style="background:#1E3A6E; color:#fff;" onmouseover="this.style.background='#00A0C6'" onmouseout="this.style.background='#1E3A6E'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+            Enrol on Genyra Academy
+          </a>
         </div>
       </div>
 
-      {{-- Course GMC-103 --}}
+      {{-- GMC-103 --}}
       <div class="animate-course-card bg-white border border-black/20 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] flex flex-col">
         <div class="h-1 bg-[#008BA3]"></div>
         <div class="p-7 pb-5 flex-1 flex flex-col">
@@ -515,10 +622,14 @@
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">Intermediate</span>
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">IQ/OQ/PQ</span>
           </div>
+          <a href="https://dexomed.co.ke" target="_blank" class="enrol-btn" style="background:#1E3A6E; color:#fff;" onmouseover="this.style.background='#00A0C6'" onmouseout="this.style.background='#1E3A6E'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+            Enrol on Genyra Academy
+          </a>
         </div>
       </div>
 
-      {{-- Course GMC-104 --}}
+      {{-- GMC-104 --}}
       <div class="animate-course-card bg-white border border-black/20 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] flex flex-col">
         <div class="h-1 bg-[#008BA3]"></div>
         <div class="p-7 pb-5 flex-1 flex flex-col">
@@ -534,10 +645,14 @@
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">GUM Framework</span>
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">Advanced</span>
           </div>
+          <a href="https://dexomed.co.ke" target="_blank" class="enrol-btn" style="background:#1E3A6E; color:#fff;" onmouseover="this.style.background='#00A0C6'" onmouseout="this.style.background='#1E3A6E'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+            Enrol on Genyra Academy
+          </a>
         </div>
       </div>
 
-      {{-- Course GMC-105 --}}
+      {{-- GMC-105 --}}
       <div class="animate-course-card bg-white border border-black/20 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] flex flex-col">
         <div class="h-1 bg-[#008BA3]"></div>
         <div class="p-7 pb-5 flex-1 flex flex-col">
@@ -553,6 +668,10 @@
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">ISO 17025</span>
             <span class="text-[9px] px-2 py-2 rounded-sm border border-[#008BA3] text-[#008BA3] tracking-wider uppercase opacity-75">Accreditation</span>
           </div>
+          <a href="https://dexomed.co.ke" target="_blank" class="enrol-btn" style="background:#1E3A6E; color:#fff;" onmouseover="this.style.background='#00A0C6'" onmouseout="this.style.background='#1E3A6E'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+            Enrol on Genyra Academy
+          </a>
         </div>
       </div>
 
@@ -567,9 +686,15 @@
     <h2 class="font-cormorant text-6xl font-bold text-[#f0ece4] leading-tight mb-4">
       Ready to Build<br><em class="italic text-[#00A0C6]">Expert Capacity</em>?
     </h2>
-    <p class="text-[14.5px] leading-[1.8] text-white max-w-[520px]">
+    <p class="text-[14.5px] leading-[1.8] text-white max-w-[520px] mb-6">
       All Genyra short courses can be delivered in-person, on-site at your organisation, or in a blended format. We also offer customised training programmes tailored to your specific institutional needs, regulatory context, and workforce profile. Contact us to discuss scheduling, group enrolment, and CPD certification options.
     </p>
+    <a href="https://dexomed.co.ke" target="_blank"
+       style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.75rem 1.5rem; background:#00A0C6; color:#fff; border-radius:4px; font-size:0.85rem; font-weight:600; text-decoration:none; letter-spacing:0.04em; transition:background 0.15s;"
+       onmouseover="this.style.background='#0090b5'" onmouseout="this.style.background='#00A0C6'">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+      Browse All Courses on Genyra Academy
+    </a>
   </div>
   <div class="flex flex-col gap-4 min-w-[220px]">
     <div class="px-7 py-4 border border-[#f0ece4]/15 rounded">
@@ -592,7 +717,6 @@
 </section>
 
 <script>
-  // Filter functionality
   const buttons = document.querySelectorAll('.filter-btn');
   const sections = document.querySelectorAll('.pillar-section');
 
@@ -602,23 +726,16 @@
       btn.classList.add('active', '!bg-[#1E3A6E]', '!text-white', '!border-transparent');
 
       const filter = btn.dataset.filter;
-
       sections.forEach(section => {
         if (filter === 'all') {
           section.classList.remove('hidden');
         } else {
-          const id = section.id;
-          if (id.includes(filter)) {
-            section.classList.remove('hidden');
-          } else {
-            section.classList.add('hidden');
-          }
+          section.id.includes(filter) ? section.classList.remove('hidden') : section.classList.add('hidden');
         }
       });
     });
   });
 
-  // Set first button as active on load
   buttons[0].classList.add('active', '!bg-[#1E3A6E]', '!text-white', '!border-transparent');
 </script>
 
