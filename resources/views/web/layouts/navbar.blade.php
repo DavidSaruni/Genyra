@@ -96,7 +96,7 @@
             
             <!-- Right side -->
             <div class="hidden md:flex items-center space-x-6">
-                <a href="#contact" class="nav-link">CONTACT</a>
+                <a href="#contact" class="nav-link">CONTACTS</a>
                 
             </div>
             
@@ -147,7 +147,7 @@
             <a href="{{ request()->is('/') ? '#business-lines' : url('/#business-lines') }}" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">WHAT WE DO</a>
             <!-- courses -->
             <a href="{{ route('courses') }}" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">GENYRA ACADEMY</a>
-            <a href="{{ request()->is('/') ? '#contact' : url('/#contact') }}" class="block px-4 py-4 text-blue-600 font-medium hover:bg-blue-50 rounded-lg transition-colors">CONTACT</a>
+            <a href="{{ request()->is('/') ? '#contact' : url('/#contact') }}" class="block px-4 py-4 text-blue-600 font-medium hover:bg-blue-50 rounded-lg transition-colors">CONTACTS</a>
         </div>
     </div>
 
