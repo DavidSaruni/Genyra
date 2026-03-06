@@ -61,6 +61,8 @@
                                 <ul class="space-y-3">
                                     <li><a href="{{ route('our-story') }}" class="text-gray-600 text-sm hover:text-blue-600">Our Story</a></li>
                                     <li><a href="{{ route('vission-mission') }}" class="text-gray-600 text-sm hover:text-blue-600">Vision & Mission</a></li>
+                                     <!-- Corporate Profile -->
+                                    <li><a href="{{ asset('downloads/genyra Group Corporate Profile.pdf') }}" class="text-gray-600 text-sm hover:text-blue-600">Corporate Profile (PDF)</a></li>
                                 </ul>
                             </div>
 
@@ -177,6 +179,8 @@
                 <div class="space-y-1">
                     <a href="{{ route('our-story') }}" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Our Story</a>
                     <a href="{{ route('vission-mission') }}" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Vision & Mission</a>
+                    <!-- Corporate Profile -->
+                    <a href="{{ asset('downloads/genyra Group Corporate Profile.pdf') }}" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">Corporate Profile (PDF)</a>
                 </div>
             </div>
             
