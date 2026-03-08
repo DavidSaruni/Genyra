@@ -94,7 +94,7 @@
                     <div class="grid md:grid-cols-2 gap-0">
                         <!-- Image Section -->
                         <div class="relative h-80 md:h-auto overflow-hidden">
-                            <img src="https://images.pexels.com/photos/3938022/pexels-photo-3938022.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                            <img src="{{ $latestNews->image ?? '' }}" 
                                  alt="News" 
                                  class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
                                  onerror="this.src='https://via.placeholder.com/800x400/1e40af/ffffff?text=News'">
@@ -107,6 +107,25 @@
                         
                         <!-- Content Section -->
                         <div class="p-8 flex flex-col justify-center">
+                            @if($latestNews)
+                            <div class="flex items-center space-x-3 mb-3">
+                                <span class="text-xs text-gray-500">{{ $latestNews->created_at->format('F j, Y') }}</span>
+                                <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+                                <span class="text-xs text-gray-500">Genyra Group</span>
+                            </div>
+                            <h3 class="text-xl md:text-3xl font-bold text-gray-700 mb-4 leading-tight hover:text-blue-700 transition-colors">
+                                {{ $latestNews->title }}
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                                {{ Str::limit(strip_tags($latestNews->content), 200) }}
+                            </p>
+                            <a href="{{ route('news.show', $latestNews->slug) }}" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 w-fit">
+                                Read more
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        @else
                             <div class="flex items-center space-x-3 mb-3">
                                 <span class="text-xs text-gray-500">February 17, 2026</span>
                                 <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
@@ -124,6 +143,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                 </svg>
                             </a>
+                        @endif
                         </div>
                     </div>
                 </div>

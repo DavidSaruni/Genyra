@@ -17,7 +17,12 @@ class WebController extends Controller
     public function index()
     {
         $poster = Poster::getActive();
-        return view('web.index', compact('poster'));
+        $latestNews = News::where('status', 'published')
+            ->whereNotNull('published_at')
+            ->where('published_at', '<=', now())
+            ->orderBy('published_at', 'desc')
+            ->first();
+        return view('web.index', compact('poster', 'latestNews'));
     }
 
     public function contactPost(Request $request)
