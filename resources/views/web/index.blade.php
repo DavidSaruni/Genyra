@@ -469,7 +469,7 @@
         <div class="grid md:grid-cols-2 gap-16 items-stretch">
             <div class="flex flex-col">
                 <div class="category-label mb-4">ABOUT GENYRA GROUP</div>
-                <h2 class="text-3xl md:text-5xl font-bold mb-6 text-gray-700">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-700">
                     Leading Healthcare Solutions Provider in East Africa
                 </h2>
                 <p class="text-md text-gray-600 mb-6 leading-relaxed">
@@ -484,56 +484,81 @@
             </div>
             
             <!-- Image with Overlay -->
-            <div class="relative h-full min-h-[500px] rounded-lg overflow-hidden group">
-                <img src="{{ asset('images/about.jpeg') }}" 
-                     alt="Laboratory" 
-                     class="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105" 
-                     onerror="this.src='https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=1200'">
-                
-                <!-- Gradient Overlay -->
-                <div class="absolute inset-0 bg-gradient-to-t from-blue-900/95 via-blue-900/50 to-transparent"></div>
-                
-                <!-- Overlay Content -->
-                <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
-                    <!-- Vision -->
-                    <div class="mb-6 transform transition-all duration-500 group-hover:translate-y-0">
-                        <div class="flex items-center mb-3">
-                            <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mr-3 backdrop-blur-sm">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-bold uppercase tracking-wide">Our Vision</h3>
-                        </div>
-                        <p class="text-white/90 text-base leading-relaxed pl-13">
-                            To be the most trusted and preferred partner for healthcare solutions in Africa
-                        </p>
-                    </div>
-                    
-                    <!-- Mission -->
-                    <div class="transform transition-all duration-500 group-hover:translate-y-0">
-                        <div class="flex items-center mb-3">
-                            <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mr-3 backdrop-blur-sm">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-bold uppercase tracking-wide">Our Mission</h3>
-                        </div>
-                        <p class="text-white/90 text-base leading-relaxed pl-13">
-                            Delivering innovative, reliable, and world-class healthcare solutions that improve patient outcomes and enhance operational efficiency
-                        </p>
-                    </div>
+<div class="relative h-full min-h-[500px] rounded-2xl overflow-hidden group shadow-2xl">
+
+    {{-- Photo --}}
+    <img src="{{ asset('images/about.jpeg') }}"
+         alt="Laboratory"
+         class="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105"
+         onerror="this.src='https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=1200'">
+
+    {{-- Layered gradient: subtle top-to-transparent, heavy navy at bottom --}}
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0f1f45] via-[#0f1f45]/60 to-transparent"></div>
+
+    {{-- Top-right badges --}}
+    <div class="absolute top-5 right-5 flex flex-col gap-2 items-end">
+        <span class="bg-cyan-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg tracking-wide">
+            ISO Certified
+        </span>
+    </div>
+
+    {{-- Divider line that slides up on hover --}}
+    <div class="absolute bottom-[200px] left-8 right-8 h-px bg-white/20
+                translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100
+                transition-all duration-500"></div>
+
+    {{-- Overlay content --}}
+    <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
+
+        {{-- Vision --}}
+        <div class="mb-5 translate-y-2 opacity-90 group-hover:translate-y-0 group-hover:opacity-100
+                    transition-all duration-500 delay-75">
+            <div class="flex items-start gap-4">
+                <div class="w-10 h-10 flex-shrink-0 rounded-xl bg-cyan-500/20 border border-cyan-400/30
+                            flex items-center justify-center backdrop-blur-sm mt-0.5">
+                    <svg class="w-5 h-5 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7
+                                 -1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                    </svg>
                 </div>
-                
-                <!-- Top Badge -->
-                <div class="absolute top-6 right-6">
-                    <div class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold backdrop-blur-sm">
-                        ISO Certified
-                    </div>
+                <div>
+                    <p class="text-cyan-300 text-[10px] font-bold tracking-[0.15em] uppercase mb-1">Our Vision</p>
+                    <p class="text-white font-semibold text-base leading-snug">
+                        To be the most trusted and preferred partner for healthcare solutions in Africa
+                    </p>
                 </div>
             </div>
+        </div>
+
+        {{-- Thin separator --}}
+        <div class="border-t border-white/10 mb-5"></div>
+
+        {{-- Mission --}}
+        <div class="translate-y-2 opacity-90 group-hover:translate-y-0 group-hover:opacity-100
+                    transition-all duration-500 delay-150">
+            <div class="flex items-start gap-4">
+                <div class="w-10 h-10 flex-shrink-0 rounded-xl bg-cyan-500/20 border border-cyan-400/30
+                            flex items-center justify-center backdrop-blur-sm mt-0.5">
+                    <svg class="w-5 h-5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-cyan-300 text-[10px] font-bold tracking-[0.15em] uppercase mb-1">Our Mission</p>
+                    <p class="text-white/90 font-medium text-sm leading-relaxed">
+                        Delivering innovative, reliable, and world-class healthcare solutions that improve
+                        patient outcomes and enhance operational efficiency
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
         </div>
     </div>
 </section>
