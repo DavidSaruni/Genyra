@@ -94,7 +94,7 @@
                     <div class="grid md:grid-cols-2 gap-0">
                         <!-- Image Section -->
                         <div class="relative h-80 md:h-auto overflow-hidden">
-                            <img src="{{ $latestNews->image ?? '' }}" 
+                            <img src="{{ asset('storage/' . $article->main_image) }}" 
                                  alt="News" 
                                  class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
                                  onerror="this.src='https://via.placeholder.com/800x400/1e40af/ffffff?text=News'">
