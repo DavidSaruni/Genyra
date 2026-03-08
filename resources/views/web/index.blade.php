@@ -119,7 +119,7 @@
                             <p class="text-gray-600 text-sm mb-6 leading-relaxed">
                                 {{ Str::limit(strip_tags($latestNews->content), 200) }}
                             </p>
-                            <a href="{{ route('news.show', $latestNews->slug) }}" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 w-fit">
+                            <a href="" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 w-fit">
                                 Read more
                                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
