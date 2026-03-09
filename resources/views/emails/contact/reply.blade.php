@@ -11,7 +11,7 @@
         <div style="max-width: 600px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 20px;">
             <!-- Logo -->
             <div style="text-align: center;">
-                <img src="{{ asset('images/genyra-logo.png') }}" alt="Genyra Group Logo" style="height: 50px; width: auto; margin-bottom: 5px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <img src="https://genyragroup.com/public/images/logo.jpeg" alt="Genyra Group Logo" style="height: 50px; width: auto; margin-bottom: 5px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                 <!-- Fallback text logo if image fails -->
                 <div style="display: none; color: #f0ece4; font-size: 28px; font-weight: bold; letter-spacing: 2px; line-height: 1;">
                     gen<span style="color: #00A0C6;">y</span>ra <span style="font-style: italic;">Group</span>
