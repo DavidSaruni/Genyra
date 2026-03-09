@@ -275,7 +275,7 @@
         </p>
 
         {{-- Card 1 Professional Short Courses --}}
-        <a href="#section-short-courses"
+        <a href="#section-biosciences"
            class="group relative flex items-center gap-4 px-5 py-4 rounded-xl no-underline overflow-hidden transition-all duration-250 hover:-translate-y-px"
            style="background: rgba(0,160,198,0.1); border: 1px solid rgba(0,160,198,0.25);"
            onmouseover="this.style.background='rgba(0,160,198,0.2)'; this.style.borderColor='rgba(0,160,198,0.5)'; this.style.boxShadow='0 16px 40px rgba(0,160,198,0.15)'"
