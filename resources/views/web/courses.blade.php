@@ -214,7 +214,7 @@
 </style>
 
 {{-- ── HERO ── --}}
-<header class="relative mt-28 overflow-hidden flex items-center" style="min-height: 480px;">
+<header class="relative mt-28 overflow-hidden flex items-center" style="min-height: 450px !important;">
 
   {{-- Background photo --}}
   <div class="absolute inset-0 z-0">
