@@ -8,7 +8,7 @@
     
     <!-- Header with Logo -->
     <div style="background-color: #1E3A6E; padding: 30px 20px; text-align: center;">
-        <div style="max-width: 600px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 20px;">
+        <div style="max-width: 600px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px;">
             <!-- Logo -->
             <div style="text-align: center;">
                 <img src="https://genyragroup.com/public/images/logo.jpeg" alt="Genyra Group Logo" style="height: 50px; width: auto; margin-bottom: 5px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
