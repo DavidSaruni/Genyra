@@ -91,7 +91,7 @@
             </div>
                 <a href="{{ request()->is('/') ? '#why-choose-us' : url('/#why-choose-us') }}" class="nav-link">WHY CHOOSE US</a>
                 <a href="{{ request()->is('/') ? '#business-lines' : url('/#business-lines') }}" class="nav-link">WHAT WE DO</a>
-                <a href="{{ route('courses') }}" class="{{ request()->routeIs('courses') ? 'text-blue-800 font-bold' : 'nav-link' }}">GENYRA ACADEMY</a>
+                <a href="{{ route('courses') }}" class="{{ request()->routeIs('courses') ? 'text-blue-800 font-bold' : 'nav-link' }}">GENYRA INSTITUTE</a>
 
 
             </div>
@@ -148,7 +148,7 @@
             <a href="{{ request()->is('/') ? '#why-choose-us' : url('/#why-choose-us') }}" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">WHY CHOOSE US</a>
             <a href="{{ request()->is('/') ? '#business-lines' : url('/#business-lines') }}" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">WHAT WE DO</a>
             <!-- courses -->
-            <a href="{{ route('courses') }}" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">GENYRA ACADEMY</a>
+            <a href="{{ route('courses') }}" class="block px-4 py-4 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors">GENYRA INSTITUTE</a>
             <a href="{{ request()->is('/') ? '#contact' : url('/#contact') }}" class="block px-4 py-4 text-blue-600 font-medium hover:bg-blue-50 rounded-lg transition-colors">CONTACTS</a>
         </div>
     </div>
