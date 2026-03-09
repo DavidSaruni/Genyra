@@ -113,11 +113,12 @@
     document.addEventListener('DOMContentLoaded', function () {
         var quill = new Quill('#editor', {
             theme: 'snow',
-            placeholder: 'Type your reply message here...',
+            placeholder: 'Write your reply message here...',
             modules: {
                 toolbar: [
                     [{ header: [1, 2, 3, false] }],
                     ['bold', 'italic', 'underline'],
+                    ['blockquote'],
                     [{ list: 'ordered' }, { list: 'bullet' }],
                     [{ align: [] }],
                     ['link'],
@@ -126,11 +127,21 @@
             }
         });
 
-        var initialContent = document.getElementById('reply_message').value;
-        if (initialContent) quill.root.innerHTML = initialContent;
+        var contentInput = document.getElementById('reply_message');
 
+        // Restore old() value on validation failure
+        if (contentInput.value) {
+            quill.root.innerHTML = contentInput.value;
+        }
+
+        // Keep hidden input in sync on every keystroke
+        quill.on('text-change', function () {
+            contentInput.value = quill.root.innerHTML;
+        });
+
+        // Belt-and-suspenders: also set on submit
         document.querySelector('form').addEventListener('submit', function () {
-            document.getElementById('reply_message').value = quill.root.innerHTML;
+            contentInput.value = quill.root.innerHTML;
         });
     });
 </script>
