@@ -16,7 +16,7 @@
   }
 
   * { font-family: 'DM Sans', sans-serif !important; }
-  .font-cormorant { font-family: 'Cormorant Garamond', serif !important; }
+  .{ font-family: 'Cormorant Garamond', serif !important; }
   .     { font-family: 'DM Mono', monospace !important; }
   html { scroll-behavior: smooth; }
 
@@ -232,7 +232,7 @@
     {{-- Wordmark --}}
     <div class="flex items-center gap-3 mb-10">
       <div class="h-px w-7 bg-[#00A0C6]"></div>
-      <span class="font-cormorant text-[1.4rem] tracking-[0.12em] text-white/90">
+      <span class="text-[1.4rem] tracking-[0.12em] text-white/90">
         gen<span class="text-[#00A0C6]">y</span>ra <em class="italic">Institute</em>
       </span>
       <div class="h-px w-10" style="background: linear-gradient(to right, rgba(0,160,198,0.4), transparent);"></div>
@@ -246,7 +246,7 @@
 
       {{-- LEFT: Headline --}}
       <div>
-        <h1 class="font-cormorant text-[2.6rem] lg:text-[3.4rem] text-white font-bold leading-[1.08] mb-5">
+        <h1 class="text-[2.6rem] lg:text-[3.4rem] text-white font-bold leading-[1.08] mb-5">
           Learn from<br>
           <span class="italic text-[#00A0C6]">Africa's</span> Leading<br>
           Healthcare Experts
@@ -423,7 +423,7 @@
   <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
     @foreach([['20','Courses'],['4','Pillars'],['CPD','Credited'],['∞','Impact']] as [$n,$l])
     <div class="text-center px-3 py-5 border border-black/15 rounded-lg">
-      <span class="font-cormorant text-[2.375rem] text-[#1a1510] leading-none block">{{ $n }}</span>
+      <span class="text-[2.375rem] text-[#1a1510] leading-none block">{{ $n }}</span>
       <span class="text-[9px] tracking-[0.2em] text-[#6b5f52] uppercase block mt-1.5">{{ $l }}</span>
     </div>
     @endforeach
@@ -663,7 +663,7 @@
 {{-- ── CTA ── --}}
 <section class="relative z-[5] bg-[#1E3A6E] px-6 lg:px-20 py-16 grid grid-cols-1 lg:grid-cols-[1fr_auto] items-center gap-12">
   <div>
-    <h2 class="font-cormorant text-5xl lg:text-6xl font-bold text-[#f0ece4] leading-tight mb-4">
+    <h2 class="text-5xl lg:text-6xl font-bold text-[#f0ece4] leading-tight mb-4">
       Ready to Build<br><em class="italic text-[#00A0C6]">Expert Capacity</em>?
     </h2>
     <p class="text-[14.5px] leading-[1.8] text-white/70 max-w-[520px] mb-7">
