@@ -1,6 +1,6 @@
 @extends('web.app')
 
-@section('title', 'Professional Training Programmes - Genyra Academy')
+@section('title', 'Professional Training Programmes - genyra Institute')
 
 @section('body')
 
@@ -17,7 +17,7 @@
 
   * { font-family: 'DM Sans', sans-serif !important; }
   .font-cormorant { font-family: 'Cormorant Garamond', serif !important; }
-  .font-mono      { font-family: 'DM Mono', monospace !important; }
+  .     { font-family: 'DM Mono', monospace !important; }
   html { scroll-behavior: smooth; }
 
   /* ── CARD CORE ── */
@@ -214,33 +214,200 @@
 </style>
 
 {{-- ── HERO ── --}}
-<header class="relative z-10 mt-28 overflow-hidden">
+<header class="relative mt-28 overflow-hidden flex items-center" style="min-height: 480px;">
+
+  {{-- Background photo --}}
   <div class="absolute inset-0 z-0">
     <img src="https://images.pexels.com/photos/8617742/pexels-photo-8617742.jpeg?auto=compress&cs=tinysrgb&w=1920"
-         alt="Genyra Academy Medical Training" class="w-full h-full object-cover">
-    <div class="absolute inset-0 bg-gradient-to-r from-[#1E3A6E]/95 to-[#1E3A6E]/80"></div>
+         alt="genyra Institute" class="w-full h-full object-cover">
+    <div class="absolute inset-0" style="background: linear-gradient(105deg, #0a1628 0%, #0d1f3c 45%, rgba(13,31,60,0.65) 100%);"></div>
   </div>
-  <div class="relative z-10 px-6 lg:px-20 py-14 lg:py-18">
-    <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 items-end">
+
+  {{-- Cyan glow orb --}}
+  <div class="absolute top-[-60px] right-[8%] w-[400px] h-[400px] rounded-full opacity-10 blur-[90px] z-0 pointer-events-none"
+       style="background: radial-gradient(circle, #00A0C6, transparent 70%);"></div>
+
+  <div class="relative z-10 w-full px-6 lg:px-20 py-14">
+
+    {{-- Wordmark --}}
+    <div class="flex items-center gap-3 mb-10">
+      <div class="h-px w-7 bg-[#00A0C6]"></div>
+      <span class="font-cormorant text-[1.4rem] tracking-[0.12em] text-white/90">
+        gen<span class="text-[#00A0C6]">y</span>ra <em class="italic">Institute</em>
+      </span>
+      <div class="h-px w-10" style="background: linear-gradient(to right, rgba(0,160,198,0.4), transparent);"></div>
+      <span class="text-[10px] tracking-[0.3em] text-white uppercase hidden md:block">
+        Continuing Education Catalogue · 2025
+      </span>
+    </div>
+
+    {{-- Two-column layout --}}
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-10 lg:gap-16 items-center">
+
+      {{-- LEFT: Headline --}}
       <div>
-        <div class="font-cormorant text-[2rem] lg:text-[2.4rem] tracking-[0.14em] text-[#f0ece4] uppercase leading-none">
-          GEN<span class="text-[#00A0C6]">Y</span>RA <span class="italic">Academy</span>
-        </div>
-        <div class="font-mono text-[9px] tracking-[0.35em] text-white/75 mt-2 uppercase">
-          Empowering Minds · Inspiring Excellence · Shaping Futures
-        </div>
-      </div>
-      <div class="text-left lg:text-right">
-        <h1 class="font-cormorant text-[2.25rem] lg:text-[2.75rem] text-[#f0ece4] leading-tight">
-          Short Courses<br>& <em class="italic text-[#00A0C6]">Professional Training</em>
+        <h1 class="font-cormorant text-[2.6rem] lg:text-[3.4rem] text-white font-bold leading-[1.08] mb-5">
+          Learn from<br>
+          <span class="italic text-[#00A0C6]">Africa's</span> Leading<br>
+          Healthcare Experts
         </h1>
-        <p class="font-mono text-[9px] tracking-[0.3em] text-white/70 mt-2.5 uppercase">Continuing Education Catalogue · 2025</p>
+        <p class="text-white/50 text-[14px] leading-relaxed max-w-[400px] mb-7">
+          Practical, accredited programmes built for working health professionals delivered entirely online.
+        </p>
         <a href="https://academy.genyragroup.com/" target="_blank"
-           style="display:inline-flex; align-items:center; gap:0.4rem; margin-top:1rem; padding:0.5rem 1.1rem; background:rgba(0,160,198,0.18); border:1px solid rgba(0,160,198,0.5); border-radius:99px; font-size:0.72rem; font-weight:600; color:#00A0C6; text-decoration:none; letter-spacing:0.05em; transition:all 0.15s;"
-           onmouseover="this.style.background='rgba(0,160,198,0.3)'" onmouseout="this.style.background='rgba(0,160,198,0.18)'">
-          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
-          Visit Genyra Academy Platform
+           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white transition-all duration-200"
+           style="background: #00A0C6; box-shadow: 0 6px 20px rgba(0,160,198,0.35);"
+           onmouseover="this.style.boxShadow='0 10px 28px rgba(0,160,198,0.5)'; this.style.transform='translateY(-1px)'"
+           onmouseout="this.style.boxShadow='0 6px 20px rgba(0,160,198,0.35)'; this.style.transform='none'">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+          </svg>
+          Visit genyra Institute Platform
         </a>
+      </div>
+
+      {{-- RIGHT: Category cards --}}
+      <div class="flex flex-col gap-2.5">
+
+        <p class="text-[10px] tracking-[0.28em] text-white uppercase mb-2">
+          Choose a category
+        </p>
+
+        {{-- Card 1 Professional Short Courses --}}
+        <a href="#section-short-courses"
+           class="group relative flex items-center gap-4 px-5 py-4 rounded-xl no-underline overflow-hidden transition-all duration-250 hover:-translate-y-px"
+           style="background: rgba(0,160,198,0.1); border: 1px solid rgba(0,160,198,0.25);"
+           onmouseover="this.style.background='rgba(0,160,198,0.2)'; this.style.borderColor='rgba(0,160,198,0.5)'; this.style.boxShadow='0 16px 40px rgba(0,160,198,0.15)'"
+           onmouseout="this.style.background='rgba(0,160,198,0.1)'; this.style.borderColor='rgba(0,160,198,0.25)'; this.style.boxShadow='none'">
+
+          {{-- Left accent bar --}}
+          <div class="absolute left-0 top-0 bottom-0 w-[3px] rounded-l-xl" style="background: #00A0C6;"></div>
+
+          {{-- Icon --}}
+          <div class="flex-shrink-0 w-11 h-11 rounded-lg flex items-center justify-center"
+               style="background: rgba(0,160,198,0.18); border: 1px solid rgba(0,160,198,0.3);">
+            <svg class="w-5 h-5" style="color:#00A0C6;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13
+                       C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477
+                       14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477
+                       18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+
+          {{-- Content --}}
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 mb-0.5">
+              <span class="text-white font-bold text-[14.5px]">Professional Short Courses</span>
+              <span class="text-[7.5px] tracking-[0.15em] uppercase px-2 py-0.5 rounded-full flex-shrink-0"
+                    style="color:#00A0C6; background:rgba(0,160,198,0.15); border:1px solid rgba(0,160,198,0.3);">Online</span>
+            </div>
+            <p class="text-white/45 text-[12px] leading-snug">
+              CPD-credited · 4 business pillars · 20 courses · Self-paced
+            </p>
+          </div>
+
+          {{-- Arrow --}}
+          <svg class="w-4 h-4 flex-shrink-0 transition-all duration-200 group-hover:translate-x-0.5"
+               style="color:rgba(0,160,198,0.5);"
+               fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+
+        {{-- Card 2 Certificates & Diplomas --}}
+        <a href="#section-certificates"
+           class="group relative flex items-center gap-4 px-5 py-4 rounded-xl no-underline overflow-hidden transition-all duration-250 hover:-translate-y-px"
+           style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);"
+           onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.borderColor='rgba(255,255,255,0.22)'; this.style.boxShadow='0 16px 40px rgba(0,0,0,0.18)'"
+           onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.1)'; this.style.boxShadow='none'">
+
+          <div class="absolute left-0 top-0 bottom-0 w-[3px] rounded-l-xl" style="background: rgba(255,255,255,0.2);"></div>
+
+          <div class="flex-shrink-0 w-11 h-11 rounded-lg flex items-center justify-center"
+               style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);">
+            <svg class="w-5 h-5 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0
+                       3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946
+                       3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138
+                       3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806
+                       3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438
+                       3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+            </svg>
+          </div>
+
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 mb-0.5">
+              <span class="text-white font-bold text-[14.5px]">Certificates &amp; Diplomas</span>
+              <span class="text-[7.5px] tracking-[0.15em] uppercase px-2 py-0.5 rounded-full flex-shrink-0"
+                    style="color:rgba(255,255,255,0.5); background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.13);">Online</span>
+            </div>
+            <p class="text-white/45 text-[12px] leading-snug">
+              Health · Information Sciences · Business · Humanities &amp; Social Sciences
+            </p>
+          </div>
+
+          <svg class="w-4 h-4 flex-shrink-0 transition-all duration-200 group-hover:translate-x-0.5"
+               style="color:rgba(255,255,255,0.25);"
+               fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+
+        {{-- Card 3 Webinars --}}
+        <a href="#section-webinars"
+           class="group relative flex items-center gap-4 px-5 py-4 rounded-xl no-underline overflow-hidden transition-all duration-250 hover:-translate-y-px"
+           style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);"
+           onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.borderColor='rgba(255,255,255,0.22)'; this.style.boxShadow='0 16px 40px rgba(0,0,0,0.18)'"
+           onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.1)'; this.style.boxShadow='none'">
+
+          <div class="absolute left-0 top-0 bottom-0 w-[3px] rounded-l-xl" style="background: rgba(255,255,255,0.2);"></div>
+
+          <div class="flex-shrink-0 w-11 h-11 rounded-lg flex items-center justify-center"
+               style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);">
+            <svg class="w-5 h-5 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                    d="M15 10l4.553-2.069A1 1 0 0121 8.845v6.31a1 1 0 01-1.447.894L15 14
+                       M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+          </div>
+
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 mb-0.5">
+              <span class="text-white font-bold text-[14.5px]">Webinars</span>
+              <span class="text-[7.5px] tracking-[0.15em] uppercase px-2 py-0.5 rounded-full flex-shrink-0"
+                    style="color:rgba(255,255,255,0.5); background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.13);">On-demand</span>
+            </div>
+            <p class="text-white/45 text-[12px] leading-snug">
+              Pre-recorded expert sessions · Watch anytime · No schedule required
+            </p>
+          </div>
+
+          <svg class="w-4 h-4 flex-shrink-0 transition-all duration-200 group-hover:translate-x-0.5"
+               style="color:rgba(255,255,255,0.25);"
+               fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+
+        {{-- Trust row --}}
+        <div class="flex items-center gap-6 pt-4 mt-1" style="border-top: 1px solid rgba(255,255,255,0.07);">
+          @foreach([
+            ['M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z', 'CPD Credited'],
+            ['M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064', '6 Countries'],
+            ['M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', 'Self-paced'],
+          ] as [$path, $label])
+          <div class="flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-[#00A0C6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="{{ $path }}"/>
+            </svg>
+            <span class="text-[9px] tracking-[0.12em] text-white uppercase">{{ $label }}</span>
+          </div>
+          @endforeach
+        </div>
+
       </div>
     </div>
   </div>
@@ -257,7 +424,7 @@
     @foreach([['20','Courses'],['4','Pillars'],['CPD','Credited'],['∞','Impact']] as [$n,$l])
     <div class="text-center px-3 py-5 border border-black/15 rounded-lg">
       <span class="font-cormorant text-[2.375rem] text-[#1a1510] leading-none block">{{ $n }}</span>
-      <span class="font-mono text-[9px] tracking-[0.2em] text-[#6b5f52] uppercase block mt-1.5">{{ $l }}</span>
+      <span class="text-[9px] tracking-[0.2em] text-[#6b5f52] uppercase block mt-1.5">{{ $l }}</span>
     </div>
     @endforeach
   </div>
@@ -265,7 +432,7 @@
 
 {{-- ── FILTER ── --}}
 <div class="relative z-[5] bg-[#f0ede8] px-6 lg:px-20 py-5 border-b border-black/10 flex items-center gap-3 flex-wrap">
-  <span class="font-mono text-[9px] tracking-[0.3em] text-[#6b5f52] uppercase mr-2 whitespace-nowrap">Filter by pillar</span>
+  <span class="text-[9px] tracking-[0.3em] text-[#6b5f52] uppercase mr-2 whitespace-nowrap">Filter by pillar</span>
   <button class="filter-btn active" data-filter="all">All Courses</button>
   <button class="filter-btn" data-filter="biosciences">BioSciences</button>
   <button class="filter-btn" data-filter="medtech">MedTech</button>
@@ -292,9 +459,9 @@
     <div class="pillar-header" style="--accent-color:#00A0C6;">
       <div class="flex-1">
         <h2 class="text-2xl font-bold text-gray-700">BioSciences</h2>
-        <span class="font-mono text-[9.5px] tracking-[0.3em] text-[#00A0C6] uppercase block mt-1">Life Sciences · Applied Biology · Research Methods</span>
+        <span class="text-[9.5px] tracking-[0.3em] text-[#00A0C6] uppercase block mt-1">Life Sciences · Applied Biology · Research Methods</span>
       </div>
-      <span class="font-mono text-[11px] text-[#6b5f52] tracking-wider">5 courses</span>
+      <span class="text-[11px] text-[#6b5f52] tracking-wider">5 courses</span>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -329,7 +496,7 @@
           </div>
           <a href="{{ $url }}" target="_blank" class="enrol-btn"
              style="background:linear-gradient(135deg,#00A0C6,#0077a0); color:#fff; box-shadow:0 3px 12px rgba(0,160,198,0.35);">
-            {!! $enrol_svg !!} Enrol on Genyra Academy
+            {!! $enrol_svg !!} Enrol on genyra Institute
           </a>
         </div>
       </div>
@@ -343,9 +510,9 @@
     <div class="pillar-header" style="--accent-color:#1E3A6E;">
       <div class="flex-1">
         <h2 class="text-2xl font-bold text-gray-700">MedTech Solutions</h2>
-        <span class="font-mono text-[9.5px] tracking-[0.3em] text-[#1E3A6E] uppercase block mt-1">Medical Technology · Device Management · Clinical Engineering</span>
+        <span class="text-[9.5px] tracking-[0.3em] text-[#1E3A6E] uppercase block mt-1">Medical Technology · Device Management · Clinical Engineering</span>
       </div>
-      <span class="font-mono text-[11px] text-[#6b5f52] tracking-wider">5 courses</span>
+      <span class="text-[11px] text-[#6b5f52] tracking-wider">5 courses</span>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -380,7 +547,7 @@
           </div>
           <a href="{{ $url }}" target="_blank" class="enrol-btn"
              style="background:linear-gradient(135deg,#1E3A6E,#152a52); color:#fff; box-shadow:0 3px 12px rgba(30,58,110,0.3);">
-            {!! $enrol_svg !!} Enrol on Genyra Academy
+            {!! $enrol_svg !!} Enrol on genyra Institute
           </a>
         </div>
       </div>
@@ -394,9 +561,9 @@
     <div class="pillar-header" style="--accent-color:#0077B6;">
       <div class="flex-1">
         <h2 class="text-2xl font-bold text-gray-700">Health Systems Planning &amp; Advisory</h2>
-        <span class="font-mono text-[9.5px] tracking-[0.3em] text-[#0077B6] uppercase block mt-1">Strategic Planning · Quality Management · Governance</span>
+        <span class="text-[9.5px] tracking-[0.3em] text-[#0077B6] uppercase block mt-1">Strategic Planning · Quality Management · Governance</span>
       </div>
-      <span class="font-mono text-[11px] text-[#6b5f52] tracking-wider">5 courses</span>
+      <span class="text-[11px] text-[#6b5f52] tracking-wider">5 courses</span>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -431,7 +598,7 @@
           </div>
           <a href="{{ $url }}" target="_blank" class="enrol-btn"
              style="background:linear-gradient(135deg,#0077B6,#005a8a); color:#fff; box-shadow:0 3px 12px rgba(0,119,182,0.3);">
-            {!! $enrol_svg !!} Enrol on Genyra Academy
+            {!! $enrol_svg !!} Enrol on genyra Institute
           </a>
         </div>
       </div>
@@ -445,9 +612,9 @@
     <div class="pillar-header" style="--accent-color:#008BA3;">
       <div class="flex-1">
         <h2 class="text-2xl font-bold text-gray-700">Metrology &amp; Calibration Services</h2>
-        <span class="font-mono text-[9.5px] tracking-[0.3em] text-[#008BA3] uppercase block mt-1">Precision Measurement · Instrument Assurance · Standards Compliance</span>
+        <span class="text-[9.5px] tracking-[0.3em] text-[#008BA3] uppercase block mt-1">Precision Measurement · Instrument Assurance · Standards Compliance</span>
       </div>
-      <span class="font-mono text-[11px] text-[#6b5f52] tracking-wider">5 courses</span>
+      <span class="text-[11px] text-[#6b5f52] tracking-wider">5 courses</span>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -482,7 +649,7 @@
           </div>
           <a href="{{ $url }}" target="_blank" class="enrol-btn"
              style="background:linear-gradient(135deg,#008BA3,#00687c); color:#fff; box-shadow:0 3px 12px rgba(0,139,163,0.3);">
-            {!! $enrol_svg !!} Enrol on Genyra Academy
+            {!! $enrol_svg !!} Enrol on genyra Institute
           </a>
         </div>
       </div>
@@ -506,25 +673,25 @@
        style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.75rem 1.75rem; background:#00A0C6; color:#fff; border-radius:6px; font-size:0.85rem; font-weight:600; text-decoration:none; letter-spacing:0.04em; transition:all 0.15s; box-shadow:0 4px 15px rgba(0,160,198,0.4);"
        onmouseover="this.style.background='#0090b5'; this.style.transform='translateY(-1px)'" onmouseout="this.style.background='#00A0C6'; this.style.transform='none'">
       <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
-      Browse All Courses on Genyra Academy
+      Browse All Courses on genyra Institute
     </a>
   </div>
   <div class="flex flex-col gap-4 min-w-[220px]">
     <div class="px-6 py-4 border border-white/10 rounded-lg bg-white/4">
       <strong class="block text-sm text-[#f0ece4] font-semibold mb-1 tracking-wide">In-Person & On-Site</strong>
-      <span class="font-mono text-[11px] text-white/45 tracking-wide">Nairobi · Available nationwide</span>
+      <span class="text-[11px] text-white/45 tracking-wide">Nairobi · Available nationwide</span>
     </div>
     <div class="px-6 py-4 border border-white/10 rounded-lg bg-white/4">
       <strong class="block text-sm text-[#f0ece4] font-semibold mb-1 tracking-wide">Group & Institutional Bookings</strong>
-      <span class="font-mono text-[11px] text-white/45 tracking-wide">Custom programmes available</span>
+      <span class="text-[11px] text-white/45 tracking-wide">Custom programmes available</span>
     </div>
     <div class="px-6 py-4 border border-white/10 rounded-lg bg-white/4">
       <strong class="block text-sm text-[#f0ece4] font-semibold mb-1 tracking-wide">CPD-Credited</strong>
-      <span class="font-mono text-[11px] text-white/45 tracking-wide">Certificates of completion issued</span>
+      <span class="text-[11px] text-white/45 tracking-wide">Certificates of completion issued</span>
     </div>
     <div class="px-6 py-4 border border-[#00A0C6]/40 rounded-lg" style="background:rgba(0,160,198,0.08);">
       <strong class="block text-sm text-[#00A0C6] font-semibold mb-1 tracking-wide">training@genyragroup.com</strong>
-      <span class="font-mono text-[11px] text-white/60 tracking-wide">Enquire about any course</span>
+      <span class="text-[11px] text-white/60 tracking-wide">Enquire about any course</span>
     </div>
   </div>
 </section>

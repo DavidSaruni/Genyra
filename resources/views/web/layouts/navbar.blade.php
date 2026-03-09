@@ -1,7 +1,7 @@
 <!-- Top Bar -->
 <div class="top-bar py-2 px-4 fixed w-full z-50 top-0">
     <div class="max-w-7xl mx-auto flex justify-between items-center text-sm">
-        <div>Genyra Group</div>
+        <div>genyra Group</div>
         <div class="items-center space-x-2 font-extrabold">
             <span class="text-white md:text-blue-600 font-medium">Think</span>
             <span class="text-white">•</span>

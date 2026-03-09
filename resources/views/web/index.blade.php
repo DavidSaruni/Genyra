@@ -111,7 +111,7 @@
                             <div class="flex items-center space-x-3 mb-3">
                                 <span class="text-xs text-gray-500">{{ $latestNews->created_at->format('F j, Y') }}</span>
                                 <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
-                                <span class="text-xs text-gray-500">Genyra Group</span>
+                                <span class="text-xs text-gray-500">genyra Group</span>
                             </div>
                             <h3 class="text-xl md:text-3xl font-bold text-gray-700 mb-4 leading-tight hover:text-blue-700 transition-colors">
                                 {{ $latestNews->title }}
@@ -129,13 +129,13 @@
                             <div class="flex items-center space-x-3 mb-3">
                                 <span class="text-xs text-gray-500">February 17, 2026</span>
                                 <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
-                                <span class="text-xs text-gray-500">Genyra Group</span>
+                                <span class="text-xs text-gray-500">genyra Group</span>
                             </div>
                             <h3 class="text-xl md:text-3xl font-bold text-gray-700 mb-4 leading-tight hover:text-blue-700 transition-colors">
                                 New Laboratory Equipment Shipment Arrives at County Hospital
                             </h3>
                             <p class="text-gray-600 text-sm mb-6 leading-relaxed">
-                                Genyra Group successfully deployed state-of-the-art laboratory equipment to enhance diagnostic capabilities and improve patient care outcomes across the region.
+                                genyra Group successfully deployed state-of-the-art laboratory equipment to enhance diagnostic capabilities and improve patient care outcomes across the region.
                             </p>
                             <a href="#" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 w-fit">
                                 Read more
@@ -473,10 +473,10 @@
                     Leading Healthcare Solutions Provider in East Africa
                 </h2>
                 <p class="text-md text-gray-600 mb-6 leading-relaxed">
-                    Genyra Group is East Africa's leading provider of healthcare solutions, specializing in laboratory equipment & consumables, general medical supplies, healthcare strategic planning & systems development and calibration services. Established with a vision to transform healthcare delivery through innovation and excellence, we serve hospitals, research institutions, diagnostic laboratories, pharmaceutical companies, and healthcare facilities across the region.
+                    genyra Group is East Africa's leading provider of healthcare solutions, specializing in laboratory equipment & consumables, general medical supplies, healthcare strategic planning & systems development and calibration services. Established with a vision to transform healthcare delivery through innovation and excellence, we serve hospitals, research institutions, diagnostic laboratories, pharmaceutical companies, and healthcare facilities across the region.
                 </p>
                 <p class="text-md text-gray-600 mb-8 leading-relaxed">
-                    With a proven track record of successful implementations and a commitment to quality, Genyra Group has positioned itself as a trusted partner for healthcare organizations seeking to enhance patient care, improve operational efficiency, and achieve regulatory compliance.
+                    With a proven track record of successful implementations and a commitment to quality, genyra Group has positioned itself as a trusted partner for healthcare organizations seeking to enhance patient care, improve operational efficiency, and achieve regulatory compliance.
                 </p>
                 <a href="#contact" class="btn-primary w-64 text-center">
                     Get in Touch
