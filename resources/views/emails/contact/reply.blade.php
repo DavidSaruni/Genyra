@@ -19,11 +19,8 @@
             </div>
             <!-- Company Info -->
             <div style="text-align: left;">
-                <h1 style="color: #f0ece4; margin: 0; font-size: 20px; font-weight: bold; letter-spacing: 1px; line-height: 1.2;">
-                    genyra <span style="color: #00A0C6;">Group</span>
-                </h1>
                 <p style="color: #f0ece4; margin: 3px 0 0 0; font-size: 11px; letter-spacing: 2px; font-family: monospace; text-transform: uppercase; line-height: 1;">
-                    Advancing Life · Precision · Systems
+                    Think • Innovate • Solve
                 </p>
             </div>
         </div>
