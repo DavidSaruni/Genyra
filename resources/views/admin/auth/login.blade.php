@@ -66,7 +66,7 @@
 
                 {{-- Card Header --}}
                 <div style="background: #1e3a6e; padding: 1.75rem 2rem; border-bottom: 3px solid #00a0c6;">
-                    <p style="color: #00a0c6; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin: 0 0 0.25rem;">genyra Group</p>
+                    <p style="color: #00a0c6; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; margin: 0 0 0.25rem;">genyra Group</p>
                     <h1 style="color: #fff; font-size: 1.15rem; font-weight: 700; margin: 0;">Admin Sign In</h1>
                     <p style="color: rgba(255,255,255,0.45); font-size: 0.78rem; margin: 0.35rem 0 0;">Access the administration dashboard</p>
                 </div>
