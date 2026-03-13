@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login — Genyra Group</title>
+    <title>Admin Login — genyra Group</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +52,7 @@
     {{-- Top bar --}}
     <div style="background: #1e3a6e; border-bottom: 3px solid #00a0c6; padding: 0.75rem 1.5rem;">
         <div style="max-width: 1280px; margin: 0 auto; display: flex; align-items: center; gap: 0.75rem;">
-            <img src="{{ asset('images/logo.jpeg') }}" alt="Genyra Group" style="height: 2rem; width: auto; border-radius: 4px;">
+            <img src="{{ asset('images/logo.jpeg') }}" alt="genyra Group" style="height: 2rem; width: auto; border-radius: 4px;">
             <span style="color: rgba(255,255,255,0.5); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em;">Admin Portal</span>
         </div>
     </div>
@@ -66,7 +66,7 @@
 
                 {{-- Card Header --}}
                 <div style="background: #1e3a6e; padding: 1.75rem 2rem; border-bottom: 3px solid #00a0c6;">
-                    <p style="color: #00a0c6; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin: 0 0 0.25rem;">Genyra Group</p>
+                    <p style="color: #00a0c6; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin: 0 0 0.25rem;">genyra Group</p>
                     <h1 style="color: #fff; font-size: 1.15rem; font-weight: 700; margin: 0;">Admin Sign In</h1>
                     <p style="color: rgba(255,255,255,0.45); font-size: 0.78rem; margin: 0.35rem 0 0;">Access the administration dashboard</p>
                 </div>
@@ -141,7 +141,7 @@
 
             {{-- Footer --}}
             <p style="text-align: center; margin-top: 1.5rem; font-size: 0.72rem;" class="text-gray-500">
-                &copy; {{ date('Y') }} Genyra Group Limited. All rights reserved.
+                &copy; {{ date('Y') }} genyra Group Limited. All rights reserved.
             </p>
         </div>
     </div>
