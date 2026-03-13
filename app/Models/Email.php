@@ -17,10 +17,7 @@ class Email extends Model
 
     protected $casts = [
         'sent_at' => 'datetime',
+        'attachment_count' => 'integer'
     ];
 
-    public function getAttachmentCountAttribute($value)
-    {
-        return $this->attachments_count ?? 0;
-    }
 }
