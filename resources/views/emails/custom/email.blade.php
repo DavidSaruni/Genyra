@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reply to your message - Genyra Group</title>
+    <title>{{ $emailSubject }}</title>
     <style>
         @media only screen and (max-width: 480px) {
             .header-logo img { height: 36px !important; }
@@ -30,7 +30,7 @@
                 <td class="header-divider" style="vertical-align: middle; width: 1%; white-space: nowrap; padding-right: 14px;">
                     <div style="width: 1px; height: 34px; background-color: rgba(240,236,228,0.3);"></div>
                 </td>
-                <!-- Tagline -->
+                <!-- Tagline — single line on desktop, wraps gracefully on mobile -->
                 <td class="header-tagline" style="vertical-align: middle;">
                     <p style="color: #f0ece4; margin: 0; font-size: 11px; letter-spacing: 2px; font-family: monospace; text-transform: uppercase; line-height: 1.6; white-space: nowrap;">
                         THINK &nbsp;·&nbsp; INNOVATE &nbsp;·&nbsp; SOLVE
@@ -43,36 +43,10 @@
     <!-- Main Content -->
     <div class="main-content" style="max-width: 600px; margin: 0 auto; padding: 40px 20px; background-color: white;">
 
-        <h1 class="main-title" style="color: #1E3A6E; font-size: 24px; margin-bottom: 20px;">Thank You for Contacting Genyra Group</h1>
+        <h1 class="main-title" style="color: #1E3A6E; font-size: 24px; margin-bottom: 20px;">{{ $emailSubject }}</h1>
 
-        <p style="font-size: 16px; margin-bottom: 20px;">Dear {{ $contact->name }},</p>
-
-        <p style="font-size: 16px; margin-bottom: 30px; line-height: 1.7;">
-            Thank you for reaching out to us. We have received your message and our team is reviewing it. We appreciate your interest in Genyra Group and will respond to your inquiry promptly.
-        </p>
-
-        <!-- Original Message -->
-        <div style="background: #f8f9fa; padding: 25px; border-left: 5px solid #1E3A6E; margin: 30px 0; border-radius: 0 8px 8px 0;">
-            <h3 style="color: #1E3A6E; margin-top: 0; font-size: 18px;">Your Original Message:</h3>
-            <p style="margin: 10px 0 0 0; font-style: italic; color: #555;">{{ $contact->message }}</p>
-        </div>
-
-        <!-- Response -->
-        <div style="background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%); padding: 25px; border-left: 5px solid #00A0C6; margin: 30px 0; border-radius: 0 8px 8px 0;">
-            <h3 style="color: #00A0C6; margin-top: 0; font-size: 18px;">Our Response:</h3>
-            <div style="margin: 15px 0 0 0; line-height: 1.7;">
-                {!! $replyMessage !!}
-            </div>
-        </div>
-
-        <!-- Next Steps -->
-        <div style="margin: 40px 0;">
-            <h3 style="color: #1E3A6E; font-size: 18px;">Next Steps:</h3>
-            <ul style="color: #555; line-height: 1.8;">
-                <li>If you have any additional questions, please don't hesitate to contact us</li>
-                <li>We typically respond within 24-48 hours</li>
-                <li>You can reach us directly at <a href="mailto:{{ config('mail.from.address') }}" style="color: #00A0C6; text-decoration: none;">{{ config('mail.from.address') }}</a></li>
-            </ul>
+        <div style="line-height: 1.7; color: #555;">
+            {!! $emailMessage !!}
         </div>
 
         <!-- Divider -->
@@ -82,7 +56,7 @@
         <div style="text-align: center; margin-bottom: 30px;">
             <p style="margin: 0; font-size: 16px;">
                 <strong style="color: #1E3A6E;">Best regards,</strong><br>
-                <span style="color: #1E3A6E; font-size: 18px;">The Genyra Group Team</span><br>
+                <span style="color: #1E3A6E; font-size: 18px;">The genyra Group Team</span><br>
                 <a href="https://genyragroup.com" style="color: #00A0C6; text-decoration: none; font-weight: 500;">genyragroup.com</a>
             </p>
         </div>
@@ -99,7 +73,7 @@
                       font-weight: 600;
                       font-size: 14px;
                       letter-spacing: 1px;
-                      box-shadow: 0 4px 15px rgba(0, 160, 198, 0.3);">
+                      box-shadow: 0 4px 15px rgba(0,160,198,0.3);">
                 Visit Our Website
             </a>
         </div>

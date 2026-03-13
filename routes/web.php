@@ -5,6 +5,7 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\WebController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\PosterController;
 use Illuminate\Support\Facades\Route;
 
@@ -49,6 +50,11 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::get('contacts/{contact}/reply', [ContactController::class, 'reply'])->name('contacts.reply');
     Route::post('contacts/{contact}/reply', [ContactController::class, 'sendReply'])->name('contacts.send-reply');
     Route::resource('posters', PosterController::class)->except(['show']);
+    
+    // Email management routes
+    Route::get('emails', [EmailController::class, 'index'])->name('emails.index');
+    Route::get('emails/create', [EmailController::class, 'create'])->name('emails.create');
+    Route::post('emails/send', [EmailController::class, 'send'])->name('emails.send');
 });
 
 

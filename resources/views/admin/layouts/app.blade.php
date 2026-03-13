@@ -52,6 +52,9 @@
                         <span class="ml-auto bg-red-500 text-white text-xs px-2 py-1 rounded-full">{{ $unreadCount }}</span>
                     @endif
                 </a>
+                <a href="{{ route('admin.emails.index') }}" class="block py-3 px-4 hover:bg-genyra-primary transition-colors {{ request()->routeIs('admin.emails.*') ? 'bg-genyra-primary border-l-4 border-genyra-accent' : '' }}">
+                    <i class="fas fa-paper-plane mr-3"></i> Email Management
+                </a>
                 <a href="{{ route('admin.posters.index') }}" class="block py-3 px-4 hover:bg-genyra-primary transition-colors {{ request()->routeIs('admin.posters.*') ? 'bg-genyra-primary border-l-4 border-genyra-accent' : '' }}">
                     <i class="fas fa-image mr-3"></i> Poster Management
                 </a>
