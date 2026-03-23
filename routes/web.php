@@ -16,6 +16,7 @@ Route::get('/news',[WebController::class,'news'])->name( 'news');
 Route::get('/news/{slug}',[WebController::class,'newsReadMore'])->name( 'news.readmore');
 Route::post('/contact',[WebController::class,'contactPost'])->name( 'contact.submit');
 Route::get('/courses',[WebController::class,'courses'])->name( 'courses');
+Route::get('/courses/readmore',[WebController::class,'courseReadMore'])->name( 'courses.readmore');
 
 // our story
 Route::get('/our-story',[WebController::class,'ourStory'])->name( 'our-story');

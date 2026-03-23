@@ -124,6 +124,11 @@ class WebController extends Controller
         return view('web.courses');
     }
 
+    // course readmore
+    public function courseReadMore(){
+        return view('web.courseReadMore');
+    }
+
     public function ourStory(){
         return view('web.ourStory');
     }

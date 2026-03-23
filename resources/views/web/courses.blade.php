@@ -658,6 +658,67 @@
     </div>
   </div>
 
+  {{-- ════ Technology & AI Courses ════ --}}
+<!-- <div class="pillar-section mb-16" id="section-tech" style="--accent-color:#008BA3;">
+  <div class="pillar-header" style="--accent-color:#008BA3;">
+    <div class="flex-1">
+      <h2 class="text-2xl font-bold text-gray-700">Technology, Data & Artificial Intelligence</h2>
+      <span class="text-[9.5px] tracking-[0.3em] text-[#008BA3] uppercase block mt-1">
+        Data Analytics · Artificial Intelligence · Digital Innovation
+      </span>
+    </div>
+    <span class="text-[11px] text-[#6b5f52] tracking-wider">10 courses</span>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+    @php
+    $tech = [
+    ['GTC-201','Introduction to Data Analytics','Provides a foundational understanding of data analytics including data collection, cleaning, analysis, and visualization. Participants learn how organizations use data to make strategic decisions and gain exposure to tools such as Excel, SQL, and Python for basic analytics workflows.','Students, business professionals, researchers, and beginners interested in understanding how data is analyzed to support decision making.',['3 Days','Beginner','Data Fundamentals'],'courses.readmore'],
+
+    ];
+    @endphp
+
+
+    @foreach($tech as [$code,$title,$desc,$who,$tags,$url])
+    <div class="course-card">
+      <div class="card-band" style="background:linear-gradient(135deg, #008BA3 0%, #00687c 100%); color:#fff;">
+        {!! $icons['met'] !!}
+        <div class="code-pill" style="color:#fff; border-color:rgba(255,255,255,0.5);">{{ $code }}</div>
+        <p style="font-size:0.85rem; font-weight:700; line-height:1.3; margin:0; color:#fff; position:relative; z-index:1; padding-right:3rem;">
+          {{ $title }}
+        </p>
+      </div>
+
+      <div class="card-body">
+        <p class="text-sm md:text-md text-gray-700">{{ $desc }}</p>
+      </div>
+
+      <div class="card-footer">
+        <div>
+          <p class="who-label text-blue-500">Who should attend</p>
+          <p class="who-text text-gray-700">{{ $who }}</p>
+        </div>
+
+        <div class="tags-row">
+          @foreach($tags as $tag)
+          <span class="tag" style="background:#e5f6f9; color:#00687c; border:1px solid #aadfea;">
+            {{ $tag }}
+          </span>
+          @endforeach
+        </div>
+
+        <a href="{{ route('courses.readmore') }}" target="_blank" class="enrol-btn"
+           style="background:linear-gradient(135deg,#008BA3,#00687c); color:#fff; box-shadow:0 3px 12px rgba(0,139,163,0.3);">
+           Read More
+        </a>
+      </div>
+    </div>
+    @endforeach
+
+  </div>
+</div> -->
+
 </main>
 
 {{-- ── CTA ── --}}
