@@ -1506,7 +1506,7 @@
                         <div>
                             <h3 class="font-bold text-lg mb-2 text-gray-700">Telephone</h3>
                             <p class="text-gray-600">
-                                <span class="font-semibold">Main:</span> <a href="tel:+254705435438" class="hover:text-blue-600 transition-colors">+254 705 435 438</a>
+                                <span class="font-semibold">Main:</span> <a href="tel:+254735553500" class="hover:text-blue-600 transition-colors">+254 735 553 500</a>
                             </p>
                         </div>
                     </div>
@@ -1647,7 +1647,7 @@
                     <div class="mt-8 pt-8 border-t border-gray-200">
                         <p class="text-center text-sm text-gray-600">
                             <strong>Need immediate assistance?</strong><br/>
-                            Call us at <a href="tel:+254705435438" class="text-blue-600 hover:underline font-semibold">+254 705 435 438</a> or email 
+                            Call us at <a href="tel:+254735553500" class="text-blue-600 hover:underline font-semibold">+254 705 435 438</a> or email 
                             <a href="mailto:sales@genyragroup.com" class="text-blue-600 hover:underline font-semibold">sales@genyragroup.com</a>
                         </p>
                     </div>
