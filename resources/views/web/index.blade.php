@@ -148,7 +148,7 @@
                     </div>
                
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 py-12 px-2 gap-8">
                 <!-- Card 1 - Featured -->
                 @php
                     $latestThree = \App\Models\News::latest()->skip('1')->take(3)->get();
