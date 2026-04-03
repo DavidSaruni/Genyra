@@ -146,8 +146,46 @@
                         @endif
                         </div>
                     </div>
-                </div>
+               
 
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 - Featured -->
+                @php
+                    $latestThree = \App\Models\News::latest()->skip('1')->take(3)->get();
+                @endphp
+                @forelse($latestThree as $news)
+                <div class="md:col-span-1 bg-white rounded-2xl overflow-hidden shadow-sm card-hover border border-gray-100">
+                <div class="relative">
+                    @if($news->main_image)
+                        <img src="{{ asset($news->main_image) }}" alt="{{ $news->title }}" class="w-full h-56 object-cover" onerror="this.style.background='#f3e8ff'" />
+                    @else
+                        <div class="w-full h-56 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+                            <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                    @endif
+                    <div class="absolute top-3 left-3 flex gap-2">
+                    <span class="bg-woje-green text-white text-xs font-bold px-3 py-1 rounded-full">{{ $news->category->name }}</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-xs text-gray-400 mb-2"> · <span class="text-accent font-medium">{{ $news->published_at->format('M d, Y') }}</span></p>
+                    <h3 class="font-bold text-lg text-gray-700 mb-3 leading-tight">{{ $news->title }}</h3>
+                    <p class="text-gray-500 text-md leading-relaxed mb-4">{{ $news->excerpt }}</p>
+                    <div class="flex gap-3">
+                    <a href="{{ route('news.newsReadMore', $news->slug) }}" class="text-primary text-md font-semibold hover:text-accent transition-colors">Read more →</a>
+                    </div>
+                </div>
+                </div>
+                @empty
+                <div class="md:col-span-3 text-center py-12">
+                    <p class="text-gray-500 text-lg">No news articles available yet.</p>
+                </div>
+                @endforelse
+                </div>
+ 
+      </div>
         <!-- Discover More Button -->
     <section class="pb-4 px-4 sm:px-6 lg:px-8 bg-white">
         <div class="max-w-7xl mx-auto">
