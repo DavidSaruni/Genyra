@@ -425,7 +425,7 @@
           </div>
           <div>
             <div class="text-[0.68rem] font-semibold tracking-wider uppercase text-[#6b7280] mb-0.5">Telephone</div>
-            <a href="tel:+254705435438" class="text-[#1e3a6e] no-underline font-medium block hover:text-[#00a0c6] transition-colors">+254 705 435 438</a>
+            <a href="tel:+254735553500" class="text-[#1e3a6e] no-underline font-medium block hover:text-[#00a0c6] transition-colors">+254 735 553 500</a>
           </div>
         </div>
 
