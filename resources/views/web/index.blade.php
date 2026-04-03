@@ -157,7 +157,7 @@
                 <div class="md:col-span-1 bg-white rounded-2xl overflow-hidden shadow-sm card-hover border border-gray-100">
                 <div class="relative">
                     @if($news->main_image)
-                        <img src="{{ asset($news->main_image) }}" alt="{{ $news->title }}" class="w-full h-56 object-cover" onerror="this.style.background='#f3e8ff'" />
+                        <img src="{{ asset('storage/' . $news->main_image) }}" alt="{{ $news->title }}" class="w-full h-56 object-cover" onerror="this.style.background='#f3e8ff'" />
                     @else
                         <div class="w-full h-56 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
                             <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -166,7 +166,7 @@
                         </div>
                     @endif
                     <div class="absolute top-3 left-3 flex gap-2">
-                    <span class="bg-woje-green text-white text-xs font-bold px-3 py-1 rounded-full">{{ $news->category->name }}</span>
+                    <span class="bg-woje-green text-white text-xs font-bold px-3 py-1 rounded-full">{{ $news->title }}</span>
                     </div>
                 </div>
                 <div class="p-6">
@@ -174,7 +174,7 @@
                     <h3 class="font-bold text-lg text-gray-700 mb-3 leading-tight">{{ $news->title }}</h3>
                     <p class="text-gray-500 text-md leading-relaxed mb-4">{{ $news->excerpt }}</p>
                     <div class="flex gap-3">
-                    <a href="{{ route('news.newsReadMore', $news->slug) }}" class="text-primary text-md font-semibold hover:text-accent transition-colors">Read more →</a>
+                    <a href="{{ route('news.readmore', $news->slug) }}" class="text-primary text-md font-semibold hover:text-accent transition-colors">Read more →</a>
                     </div>
                 </div>
                 </div>
