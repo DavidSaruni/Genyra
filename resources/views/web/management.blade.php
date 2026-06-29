@@ -55,7 +55,7 @@ function photoPlaceholder($color = '#1e3a6e', $size = 'md') {
       <div class="team-card bg-white rounded shadow-[0_1px_6px_rgba(0,0,0,0.08)] overflow-hidden w-full max-w-lg">
         <div class="h-1.5 bg-[#00a0c6]"></div>
         <div class="flex flex-col sm:flex-row">
-          <div class="sm:w-48 w-full h-52 sm:h-auto bg-[#eaf6fb] flex flex-col items-center justify-center gap-2 flex-shrink-0">
+          <div class="sm:w-48 w-full h-auto min-h-52 sm:min-h-0 sm:h-auto bg-[#eaf6fb] flex flex-col items-center justify-center gap-2 flex-shrink-0 overflow-hidden">
             <div class="w-20 h-20 rounded-full bg-[#c8dce8] flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#1e3a6e" viewBox="0 0 16 16">
                 <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
@@ -88,9 +88,9 @@ function photoPlaceholder($color = '#1e3a6e', $size = 'md') {
       ] as [$title, $division, $tagline, $color, $name, $credentials, $photo])
       <div class="team-card bg-white rounded shadow-[0_1px_6px_rgba(0,0,0,0.08)] overflow-hidden flex flex-col">
         <div class="h-1.5" style="background:{{ $color }}"></div>
-        <div class="h-44 flex flex-col items-center justify-center gap-2 flex-shrink-0 overflow-hidden" style="background:{{ $color }}14">
+        <div class="{{ $photo ? 'h-auto sm:h-44' : 'h-44' }} flex flex-col items-center justify-center gap-2 flex-shrink-0 overflow-hidden" style="background:{{ $color }}14">
           @if($photo)
-            <img src="{{ asset($photo) }}" alt="{{ $name }}" class="w-full h-full object-cover object-top">
+            <img src="{{ asset($photo) }}" alt="{{ $name }}" class="w-full h-auto sm:h-full object-cover object-top block">
           @else
           <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background:{{ $color }}35">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="{{ $color }}" viewBox="0 0 16 16">
@@ -128,7 +128,7 @@ function photoPlaceholder($color = '#1e3a6e', $size = 'md') {
       ] as [$role, $desc])
       <div class="team-card bg-white rounded shadow-[0_1px_6px_rgba(0,0,0,0.08)] overflow-hidden flex flex-col">
         <div class="h-1.5 bg-[#1e3a6e]"></div>
-        <div class="h-44 bg-[#f1f5f9] flex flex-col items-center justify-center gap-2 flex-shrink-0">
+        <div class="h-auto min-h-44 sm:h-44 sm:min-h-0 bg-[#f1f5f9] flex flex-col items-center justify-center gap-2 flex-shrink-0 overflow-hidden">
           <div class="w-16 h-16 rounded-full bg-[#dde6f0] flex items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#1e3a6e" viewBox="0 0 16 16">
               <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
