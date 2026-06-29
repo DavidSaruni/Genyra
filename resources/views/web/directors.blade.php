@@ -33,7 +33,7 @@
     <p class="text-[0.7rem] font-semibold tracking-[0.15em] uppercase text-[#00a0c6] mb-2">Corporate Governance</p>
     <h2 class="text-xl font-bold text-[#1e3a6e] mb-3">Leadership &amp; Oversight</h2>
     <p class="text-sm text-[#4b5563] leading-relaxed max-w-3xl">
-      Genyra Group is governed by a board of experienced professionals committed to ethical leadership, strategic oversight, and delivering lasting value to healthcare systems across East Africa. The board provides guidance, accountability, and strategic direction to the executive management team.
+      genyra Group is governed by a board of experienced professionals committed to ethical leadership, strategic oversight, and delivering lasting value to healthcare systems across East Africa. The board provides guidance, accountability, and strategic direction to the executive management team.
     </p>
   </div>
 
@@ -46,28 +46,33 @@
       @foreach([
         [
           'Chairman',
-          'Name Here',
+          'David Masinde',
           'Qualifications Here',
-          'A seasoned healthcare leader with over 25 years of experience in health systems governance, policy development, and institutional leadership across East Africa. Brings a wealth of strategic insight and a strong commitment to transforming healthcare delivery on the continent.',
+          'Experienced NGO leader with expertise in managing donor-funded programs (USAID, EU, ECHO, BMZ, ADA, among others) and leading teams of 600+ staff. Skilled in resource mobilization, stakeholder engagement, and organizational leadership, with a strong track record of building partnerships and driving impact in the development sector.',
+          'images/directors/david.jpg',
         ],
         [
           'Secretary / Chief Executive Officer',
-          'Name Here',
+          'Ms. Rhodah N. Mukopi',
           'Qualifications Here',
-          'Leads Genyra Group\'s overall strategy and operations with a focus on innovation, quality, and regional growth. With a background spanning biomedical engineering and executive management, instrumental in positioning Genyra as East Africa\'s most trusted healthcare solutions partner.',
+          'Leads genyra Group\'s overall strategy and operations with a focus on innovation, quality, and regional growth. With a background spanning biomedical engineering and executive management, instrumental in positioning genyra as East Africa\'s most trusted healthcare solutions partner.',
+          null,
         ],
-      ] as [$role, $name, $credentials, $bio])
+      ] as [$role, $name, $credentials, $bio, $photo])
       <div class="team-card bg-white rounded shadow-[0_1px_6px_rgba(0,0,0,0.08)] overflow-hidden">
         <div class="h-1.5 bg-[#00a0c6]"></div>
         <div class="flex flex-col sm:flex-row">
-          {{-- Photo placeholder --}}
-          <div class="sm:w-48 w-full h-52 sm:h-auto bg-[#eaf6fb] flex flex-col items-center justify-center gap-2 flex-shrink-0">
+          <div class="sm:w-48 w-full h-auto sm:h-auto bg-[#eaf6fb] flex flex-col items-center justify-center gap-2 flex-shrink-0 overflow-hidden">
+            @if($photo)
+              <img src="{{ asset($photo) }}" alt="{{ $name }}" class="w-full h-full object-cover object-top">
+            @else
             <div class="w-20 h-20 rounded-full bg-[#c8dce8] flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#1e3a6e" viewBox="0 0 16 16">
                 <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
               </svg>
             </div>
             <p class="text-[0.68rem] text-[#94a3b8] tracking-wide">Photo</p>
+            @endif
           </div>
           <div class="border-l-4 border-[#00a0c6] px-6 py-6 flex flex-col justify-center">
             <p class="text-[0.65rem] font-semibold tracking-widest uppercase text-[#00a0c6] mb-1">{{ $role }}</p>
@@ -90,45 +95,53 @@
       @foreach([
         [
           'Board Member',
-          'Name Here',
-          'Qualifications Here',
-          'Professor of Molecular Biology with extensive research experience in infectious diseases and laboratory systems. Provides scientific oversight and academic linkage to Genyra\'s BioSciences division.',
+          'Damary Okwako',
+          'PhD in Strategic Management (MMUST) · MBA, Strategic Planning (University of Nairobi) · BEd (Kenyatta University)',
+          'A strategic management scholar and lecturer at Masinde Muliro University of Science and Technology (MMUST), with published research on how strategic planning practices influence organizational performance. Brings academic rigor and strategic planning expertise to support genyra\'s long-term institutional direction and governance practices.',
+          'images/directors/damary okwako.jpg',
         ],
         [
           'Board Member',
-          'Name Here',
-          'Qualifications Here',
-          'A senior finance and investment professional with 20+ years across banking and private equity in East Africa. Chairs the Finance & Audit Committee and provides oversight on fiscal strategy and risk management.',
+          'Dr. Nelson Menza',
+          'PhD, Medical Laboratory Science (Medical Mycology & Bacteriology) · Kenyatta University',
+          'Chairperson of the Department of Medical Laboratory Science at Kenyatta University\'s School of Medicine, with an extensive research and publication record spanning infectious disease diagnostics, microbiology, and laboratory systems. A licensed member of the Kenya Medical Laboratory Technologist and Technicians Board, he provides scientific oversight and academic linkage to genyra\'s BioSciences division.',
+          'images/directors/Dr_Nelson_Chengo_Menza.jpg',
         ],
         [
           'Board Member',
-          'Name Here',
+          'Dr. Filex Otieno',
           'Qualifications Here',
-          'A public health physician and health systems specialist with experience working with the Ministry of Health, WHO, and international NGOs. Guides Genyra\'s Health Systems Advisory division with strong policy expertise.',
+          'A public health physician and health systems specialist with experience working with the Ministry of Health, WHO, and international NGOs. Guides genyra\'s Health Systems Advisory division with strong policy expertise.',
+          null,
         ],
         [
           'Board Member',
-          'Name Here',
-          'Qualifications Here',
-          'A leading biomedical engineer with a track record of healthcare infrastructure development across the region. Provides technical oversight on MedTech Solutions and equipment quality standards.',
+          'Ms. Zabib Musa Loro',
+          'BSc, Human Resource Management · Diplomas in Development Studies, Gender Studies, Islamic Studies & Leadership',
+          'Executive Director of Women for Justice and Equality (WOJE), with over a decade of leadership in gender programming, human rights advocacy, and HIV/AIDS response across South Sudan and Eastern Africa. A 2025 US International Women of Courage Award recipient, she brings deep expertise in community health programming and regional advocacy networks, strengthening genyra\'s commitment to equitable, people-centered healthcare delivery.',
+          'images/directors/zabibloro.jpeg',
         ],
         [
           'Board Member',
-          'Name Here',
+          'Ms. Rhodah N. Mukopi',
           'Qualifications Here',
-          'A corporate and commercial lawyer specialising in regulatory compliance, contract law, and corporate governance. Ensures Genyra maintains the highest standards of legal and ethical conduct across all operations.',
+          'A corporate and commercial lawyer specialising in regulatory compliance, contract law, and corporate governance. Ensures genyra maintains the highest standards of legal and ethical conduct across all operations.',
+          null,
         ],
-      ] as [$role, $name, $credentials, $bio])
+      ] as [$role, $name, $credentials, $bio, $photo])
       <div class="team-card bg-white rounded shadow-[0_1px_6px_rgba(0,0,0,0.08)] overflow-hidden flex flex-col">
         <div class="h-1.5 bg-[#1e3a6e]"></div>
-        {{-- Photo placeholder --}}
-        <div class="h-44 bg-[#f1f5f9] flex flex-col items-center justify-center gap-2 flex-shrink-0">
+        <div class="h-64 bg-[#f1f5f9] flex flex-col items-center justify-center gap-2 flex-shrink-0 overflow-hidden">
+          @if($photo)
+            <img src="{{ asset($photo) }}" alt="{{ $name }}" class="w-full h-full object-cover object-top">
+          @else
           <div class="w-16 h-16 rounded-full bg-[#dde6f0] flex items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#1e3a6e" viewBox="0 0 16 16">
               <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
             </svg>
           </div>
           <p class="text-[0.65rem] text-[#94a3b8] tracking-wide">Photo</p>
+          @endif
         </div>
         <div class="px-5 py-5 flex flex-col flex-1">
           <p class="text-[0.62rem] font-semibold tracking-widest uppercase text-[#00a0c6] mb-1">{{ $role }}</p>

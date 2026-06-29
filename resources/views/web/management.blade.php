@@ -42,7 +42,7 @@ function photoPlaceholder($color = '#1e3a6e', $size = 'md') {
     <p class="text-[0.7rem] font-semibold tracking-[0.15em] uppercase text-[#00a0c6] mb-2">The People Behind Our Work</p>
     <h2 class="text-xl font-bold text-[#1e3a6e] mb-3">Experienced. Dedicated. Expert.</h2>
     <p class="text-sm text-[#4b5563] leading-relaxed max-w-3xl">
-      Genyra Group's management team brings together specialists across biomedical engineering, laboratory sciences, health systems, metrology, finance, and research united by a shared commitment to transforming healthcare delivery across East Africa.
+      genyra Group's management team brings together specialists across biomedical engineering, laboratory sciences, health systems, metrology, finance, and research united by a shared commitment to transforming healthcare delivery across East Africa.
     </p>
   </div>
 
@@ -67,7 +67,7 @@ function photoPlaceholder($color = '#1e3a6e', $size = 'md') {
             <p class="text-[0.65rem] font-semibold tracking-widest uppercase text-[#00a0c6] mb-1">Chief Executive Officer</p>
             <h3 class="font-bold text-[#1e3a6e] text-[1.05rem] leading-tight">Name Here</h3>
             <p class="text-[0.75rem] text-[#6b7280] italic mt-0.5 mb-3">Qualifications Here</p>
-            <p class="text-[0.82rem] text-[#4b5563] leading-relaxed">Provides overall strategic leadership across Genyra Group's four business lines, driving innovation, regional expansion, and operational excellence.</p>
+            <p class="text-[0.82rem] text-[#4b5563] leading-relaxed">Provides overall strategic leadership across genyra Group's four business lines, driving innovation, regional expansion, and operational excellence.</p>
           </div>
         </div>
       </div>
@@ -81,27 +81,33 @@ function photoPlaceholder($color = '#1e3a6e', $size = 'md') {
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 pt-6">
       @foreach([
-        ['Technical Lead', 'BioSciences',                         'Discovery. Diagnostics. Translation.',                        '#4caf50'],
-        ['Technical Lead', 'MedTech Solutions',                   'Smart technologies for better health outcomes.',               '#e07b2a'],
-        ['Technical Lead', 'Health Systems Planning & Advisory',  'Designing resilient, compliant health systems.',               '#5b7fa6'],
-        ['Technical Lead', 'Metrology & Calibration Services',    'Precision you can trust.',                                     '#7b5ea7'],
-      ] as [$title, $division, $tagline, $color])
+        ['Webmaster', '', 'Layton Matheka is Webmaster at genyra Group, developing and maintaining the organisation\'s digital presence. With a degree in Computer Science, he oversees website performance, security, and user experience, ensuring genyra\'s online platforms remain professional, accessible, and aligned with the group\'s mission to transform healthcare across East Africa.', '#1e3a6e', 'Layton Matheka', 'Degree in Computer Science', 'images/management/layton.jpeg'],
+        ['Technical Lead', 'MedTech Solutions',                   'Smart technologies for better health outcomes.',               '#e07b2a', null, null, null],
+        ['Technical Lead', 'Health Systems Planning & Advisory',  'Designing resilient, compliant health systems.',               '#5b7fa6', null, null, null],
+        ['Technical Lead', 'Metrology & Calibration Services',    'Precision you can trust.',                                     '#7b5ea7', null, null, null],
+      ] as [$title, $division, $tagline, $color, $name, $credentials, $photo])
       <div class="team-card bg-white rounded shadow-[0_1px_6px_rgba(0,0,0,0.08)] overflow-hidden flex flex-col">
         <div class="h-1.5" style="background:{{ $color }}"></div>
-        <div class="h-44 flex flex-col items-center justify-center gap-2 flex-shrink-0" style="background:{{ $color }}14">
+        <div class="h-44 flex flex-col items-center justify-center gap-2 flex-shrink-0 overflow-hidden" style="background:{{ $color }}14">
+          @if($photo)
+            <img src="{{ asset($photo) }}" alt="{{ $name }}" class="w-full h-full object-cover object-top">
+          @else
           <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background:{{ $color }}35">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="{{ $color }}" viewBox="0 0 16 16">
               <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
             </svg>
           </div>
           <p class="text-[0.65rem] tracking-wide" style="color:{{ $color }}99">Photo</p>
+          @endif
         </div>
         <div class="px-5 py-5 flex flex-col flex-1">
           <p class="text-[0.6rem] font-semibold tracking-widest uppercase mb-0.5" style="color:{{ $color }}">{{ $title }}</p>
+          @if($division)
           <p class="text-[0.66rem] font-medium text-[#6b7280] uppercase tracking-wide mb-1">{{ $division }}</p>
-          <h3 class="font-bold text-[#1e3a6e] text-[0.9rem]">Name Here</h3>
-          <p class="text-[0.72rem] text-[#6b7280] italic mt-0.5 mb-3">Qualifications Here</p>
-          <p class="text-[0.78rem] text-[#4b5563] leading-relaxed border-t border-[#f0f4f8] pt-3 mt-auto italic">{{ $tagline }}</p>
+          @endif
+          <h3 class="font-bold text-[#1e3a6e] text-[0.9rem]">{{ $name ?? 'Name Here' }}</h3>
+          <p class="text-[0.72rem] text-[#6b7280] italic mt-0.5 mb-3">{{ $credentials ?? 'Qualifications Here' }}</p>
+          <p class="text-[0.78rem] text-[#4b5563] leading-relaxed border-t border-[#f0f4f8] pt-3 mt-auto">{{ $tagline }}</p>
         </div>
       </div>
       @endforeach
