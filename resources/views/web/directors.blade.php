@@ -124,7 +124,7 @@
         [
           'Board Member',
           'Ms. Rhodah N. Mukopi',
-          'Qualifications Here',
+          '',
           'A corporate and commercial lawyer specialising in regulatory compliance, contract law, and corporate governance. Ensures genyra maintains the highest standards of legal and ethical conduct across all operations.',
           null,
         ],
