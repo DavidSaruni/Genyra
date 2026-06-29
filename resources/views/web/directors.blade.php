@@ -112,7 +112,7 @@
           'Dr. Filex Otieno',
           '',
           'A public health physician and health systems specialist with experience working with the Ministry of Health, WHO, and international NGOs. Guides genyra\'s Health Systems Advisory division with strong policy expertise.',
-          null,
+          'images/directors/dr-filex-odhiambo.jpg.jpeg',
         ],
         [
           'Board Member',
