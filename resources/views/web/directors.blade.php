@@ -47,14 +47,14 @@
         [
           'Chairman',
           'David Masinde',
-          'Qualifications Here',
+          '',
           'Experienced NGO leader with expertise in managing donor-funded programs (USAID, EU, ECHO, BMZ, ADA, among others) and leading teams of 600+ staff. Skilled in resource mobilization, stakeholder engagement, and organizational leadership, with a strong track record of building partnerships and driving impact in the development sector.',
           'images/directors/david.jpg',
         ],
         [
           'Secretary / Chief Executive Officer',
           'Ms. Rhodah N. Mukopi',
-          'Qualifications Here',
+          '',
           'Leads genyra Group\'s overall strategy and operations with a focus on innovation, quality, and regional growth. With a background spanning biomedical engineering and executive management, instrumental in positioning genyra as East Africa\'s most trusted healthcare solutions partner.',
           null,
         ],
@@ -110,7 +110,7 @@
         [
           'Board Member',
           'Dr. Filex Otieno',
-          'Qualifications Here',
+          '',
           'A public health physician and health systems specialist with experience working with the Ministry of Health, WHO, and international NGOs. Guides genyra\'s Health Systems Advisory division with strong policy expertise.',
           null,
         ],
@@ -121,13 +121,7 @@
           'Executive Director of Women for Justice and Equality (WOJE), with over a decade of leadership in gender programming, human rights advocacy, and HIV/AIDS response across South Sudan and Eastern Africa. A 2025 US International Women of Courage Award recipient, she brings deep expertise in community health programming and regional advocacy networks, strengthening genyra\'s commitment to equitable, people-centered healthcare delivery.',
           'images/directors/zabibloro.jpeg',
         ],
-        [
-          'Board Member',
-          'Ms. Rhodah N. Mukopi',
-          '',
-          'A corporate and commercial lawyer specialising in regulatory compliance, contract law, and corporate governance. Ensures genyra maintains the highest standards of legal and ethical conduct across all operations.',
-          null,
-        ],
+        
       ] as [$role, $name, $credentials, $bio, $photo])
       <div class="team-card bg-white rounded shadow-[0_1px_6px_rgba(0,0,0,0.08)] overflow-hidden flex flex-col">
         <div class="h-1.5 bg-[#1e3a6e]"></div>
