@@ -125,7 +125,7 @@
       ] as [$role, $name, $credentials, $bio, $photo])
       <div class="team-card bg-white rounded shadow-[0_1px_6px_rgba(0,0,0,0.08)] overflow-hidden flex flex-col">
         <div class="h-1.5 bg-[#1e3a6e]"></div>
-        <div class="h-64 bg-[#f1f5f9] flex flex-col items-center justify-center gap-2 flex-shrink-0 overflow-hidden">
+        <div class="h-75 bg-[#f1f5f9] flex flex-col items-center justify-center gap-2 flex-shrink-0 overflow-hidden">
           @if($photo)
             <img src="{{ asset($photo) }}" alt="{{ $name }}" class="w-full h-full object-cover object-top">
           @else

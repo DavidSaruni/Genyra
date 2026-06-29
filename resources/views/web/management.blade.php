@@ -88,7 +88,7 @@ function photoPlaceholder($color = '#1e3a6e', $size = 'md') {
       ] as [$title, $division, $tagline, $color, $name, $credentials, $photo])
       <div class="team-card bg-white rounded shadow-[0_1px_6px_rgba(0,0,0,0.08)] overflow-hidden flex flex-col">
         <div class="h-1.5" style="background:{{ $color }}"></div>
-        <div class="{{ $photo ? 'h-auto sm:h-44' : 'h-44' }} flex flex-col items-center justify-center gap-2 flex-shrink-0 overflow-hidden" style="background:{{ $color }}14">
+        <div class="{{ $photo ? 'h-auto sm:h-44' : 'h-75' }} flex flex-col items-center justify-center gap-2 flex-shrink-0 overflow-hidden" style="background:{{ $color }}14">
           @if($photo)
             <img src="{{ asset($photo) }}" alt="{{ $name }}" class="w-full h-auto sm:h-full object-cover object-top block">
           @else
