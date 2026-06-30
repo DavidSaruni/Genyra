@@ -1,6 +1,13 @@
 @extends('web.app')
 
-@section('title', 'New Laboratory Equipment Shipment Arrives at County Hospital - Genyra Group')
+@if(isset($article))
+@section('title', $article->title . ' - genyra Group')
+@section('meta_description', \Illuminate\Support\Str::limit(strip_tags($article->excerpt ?? ''), 160))
+@endif
+
+@if(isset($article) && $article->main_image)
+@section('meta_image', asset('storage/' . $article->main_image))
+@endif
 
 @section('body')
 

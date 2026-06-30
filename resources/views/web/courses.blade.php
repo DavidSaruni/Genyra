@@ -1,6 +1,7 @@
 @extends('web.app')
 
 @section('title', 'Professional Training Programmes - genyra Institute')
+@section('meta_description', 'Professional healthcare training programmes from genyra Institute covering laboratory sciences, MedTech, health systems, and ISO 17025 calibration.')
 
 @section('body')
 

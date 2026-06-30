@@ -1,6 +1,7 @@
 @extends('web.app')
 
 @section('title', 'Board Of Directors')
+@section('meta_description', 'Meet the genyra Group board of directors providing governance, strategic oversight, and leadership across our healthcare and medtech operations in East Africa.')
 
 @section('body')
 

@@ -1,6 +1,7 @@
 @extends('web.app')
 
 @section('title', 'Management Team')
+@section('meta_description', 'Explore the genyra Group management team leading MedTech, BioSciences, health systems advisory, metrology, and corporate operations across East Africa.')
 
 @section('body')
 

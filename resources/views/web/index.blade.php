@@ -1,10 +1,7 @@
 @extends('web.app')
 
-
-
-@section('title')
-
-
+@section('title', 'genyra Group - Building Solutions | Transforming Healthcare')
+@section('meta_description', 'genyra Group builds MedTech, BioSciences, calibration, and health systems solutions that transform healthcare delivery across East Africa.')
 
 @section('body')
 

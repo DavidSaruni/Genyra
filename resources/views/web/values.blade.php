@@ -1,6 +1,7 @@
 @extends('web.app')
 
 @section('title', 'Our Values')
+@section('meta_description', 'Discover the core values that guide genyra Group in delivering ethical, high-quality healthcare solutions across East Africa.')
 
 @section('body')
 

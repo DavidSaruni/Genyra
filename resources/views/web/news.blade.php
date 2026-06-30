@@ -1,6 +1,7 @@
 @extends('web.app')
 
 @section('title', 'News & Updates')
+@section('meta_description', 'Latest news and updates from genyra Group on healthcare innovation, laboratory sciences, MedTech, and health systems across East Africa.')
 
 @section('body')
 

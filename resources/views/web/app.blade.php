@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        @yield('title','genyra Group - Building Solutions | Transforming Healthcare ')
-    </title>
+    @php
+        $seoTitle = trim($__env->yieldContent('title')) ?: 'genyra Group - Building Solutions | Transforming Healthcare';
+        $seoDescription = trim($__env->yieldContent('meta_description')) ?: 'genyra Group delivers MedTech, BioSciences, calibration, and health systems solutions across East Africa.';
+        $seoImage = trim($__env->yieldContent('meta_image')) ?: asset('images/favicon.jpeg');
+        $seoCanonical = trim($__env->yieldContent('canonical')) ?: url()->current();
+    @endphp
+    <title>{{ $seoTitle }}</title>
+    <meta name="description" content="{{ $seoDescription }}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ $seoCanonical }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="genyra Group">
+    <meta property="og:title" content="{{ $seoTitle }}">
+    <meta property="og:description" content="{{ $seoDescription }}">
+    <meta property="og:url" content="{{ $seoCanonical }}">
+    <meta property="og:image" content="{{ $seoImage }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $seoTitle }}">
+    <meta name="twitter:description" content="{{ $seoDescription }}">
+    <meta name="twitter:image" content="{{ $seoImage }}">
+    @stack('head')
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.jpeg') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -1,6 +1,7 @@
 @extends('web.app')
 
 @section('title', 'Strategic Direction')
+@section('meta_description', 'Explore genyra Group strategic direction and long-term priorities for healthcare innovation, quality, and regional growth.')
 
 @section('body')
 

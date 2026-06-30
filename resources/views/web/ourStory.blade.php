@@ -1,6 +1,7 @@
 @extends('web.app')
 
 @section('title', 'Our Story')
+@section('meta_description', 'Learn the story of genyra Group and our mission to build healthcare solutions that transform delivery across East Africa.')
 
 @section('body')
 

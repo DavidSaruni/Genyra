@@ -1,6 +1,7 @@
 @extends('web.app')
 
 @section('title', 'Data Analytics Course - Genyra Academy')
+@section('meta_description', 'Learn more about the Data Analytics course offered by genyra Institute for healthcare and laboratory professionals.')
 
 @section('body')
 
