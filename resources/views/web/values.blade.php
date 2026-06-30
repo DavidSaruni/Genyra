@@ -3,6 +3,15 @@
 @section('title', 'Our Values')
 @section('meta_description', 'Discover the core values that guide genyra Group in delivering ethical, high-quality healthcare solutions across East Africa.')
 
+@push('structured_data')
+@include('web.partials.seo.breadcrumb-structured-data', [
+    'items' => [
+        ['name' => 'Home', 'url' => url('/')],
+        ['name' => 'Our Values', 'url' => route('values')],
+    ],
+])
+@endpush
+
 @section('body')
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

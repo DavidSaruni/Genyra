@@ -3,6 +3,15 @@
 @section('title', 'Vision & Mission')
 @section('meta_description', 'Read the vision and mission of genyra Group and our commitment to transforming healthcare through innovation and quality.')
 
+@push('structured_data')
+@include('web.partials.seo.breadcrumb-structured-data', [
+    'items' => [
+        ['name' => 'Home', 'url' => url('/')],
+        ['name' => 'Vision & Mission', 'url' => route('vission-mission')],
+    ],
+])
+@endpush
+
 @section('body')
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

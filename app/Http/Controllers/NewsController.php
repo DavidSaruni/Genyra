@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\News;
+use App\Support\SitemapGenerator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -59,6 +60,8 @@ class NewsController extends Controller
 
         $news = News::create($validated);
         $news->categories()->attach($validated['category_id']);
+
+        $this->regenerateSitemap();
 
         return redirect()->route('admin.news.index')
             ->with('success', 'News article created successfully.');
@@ -118,6 +121,8 @@ class NewsController extends Controller
         $news->update($validated);
         $news->categories()->sync([$validated['category_id']]);
 
+        $this->regenerateSitemap();
+
         return redirect()->route('admin.news.index')
             ->with('success', 'News article updated successfully.');
     }
@@ -126,7 +131,18 @@ class NewsController extends Controller
     {
         $news->delete();
 
+        $this->regenerateSitemap();
+
         return redirect()->route('admin.news.index')
             ->with('success', 'News article deleted successfully.');
+    }
+
+    protected function regenerateSitemap(): void
+    {
+        try {
+            app(SitemapGenerator::class)->writeToPublic();
+        } catch (\Throwable $e) {
+            report($e);
+        }
     }
 }

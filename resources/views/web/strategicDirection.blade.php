@@ -3,6 +3,15 @@
 @section('title', 'Strategic Direction')
 @section('meta_description', 'Explore genyra Group strategic direction and long-term priorities for healthcare innovation, quality, and regional growth.')
 
+@push('structured_data')
+@include('web.partials.seo.breadcrumb-structured-data', [
+    'items' => [
+        ['name' => 'Home', 'url' => url('/')],
+        ['name' => 'Strategic Direction', 'url' => route('strategic-direction')],
+    ],
+])
+@endpush
+
 @section('body')
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

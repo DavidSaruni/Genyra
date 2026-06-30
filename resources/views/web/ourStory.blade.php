@@ -3,6 +3,15 @@
 @section('title', 'Our Story')
 @section('meta_description', 'Learn the story of genyra Group and our mission to build healthcare solutions that transform delivery across East Africa.')
 
+@push('structured_data')
+@include('web.partials.seo.breadcrumb-structured-data', [
+    'items' => [
+        ['name' => 'Home', 'url' => url('/')],
+        ['name' => 'Our Story', 'url' => route('our-story')],
+    ],
+])
+@endpush
+
 @section('body')
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

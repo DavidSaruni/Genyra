@@ -3,10 +3,26 @@
 @if(isset($article))
 @section('title', $article->title . ' - genyra Group')
 @section('meta_description', \Illuminate\Support\Str::limit(strip_tags($article->excerpt ?? ''), 160))
+@section('og_type', 'article')
+@section('canonical', route('news.readmore', $article->slug))
 @endif
 
 @if(isset($article) && $article->main_image)
 @section('meta_image', asset('storage/' . $article->main_image))
+@endif
+
+@if(isset($article))
+@push('head')
+    <meta property="article:published_time" content="{{ $article->published_at?->toAtomString() }}">
+    <meta property="article:modified_time" content="{{ ($article->updated_at ?? $article->published_at)?->toAtomString() }}">
+    @if($article->categories->isNotEmpty())
+        <meta property="article:section" content="{{ $article->categories->first()->name }}">
+    @endif
+@endpush
+
+@push('structured_data')
+    @include('web.partials.seo.article-structured-data', ['article' => $article])
+@endpush
 @endif
 
 @section('body')

@@ -3,6 +3,15 @@
 @section('title', 'Professional Training Programmes - genyra Institute')
 @section('meta_description', 'Professional healthcare training programmes from genyra Institute covering laboratory sciences, MedTech, health systems, and ISO 17025 calibration.')
 
+@push('structured_data')
+@include('web.partials.seo.breadcrumb-structured-data', [
+    'items' => [
+        ['name' => 'Home', 'url' => url('/')],
+        ['name' => 'genyra Institute', 'url' => route('courses')],
+    ],
+])
+@endpush
+
 @section('body')
 
 <style>

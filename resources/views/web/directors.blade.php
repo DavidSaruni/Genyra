@@ -3,6 +3,15 @@
 @section('title', 'Board Of Directors')
 @section('meta_description', 'Meet the genyra Group board of directors providing governance, strategic oversight, and leadership across our healthcare and medtech operations in East Africa.')
 
+@push('structured_data')
+@include('web.partials.seo.breadcrumb-structured-data', [
+    'items' => [
+        ['name' => 'Home', 'url' => url('/')],
+        ['name' => 'Board of Directors', 'url' => route('directors')],
+    ],
+])
+@endpush
+
 @section('body')
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

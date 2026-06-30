@@ -3,6 +3,15 @@
 @section('title', 'Management Team')
 @section('meta_description', 'Explore the genyra Group management team leading MedTech, BioSciences, health systems advisory, metrology, and corporate operations across East Africa.')
 
+@push('structured_data')
+@include('web.partials.seo.breadcrumb-structured-data', [
+    'items' => [
+        ['name' => 'Home', 'url' => url('/')],
+        ['name' => 'Management Team', 'url' => route('management')],
+    ],
+])
+@endpush
+
 @section('body')
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

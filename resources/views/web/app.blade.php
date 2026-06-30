@@ -8,12 +8,13 @@
         $seoDescription = trim($__env->yieldContent('meta_description')) ?: 'genyra Group delivers MedTech, BioSciences, calibration, and health systems solutions across East Africa.';
         $seoImage = trim($__env->yieldContent('meta_image')) ?: asset('images/favicon.jpeg');
         $seoCanonical = trim($__env->yieldContent('canonical')) ?: url()->current();
+        $seoOgType = trim($__env->yieldContent('og_type')) ?: 'website';
     @endphp
     <title>{{ $seoTitle }}</title>
     <meta name="description" content="{{ $seoDescription }}">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="{{ $seoCanonical }}">
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="{{ $seoOgType }}">
     <meta property="og:site_name" content="genyra Group">
     <meta property="og:title" content="{{ $seoTitle }}">
     <meta property="og:description" content="{{ $seoDescription }}">
@@ -24,6 +25,7 @@
     <meta name="twitter:description" content="{{ $seoDescription }}">
     <meta name="twitter:image" content="{{ $seoImage }}">
     @stack('head')
+    @include('web.partials.seo.structured-data')
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.jpeg') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">

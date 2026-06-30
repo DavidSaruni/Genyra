@@ -3,6 +3,15 @@
 @section('title', 'News & Updates')
 @section('meta_description', 'Latest news and updates from genyra Group on healthcare innovation, laboratory sciences, MedTech, and health systems across East Africa.')
 
+@push('structured_data')
+@include('web.partials.seo.breadcrumb-structured-data', [
+    'items' => [
+        ['name' => 'Home', 'url' => url('/')],
+        ['name' => 'News & Updates', 'url' => route('news')],
+    ],
+])
+@endpush
+
 @section('body')
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

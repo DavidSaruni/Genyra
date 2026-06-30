@@ -3,6 +3,16 @@
 @section('title', 'Data Analytics Course - Genyra Academy')
 @section('meta_description', 'Learn more about the Data Analytics course offered by genyra Institute for healthcare and laboratory professionals.')
 
+@push('structured_data')
+@include('web.partials.seo.breadcrumb-structured-data', [
+    'items' => [
+        ['name' => 'Home', 'url' => url('/')],
+        ['name' => 'genyra Institute', 'url' => route('courses')],
+        ['name' => 'Data Analytics Course', 'url' => route('courses.readmore')],
+    ],
+])
+@endpush
+
 @section('body')
 
 {{-- Hero Section --}}
