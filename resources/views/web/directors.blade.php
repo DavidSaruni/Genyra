@@ -29,7 +29,7 @@ $boardMembers = [
         'name' => 'Damary Okwako',
         'credentials' => 'PhD in Strategic Management (MMUST) · MBA, Strategic Planning (University of Nairobi) · BEd (Kenyatta University)',
         'bio' => 'A strategic management scholar and lecturer at Masinde Muliro University of Science and Technology (MMUST), with published research on how strategic planning practices influence organizational performance. Brings academic rigor and strategic planning expertise to support genyra\'s long-term institutional direction and governance practices.',
-        'photo' => 'images/directors/damary okwako.jpg',
+        'photo' => 'images/directors/damary.jpeg',
     ],
     [
         'role' => 'Board Member',
@@ -57,7 +57,7 @@ $boardMembers = [
         'name' => 'Ms. Rhodah N. Mukopi',
         'credentials' => '',
         'bio' => 'Leads genyra Group\'s overall strategy and operations with a focus on innovation, quality, and regional growth. With a background spanning biomedical engineering and executive management, instrumental in positioning genyra as East Africa\'s most trusted healthcare solutions partner.',
-        'photo' => 'images/directors/Rhoda.jpeg',
+        'photo' => null,
     ],
 ];
 $executiveDirectorsForModal = array_map(function ($director) {
