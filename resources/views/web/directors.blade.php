@@ -57,7 +57,7 @@ $boardMembers = [
         'name' => 'Ms. Rhodah N. Mukopi',
         'credentials' => '',
         'bio' => 'Leads genyra Group\'s overall strategy and operations with a focus on innovation, quality, and regional growth. With a background spanning biomedical engineering and executive management, instrumental in positioning genyra as East Africa\'s most trusted healthcare solutions partner.',
-        'photo' => null,
+        'photo' => 'images/directors/Rhoda.jpeg',
     ],
 ];
 $executiveDirectorsForModal = array_map(function ($director) {
