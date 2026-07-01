@@ -112,9 +112,9 @@
         ],
         [
           'Board Member',
-          'Mbithi Benjamin Kioko',
+          'Mr. Benjamin Kioko Mbithi',
           'MPH, Public Health (Makerere University) · BSc, Medical Laboratory Science (University of Eastern Africa, Baraton)',
-          'A public health and humanitarian programming specialist with over a decade of field experience delivering health, nutrition, and emergency response programmes across South Sudan. Currently Health and Grants Manager at Touch Africa Development Organization (TADO), he has successfully managed multi-donor health portfolios exceeding $3M, engaged with the Health Cluster Strategic Advisory Group, and led disability-inclusive and gender-sensitive programme design across Eastern Africa. He brings deep operational expertise in health systems strengthening and grant management to genyra\'s health programming and advisory functions.',
+          'Mr. Benjamin Kioko Mbithi is a seasoned public health and humanitarian development professional with over a decade of progressive experience in programme management, grant acquisition, research, and institutional capacity strengthening across South Sudan. He holds a Bachelor of Science in Medical Laboratory Science and a Master of Public Health, and currently serves as Health and Grants Manager at Touch Africa Development Organization (TADO), where he leads proposal development, grant compliance, donor engagement, and programme oversight. Mr. Mbithi has successfully mobilized and managed multi-million-dollar grants from leading development partners, including GAVI, UNOCHA, IOM, Caritas Luxembourg, UNICEF, and the European Union, while providing strategic consultancy in health systems strengthening, disability inclusion, monitoring and evaluation, policy development, and organizational strategy. His extensive regional networks, expertise in humanitarian programming, grant management, and institutional development make him a valuable addition to the Genyra Group Board of Directors, where he will provide strategic oversight, strengthen partnerships, guide business development, and support the organization\'s expansion across East Africa and beyond.',
           'images/directors/benjamin.jpeg',
         ],
         [
