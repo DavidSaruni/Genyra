@@ -112,10 +112,10 @@
         ],
         [
           'Board Member',
-          'Dr. Nelson Menza',
-          'PhD, Medical Laboratory Science (Medical Mycology & Bacteriology) · Kenyatta University',
-          'Chairperson of the Department of Medical Laboratory Science at Kenyatta University\'s School of Medicine, with an extensive research and publication record spanning infectious disease diagnostics, microbiology, and laboratory systems. A licensed member of the Kenya Medical Laboratory Technologist and Technicians Board, he provides scientific oversight and academic linkage to genyra\'s BioSciences division.',
-          'images/directors/Dr_Nelson_Chengo_Menza.jpg',
+          'Mbithi Benjamin Kioko',
+          'MPH, Public Health (Makerere University) · BSc, Medical Laboratory Science (University of Eastern Africa, Baraton)',
+          'A public health and humanitarian programming specialist with over a decade of field experience delivering health, nutrition, and emergency response programmes across South Sudan. Currently Health and Grants Manager at Touch Africa Development Organization (TADO), he has successfully managed multi-donor health portfolios exceeding $3M, engaged with the Health Cluster Strategic Advisory Group, and led disability-inclusive and gender-sensitive programme design across Eastern Africa. He brings deep operational expertise in health systems strengthening and grant management to genyra\'s health programming and advisory functions.',
+          'images/directors/benjamin.jpeg',
         ],
         [
           'Board Member',
