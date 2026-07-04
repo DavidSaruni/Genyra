@@ -26,13 +26,6 @@ $executiveDirectors = [
 $boardMembers = [
     [
         'role' => 'Board Member',
-        'name' => 'Damary Okwako',
-        'credentials' => 'PhD in Strategic Management (MMUST) · MBA, Strategic Planning (University of Nairobi) · BEd (Kenyatta University)',
-        'bio' => 'A strategic management scholar and lecturer at Masinde Muliro University of Science and Technology (MMUST), with published research on how strategic planning practices influence organizational performance. Brings academic rigor and strategic planning expertise to support genyra\'s long-term institutional direction and governance practices.',
-        'photo' => 'images/directors/damary.jpeg',
-    ],
-    [
-        'role' => 'Board Member',
         'name' => 'Mr. Benjamin Kioko Mbithi',
         'credentials' => 'MPH, Public Health (Makerere University) · BSc, Medical Laboratory Science (University of Eastern Africa, Baraton)',
         'bio' => 'Mr. Benjamin Kioko Mbithi is a seasoned public health and humanitarian development professional with over a decade of progressive experience in programme management, grant acquisition, research, and institutional capacity strengthening across South Sudan. He holds a Bachelor of Science in Medical Laboratory Science and a Master of Public Health, and currently serves as Health and Grants Manager at Touch Africa Development Organization (TADO), where he leads proposal development, grant compliance, donor engagement, and programme oversight. Mr. Mbithi has successfully mobilized and managed multi-million-dollar grants from leading development partners, including GAVI, UNOCHA, IOM, Caritas Luxembourg, UNICEF, and the European Union, while providing strategic consultancy in health systems strengthening, disability inclusion, monitoring and evaluation, policy development, and organizational strategy. His extensive regional networks, expertise in humanitarian programming, grant management, and institutional development make him a valuable addition to the Genyra Group Board of Directors, where he will provide strategic oversight, strengthen partnerships, guide business development, and support the organization\'s expansion across East Africa and beyond.',
@@ -51,6 +44,13 @@ $boardMembers = [
         'credentials' => 'BSc, Human Resource Management · Diplomas in Development Studies, Gender Studies, Islamic Studies & Leadership',
         'bio' => 'Executive Director of Women for Justice and Equality (WOJE), with over a decade of leadership in gender programming, human rights advocacy, and HIV/AIDS response across South Sudan and Eastern Africa. A 2025 US International Women of Courage Award recipient, she brings deep expertise in community health programming and regional advocacy networks, strengthening genyra\'s commitment to equitable, people-centered healthcare delivery.',
         'photo' => 'images/directors/zabibloro.jpeg',
+    ],
+    [
+        'role' => 'Board Member',
+        'name' => 'Dr. Damary Okwako',
+        'credentials' => 'PhD in Strategic Management (MMUST) · MBA, Strategic Planning (University of Nairobi) · BEd (Kenyatta University)',
+        'bio' => 'A strategic management scholar and lecturer at Masinde Muliro University of Science and Technology (MMUST), with published research on how strategic planning practices influence organizational performance. Brings academic rigor and strategic planning expertise to support genyra\'s long-term institutional direction and governance practices.',
+        'photo' => 'images/directors/damary.jpeg',
     ],
     [
         'role' => 'Board Member',

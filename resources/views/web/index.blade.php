@@ -37,11 +37,17 @@
             <div class="category-label mb-4">
                 ENABLING HEALTHCARE INNOVATION
             </div>
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-8 leading-tight">
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
                 <span class="text-[#22235a]">Building Solutions</span> 
                 <span class="text-white">Transforming</span>
                 <span class="text-cyan-400">Healthcare</span>
             </h1>
+            <blockquote class="mb-8 max-w-2xl">
+                <p class="text-white/90 text-md md:text-md leading-relaxed mb-2">
+                    &ldquo;Where there is no vision, the people perish: but he that keepeth the law, happy is he.&rdquo;
+                </p>
+                <cite class="text-cyan-300 text-sm not-italic font-medium tracking-wide">Proverbs 29:18</cite>
+            </blockquote>
             <a href="#about" class="btn-primary">
                 Learn more
             </a>
@@ -57,10 +63,16 @@
                   <div class="category-label mb-4 text-gray-800">
                       ENABLING HEALTHCARE INNOVATION
                   </div>
-                  <h1 class="text-3xl md:text-3xl md:text-4xl font-bold text-gray-700 mb-6 leading-tight">
+                  <h1 class="text-3xl md:text-3xl md:text-4xl font-bold text-gray-700 mb-4 leading-tight">
                         <span class="text-[#22235a] font-extrabold">Building Solutions</span> <br>
                         <span class="text-gray-700 italic text-xl">Transforming Healthcare</span>
                   </h1>
+                  <blockquote class="mb-6 max-w-2xl">
+                      <p class="text-gray-600 text-base md:text-lg leading-relaxed mb-1">
+                          &ldquo;Where there is no vision, the people perish: but he that keepeth the law, happy is he.&rdquo;
+                      </p>
+                      <cite class="text-[#22235a] text-sm not-italic font-medium">Proverbs 29:18</cite>
+                  </blockquote>
                   <a href="#about" class="btn-primary">
                       Learn more
                   </a>
