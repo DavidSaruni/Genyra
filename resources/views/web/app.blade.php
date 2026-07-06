@@ -7,7 +7,15 @@
         $seoTitle = trim($__env->yieldContent('title')) ?: 'genyra Group - Building Solutions | Transforming Healthcare';
         $seoDescription = trim($__env->yieldContent('meta_description')) ?: 'genyra Group delivers MedTech, BioSciences, calibration, and health systems solutions across East Africa.';
         $seoImage = trim($__env->yieldContent('meta_image')) ?: asset('images/favicon.jpeg');
-        $seoCanonical = trim($__env->yieldContent('canonical')) ?: url()->current();
+        $seoCanonical = trim($__env->yieldContent('canonical'));
+        if (! $seoCanonical) {
+            $path = request()->path();
+            $seoCanonical = rtrim(config('app.url'), '/') . ($path === '' || $path === '/' ? '/' : '/' . ltrim($path, '/'));
+        }
+        $seoCanonical = rtrim($seoCanonical, '/');
+        if (parse_url($seoCanonical, PHP_URL_PATH) === '' || parse_url($seoCanonical, PHP_URL_PATH) === '/') {
+            $seoCanonical = rtrim(config('app.url'), '/') . '/';
+        }
         $seoOgType = trim($__env->yieldContent('og_type')) ?: 'website';
     @endphp
     <title>{{ $seoTitle }}</title>
