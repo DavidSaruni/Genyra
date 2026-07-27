@@ -103,10 +103,16 @@
                     <div class="grid md:grid-cols-2 gap-0">
                         <!-- Image Section -->
                         <div class="relative h-80 md:h-auto overflow-hidden">
+                            @if($latestNews && $latestNews->main_image)
                             <img src="{{ asset('storage/' . $latestNews->main_image) }}" 
                                  alt="News" 
                                  class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
                                  onerror="this.src='https://via.placeholder.com/800x400/1e40af/ffffff?text=News'">
+                            @else
+                            <img src="https://via.placeholder.com/800x400/1e40af/ffffff?text=News"
+                                 alt="News"
+                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                            @endif
                             <div class="absolute top-4 left-4">
                                 <span class="bg-blue-600 text-white px-3 py-1 rounded text-xs font-bold uppercase">
                                     News & Updates
