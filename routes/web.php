@@ -56,6 +56,8 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::get('emails', [EmailController::class, 'index'])->name('emails.index');
     Route::get('emails/create', [EmailController::class, 'create'])->name('emails.create');
     Route::post('emails/send', [EmailController::class, 'send'])->name('emails.send');
+    Route::get('emails/{email}', [EmailController::class, 'show'])->name('emails.show');
+    Route::delete('emails/{email}', [EmailController::class, 'destroy'])->name('emails.destroy');
 });
 
 

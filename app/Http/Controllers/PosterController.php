@@ -12,7 +12,7 @@ class PosterController extends Controller
      */
     public function index()
     {
-        $posters = Poster::latest()->paginate(10);
+        $posters = Poster::latest()->paginate(6);
         return view('admin.posters.index', compact('posters'));
     }
 

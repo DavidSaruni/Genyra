@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Storage;
 use App\Mail\CustomEmail;
 use App\Models\Email;
 
@@ -12,7 +11,7 @@ class EmailController extends Controller
 {
     public function index()
     {
-        $emails = Email::orderBy('sent_at', 'desc')->paginate(20);
+        $emails = Email::orderBy('sent_at', 'desc')->paginate(6);
 
         // Query full table for accurate stats — paginator only holds current page
         $totalSent        = Email::count();
@@ -25,6 +24,11 @@ class EmailController extends Controller
     public function create()
     {
         return view('admin.emails.create');
+    }
+
+    public function show(Email $email)
+    {
+        return view('admin.emails.show', compact('email'));
     }
 
     public function send(Request $request)
@@ -101,5 +105,13 @@ class EmailController extends Controller
 
         return redirect()->route('admin.emails.index')
             ->with('success', 'Email sent successfully!');
+    }
+
+    public function destroy(Email $email)
+    {
+        $email->delete();
+
+        return redirect()->route('admin.emails.index')
+            ->with('success', 'Email removed from history.');
     }
 }
