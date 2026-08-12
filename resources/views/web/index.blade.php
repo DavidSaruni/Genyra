@@ -108,13 +108,13 @@
 
                     <article class="group">
                         <a href="{{ route('news.readmore', $latestNews->slug) }}" class="block">
-                            <div class="relative w-full aspect-[16/9] md:aspect-[2/1] overflow-hidden bg-[#22235a]/20">
+                            <div class="relative w-full aspect-[16/9] md:aspect-[2/1] overflow-hidden bg-[#e8eef5] p-3 md:p-4">
                                 @if($latestNews->main_image)
                                     <img src="{{ asset('storage/' . $latestNews->main_image) }}"
                                          alt="{{ $latestNews->title }}"
-                                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]">
+                                         class="relative w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.02]">
                                 @else
-                                    <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#22235a] to-[#1BA0D8]">
+                                    <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#22235a] to-[#1BA0D8]">
                                         <span class="text-white/80 text-sm uppercase tracking-widest">genyra</span>
                                     </div>
                                 @endif
