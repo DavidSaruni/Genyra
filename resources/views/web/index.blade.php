@@ -82,218 +82,163 @@
   </section>
 
 
-  <!-- News & Updates and Noticeboard Section -->
-<section id="news-notices" class="pt-24 mb-16 bg-gray-50 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto">
-        <div class="grid lg:grid-cols-3 gap-8">
-            
-            <!-- News & Updates Column (2 columns) -->
-            <div class="lg:col-span-2">
-                <div class="mb-8">
-                    <div class="flex items-center justify-between mb-4">
-                        <div>
-                            <div class="category-label mb-2">STAY INFORMED</div>
-                            <h2 class="text-3xl md:text-4xl font-bold text-gray-700">News & Updates</h2>
-                        </div>
-                    </div>
-                </div>
+  <!-- News & Updates and Notice Board -->
+<section id="news-notices" class="relative pt-20 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
+         style="background: linear-gradient(165deg, #f0f7fc 0%, #eef1f8 45%, #f7f9fc 100%);">
+    <div class="pointer-events-none absolute inset-0 opacity-[0.035]"
+         style="background-image: radial-gradient(#22235a 1px, transparent 1px); background-size: 22px 22px;"></div>
 
-                <!-- Single Large News Item (Full 2 columns) -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 mb-8">
-                    <div class="grid md:grid-cols-2 gap-0">
-                        <!-- Image Section -->
-                        <div class="relative h-80 md:h-auto overflow-hidden">
-                            @if($latestNews && $latestNews->main_image)
-                            <img src="{{ asset('storage/' . $latestNews->main_image) }}" 
-                                 alt="News" 
-                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
-                                 onerror="this.src='https://via.placeholder.com/800x400/1e40af/ffffff?text=News'">
-                            @else
-                            <img src="https://via.placeholder.com/800x400/1e40af/ffffff?text=News"
-                                 alt="News"
-                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
-                            @endif
-                            <div class="absolute top-4 left-4">
-                                <span class="bg-blue-600 text-white px-3 py-1 rounded text-xs font-bold uppercase">
-                                    News & Updates
-                                </span>
-                            </div>
-                        </div>
-                        
-                        <!-- Content Section -->
-                        <div class="p-8 flex flex-col justify-center">
-                            @if($latestNews)
-                            <div class="flex items-center space-x-3 mb-3">
-                                <span class="text-xs text-gray-500">{{ $latestNews->created_at->format('F j, Y') }}</span>
-                                <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
-                                <span class="text-xs text-gray-500">genyra Group</span>
-                            </div>
-                            <h3 class="text-xl md:text-3xl font-bold text-gray-700 mb-4 leading-tight hover:text-blue-700 transition-colors">
-                                {{ $latestNews->title }}
-                            </h3>
-                            <p class="text-gray-600 text-sm mb-6 leading-relaxed">
-                                {{ Str::limit(strip_tags($latestNews->content), 200) }}
-                            </p>
-                            <a href="{{ route('news.readmore', $latestNews->slug) }}" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 w-fit">
-                                Read more
-                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                                </svg>
-                            </a>
-                        @else
-                            <div class="flex items-center space-x-3 mb-3">
-                                <span class="text-xs text-gray-500">February 17, 2026</span>
-                                <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
-                                <span class="text-xs text-gray-500">genyra Group</span>
-                            </div>
-                            <h3 class="text-xl md:text-3xl font-bold text-gray-700 mb-4 leading-tight hover:text-blue-700 transition-colors">
-                                New Laboratory Equipment Shipment Arrives at County Hospital
-                            </h3>
-                            <p class="text-gray-600 text-sm mb-6 leading-relaxed">
-                                genyra Group successfully deployed state-of-the-art laboratory equipment to enhance diagnostic capabilities and improve patient care outcomes across the region.
-                            </p>
-                            <a href="#" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 w-fit">
-                                Read more
-                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                                </svg>
-                            </a>
-                        @endif
-                        </div>
-                    </div>
-               
-
-                <div class="grid grid-cols-1 md:grid-cols-3 py-12 px-2 gap-8">
-                <!-- Card 1 - Featured -->
-                @php
-                    $latestThree = \App\Models\News::latest()->skip('1')->take(3)->get();
-                @endphp
-                @forelse($latestThree as $news)
-                <div class="md:col-span-1 bg-white rounded-2xl overflow-hidden shadow-sm card-hover border border-gray-100">
-                <div class="relative">
-                    @if($news->main_image)
-                        <img src="{{ asset('storage/' . $news->main_image) }}" alt="{{ $news->title }}" class="w-full h-56 object-cover" onerror="this.style.background='#f3e8ff'" />
-                    @else
-                        <div class="w-full h-56 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                            <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                            </svg>
-                        </div>
-                    @endif
-                    <div class="absolute top-3 left-3 flex gap-2">
-                    <span class="bg-woje-green text-white text-xs font-bold px-3 py-1 rounded-full">{{ $news->title }}</span>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <p class="text-xs text-gray-400 mb-2"> · <span class="text-accent font-medium">{{ $news->published_at->format('M d, Y') }}</span></p>
-                    <h3 class="font-bold text-lg text-gray-700 mb-3 leading-tight">{{ $news->title }}</h3>
-                    <p class="text-gray-500 text-md leading-relaxed mb-4">{{ $news->excerpt }}</p>
-                    <div class="flex gap-3">
-                    <a href="{{ route('news.readmore', $news->slug) }}" class="text-primary text-md font-semibold hover:text-accent transition-colors">Read more →</a>
-                    </div>
-                </div>
-                </div>
-                @empty
-                <div class="md:col-span-3 text-center py-12">
-                    <p class="text-gray-500 text-lg">No news articles available yet.</p>
-                </div>
-                @endforelse
-                </div>
- 
-      </div>
-        <!-- Discover More Button -->
-    <section class="pb-4 px-4 sm:px-6 lg:px-8 bg-white">
-        <div class="max-w-7xl mx-auto">
-            
-            <div class="border-t border-gray-200 mb-16"></div>
-
-            <div class="flex flex-col items-center justify-center">
-
-                <!-- Load More Button -->
-                <a 
-                href="{{ route('news') }}"
-                    id="loadMoreBtn"
-                    class="group relative flex items-center gap-4 border border-blue-900 px-6 md:px-12 py-5 text-sm font-semibold uppercase tracking-widest text-gray-900 hover:text-white transition-all duration-300 overflow-hidden">
-                    <span class="absolute inset-0 bg-blue-900 -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0"></span>
-                    <span class="relative z-10">Load More News</span>
-                    <svg class="relative z-10 w-5 h-5 transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                    </svg>
-                </a>
-
-                <!-- Loading Spinner -->
-                <div id="loadingSpinner" class="hidden mt-8 flex-col items-center gap-4">
-                    <div class="w-8 h-8 border-2 border-gray-200 border-t-[#1BA0D8] rounded-full animate-spin"></div>
-                    <p class="text-sm text-gray-400 uppercase tracking-widest">Loading news...</p>
-                </div>
-
-                <!-- All Loaded Message -->
-                <div id="allLoadedMsg" class="hidden mt-8 flex-col items-center gap-3">
-                    <div class="w-12 h-12 bg-[#1BA0D8] rounded-full flex items-center justify-center">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                    </div>
-                    <p class="text-sm text-gray-500 uppercase tracking-widest">All News Loaded</p>
-                </div>
-
-                <!-- View All Link -->
-                <a href="{{ route('news') }}" class="mt-8 flex items-center gap-2 text-sm text-gray-400 hover:text-[#1BA0D8] transition-colors duration-300 uppercase tracking-widest">
-                    <span>View All News</span>
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                    </svg>
-                </a>
-
-            </div>
+    <div class="relative max-w-7xl mx-auto">
+        <div class="mb-10 md:mb-12">
+            <div class="category-label mb-2" style="color: #1BA0D8;">Stay informed</div>
+            <h2 class="text-3xl md:text-4xl font-bold text-[#22235a]">News &amp; Updates</h2>
         </div>
-    </section>
-            </div>
 
-            <!-- genyra Notice Board Column (1 column) -->
-            <div>
-                <div class="sticky top-8">
-                    <div class="bg-gradient-to-br from-blue-500 to-blue-500 text-white rounded-t-xl px-6 py-2 shadow-lg">
-                        <h2 class="text-2xl font-bold mb-1">genyra Group Notice Board</h2>
-                        <p class="text-blue-100 text-sm">Important announcements & updates</p>
-                    </div>
-                    
-                    <div class="bg-white rounded-b-xl shadow-lg overflow-hidden">
-                        <!-- Single Large Notice Poster -->
-                        <div class="md:p-4">
-                            @if($poster)
-                            <div class="group cursor-pointer">
-                                <div class="relative overflow-hidden md:rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                                    <div class="relative w-full aspect-[3/4]">
-                                        <img src="{{ $poster->image_url }}"
-                                            alt="{{ $poster->title }}"
-                                            class="absolute inset-0 w-full h-full object-cover">
+        {{-- Top module: featured + notice (magazine lead) --}}
+        <div class="grid lg:grid-cols-3 gap-10 lg:gap-12 items-start">
+            <div class="lg:col-span-2">
+                @if($latestNews)
+                    @php
+                        $featuredCategory = $latestNews->categories->first()?->name ?? 'News';
+                        $featuredDate = optional($latestNews->published_at)->format('F j, Y')
+                            ?? optional($latestNews->created_at)->format('F j, Y');
+                        $featuredExcerpt = $latestNews->excerpt
+                            ?: \Illuminate\Support\Str::limit(strip_tags($latestNews->content), 200);
+                    @endphp
+
+                    <article class="group">
+                        <a href="{{ route('news.readmore', $latestNews->slug) }}" class="block">
+                            <div class="relative w-full aspect-[16/9] md:aspect-[2/1] overflow-hidden bg-[#22235a]/20">
+                                @if($latestNews->main_image)
+                                    <img src="{{ asset('storage/' . $latestNews->main_image) }}"
+                                         alt="{{ $latestNews->title }}"
+                                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]">
+                                @else
+                                    <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#22235a] to-[#1BA0D8]">
+                                        <span class="text-white/80 text-sm uppercase tracking-widest">genyra</span>
                                     </div>
-
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div class="absolute bottom-0 left-0 right-0 p-4">
-                                            <p class="text-white text-sm font-semibold">{{ $poster->title }}</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endif
                             </div>
-                            @else
-                            <!-- add text for no poster -->
-                            <div class="text-center p-4">
-                                <p class="text-gray-500">No notices available</p>
+                        </a>
+                        <div class="pt-6 max-w-2xl">
+                            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mb-3 text-xs text-gray-500">
+                                <span class="uppercase tracking-wider font-semibold text-[#1BA0D8]">{{ $featuredCategory }}</span>
+                                <span class="w-1 h-1 rounded-full bg-gray-300"></span>
+                                <time datetime="{{ optional($latestNews->published_at ?? $latestNews->created_at)->toDateString() }}">{{ $featuredDate }}</time>
                             </div>
-                            @endif
-                        </div>
-
-                        <!-- View All Notices Button -->
-                        <div class="p-6 bg-gray-50 border-t border-gray-200">
-                            <a href="/notices" class="block w-full text-center px-4 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl">
-                                View All Notices
+                            <h3 class="text-2xl md:text-3xl font-bold text-[#22235a] leading-tight mb-4">
+                                <a href="{{ route('news.readmore', $latestNews->slug) }}" class="hover:text-[#1BA0D8] transition-colors">
+                                    {{ $latestNews->title }}
+                                </a>
+                            </h3>
+                            <p class="text-gray-600 text-base leading-relaxed mb-6">{{ $featuredExcerpt }}</p>
+                            <a href="{{ route('news.readmore', $latestNews->slug) }}"
+                               class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-[#22235a] hover:text-[#1BA0D8] transition-colors">
+                                Read story
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
                             </a>
                         </div>
+                    </article>
+                @else
+                    <div class="py-16 text-center sm:text-left">
+                        <p class="text-lg text-gray-600 mb-2">No news published yet.</p>
+                        <p class="text-sm text-gray-500">Check back soon for updates from genyra Group.</p>
+                    </div>
+                @endif
+            </div>
+
+            {{-- Notice Board --}}
+            <aside class="lg:sticky lg:top-8">
+                <div class="overflow-hidden rounded-sm shadow-lg"
+                     style="background: linear-gradient(160deg, #22235a 0%, #1a1b4a 55%, #0d5f7a 100%);">
+                    <div class="px-6 pt-6 pb-4">
+                        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#1BA0D8] mb-2">Notice board</p>
+                        <h2 class="text-xl md:text-2xl font-bold text-white leading-tight">genyra Group</h2>
+                        <p class="text-white/70 text-sm mt-1">Announcements &amp; updates</p>
+                    </div>
+
+                    <div class="px-4 pb-6">
+                        @if($poster)
+                            <div class="relative w-full aspect-[3/4] overflow-hidden bg-black/20">
+                                <img src="{{ $poster->image_url }}"
+                                     alt="{{ $poster->title }}"
+                                     class="absolute inset-0 w-full h-full object-cover">
+                            </div>
+                            @if($poster->title)
+                                <p class="mt-4 text-sm font-medium text-white/90 text-center">{{ $poster->title }}</p>
+                            @endif
+                        @else
+                            <div class="aspect-[3/4] flex flex-col items-center justify-center text-center px-6 border border-dashed border-white/25 bg-white/5">
+                                <p class="text-white/80 text-sm font-medium mb-1">No notices posted</p>
+                                <p class="text-white/50 text-xs">Check back for important announcements.</p>
+                            </div>
+                        @endif
                     </div>
                 </div>
+            </aside>
+        </div>
+
+        {{-- Full-width secondary strip (big story + three small pattern) --}}
+        @if($latestNews && $latestThree->isNotEmpty())
+            <div class="mt-14 md:mt-16 pt-10 border-t border-[#22235a]/10">
+                <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+                    @foreach($latestThree as $news)
+                        @php
+                            $newsCategory = $news->categories->first()?->name ?? 'News';
+                            $newsDate = optional($news->published_at)->format('M j, Y')
+                                ?? optional($news->created_at)->format('M j, Y');
+                            $newsExcerpt = $news->excerpt
+                                ?: \Illuminate\Support\Str::limit(strip_tags($news->content), 110);
+                        @endphp
+                        <li>
+                            <article class="group h-full flex flex-col">
+                                <a href="{{ route('news.readmore', $news->slug) }}" class="block">
+                                    <div class="relative w-full aspect-[16/10] overflow-hidden bg-[#22235a]/10">
+                                        @if($news->main_image)
+                                            <img src="{{ asset('storage/' . $news->main_image) }}"
+                                                 alt="{{ $news->title }}"
+                                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]">
+                                        @else
+                                            <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#22235a] to-[#1BA0D8]">
+                                                <span class="text-white/80 text-xs uppercase tracking-widest">genyra</span>
+                                            </div>
+                                        @endif
+                                    </div>
+                                </a>
+                                <div class="pt-4 flex flex-col flex-1">
+                                    <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mb-2 text-xs text-gray-500">
+                                        <span class="uppercase tracking-wider font-semibold text-[#1BA0D8]">{{ $newsCategory }}</span>
+                                        <span class="w-1 h-1 rounded-full bg-gray-300"></span>
+                                        <time>{{ $newsDate }}</time>
+                                    </div>
+                                    <h4 class="font-bold text-[#22235a] text-lg leading-snug mb-2">
+                                        <a href="{{ route('news.readmore', $news->slug) }}" class="hover:text-[#1BA0D8] transition-colors">
+                                            {{ $news->title }}
+                                        </a>
+                                    </h4>
+                                    <p class="text-sm text-gray-600 leading-relaxed mb-4 flex-1">{{ $newsExcerpt }}</p>
+                                    <a href="{{ route('news.readmore', $news->slug) }}"
+                                       class="text-sm font-semibold text-[#22235a] hover:text-[#1BA0D8] transition-colors">
+                                        Read more →
+                                    </a>
+                                </div>
+                            </article>
+                        </li>
+                    @endforeach
+                </ul>
             </div>
+        @endif
+
+        <div class="mt-12 flex justify-center sm:justify-start">
+            <a href="{{ route('news') }}"
+               class="inline-flex items-center gap-3 border border-[#22235a] px-8 py-4 text-sm font-semibold uppercase tracking-widest text-[#22235a] hover:bg-[#22235a] hover:text-white transition-colors duration-300">
+                View all news
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
         </div>
     </div>
 </section>
@@ -617,172 +562,254 @@
 </section>
 
 
-  <!-- Business Lines Section -->
-  <section id="business-lines" class="py-24 bg-gray-50 px-4 sm:px-6 lg:px-8">
+  <!-- Strategic Business Units -->
+  <section id="business-lines" class="py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
       <div class="max-w-7xl mx-auto">
-          <div class="text-center mb-16">
-              <div class="category-label mb-4 text-left md:text-center">OUR EXPERTISE</div>
-              <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-700 text-left md:text-center" >Strategic Business Units</h2>
-              <p class="text-md text-gray-600 text-left md:text-center">
+          <div class="mb-10 md:mb-12 max-w-3xl">
+              <div class="category-label mb-3" style="color: #1BA0D8;">OUR EXPERTISE</div>
+              <h2 class="text-3xl md:text-4xl font-bold text-[#22235a] leading-tight mb-4">Strategic Business Units</h2>
+              <p class="text-gray-600 leading-relaxed">
                   At genyra, we bring together a diverse portfolio of businesses to create forward-looking solutions that strengthen healthcare delivery, improve outcomes, and drive sustainable system performance.
               </p>
           </div>
-          
-          <div class="grid md:grid-cols-2 gap-8">
-              <!-- BioSciences -->
-              <div class="bg-white rounded-lg overflow-hidden shadow-lg card-hover">
-                  <img src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=800" alt="BioSciences" class="w-full h-64 object-cover" onerror="this.src='https://via.placeholder.com/800x400/3b82f6/ffffff?text=BioSciences'">
-                  <div class="p-8">
-                      <div class="category-label mb-3">Life Sciences Research & Applied Biology</div>
-                      <h3 class="text-2xl font-bold mb-4 text-gray-700">BioSciences</h3>
-                      <p class="text-gray-600 mb-6">
-                          Genyra BioSciences is where discovery meets application. We bridge the gap between fundamental biological research and real-world health outcomes advancing knowledge in molecular biology, microbiology, genomics, and applied life sciences. Our work underpins the science behind better diagnostics, safer products, and more effective therapies.
-                      </p>
-                      <p class="category-label mb-3">Core Capabilities</p>
-                      <ul class="space-y-4">
-                    <li class="flex items-start">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                        <span class="text-gray-700">Applied biological research & laboratory sciences</span>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                        <span class="text-gray-700">Microbiology, genomics & molecular diagnostics support</span>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                        <span class="text-gray-700">Biosafety & biosecurity advisory</span>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                        <span class="text-gray-700">Research design, data analysis & scientific consulting</span>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                        <span class="text-gray-700">Capacity building & scientific training programmes</span>
-                    </li>
-                      </ul>
-                        <a  class="text-sm font-semibold border border-blue-800 bg-blue-900 text-white py-4 px-6 inline-flex items-center mt-6 rounded-sm">
-                            Science that translates into health impact
-                        </a>
-                  </div>
-              </div>
 
-              <!-- MedTech Solutions -->
-              <div class="bg-white rounded-lg overflow-hidden shadow-lg card-hover">
-                  <img src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="MedTech" class="w-full h-64 object-cover" onerror="this.src='https://via.placeholder.com/800x400/10b981/ffffff?text=MedTech'">
-                  <div class="p-8">
-                      <div class="category-label mb-3">Medical Technology & Device Solutions</div>
-                      <h3 class="text-2xl font-bold mb-4 text-gray-700">MedTech Solutions</h3>
-                      <p class="text-gray-600 mb-6">
-                          Genyra MedTech delivers end-to-end medical technology solutions from device selection and procurement to deployment, user training, and post-market support. We work with hospitals, clinics, and health programmes to ensure the right technology is in the right hands, functioning optimally, and aligned with clinical and operational needs.
-                      </p>
-                      <p class="category-label mb-3">Core Capabilities</p>
-                      <ul class="space-y-4">
-                    <li class="flex items-start">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                        <span class="text-gray-700">Medical device supply, sourcing & procurement advisory</span>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                        <span class="text-gray-700">Technology needs assessment & health technology evaluation</span>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                        <span class="text-gray-700">Biomedical equipment management & lifecycle support</span>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                        <span class="text-gray-700">Installation, commissioning & user training</span>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                        <span class="text-gray-700">Maintenance programme design & technical support</span>
-                    </li>
-                      </ul>
-                        <a  class="text-sm font-semibold border border-blue-800 bg-blue-900 text-white py-4 px-2 inline-flex items-center mt-6 rounded-sm">
-                            Technology that serves people, not just processes
-                        </a>
-                  </div>
-              </div>
+          <div class="overflow-hidden border border-[#22235a]/10 bg-[#f7f9fc]"
+               data-sbu-showcase>
+              <div class="grid lg:grid-cols-12">
 
-              <!-- Health Systems Planning -->
-              <div class="bg-white rounded-lg overflow-hidden shadow-lg card-hover">
-                  <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Planning" class="w-full h-64 object-cover" onerror="this.src='https://via.placeholder.com/800x400/8b5cf6/ffffff?text=Health+Systems'">
-                  <div class="p-8">
-                      <div class="category-label mb-3">Strategic Planning · Quality Management Systems</div>
-                      <h3 class="text-2xl font-bold mb-4 text-gray-700">Health Systems Planning & Advisory</h3>
-                      <p class="text-gray-600 mb-6">
-                          Genyra Health Systems Planning & Advisory empowers health institutions and organisations with the strategic intelligence and quality frameworks they need to perform at their best. We partner with governments, health authorities, NGOs, and private sector actors to design robust health systems, develop strategic plans, and embed quality cultures that endure.
-                      </p>
-                      <p class="category-label mb-3">Core Capabilities</p>
-                      <ul class="space-y-4">
-                    <li class="flex items-start">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                        <span class="text-gray-700">Health sector strategic planning & institutional strengthening</span>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                        <span class="text-gray-700">Quality Management Systems (QMS) design & implementation</span>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                        <span class="text-gray-700">ISO standards alignment & accreditation readiness</span>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                        <span class="text-gray-700">Health policy advisory & programme design</span>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                        <span class="text-gray-700">Monitoring, evaluation & performance improvement frameworks</span>
-                    </li>
-                      </ul>
-                        <a  class="text-sm font-semibold border border-blue-800 bg-blue-900 text-white py-4 px-2 inline-flex items-center mt-6 rounded-sm">
-                            Governance that makes health systems work
-                        </a>
+                  {{-- Mobile: current unit + icon to open picker --}}
+                  <div class="lg:hidden flex items-center justify-between gap-3 px-4 py-3 bg-white border-b border-[#22235a]/10">
+                      <div class="min-w-0">
+                          <p class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#1BA0D8]">Browse units</p>
+                          <p class="text-sm font-bold text-[#22235a] truncate" data-sbu-mobile-label>BioSciences</p>
+                      </div>
+                      <button type="button"
+                              data-sbu-menu-toggle
+                              class="flex-shrink-0 inline-flex items-center justify-center w-11 h-11 rounded-md bg-[#22235a] text-white"
+                              aria-expanded="false"
+                              aria-controls="sbu-unit-list"
+                              aria-label="Show business units">
+                          <svg data-sbu-icon-open class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                          </svg>
+                          <svg data-sbu-icon-close class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                          </svg>
+                      </button>
                   </div>
-              </div>
 
-              <!-- Metrology & Calibration -->
-              <div class="bg-white rounded-lg overflow-hidden shadow-lg card-hover">
-                  <img src="https://images.pexels.com/photos/3938022/pexels-photo-3938022.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Calibration" class="w-full h-64 object-cover" onerror="this.src='https://via.placeholder.com/800x400/f97316/ffffff?text=Metrology'">
-                  <div class="p-8">
-                      <div class="category-label mb-3">Precision Measurement & Instrument Assurance</div>
-                      <h3 class="text-2xl font-bold mb-4 text-gray-700">Metrology & Calibration Services</h3>
-                      <p class="text-gray-600 mb-6">
-                          Genyra Metrology & Calibration Services is built on a fundamental truth: accurate measurement is the foundation of safe and effective healthcare. We provide professional calibration, verification, and measurement assurance services for medical, laboratory, and industrial instruments ensuring that every reading is trustworthy, traceable, and compliant.
-                      </p>
-                      <p class="category-label mb-3">Core Capabilities</p>
-                      <ul class="space-y-4">
-                    <li class="flex items-start">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                        <span class="text-gray-700">Calibration of medical, laboratory & industrial instruments</span>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                        <span class="text-gray-700">Measurement traceability to national & international standards</span>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                        <span class="text-gray-700">Preventive maintenance & performance verification</span>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                        <span class="text-gray-700">Calibration programme management & scheduling</span>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                        <span class="text-gray-700">Compliance with ISO 17025 & regulatory requirements</span>
-                    </li>
-                      </ul>
-                        <a  class="text-sm font-semibold border border-blue-800 bg-blue-900 text-white py-4 px-2 inline-flex items-center mt-6 rounded-sm">
-                            Precision you can trust every time
-                        </a>
+                  {{-- Unit picker: collapsed on mobile, always visible on lg --}}
+                  <div id="sbu-unit-list"
+                       data-sbu-menu
+                       class="hidden lg:block lg:col-span-4 border-b lg:border-b-0 lg:border-r border-[#22235a]/10 bg-white lg:min-h-full"
+                       role="tablist" aria-label="Strategic business units">
+                      <button type="button" role="tab" aria-selected="true" data-sbu-tab="biosciences" data-sbu-label="BioSciences"
+                              class="sbu-tab w-full text-left px-6 py-5 border-b border-[#22235a]/10 transition-colors duration-200 bg-[#22235a] text-white">
+                          <span class="block text-[11px] font-semibold tracking-[0.2em] uppercase opacity-70 mb-1">01</span>
+                          <span class="block text-base md:text-lg font-bold leading-snug">BioSciences</span>
+                          <span class="block text-xs mt-1 opacity-80">Life Sciences Research &amp; Applied Biology</span>
+                      </button>
+                      <button type="button" role="tab" aria-selected="false" data-sbu-tab="medtech" data-sbu-label="MedTech Solutions"
+                              class="sbu-tab w-full text-left px-6 py-5 border-b border-[#22235a]/10 transition-colors duration-200 text-[#22235a] hover:bg-[#22235a]/5">
+                          <span class="block text-[11px] font-semibold tracking-[0.2em] uppercase text-[#1BA0D8] mb-1">02</span>
+                          <span class="block text-base md:text-lg font-bold leading-snug">MedTech Solutions</span>
+                          <span class="block text-xs mt-1 text-gray-500">Medical Technology &amp; Device Solutions</span>
+                      </button>
+                      <button type="button" role="tab" aria-selected="false" data-sbu-tab="health" data-sbu-label="Health Systems Planning &amp; Advisory"
+                              class="sbu-tab w-full text-left px-6 py-5 border-b border-[#22235a]/10 transition-colors duration-200 text-[#22235a] hover:bg-[#22235a]/5">
+                          <span class="block text-[11px] font-semibold tracking-[0.2em] uppercase text-[#1BA0D8] mb-1">03</span>
+                          <span class="block text-base md:text-lg font-bold leading-snug">Health Systems Planning &amp; Advisory</span>
+                          <span class="block text-xs mt-1 text-gray-500">Strategic Planning · Quality Management Systems</span>
+                      </button>
+                      <button type="button" role="tab" aria-selected="false" data-sbu-tab="metrology" data-sbu-label="Metrology &amp; Calibration Services"
+                              class="sbu-tab w-full text-left px-6 py-5 transition-colors duration-200 text-[#22235a] hover:bg-[#22235a]/5">
+                          <span class="block text-[11px] font-semibold tracking-[0.2em] uppercase text-[#1BA0D8] mb-1">04</span>
+                          <span class="block text-base md:text-lg font-bold leading-snug">Metrology &amp; Calibration Services</span>
+                          <span class="block text-xs mt-1 text-gray-500">Precision Measurement &amp; Instrument Assurance</span>
+                      </button>
+                  </div>
+
+                  {{-- Detail panel --}}
+                  <div class="lg:col-span-8 relative">
+
+                      <div data-sbu-panel="biosciences" class="sbu-panel">
+                          <div class="relative h-72 md:h-96 overflow-hidden">
+                              <img src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                                   alt="BioSciences" class="absolute inset-0 w-full h-full object-cover">
+                              <div class="absolute inset-0 bg-gradient-to-t from-[#22235a]/40 to-transparent"></div>
+                          </div>
+                          <div class="p-6 md:p-8">
+                              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-[#1BA0D8] mb-2">Life Sciences Research &amp; Applied Biology</p>
+                              <h3 class="text-2xl font-bold text-[#22235a] mb-4">BioSciences</h3>
+                              <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-6">
+                                  Genyra BioSciences is where discovery meets application. We bridge the gap between fundamental biological research and real-world health outcomes advancing knowledge in molecular biology, microbiology, genomics, and applied life sciences. Our work underpins the science behind better diagnostics, safer products, and more effective therapies.
+                              </p>
+                              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-[#22235a] mb-3">Core Capabilities</p>
+                              <ul class="space-y-2.5 mb-6">
+                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Applied biological research &amp; laboratory sciences</li>
+                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Microbiology, genomics &amp; molecular diagnostics support</li>
+                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Biosafety &amp; biosecurity advisory</li>
+                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Research design, data analysis &amp; scientific consulting</li>
+                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Capacity building &amp; scientific training programmes</li>
+                              </ul>
+                              <p class="text-sm font-semibold text-[#22235a]">Science that translates into health impact</p>
+                          </div>
+                      </div>
+
+                      <div data-sbu-panel="medtech" class="sbu-panel hidden">
+                          <div class="relative h-72 md:h-96 overflow-hidden">
+                              <img src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                                   alt="MedTech" class="absolute inset-0 w-full h-full object-cover">
+                              <div class="absolute inset-0 bg-gradient-to-t from-[#22235a]/40 to-transparent"></div>
+                          </div>
+                          <div class="p-6 md:p-8">
+                              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-[#1BA0D8] mb-2">Medical Technology &amp; Device Solutions</p>
+                              <h3 class="text-2xl font-bold text-[#22235a] mb-4">MedTech Solutions</h3>
+                              <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-6">
+                                  Genyra MedTech delivers end-to-end medical technology solutions from device selection and procurement to deployment, user training, and post-market support. We work with hospitals, clinics, and health programmes to ensure the right technology is in the right hands, functioning optimally, and aligned with clinical and operational needs.
+                              </p>
+                              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-[#22235a] mb-3">Core Capabilities</p>
+                              <ul class="space-y-2.5 mb-6">
+                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Medical device supply, sourcing &amp; procurement advisory</li>
+                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Technology needs assessment &amp; health technology evaluation</li>
+                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Biomedical equipment management &amp; lifecycle support</li>
+                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Installation, commissioning &amp; user training</li>
+                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Maintenance programme design &amp; technical support</li>
+                              </ul>
+                              <p class="text-sm font-semibold text-[#22235a]">Technology that serves people, not just processes</p>
+                          </div>
+                      </div>
+
+                      <div data-sbu-panel="health" class="sbu-panel hidden">
+                          <div class="relative h-72 md:h-96 overflow-hidden">
+                              <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                                   alt="Health Systems" class="absolute inset-0 w-full h-full object-cover">
+                              <div class="absolute inset-0 bg-gradient-to-t from-[#22235a]/40 to-transparent"></div>
+                          </div>
+                          <div class="p-6 md:p-8">
+                              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-[#1BA0D8] mb-2">Strategic Planning · Quality Management Systems</p>
+                              <h3 class="text-2xl font-bold text-[#22235a] mb-4">Health Systems Planning &amp; Advisory</h3>
+                              <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-6">
+                                  Genyra Health Systems Planning &amp; Advisory empowers health institutions and organisations with the strategic intelligence and quality frameworks they need to perform at their best. We partner with governments, health authorities, NGOs, and private sector actors to design robust health systems, develop strategic plans, and embed quality cultures that endure.
+                              </p>
+                              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-[#22235a] mb-3">Core Capabilities</p>
+                              <ul class="space-y-2.5 mb-6">
+                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Health sector strategic planning &amp; institutional strengthening</li>
+                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Quality Management Systems (QMS) design &amp; implementation</li>
+                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> ISO standards alignment &amp; accreditation readiness</li>
+                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Health policy advisory &amp; programme design</li>
+                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Monitoring, evaluation &amp; performance improvement frameworks</li>
+                              </ul>
+                              <p class="text-sm font-semibold text-[#22235a]">Governance that makes health systems work</p>
+                          </div>
+                      </div>
+
+                      <div data-sbu-panel="metrology" class="sbu-panel hidden">
+                          <div class="relative h-72 md:h-96 overflow-hidden">
+                              <img src="https://images.pexels.com/photos/3938022/pexels-photo-3938022.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                                   alt="Metrology" class="absolute inset-0 w-full h-full object-cover">
+                              <div class="absolute inset-0 bg-gradient-to-t from-[#22235a]/40 to-transparent"></div>
+                          </div>
+                          <div class="p-6 md:p-8">
+                              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-[#1BA0D8] mb-2">Precision Measurement &amp; Instrument Assurance</p>
+                              <h3 class="text-2xl font-bold text-[#22235a] mb-4">Metrology &amp; Calibration Services</h3>
+                              <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-6">
+                                  Genyra Metrology &amp; Calibration Services is built on a fundamental truth: accurate measurement is the foundation of safe and effective healthcare. We provide professional calibration, verification, and measurement assurance services for medical, laboratory, and industrial instruments ensuring that every reading is trustworthy, traceable, and compliant.
+                              </p>
+                              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-[#22235a] mb-3">Core Capabilities</p>
+                              <ul class="space-y-2.5 mb-6">
+                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Calibration of medical, laboratory &amp; industrial instruments</li>
+                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Measurement traceability to national &amp; international standards</li>
+                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Preventive maintenance &amp; performance verification</li>
+                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Calibration programme management &amp; scheduling</li>
+                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Compliance with ISO 17025 &amp; regulatory requirements</li>
+                              </ul>
+                              <p class="text-sm font-semibold text-[#22235a]">Precision you can trust every time</p>
+                          </div>
+                      </div>
+
                   </div>
               </div>
           </div>
       </div>
   </section>
+
+  <script>
+  (function () {
+      var root = document.querySelector('[data-sbu-showcase]');
+      if (!root) return;
+
+      var tabs = root.querySelectorAll('[data-sbu-tab]');
+      var panels = root.querySelectorAll('[data-sbu-panel]');
+      var menu = root.querySelector('[data-sbu-menu]');
+      var toggle = root.querySelector('[data-sbu-menu-toggle]');
+      var mobileLabel = root.querySelector('[data-sbu-mobile-label]');
+      var iconOpen = root.querySelector('[data-sbu-icon-open]');
+      var iconClose = root.querySelector('[data-sbu-icon-close]');
+      var active = 'bg-[#22235a] text-white';
+      var idle = 'text-[#22235a] hover:bg-[#22235a]/5';
+
+      function isDesktop() {
+          return window.matchMedia('(min-width: 1024px)').matches;
+      }
+
+      function setMenuOpen(open) {
+          if (!menu || !toggle) return;
+          if (isDesktop()) {
+              menu.classList.remove('hidden');
+              menu.classList.add('lg:block');
+              toggle.setAttribute('aria-expanded', 'false');
+              if (iconOpen) iconOpen.classList.remove('hidden');
+              if (iconClose) iconClose.classList.add('hidden');
+              return;
+          }
+          menu.classList.toggle('hidden', !open);
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+          if (iconOpen) iconOpen.classList.toggle('hidden', open);
+          if (iconClose) iconClose.classList.toggle('hidden', !open);
+      }
+
+      function setActive(id) {
+          tabs.forEach(function (tab) {
+              var on = tab.getAttribute('data-sbu-tab') === id;
+              tab.setAttribute('aria-selected', on ? 'true' : 'false');
+              tab.className = 'sbu-tab w-full text-left px-6 py-5 border-b border-[#22235a]/10 transition-colors duration-200 ' + (on ? active : idle);
+              if (tab.getAttribute('data-sbu-tab') === 'metrology') {
+                  tab.classList.remove('border-b');
+              }
+              var num = tab.querySelector('span:first-child');
+              var sub = tab.querySelector('span:last-child');
+              if (num) num.className = 'block text-[11px] font-semibold tracking-[0.2em] uppercase mb-1 ' + (on ? 'opacity-70' : 'text-[#1BA0D8]');
+              if (sub) sub.className = 'block text-xs mt-1 ' + (on ? 'opacity-80' : 'text-gray-500');
+              if (on && mobileLabel) {
+                  mobileLabel.textContent = tab.getAttribute('data-sbu-label') || tab.querySelector('.font-bold')?.textContent || '';
+              }
+          });
+          panels.forEach(function (panel) {
+              var on = panel.getAttribute('data-sbu-panel') === id;
+              panel.classList.toggle('hidden', !on);
+          });
+          setMenuOpen(false);
+      }
+
+      if (toggle) {
+          toggle.addEventListener('click', function () {
+              var open = toggle.getAttribute('aria-expanded') === 'true';
+              setMenuOpen(!open);
+          });
+      }
+
+      tabs.forEach(function (tab) {
+          tab.addEventListener('click', function () {
+              setActive(tab.getAttribute('data-sbu-tab'));
+          });
+      });
+
+      window.addEventListener('resize', function () {
+          if (isDesktop()) setMenuOpen(false);
+      });
+  })();
+  </script>
 
 <!-- Projects Section -->
 <section id="projects" class="py-12 px-4 sm:px-6 lg:px-8 bg-white">

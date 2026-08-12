@@ -17,12 +17,20 @@ class WebController extends Controller
     public function index()
     {
         $poster = Poster::getActive();
-        $latestNews = News::where('status', 'published')
+
+        $baseQuery = fn () => News::with('categories')
+            ->where('status', 'published')
             ->whereNotNull('published_at')
             ->where('published_at', '<=', now())
-            ->orderBy('published_at', 'desc')
-            ->first();
-        return view('web.index', compact('poster', 'latestNews'));
+            ->orderBy('published_at', 'desc');
+
+        $latestNews = $baseQuery()->first();
+        $latestThree = $baseQuery()
+            ->when($latestNews, fn ($q) => $q->where('id', '!=', $latestNews->id))
+            ->take(3)
+            ->get();
+
+        return view('web.index', compact('poster', 'latestNews', 'latestThree'));
     }
 
     public function contactPost(Request $request)
