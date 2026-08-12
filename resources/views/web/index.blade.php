@@ -112,7 +112,7 @@
                                 @if($latestNews->main_image)
                                     <img src="{{ asset('storage/' . $latestNews->main_image) }}"
                                          alt="{{ $latestNews->title }}"
-                                         class="relative w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.02]">
+                                         class="relative w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]">
                                 @else
                                     <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#22235a] to-[#1BA0D8]">
                                         <span class="text-white/80 text-sm uppercase tracking-widest">genyra</span>
