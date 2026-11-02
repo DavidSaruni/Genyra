@@ -8,7 +8,7 @@
 
   <!-- Video Hero Section -->
   <section class="video-hero">
-      <video class="video-background" autoplay muted playsinline id="heroVideo" preload="auto"></video>
+      <video class="video-background" autoplay muted playsinline id="heroVideo" preload="metadata" disablePictureInPicture></video>
     
       <div class="animated-bg" id="animatedBg"></div>
       
@@ -56,8 +56,14 @@
 </div>
   </section>
 
+  {{-- Holds scroll space while the video hero stays fixed behind --}}
+  <div class="hero-scroll-spacer" aria-hidden="true"></div>
+
+  {{-- Content panel slides up over the fixed hero --}}
+  <div class="home-scroll-panel">
+
   <section class="hidden" id="small-hero-content">
-    <div class="hero-content w-full py-12 px-4  flex items-center min-h-64">
+    <div class="hero-content w-full py-12 px-4  flex items-center min-h-64 bg-white">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
               <div class="max-w-3xl fade-in-up">
                   <div class="category-label mb-4 text-gray-800">
@@ -83,57 +89,52 @@
 
 
   <!-- News & Updates and Notice Board -->
-<section id="news-notices" class="relative pt-20 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
+<section id="news-notices" class="relative pt-6 md:pt-8 pb-14 md:pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden"
          style="background: linear-gradient(165deg, #f0f7fc 0%, #eef1f8 45%, #f7f9fc 100%);">
     <div class="pointer-events-none absolute inset-0 opacity-[0.035]"
          style="background-image: radial-gradient(#22235a 1px, transparent 1px); background-size: 22px 22px;"></div>
 
     <div class="relative max-w-7xl mx-auto">
-        <div class="mb-10 md:mb-12">
+        <div class="mb-6 md:mb-8">
             <div class="category-label mb-2" style="color: #1BA0D8;">Stay informed</div>
             <h2 class="text-3xl md:text-4xl font-bold text-[#22235a]">News &amp; Updates</h2>
         </div>
 
         {{-- Top module: featured + notice (magazine lead) --}}
-        <div class="grid lg:grid-cols-3 gap-10 lg:gap-12 items-start">
+        <div class="grid lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
             <div class="lg:col-span-2">
                 @if($latestNews)
                     @php
                         $featuredCategory = $latestNews->categories->first()?->name ?? 'News';
-                        $featuredDate = optional($latestNews->published_at)->format('F j, Y')
-                            ?? optional($latestNews->created_at)->format('F j, Y');
+                        $featuredDate = optional($latestNews->published_at)->format('M j, Y')
+                            ?? optional($latestNews->created_at)->format('M j, Y');
                         $featuredExcerpt = $latestNews->excerpt
-                            ?: \Illuminate\Support\Str::limit(strip_tags($latestNews->content), 200);
+                            ?: \Illuminate\Support\Str::limit(strip_tags($latestNews->content), 140);
                     @endphp
 
-                    <article class="group">
-                        <a href="{{ route('news.readmore', $latestNews->slug) }}" class="block">
-                            <div class="relative w-full aspect-[16/9] md:aspect-[2/1] overflow-hidden bg-[#e8eef5] p-3 md:p-4">
-                                @if($latestNews->main_image)
-                                    <img src="{{ asset('storage/' . $latestNews->main_image) }}"
-                                         alt="{{ $latestNews->title }}"
-                                         class="relative w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]">
-                                @else
-                                    <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#22235a] to-[#1BA0D8]">
-                                        <span class="text-white/80 text-sm uppercase tracking-widest">genyra</span>
-                                    </div>
-                                @endif
-                            </div>
+                    <article class="featured-news-card group h-full">
+                        <a href="{{ route('news.readmore', $latestNews->slug) }}" class="featured-news-card__media">
+                            @if($latestNews->main_image)
+                                <img src="{{ asset('storage/' . $latestNews->main_image) }}"
+                                     alt="{{ $latestNews->title }}"
+                                     class="featured-news-card__image">
+                            @else
+                                <div class="featured-news-card__fallback">
+                                    <span>genyra</span>
+                                </div>
+                            @endif
                         </a>
-                        <div class="pt-6 max-w-2xl">
-                            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mb-3 text-xs text-gray-500">
-                                <span class="uppercase tracking-wider font-semibold text-[#1BA0D8]">{{ $featuredCategory }}</span>
-                                <span class="w-1 h-1 rounded-full bg-gray-300"></span>
+
+                        <div class="featured-news-card__body">
+                            <div class="featured-news-card__meta">
+                                <span class="featured-news-card__chip">{{ $featuredCategory }}</span>
                                 <time datetime="{{ optional($latestNews->published_at ?? $latestNews->created_at)->toDateString() }}">{{ $featuredDate }}</time>
                             </div>
-                            <h3 class="text-2xl md:text-3xl font-bold text-[#22235a] leading-tight mb-4">
-                                <a href="{{ route('news.readmore', $latestNews->slug) }}" class="hover:text-[#1BA0D8] transition-colors">
-                                    {{ $latestNews->title }}
-                                </a>
+                            <h3 class="featured-news-card__title">
+                                <a href="{{ route('news.readmore', $latestNews->slug) }}">{{ $latestNews->title }}</a>
                             </h3>
-                            <p class="text-gray-600 text-base leading-relaxed mb-6">{{ $featuredExcerpt }}</p>
-                            <a href="{{ route('news.readmore', $latestNews->slug) }}"
-                               class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-[#22235a] hover:text-[#1BA0D8] transition-colors">
+                            <p class="featured-news-card__excerpt">{{ $featuredExcerpt }}</p>
+                            <a href="{{ route('news.readmore', $latestNews->slug) }}" class="featured-news-card__cta">
                                 Read story
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -142,87 +143,114 @@
                         </div>
                     </article>
                 @else
-                    <div class="py-16 text-center sm:text-left">
-                        <p class="text-lg text-gray-600 mb-2">No news published yet.</p>
-                        <p class="text-sm text-gray-500">Check back soon for updates from genyra Group.</p>
+                    <div class="featured-news-card featured-news-card--empty">
+                        <img src="{{ asset('images/logo.jpeg') }}" alt="" class="featured-news-card__empty-logo" aria-hidden="true">
+                        <p class="featured-news-card__empty-title">No news published yet</p>
+                        <p class="featured-news-card__empty-text">Check back soon for updates from genyra Group.</p>
                     </div>
                 @endif
             </div>
 
             {{-- Notice Board --}}
-            <aside class="lg:sticky lg:top-8">
-                <div class="overflow-hidden rounded-sm shadow-lg"
-                     style="background: linear-gradient(160deg, #22235a 0%, #1a1b4a 55%, #0d5f7a 100%);">
-                    <div class="px-6 pt-6 pb-4">
-                        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#1BA0D8] mb-2">Notice board</p>
-                        <h2 class="text-xl md:text-2xl font-bold text-white leading-tight">genyra Group</h2>
-                        <p class="text-white/70 text-sm mt-1">Announcements &amp; updates</p>
+            <aside class="lg:sticky lg:top-8 h-full">
+                <div class="notice-board-card h-full">
+                    <div class="notice-board-card__header">
+                        <span class="notice-board-card__pin" aria-hidden="true"></span>
+                        <div>
+                            <p class="notice-board-card__eyebrow">Notice board</p>
+                            <h2 class="notice-board-card__heading">Announcements</h2>
+                        </div>
                     </div>
 
-                    <div class="px-4 pb-6">
-                        @if($poster)
-                            <div class="relative w-full aspect-[3/4] overflow-hidden bg-black/20">
-                                <img src="{{ $poster->image_url }}"
-                                     alt="{{ $poster->title }}"
-                                     class="absolute inset-0 w-full h-full object-cover">
-                            </div>
+                    @if($poster)
+                        <button type="button"
+                                class="notice-board-card__media"
+                                data-notice-lightbox
+                                data-notice-src="{{ $poster->image_url }}"
+                                data-notice-title="{{ $poster->title }}"
+                                aria-label="View notice full size">
+                            <img src="{{ $poster->image_url }}"
+                                 alt="{{ $poster->title ?: 'Notice board poster' }}"
+                                 class="notice-board-card__image">
+                        </button>
+
+                        <div class="notice-board-card__body">
                             @if($poster->title)
-                                <p class="mt-4 text-sm font-medium text-white/90 text-center">{{ $poster->title }}</p>
+                                <h3 class="notice-board-card__title">{{ $poster->title }}</h3>
                             @endif
-                        @else
-                            <div class="aspect-[3/4] flex flex-col items-center justify-center text-center px-6 border border-dashed border-white/25 bg-white/5">
-                                <p class="text-white/80 text-sm font-medium mb-1">No notices posted</p>
-                                <p class="text-white/50 text-xs">Check back for important announcements.</p>
-                            </div>
-                        @endif
-                    </div>
+                            @if($poster->description)
+                                <p class="notice-board-card__desc">
+                                    {{ \Illuminate\Support\Str::limit(strip_tags($poster->description), 110) }}
+                                </p>
+                            @endif
+                            <button type="button"
+                                    class="notice-board-card__cta"
+                                    data-notice-lightbox
+                                    data-notice-src="{{ $poster->image_url }}"
+                                    data-notice-title="{{ $poster->title }}">
+                                View full size
+                            </button>
+                        </div>
+                    @else
+                        <div class="notice-board-card__empty">
+                            <img src="{{ asset('images/logo.jpeg') }}"
+                                 alt=""
+                                 class="notice-board-card__empty-logo"
+                                 aria-hidden="true">
+                            <p class="notice-board-card__empty-title">No notices posted</p>
+                            <p class="notice-board-card__empty-text">Check back for important announcements from genyra Group.</p>
+                        </div>
+                    @endif
                 </div>
             </aside>
         </div>
 
-        {{-- Full-width secondary strip (big story + three small pattern) --}}
-        @if($latestNews && $latestThree->isNotEmpty())
+        {{-- Theme cards strip: exactly 4 from backend --}}
+        @if($latestFour->isNotEmpty())
+            @php
+                $newsCardColors = ['#22235a', '#1BA0D8', '#6a1b9a', '#e65100'];
+            @endphp
             <div class="mt-14 md:mt-16 pt-10 border-t border-[#22235a]/10">
-                <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-                    @foreach($latestThree as $news)
+                <ul class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-5">
+                    @foreach($latestFour as $index => $news)
                         @php
                             $newsCategory = $news->categories->first()?->name ?? 'News';
-                            $newsDate = optional($news->published_at)->format('M j, Y')
-                                ?? optional($news->created_at)->format('M j, Y');
                             $newsExcerpt = $news->excerpt
-                                ?: \Illuminate\Support\Str::limit(strip_tags($news->content), 110);
+                                ?: \Illuminate\Support\Str::limit(strip_tags($news->content), 100);
+                            $cardColor = $newsCardColors[$index % count($newsCardColors)];
+                            $categorySlug = $news->categories->first()?->slug;
                         @endphp
-                        <li>
-                            <article class="group h-full flex flex-col">
-                                <a href="{{ route('news.readmore', $news->slug) }}" class="block">
-                                    <div class="relative w-full aspect-[16/10] overflow-hidden bg-[#22235a]/10">
-                                        @if($news->main_image)
-                                            <img src="{{ asset('storage/' . $news->main_image) }}"
-                                                 alt="{{ $news->title }}"
-                                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]">
-                                        @else
-                                            <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#22235a] to-[#1BA0D8]">
-                                                <span class="text-white/80 text-xs uppercase tracking-widest">genyra</span>
-                                            </div>
-                                        @endif
-                                    </div>
+                        <li class="h-full">
+                            <article class="news-theme-card" style="--card-color: {{ $cardColor }};">
+                                <a href="{{ route('news.readmore', $news->slug) }}" class="news-theme-card__media block" aria-label="{{ $news->title }}">
+                                    @if($news->main_image)
+                                        <img src="{{ asset('storage/' . $news->main_image) }}"
+                                             alt="{{ $news->title }}">
+                                    @else
+                                        <div class="absolute inset-0 flex items-center justify-center"
+                                             style="background: linear-gradient(145deg, {{ $cardColor }}, #22235a);">
+                                            <span class="relative z-10 text-white/85 text-xs uppercase tracking-widest">genyra</span>
+                                        </div>
+                                    @endif
+                                    <span class="news-theme-card__tint" aria-hidden="true"></span>
                                 </a>
-                                <div class="pt-4 flex flex-col flex-1">
-                                    <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mb-2 text-xs text-gray-500">
-                                        <span class="uppercase tracking-wider font-semibold text-[#1BA0D8]">{{ $newsCategory }}</span>
-                                        <span class="w-1 h-1 rounded-full bg-gray-300"></span>
-                                        <time>{{ $newsDate }}</time>
-                                    </div>
-                                    <h4 class="font-bold text-[#22235a] text-lg leading-snug mb-2">
-                                        <a href="{{ route('news.readmore', $news->slug) }}" class="hover:text-[#1BA0D8] transition-colors">
-                                            {{ $news->title }}
-                                        </a>
+
+                                <div class="news-theme-card__body">
+                                    <h4 class="news-theme-card__title">
+                                        <a href="{{ route('news.readmore', $news->slug) }}">{{ $news->title }}</a>
                                     </h4>
-                                    <p class="text-sm text-gray-600 leading-relaxed mb-4 flex-1">{{ $newsExcerpt }}</p>
-                                    <a href="{{ route('news.readmore', $news->slug) }}"
-                                       class="text-sm font-semibold text-[#22235a] hover:text-[#1BA0D8] transition-colors">
-                                        Read more →
-                                    </a>
+                                    <p class="news-theme-card__excerpt">{{ $newsExcerpt }}</p>
+                                    <span class="news-theme-card__category">{{ $newsCategory }}</span>
+                                    <div class="news-theme-card__actions">
+                                        <a href="{{ route('news.readmore', $news->slug) }}"
+                                           class="news-theme-card__btn news-theme-card__btn--primary">
+                                            Read article
+                                        </a>
+                                        <a href="{{ $categorySlug ? route('news', ['category' => $categorySlug]) : route('news') }}"
+                                           class="news-theme-card__btn news-theme-card__btn--secondary">
+                                            More in {{ $newsCategory }}
+                                        </a>
+                                    </div>
                                 </div>
                             </article>
                         </li>
@@ -1699,5 +1727,6 @@
     </div>
 </section>
 
+  </div>{{-- /.home-scroll-panel --}}
 
 @endsection

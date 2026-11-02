@@ -107,7 +107,7 @@
 }
 </style>
 
-<body class="bg-white text-gray-900">
+<body class="bg-white text-gray-900 {{ request()->routeIs('home') ? 'is-home' : '' }}">
 
 
 <!-- navbar -->

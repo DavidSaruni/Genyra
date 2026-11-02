@@ -25,12 +25,15 @@ class WebController extends Controller
             ->orderBy('published_at', 'desc');
 
         $latestNews = $baseQuery()->first();
-        $latestThree = $baseQuery()
-            ->when($latestNews, fn ($q) => $q->where('id', '!=', $latestNews->id))
-            ->take(3)
-            ->get();
 
-        return view('web.index', compact('poster', 'latestNews', 'latestThree'));
+        // Exactly four theme cards for the homepage strip (exclude featured)
+        $latestFour = $baseQuery()
+            ->when($latestNews, fn ($q) => $q->whereKeyNot($latestNews->id))
+            ->limit(4)
+            ->get()
+            ->values();
+
+        return view('web.index', compact('poster', 'latestNews', 'latestFour'));
     }
 
     public function contactPost(Request $request)

@@ -282,16 +282,22 @@
         });
     });
 
-    // Navbar scroll effect
+    // Navbar scroll effect (+ homepage solid white when content covers fixed hero)
     const nav = document.getElementById('mainNav');
     const topBar = document.querySelector('.top-bar');
-    let lastScroll = 0;
+    const isHome = document.body.classList.contains('is-home');
+    const heroEl = document.querySelector('.video-hero');
 
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
+    function updateNavOnScroll() {
+        if (!nav) return;
+
+        const currentScroll = window.pageYOffset || window.scrollY || 0;
+        const heroHeight = heroEl
+            ? heroEl.offsetHeight
+            : window.innerHeight;
+        const solidThreshold = Math.max(80, heroHeight * 0.35);
+
         if (currentScroll > 50) {
-            // Hide top bar and move nav to top
             if (topBar) topBar.style.transform = 'translateY(-100%)';
             nav.style.top = '0';
             nav.classList.add('shadow-lg');
@@ -300,9 +306,64 @@
             nav.style.top = '32px';
             nav.classList.remove('shadow-lg');
         }
-        
-        lastScroll = currentScroll;
-    });
+
+        if (isHome) {
+            const makeSolid = currentScroll > solidThreshold;
+            nav.classList.toggle('is-solid', makeSolid);
+            document.body.classList.toggle('nav-is-solid', makeSolid);
+        }
+    }
+
+    window.addEventListener('scroll', updateNavOnScroll, { passive: true });
+    updateNavOnScroll();
+
+    // Notice board lightbox
+    (function initNoticeLightbox() {
+        const triggers = document.querySelectorAll('[data-notice-lightbox]');
+        if (!triggers.length) return;
+
+        const lightbox = document.createElement('div');
+        lightbox.className = 'notice-lightbox';
+        lightbox.innerHTML = `
+            <div class="notice-lightbox__dialog" role="dialog" aria-modal="true" aria-label="Notice poster">
+                <button type="button" class="notice-lightbox__close" aria-label="Close">&times;</button>
+                <img src="" alt="">
+            </div>
+        `;
+        document.body.appendChild(lightbox);
+
+        const img = lightbox.querySelector('img');
+        const closeBtn = lightbox.querySelector('.notice-lightbox__close');
+
+        function openLightbox(src, title) {
+            img.src = src;
+            img.alt = title || 'Notice board poster';
+            lightbox.classList.add('is-open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('is-open');
+            document.body.style.overflow = '';
+            img.removeAttribute('src');
+        }
+
+        triggers.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                openLightbox(btn.dataset.noticeSrc, btn.dataset.noticeTitle);
+            });
+        });
+
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('is-open')) {
+                closeLightbox();
+            }
+        });
+    })();
 
     const observerOptions = {
         threshold: 0.1,

@@ -13,7 +13,7 @@
 </div>
 
 <!-- Main Navigation -->
-<nav class="main-nav fixed w-full z-50 top-8 transition-all duration-300 bg-white" id="mainNav">
+<nav class="main-nav fixed w-full z-50 top-8 transition-all duration-300 {{ request()->routeIs('home') ? '' : 'bg-white' }}" id="mainNav">
     <div class="max-w-7xl mx-auto px-1 sm:px-6 lg:px-8 py-1 md:py-0">
         <div class="flex justify-between items-center h-20">
             <!-- Logo -->
