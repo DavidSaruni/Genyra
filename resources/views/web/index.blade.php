@@ -88,6 +88,170 @@
   </section>
 
 
+  <!-- Strategic Business Units -->
+  <section id="business-lines" class="what-we-do">
+      <div class="wwd-banner" style="background-image: url('{{ asset('images/what_we_do.jpeg') }}');">
+          <div class="wwd-banner__copy">
+              <p class="wwd-banner__eyebrow">Our expertise</p>
+              <h2 class="wwd-banner__title">What We Do</h2>
+              <p class="wwd-banner__lead">Solutions that strengthen healthcare delivery, improve outcomes, and keep systems performing.</p>
+              <a href="#contact" class="btn-primary">Get in touch</a>
+          </div>
+      </div>
+
+      <div class="what-we-do__bleed">
+          <div class="what-we-do__grid">
+              <a href="{{ route('department.medical-supplies') }}" class="wwd-card">
+                  <div class="wwd-card__body">
+                      <div class="wwd-card__copy">
+                          <span class="wwd-card__tag">Department 1</span>
+                          <h3 class="wwd-card__title">Medical <br> Supplies</h3>
+                      </div>
+                      <span class="wwd-card__cta">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                  </div>
+                  <img class="wwd-card__image"
+                       src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400"
+                       alt="Scientist working in a laboratory">
+              </a>
+
+              <a href="{{ route('department.medical-technologies') }}" class="wwd-card">
+                  <div class="wwd-card__body">
+                      <div class="wwd-card__copy">
+                          <span class="wwd-card__tag">Department 2</span>
+                          <h3 class="wwd-card__title">Medical <br> Technologies</h3>
+                      </div>
+                      <span class="wwd-card__cta">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                  </div>
+                  <img class="wwd-card__image"
+                       src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400"
+                       alt="Medical technology in clinical use">
+              </a>
+
+              <a href="{{ route('department.strategic-planning') }}" class="wwd-card">
+                  <div class="wwd-card__body">
+                      <div class="wwd-card__copy">
+                          <span class="wwd-card__tag">Department 3</span>
+                          <h3 class="wwd-card__title">Strategic Planning & QMS</h3>
+                      </div>
+                      <span class="wwd-card__cta">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                  </div>
+                  <img class="wwd-card__image"
+                       src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400"
+                       alt="Health systems planning discussion">
+              </a>
+
+              <a href="{{ route('department.metrology') }}" class="wwd-card">
+                  <div class="wwd-card__body">
+                      <div class="wwd-card__copy">
+                          <span class="wwd-card__tag">Department 4</span>
+                          <h3 class="wwd-card__title">Metrology, Calibration & Preventive Maintenance</h3>
+                      </div>
+                      <span class="wwd-card__cta">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                  </div>
+                  <img class="wwd-card__image"
+                       src="https://images.pexels.com/photos/3938022/pexels-photo-3938022.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400"
+                       alt="Precision laboratory instruments">
+              </a>
+          </div>
+      </div>
+  </section>
+
+
+
+<!-- About Section -->
+<section id="about" class="py-12 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-stretch">
+            <div class="flex flex-col">
+                <div class="category-label mb-4">ABOUT GENYRA GROUP</div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-700">
+                    Leading Healthcare Solutions Provider in East Africa
+                </h2>
+                <p class="text-md text-gray-600 mb-6 leading-relaxed">
+                    genyra Group is East Africa's leading provider of healthcare solutions, specializing in laboratory equipment & consumables, general medical supplies, healthcare strategic planning & systems development and calibration services. Established with a vision to transform healthcare delivery through innovation and excellence, we serve hospitals, research institutions, diagnostic laboratories, pharmaceutical companies, and healthcare facilities across the region.
+                </p>
+                <p class="text-md text-gray-600 mb-8 leading-relaxed">
+                    With a proven track record of successful implementations and a commitment to quality, genyra Group has positioned itself as a trusted partner for healthcare organizations seeking to enhance patient care, improve operational efficiency, and achieve regulatory compliance.
+                </p>
+                <a href="#contact" class="btn-primary w-64 text-center">
+                    Get in Touch
+                </a>
+            </div>
+            
+            <!-- Image with Overlay -->
+<div class="relative h-full min-h-[500px] rounded-2xl overflow-hidden group shadow-2xl">
+
+    {{-- Photo --}}
+    <img src="{{ asset('images/about.jpeg') }}"
+         alt="Laboratory"
+         class="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105"
+         onerror="this.src='https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=1200'">
+
+    {{-- Layered gradient: subtle top-to-transparent, heavy navy at bottom --}}
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0f1f45] via-[#0f1f45]/60 to-transparent"></div>
+
+    {{-- Divider line that slides up on hover --}}
+    <div class="absolute bottom-[200px] left-8 right-8 h-px bg-white/20
+                translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100
+                transition-all duration-500"></div>
+
+    {{-- Overlay content --}}
+    <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
+
+        {{-- Vision --}}
+        <div class="mb-5 translate-y-2 opacity-90 group-hover:translate-y-0 group-hover:opacity-100
+                    transition-all duration-500 delay-75">
+            <div class="flex items-start gap-4">
+                <div class="w-10 h-10 flex-shrink-0 rounded-xl bg-cyan-500/20 border border-cyan-400/30
+                            flex items-center justify-center backdrop-blur-sm mt-0.5">
+                    <svg class="w-5 h-5 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7
+                                 -1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-cyan-300 text-[10px] font-bold tracking-[0.15em] uppercase mb-1">Our Vision</p>
+                    <p class="text-white font-semibold text-base leading-snug">
+                        To be the most trusted and preferred partner for healthcare solutions in Africa
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        {{-- Thin separator --}}
+        <div class="border-t border-white/10 mb-5"></div>
+
+        {{-- Mission --}}
+        <div class="translate-y-2 opacity-90 group-hover:translate-y-0 group-hover:opacity-100
+                    transition-all duration-500 delay-150">
+            <div class="flex items-start gap-4">
+                <div class="w-10 h-10 flex-shrink-0 rounded-xl bg-cyan-500/20 border border-cyan-400/30
+                            flex items-center justify-center backdrop-blur-sm mt-0.5">
+                    <svg class="w-5 h-5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-cyan-300 text-[10px] font-bold tracking-[0.15em] uppercase mb-1">Our Mission</p>
+                    <p class="text-white/90 font-medium text-sm leading-relaxed">
+                        Delivering innovative, reliable, and world-class healthcare solutions that improve
+                        patient outcomes and enhance operational efficiency
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+        </div>
+    </div>
+</section>
+
+
   <!-- News & Updates and Notice Board -->
 <section id="news-notices" class="relative pt-6 md:pt-8 pb-14 md:pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden"
          style="background: linear-gradient(165deg, #f0f7fc 0%, #eef1f8 45%, #f7f9fc 100%);">
@@ -268,1262 +432,6 @@
                 </svg>
             </a>
         </div>
-    </div>
-</section>
-
-
-<section id="solutions" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-    <div class="max-w-7xl mx-auto">
-        <!-- Optional Header -->
-        <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-3xl md:text-4xl font-bold text-gray-700 mb-4 text-left md:text-center">Our Solutions</h2>
-            <p class="text-md text-gray-600 text-left md:text-center">We design, deploy & maintain solutions that shape healthcare in East Africa and beyond</p>
-        </div>
-
-        <!-- Icon Grid - 3 on mobile, 5 on tablet, 10 on desktop -->
-        <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-10 gap-4">
-            
-            <!-- Card 1: Laboratory Equipment -->
-            <div class="group">
-                <div class="bg-gray-100 hover:bg-blue-50 transition-all duration-300 p-6 flex flex-col items-center justify-center h-32 cursor-pointer">
-                    <svg class="w-10 h-10 text-gray-700 group-hover:text-blue-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.9" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
-                    </svg>
-                </div>
-                <div class="text-center mt-3">
-                    <p class="font-semibold text-xs text-gray-700 leading-tight">Laboratory Equipment</p>
-                    <p class="text-[10px] text-gray-500 mt-1">BioSciences</p>
-                </div>
-            </div>
-
-            <!-- Card 2: Medical Devices -->
-            <div class="group">
-                <div class="bg-gray-100 hover:bg-blue-50 transition-all duration-300 p-6 flex flex-col items-center justify-center h-32 cursor-pointer">
-                    <svg class="w-10 h-10 text-gray-700 group-hover:text-blue-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.9" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                    </svg>
-                </div>
-                <div class="text-center mt-3">
-                    <p class="font-semibold text-xs text-gray-700 leading-tight">Medical Devices</p>
-                    <p class="text-[10px] text-gray-500 mt-1">MedTech</p>
-                </div>
-            </div>
-
-            <!-- Card 3: Digital Health -->
-            <div class="group">
-                <div class="bg-gray-100 hover:bg-blue-50 transition-all duration-300 p-6 flex flex-col items-center justify-center h-32 cursor-pointer">
-                    <svg class="w-10 h-10 text-gray-700 group-hover:text-blue-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.9" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                    </svg>
-                </div>
-                <div class="text-center mt-3">
-                    <p class="font-semibold text-xs text-gray-700 leading-tight">Digital Health</p>
-                    <p class="text-[10px] text-gray-500 mt-1">HIS/LIS</p>
-                </div>
-            </div>
-
-            <!-- Card 4: Calibration -->
-            <div class="group">
-                <div class="bg-gray-100 hover:bg-blue-50 transition-all duration-300 p-6 flex flex-col items-center justify-center h-32 cursor-pointer">
-                    <svg class="w-10 h-10 text-gray-700 group-hover:text-blue-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.9" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                    </svg>
-                </div>
-                <div class="text-center mt-3">
-                    <p class="font-semibold text-xs text-gray-700 leading-tight">Calibration</p>
-                    <p class="text-[10px] text-gray-500 mt-1">ISO 17025</p>
-                </div>
-            </div>
-
-            <!-- Card 5: Quality -->
-            <div class="group">
-                <div class="bg-gray-100 hover:bg-blue-50 transition-all duration-300 p-6 flex flex-col items-center justify-center h-32 cursor-pointer">
-                    <svg class="w-10 h-10 text-gray-700 group-hover:text-blue-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.9" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                </div>
-                <div class="text-center mt-3">
-                    <p class="font-semibold text-xs text-gray-700 leading-tight">Quality</p>
-                    <p class="text-[10px] text-gray-500 mt-1">ISO Compliance</p>
-                </div>
-            </div>
-
-            <!-- Card 6: Hospital -->
-            <div class="group">
-                <div class="bg-gray-100 hover:bg-blue-50 transition-all duration-300 p-6 flex flex-col items-center justify-center h-32 cursor-pointer">
-                    <svg class="w-10 h-10 text-gray-700 group-hover:text-blue-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.9" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-                    </svg>
-                </div>
-                <div class="text-center mt-3">
-                    <p class="font-semibold text-xs text-gray-700 leading-tight">Hospital Setup</p>
-                    <p class="text-[10px] text-gray-500 mt-1">Complete</p>
-                </div>
-            </div>
-
-            <!-- Card 7: Research -->
-            <div class="group">
-                <div class="bg-gray-100 hover:bg-blue-50 transition-all duration-300 p-6 flex flex-col items-center justify-center h-32 cursor-pointer">
-                    <svg class="w-10 h-10 text-gray-700 group-hover:text-blue-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.9" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                    </svg>
-                </div>
-                <div class="text-center mt-3">
-                    <p class="font-semibold text-xs text-gray-700 leading-tight">Research</p>
-                    <p class="text-[10px] text-gray-500 mt-1">Support</p>
-                </div>
-            </div>
-
-            <!-- Card 8: Training -->
-            <div class="group">
-                <div class="bg-gray-100 hover:bg-blue-50 transition-all duration-300 p-6 flex flex-col items-center justify-center h-32 cursor-pointer">
-                    <svg class="w-10 h-10 text-gray-700 group-hover:text-blue-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.9" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
-                    </svg>
-                </div>
-                <div class="text-center mt-3">
-                    <p class="font-semibold text-xs text-gray-700 leading-tight">Training</p>
-                    <p class="text-[10px] text-gray-500 mt-1">500+ Annually</p>
-                </div>
-            </div>
-
-            <!-- Card 9: Maintenance -->
-            <div class="group">
-                <div class="bg-gray-100 hover:bg-blue-50 transition-all duration-300 p-6 flex flex-col items-center justify-center h-32 cursor-pointer">
-                    <svg class="w-10 h-10 text-gray-700 group-hover:text-blue-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.9" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.9" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                    </svg>
-                </div>
-                <div class="text-center mt-3">
-                    <p class="font-semibold text-xs text-gray-700 leading-tight">Maintenance</p>
-                    <p class="text-[10px] text-gray-500 mt-1">24/7 Service</p>
-                </div>
-            </div>
-
-            <!-- Card 10: Pharma -->
-            <div class="group">
-                <div class="bg-gray-100 hover:bg-blue-50 transition-all duration-300 p-6 flex flex-col items-center justify-center h-32 cursor-pointer">
-                    <svg class="w-10 h-10 text-gray-700 group-hover:text-blue-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.9" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
-                    </svg>
-                </div>
-                <div class="text-center mt-3">
-                    <p class="font-semibold text-xs text-gray-700 leading-tight">Pharmaceutical</p>
-                    <p class="text-[10px] text-gray-500 mt-1">QC Labs</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- Featured Highlights Section  -->
-<section class="py-12 px-4 sm:px-6 lg:px-8 bg-white">
-    <div class="max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-3 gap-2" id="highlightGrid">
-            
-            <div class="highlight-card group relative h-[300px] md:h-[350px] lg:h-[500px] overflow-hidden cursor-pointer transition-all duration-500">
-                <img src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-                     alt="BioSciences Laboratory" 
-                     class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                
-                <!-- Dark Overlay -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/30"></div>
-                
-                <!-- Content at Bottom -->
-                <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-8 text-white transition-all duration-500">
-                    <div class="mb-3 md:mb-4">
-                        <span class="text-[10px] md:text-xs font-semibold uppercase tracking-widest text-blue-400">INNOVATION</span>
-                    </div>
-                    <h3 class="text-lg md:text-xl lg:text-2xl font-bold leading-tight mb-3 md:mb-4 transition-all duration-500">
-                        Advanced Laboratory Solutions for East Africa
-                    </h3>
-                    <div class="w-12 h-1 bg-blue-500 transition-all duration-500 group-hover:w-24"></div>
-                </div>
-            </div>
-
-            <div class="highlight-card group relative h-[300px] md:h-[350px] lg:h-[500px] overflow-hidden cursor-pointer transition-all duration-500">
-                <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-                     alt="Digital Health Technology" 
-                     class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                
-                <!-- Light Overlay -->
-                <div class="absolute inset-0 bg-gradient-to-b from-white/10 via-white/30 to-white/90 transition-all duration-500 group-hover:from-white/5 group-hover:via-white/20 group-hover:to-white/85"></div>
-                
-                <!-- Content at TOP -->
-                <div class="absolute inset-0 flex flex-col justify-start p-6 md:p-8 transition-all duration-500">
-                    <div class="mb-3 md:mb-4">
-                        <span class="text-[10px] md:text-xs font-semibold uppercase tracking-widest text-blue-600">HIGHLIGHTS</span>
-                    </div>
-                    <h3 class="text-lg md:text-xl lg:text-2xl font-bold leading-tight mb-3 md:mb-4 text-gray-700 transition-all duration-500">
-                        Integrated Health Information Systems
-                    </h3>
-                    <div class="w-12 h-1 bg-blue-600 transition-all duration-500 group-hover:w-24"></div>
-                </div>
-            </div>
-
-            <div class="highlight-card group relative h-[300px] md:h-[350px] lg:h-[500px] overflow-hidden cursor-pointer transition-all duration-500">
-                <img src="https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-                     alt="Healthcare Excellence" 
-                     class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                
-                <!-- Dark Overlay -->
-                <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/50 to-transparent transition-all duration-500 group-hover:from-blue-900/80 group-hover:via-blue-900/40"></div>
-                
-                <!-- Content at Bottom -->
-                <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-8 text-white transition-all duration-500">
-                    <div class="mb-3 md:mb-4">
-                        <span class="text-[10px] md:text-xs font-semibold uppercase tracking-widest text-blue-300">ABOUT GENYRA</span>
-                    </div>
-                    <h3 class="text-lg md:text-xl lg:text-2xl font-bold leading-tight mb-3 md:mb-4 transition-all duration-500">
-                        Transforming Healthcare Across East Africa
-                    </h3>
-                    <div class="w-12 h-1 bg-blue-400 transition-all duration-500 group-hover:w-24"></div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-
-<!-- About Section -->
-<section id="about" class="py-12 px-4 sm:px-6 lg:px-8 bg-white">
-    <div class="max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-16 items-stretch">
-            <div class="flex flex-col">
-                <div class="category-label mb-4">ABOUT GENYRA GROUP</div>
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-700">
-                    Leading Healthcare Solutions Provider in East Africa
-                </h2>
-                <p class="text-md text-gray-600 mb-6 leading-relaxed">
-                    genyra Group is East Africa's leading provider of healthcare solutions, specializing in laboratory equipment & consumables, general medical supplies, healthcare strategic planning & systems development and calibration services. Established with a vision to transform healthcare delivery through innovation and excellence, we serve hospitals, research institutions, diagnostic laboratories, pharmaceutical companies, and healthcare facilities across the region.
-                </p>
-                <p class="text-md text-gray-600 mb-8 leading-relaxed">
-                    With a proven track record of successful implementations and a commitment to quality, genyra Group has positioned itself as a trusted partner for healthcare organizations seeking to enhance patient care, improve operational efficiency, and achieve regulatory compliance.
-                </p>
-                <a href="#contact" class="btn-primary w-64 text-center">
-                    Get in Touch
-                </a>
-            </div>
-            
-            <!-- Image with Overlay -->
-<div class="relative h-full min-h-[500px] rounded-2xl overflow-hidden group shadow-2xl">
-
-    {{-- Photo --}}
-    <img src="{{ asset('images/about.jpeg') }}"
-         alt="Laboratory"
-         class="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105"
-         onerror="this.src='https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=1200'">
-
-    {{-- Layered gradient: subtle top-to-transparent, heavy navy at bottom --}}
-    <div class="absolute inset-0 bg-gradient-to-t from-[#0f1f45] via-[#0f1f45]/60 to-transparent"></div>
-
-    {{-- Top-right badges --}}
-    <div class="absolute top-5 right-5 flex flex-col gap-2 items-end">
-        <span class="bg-cyan-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg tracking-wide">
-            ISO Certified
-        </span>
-    </div>
-
-    {{-- Divider line that slides up on hover --}}
-    <div class="absolute bottom-[200px] left-8 right-8 h-px bg-white/20
-                translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100
-                transition-all duration-500"></div>
-
-    {{-- Overlay content --}}
-    <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
-
-        {{-- Vision --}}
-        <div class="mb-5 translate-y-2 opacity-90 group-hover:translate-y-0 group-hover:opacity-100
-                    transition-all duration-500 delay-75">
-            <div class="flex items-start gap-4">
-                <div class="w-10 h-10 flex-shrink-0 rounded-xl bg-cyan-500/20 border border-cyan-400/30
-                            flex items-center justify-center backdrop-blur-sm mt-0.5">
-                    <svg class="w-5 h-5 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7
-                                 -1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
-                    </svg>
-                </div>
-                <div>
-                    <p class="text-cyan-300 text-[10px] font-bold tracking-[0.15em] uppercase mb-1">Our Vision</p>
-                    <p class="text-white font-semibold text-base leading-snug">
-                        To be the most trusted and preferred partner for healthcare solutions in Africa
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        {{-- Thin separator --}}
-        <div class="border-t border-white/10 mb-5"></div>
-
-        {{-- Mission --}}
-        <div class="translate-y-2 opacity-90 group-hover:translate-y-0 group-hover:opacity-100
-                    transition-all duration-500 delay-150">
-            <div class="flex items-start gap-4">
-                <div class="w-10 h-10 flex-shrink-0 rounded-xl bg-cyan-500/20 border border-cyan-400/30
-                            flex items-center justify-center backdrop-blur-sm mt-0.5">
-                    <svg class="w-5 h-5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                    </svg>
-                </div>
-                <div>
-                    <p class="text-cyan-300 text-[10px] font-bold tracking-[0.15em] uppercase mb-1">Our Mission</p>
-                    <p class="text-white/90 font-medium text-sm leading-relaxed">
-                        Delivering innovative, reliable, and world-class healthcare solutions that improve
-                        patient outcomes and enhance operational efficiency
-                    </p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-        </div>
-    </div>
-</section>
-
-
-  <!-- Strategic Business Units -->
-  <section id="business-lines" class="py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
-      <div class="max-w-7xl mx-auto">
-          <div class="mb-10 md:mb-12 max-w-3xl">
-              <div class="category-label mb-3" style="color: #1BA0D8;">OUR EXPERTISE</div>
-              <h2 class="text-3xl md:text-4xl font-bold text-[#22235a] leading-tight mb-4">Strategic Business Units</h2>
-              <p class="text-gray-600 leading-relaxed">
-                  At genyra, we bring together a diverse portfolio of businesses to create forward-looking solutions that strengthen healthcare delivery, improve outcomes, and drive sustainable system performance.
-              </p>
-          </div>
-
-          <div class="overflow-hidden border border-[#22235a]/10 bg-[#f7f9fc]"
-               data-sbu-showcase>
-              <div class="grid lg:grid-cols-12">
-
-                  {{-- Mobile: current unit + icon to open picker --}}
-                  <div class="lg:hidden flex items-center justify-between gap-3 px-4 py-3 bg-white border-b border-[#22235a]/10">
-                      <div class="min-w-0">
-                          <p class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#1BA0D8]">Browse units</p>
-                          <p class="text-sm font-bold text-[#22235a] truncate" data-sbu-mobile-label>BioSciences</p>
-                      </div>
-                      <button type="button"
-                              data-sbu-menu-toggle
-                              class="flex-shrink-0 inline-flex items-center justify-center w-11 h-11 rounded-md bg-[#22235a] text-white"
-                              aria-expanded="false"
-                              aria-controls="sbu-unit-list"
-                              aria-label="Show business units">
-                          <svg data-sbu-icon-open class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                          </svg>
-                          <svg data-sbu-icon-close class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                          </svg>
-                      </button>
-                  </div>
-
-                  {{-- Unit picker: collapsed on mobile, always visible on lg --}}
-                  <div id="sbu-unit-list"
-                       data-sbu-menu
-                       class="hidden lg:block lg:col-span-4 border-b lg:border-b-0 lg:border-r border-[#22235a]/10 bg-white lg:min-h-full"
-                       role="tablist" aria-label="Strategic business units">
-                      <button type="button" role="tab" aria-selected="true" data-sbu-tab="biosciences" data-sbu-label="BioSciences"
-                              class="sbu-tab w-full text-left px-6 py-5 border-b border-[#22235a]/10 transition-colors duration-200 bg-[#22235a] text-white">
-                          <span class="block text-[11px] font-semibold tracking-[0.2em] uppercase opacity-70 mb-1">01</span>
-                          <span class="block text-base md:text-lg font-bold leading-snug">BioSciences</span>
-                          <span class="block text-xs mt-1 opacity-80">Life Sciences Research &amp; Applied Biology</span>
-                      </button>
-                      <button type="button" role="tab" aria-selected="false" data-sbu-tab="medtech" data-sbu-label="MedTech Solutions"
-                              class="sbu-tab w-full text-left px-6 py-5 border-b border-[#22235a]/10 transition-colors duration-200 text-[#22235a] hover:bg-[#22235a]/5">
-                          <span class="block text-[11px] font-semibold tracking-[0.2em] uppercase text-[#1BA0D8] mb-1">02</span>
-                          <span class="block text-base md:text-lg font-bold leading-snug">MedTech Solutions</span>
-                          <span class="block text-xs mt-1 text-gray-500">Medical Technology &amp; Device Solutions</span>
-                      </button>
-                      <button type="button" role="tab" aria-selected="false" data-sbu-tab="health" data-sbu-label="Health Systems Planning &amp; Advisory"
-                              class="sbu-tab w-full text-left px-6 py-5 border-b border-[#22235a]/10 transition-colors duration-200 text-[#22235a] hover:bg-[#22235a]/5">
-                          <span class="block text-[11px] font-semibold tracking-[0.2em] uppercase text-[#1BA0D8] mb-1">03</span>
-                          <span class="block text-base md:text-lg font-bold leading-snug">Health Systems Planning &amp; Advisory</span>
-                          <span class="block text-xs mt-1 text-gray-500">Strategic Planning · Quality Management Systems</span>
-                      </button>
-                      <button type="button" role="tab" aria-selected="false" data-sbu-tab="metrology" data-sbu-label="Metrology &amp; Calibration Services"
-                              class="sbu-tab w-full text-left px-6 py-5 transition-colors duration-200 text-[#22235a] hover:bg-[#22235a]/5">
-                          <span class="block text-[11px] font-semibold tracking-[0.2em] uppercase text-[#1BA0D8] mb-1">04</span>
-                          <span class="block text-base md:text-lg font-bold leading-snug">Metrology &amp; Calibration Services</span>
-                          <span class="block text-xs mt-1 text-gray-500">Precision Measurement &amp; Instrument Assurance</span>
-                      </button>
-                  </div>
-
-                  {{-- Detail panel --}}
-                  <div class="lg:col-span-8 relative">
-
-                      <div data-sbu-panel="biosciences" class="sbu-panel">
-                          <div class="relative h-72 md:h-96 overflow-hidden">
-                              <img src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                                   alt="BioSciences" class="absolute inset-0 w-full h-full object-cover">
-                              <div class="absolute inset-0 bg-gradient-to-t from-[#22235a]/40 to-transparent"></div>
-                          </div>
-                          <div class="p-6 md:p-8">
-                              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-[#1BA0D8] mb-2">Life Sciences Research &amp; Applied Biology</p>
-                              <h3 class="text-2xl font-bold text-[#22235a] mb-4">BioSciences</h3>
-                              <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-6">
-                                  Genyra BioSciences is where discovery meets application. We bridge the gap between fundamental biological research and real-world health outcomes advancing knowledge in molecular biology, microbiology, genomics, and applied life sciences. Our work underpins the science behind better diagnostics, safer products, and more effective therapies.
-                              </p>
-                              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-[#22235a] mb-3">Core Capabilities</p>
-                              <ul class="space-y-2.5 mb-6">
-                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Applied biological research &amp; laboratory sciences</li>
-                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Microbiology, genomics &amp; molecular diagnostics support</li>
-                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Biosafety &amp; biosecurity advisory</li>
-                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Research design, data analysis &amp; scientific consulting</li>
-                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Capacity building &amp; scientific training programmes</li>
-                              </ul>
-                              <p class="text-sm font-semibold text-[#22235a]">Science that translates into health impact</p>
-                          </div>
-                      </div>
-
-                      <div data-sbu-panel="medtech" class="sbu-panel hidden">
-                          <div class="relative h-72 md:h-96 overflow-hidden">
-                              <img src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                                   alt="MedTech" class="absolute inset-0 w-full h-full object-cover">
-                              <div class="absolute inset-0 bg-gradient-to-t from-[#22235a]/40 to-transparent"></div>
-                          </div>
-                          <div class="p-6 md:p-8">
-                              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-[#1BA0D8] mb-2">Medical Technology &amp; Device Solutions</p>
-                              <h3 class="text-2xl font-bold text-[#22235a] mb-4">MedTech Solutions</h3>
-                              <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-6">
-                                  Genyra MedTech delivers end-to-end medical technology solutions from device selection and procurement to deployment, user training, and post-market support. We work with hospitals, clinics, and health programmes to ensure the right technology is in the right hands, functioning optimally, and aligned with clinical and operational needs.
-                              </p>
-                              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-[#22235a] mb-3">Core Capabilities</p>
-                              <ul class="space-y-2.5 mb-6">
-                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Medical device supply, sourcing &amp; procurement advisory</li>
-                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Technology needs assessment &amp; health technology evaluation</li>
-                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Biomedical equipment management &amp; lifecycle support</li>
-                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Installation, commissioning &amp; user training</li>
-                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Maintenance programme design &amp; technical support</li>
-                              </ul>
-                              <p class="text-sm font-semibold text-[#22235a]">Technology that serves people, not just processes</p>
-                          </div>
-                      </div>
-
-                      <div data-sbu-panel="health" class="sbu-panel hidden">
-                          <div class="relative h-72 md:h-96 overflow-hidden">
-                              <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                                   alt="Health Systems" class="absolute inset-0 w-full h-full object-cover">
-                              <div class="absolute inset-0 bg-gradient-to-t from-[#22235a]/40 to-transparent"></div>
-                          </div>
-                          <div class="p-6 md:p-8">
-                              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-[#1BA0D8] mb-2">Strategic Planning · Quality Management Systems</p>
-                              <h3 class="text-2xl font-bold text-[#22235a] mb-4">Health Systems Planning &amp; Advisory</h3>
-                              <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-6">
-                                  Genyra Health Systems Planning &amp; Advisory empowers health institutions and organisations with the strategic intelligence and quality frameworks they need to perform at their best. We partner with governments, health authorities, NGOs, and private sector actors to design robust health systems, develop strategic plans, and embed quality cultures that endure.
-                              </p>
-                              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-[#22235a] mb-3">Core Capabilities</p>
-                              <ul class="space-y-2.5 mb-6">
-                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Health sector strategic planning &amp; institutional strengthening</li>
-                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Quality Management Systems (QMS) design &amp; implementation</li>
-                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> ISO standards alignment &amp; accreditation readiness</li>
-                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Health policy advisory &amp; programme design</li>
-                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Monitoring, evaluation &amp; performance improvement frameworks</li>
-                              </ul>
-                              <p class="text-sm font-semibold text-[#22235a]">Governance that makes health systems work</p>
-                          </div>
-                      </div>
-
-                      <div data-sbu-panel="metrology" class="sbu-panel hidden">
-                          <div class="relative h-72 md:h-96 overflow-hidden">
-                              <img src="https://images.pexels.com/photos/3938022/pexels-photo-3938022.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                                   alt="Metrology" class="absolute inset-0 w-full h-full object-cover">
-                              <div class="absolute inset-0 bg-gradient-to-t from-[#22235a]/40 to-transparent"></div>
-                          </div>
-                          <div class="p-6 md:p-8">
-                              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-[#1BA0D8] mb-2">Precision Measurement &amp; Instrument Assurance</p>
-                              <h3 class="text-2xl font-bold text-[#22235a] mb-4">Metrology &amp; Calibration Services</h3>
-                              <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-6">
-                                  Genyra Metrology &amp; Calibration Services is built on a fundamental truth: accurate measurement is the foundation of safe and effective healthcare. We provide professional calibration, verification, and measurement assurance services for medical, laboratory, and industrial instruments ensuring that every reading is trustworthy, traceable, and compliant.
-                              </p>
-                              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-[#22235a] mb-3">Core Capabilities</p>
-                              <ul class="space-y-2.5 mb-6">
-                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Calibration of medical, laboratory &amp; industrial instruments</li>
-                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Measurement traceability to national &amp; international standards</li>
-                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Preventive maintenance &amp; performance verification</li>
-                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Calibration programme management &amp; scheduling</li>
-                                  <li class="text-sm text-gray-700 flex gap-2"><span class="text-[#1BA0D8] mt-0.5">▸</span> Compliance with ISO 17025 &amp; regulatory requirements</li>
-                              </ul>
-                              <p class="text-sm font-semibold text-[#22235a]">Precision you can trust every time</p>
-                          </div>
-                      </div>
-
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-
-  <script>
-  (function () {
-      var root = document.querySelector('[data-sbu-showcase]');
-      if (!root) return;
-
-      var tabs = root.querySelectorAll('[data-sbu-tab]');
-      var panels = root.querySelectorAll('[data-sbu-panel]');
-      var menu = root.querySelector('[data-sbu-menu]');
-      var toggle = root.querySelector('[data-sbu-menu-toggle]');
-      var mobileLabel = root.querySelector('[data-sbu-mobile-label]');
-      var iconOpen = root.querySelector('[data-sbu-icon-open]');
-      var iconClose = root.querySelector('[data-sbu-icon-close]');
-      var active = 'bg-[#22235a] text-white';
-      var idle = 'text-[#22235a] hover:bg-[#22235a]/5';
-
-      function isDesktop() {
-          return window.matchMedia('(min-width: 1024px)').matches;
-      }
-
-      function setMenuOpen(open) {
-          if (!menu || !toggle) return;
-          if (isDesktop()) {
-              menu.classList.remove('hidden');
-              menu.classList.add('lg:block');
-              toggle.setAttribute('aria-expanded', 'false');
-              if (iconOpen) iconOpen.classList.remove('hidden');
-              if (iconClose) iconClose.classList.add('hidden');
-              return;
-          }
-          menu.classList.toggle('hidden', !open);
-          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-          if (iconOpen) iconOpen.classList.toggle('hidden', open);
-          if (iconClose) iconClose.classList.toggle('hidden', !open);
-      }
-
-      function setActive(id) {
-          tabs.forEach(function (tab) {
-              var on = tab.getAttribute('data-sbu-tab') === id;
-              tab.setAttribute('aria-selected', on ? 'true' : 'false');
-              tab.className = 'sbu-tab w-full text-left px-6 py-5 border-b border-[#22235a]/10 transition-colors duration-200 ' + (on ? active : idle);
-              if (tab.getAttribute('data-sbu-tab') === 'metrology') {
-                  tab.classList.remove('border-b');
-              }
-              var num = tab.querySelector('span:first-child');
-              var sub = tab.querySelector('span:last-child');
-              if (num) num.className = 'block text-[11px] font-semibold tracking-[0.2em] uppercase mb-1 ' + (on ? 'opacity-70' : 'text-[#1BA0D8]');
-              if (sub) sub.className = 'block text-xs mt-1 ' + (on ? 'opacity-80' : 'text-gray-500');
-              if (on && mobileLabel) {
-                  mobileLabel.textContent = tab.getAttribute('data-sbu-label') || tab.querySelector('.font-bold')?.textContent || '';
-              }
-          });
-          panels.forEach(function (panel) {
-              var on = panel.getAttribute('data-sbu-panel') === id;
-              panel.classList.toggle('hidden', !on);
-          });
-          setMenuOpen(false);
-      }
-
-      if (toggle) {
-          toggle.addEventListener('click', function () {
-              var open = toggle.getAttribute('aria-expanded') === 'true';
-              setMenuOpen(!open);
-          });
-      }
-
-      tabs.forEach(function (tab) {
-          tab.addEventListener('click', function () {
-              setActive(tab.getAttribute('data-sbu-tab'));
-          });
-      });
-
-      window.addEventListener('resize', function () {
-          if (isDesktop()) setMenuOpen(false);
-      });
-  })();
-  </script>
-
-<!-- Projects Section -->
-<section id="projects" class="py-12 px-4 sm:px-6 lg:px-8 bg-white">
-    <div class="max-w-7xl mx-auto">
-        <!-- Header -->
-        <div class="mb-16">
-            <div class="category-label mb-4" style="font-size: 11px; letter-spacing: 2.5px;">OUR IMPACT</div>
-            <h2 class="text-3xl md:text-5xl font-bold mb-6 text-gray-700">Recent Key Projects & Achievements</h2>
-        </div>
-        
-        <!-- Projects Grid -->
-        <div class="grid md:grid-cols-3 gap-2 mb-12" id="projectsGrid">
-            
-            <!-- Row 1: Large Card (2 columns) -->
-            <div class="project-card md:col-span-2 relative h-[300px] md:h-[400px] lg:h-[450px] overflow-hidden cursor-pointer group">
-                <img src="https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-                     alt="Laboratory Setup" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent group-hover:from-black/70 group-hover:via-black/30 transition-all duration-500"></div>
-                
-                <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-8 text-white">
-                    <div class="mb-3 md:mb-4">
-                        <span class="text-[10px] md:text-xs font-semibold uppercase tracking-widest text-blue-400" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">INNOVATION</span>
-                    </div>
-                    <h3 class="text-lg md:text-xl lg:text-2xl font-bold leading-tight mb-3 md:mb-4" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
-                        Complete Laboratory Setup for Level 5 County Hospital
-                    </h3>
-                    <div class="w-12 h-1 bg-blue-500 group-hover:w-24 transition-all duration-500" style="box-shadow: 0 2px 4px rgba(0,0,0,0.5);"></div>
-                </div>
-            </div>
-            
-            <!-- Row 1: Small Card (1 column) -->
-            <div class="project-card relative h-[300px] md:h-[400px] lg:h-[450px] overflow-hidden cursor-pointer group">
-                <img src="https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                     alt="Healthcare Quality" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                
-                <div class="absolute inset-0 bg-gradient-to-t from-blue-900/60 via-blue-900/10 to-transparent group-hover:from-blue-900/80 group-hover:via-blue-900/40 transition-all duration-500"></div>
-                
-                <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-8 text-white">
-                    <div class="mb-3 md:mb-4">
-                        <span class="text-[10px] md:text-xs font-semibold uppercase tracking-widest text-blue-300" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">SUSTAINABILITY</span>
-                    </div>
-                    <h3 class="text-xl md:text-xl lg:text-2xl font-bold leading-tight mb-3 md:mb-4" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
-                        ISO 13485:2016 Certification Achievement
-                    </h3>
-                    <div class="w-12 h-1 bg-blue-400 group-hover:w-24 transition-all duration-500" style="box-shadow: 0 2px 4px rgba(0,0,0,0.5);"></div>
-                </div>
-            </div>
-            
-            <!-- Row 2: Card 1 -->
-            <div class="project-card relative h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden cursor-pointer group">
-                <img src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                     alt="Hospital Technology" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent group-hover:from-black/70 group-hover:via-black/30 transition-all duration-500"></div>
-                
-                <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-8 text-white">
-                    <div class="mb-3 md:mb-4">
-                        <span class="text-[10px] md:text-xs font-semibold uppercase tracking-widest text-blue-400" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">TECHNOLOGY</span>
-                    </div>
-                    <h3 class="text-md md:text-xl lg:text-2xl font-bold leading-tight mb-3 md:mb-4" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
-                        Integrated HIS/LIS for 300-bed Hospital Network
-                    </h3>
-                    <div class="w-12 h-1 bg-blue-500 group-hover:w-24 transition-all duration-500" style="box-shadow: 0 2px 4px rgba(0,0,0,0.5);"></div>
-                </div>
-            </div>
-            
-            <!-- Row 2: Card 2 -->
-            <div class="project-card relative h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden cursor-pointer group">
-                <img src="https://images.pexels.com/photos/4225880/pexels-photo-4225880.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                     alt="Medical Equipment Calibration" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent group-hover:from-black/70 group-hover:via-black/30 transition-all duration-500"></div>
-                
-                <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-8 text-white">
-                    <div class="mb-3 md:mb-4">
-                        <span class="text-[10px] md:text-xs font-semibold uppercase tracking-widest text-blue-400" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">EXCELLENCE</span>
-                    </div>
-                    <h3 class="text-md md:text-xl lg:text-2xl font-bold leading-tight mb-3 md:mb-4" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
-                        Calibration Lab Accreditation ISO/IEC 17025:2017
-                    </h3>
-                    <div class="w-12 h-1 bg-blue-500 group-hover:w-24 transition-all duration-500" style="box-shadow: 0 2px 4px rgba(0,0,0,0.5);"></div>
-                </div>
-            </div>
-            
-            <!-- Row 2: Card 3 -->
-            <div class="project-card relative h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden cursor-pointer group">
-                <img src="https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                     alt="ICU Medical Equipment" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent group-hover:from-black/70 group-hover:via-black/30 transition-all duration-500"></div>
-                
-                <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-8 text-white">
-                    <div class="mb-3 md:mb-4">
-                        <span class="text-[10px] md:text-xs font-semibold uppercase tracking-widest text-blue-400" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">IMPACT</span>
-                    </div>
-                    <h3 class="text-md md:text-xl lg:text-2xl font-bold leading-tight mb-3 md:mb-4" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
-                        COVID-19 Response: ICU Equipment Package
-                    </h3>
-                    <div class="w-12 h-1 bg-blue-500 group-hover:w-24 transition-all duration-500" style="box-shadow: 0 2px 4px rgba(0,0,0,0.5);"></div>
-                </div>
-            </div>
-
-        </div>
-        
-        <!-- Discover More Button -->
-    <section class="pb-4 px-4 sm:px-6 lg:px-8 bg-white">
-        <div class="max-w-7xl mx-auto">
-            
-            <div class="border-t border-gray-200 mb-16"></div>
-
-            <div class="flex flex-col items-center justify-center">
-
-                <!-- Load More Button -->
-                <a 
-                href="{{ route('projects') }}"
-                    id="loadMoreBtn"
-                    class="group relative flex items-center gap-4 border border-gray-900 px-6 md:px-12 py-5 text-sm font-semibold uppercase tracking-widest text-gray-900 hover:text-white transition-all duration-300 overflow-hidden">
-                    <span class="absolute inset-0 bg-gray-900 -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0"></span>
-                    <span class="relative z-10">Load More Projects</span>
-                    <svg class="relative z-10 w-5 h-5 transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                    </svg>
-</a>
-
-                <!-- Loading Spinner -->
-                <div id="loadingSpinner" class="hidden mt-8 flex-col items-center gap-4">
-                    <div class="w-8 h-8 border-2 border-gray-200 border-t-[#1BA0D8] rounded-full animate-spin"></div>
-                    <p class="text-sm text-gray-400 uppercase tracking-widest">Loading projects...</p>
-                </div>
-
-                <!-- All Loaded Message -->
-                <div id="allLoadedMsg" class="hidden mt-8 flex-col items-center gap-3">
-                    <div class="w-12 h-12 bg-[#1BA0D8] rounded-full flex items-center justify-center">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                    </div>
-                    <p class="text-sm text-gray-500 uppercase tracking-widest">All Projects Loaded</p>
-                </div>
-
-                <!-- View All Link -->
-                <a href="{{ route('projects') }}" class="mt-8 flex items-center gap-2 text-sm text-gray-400 hover:text-[#1BA0D8] transition-colors duration-300 uppercase tracking-widest">
-                    <span>View All Projects</span>
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                    </svg>
-                </a>
-
-            </div>
-        </div>
-    </section>
-    </div>
-</section>
-
-
-<!-- Why Choose Us Section -->
-<section id="why-choose-us" class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
-    <div class="max-w-7xl mx-auto">
-        
-        <!-- Section Header -->
-        <div class="max-w-3xl mb-[15px]">
-            <div class="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-4">WHY CHOOSE US</div>
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-700 mb-6 leading-tight">
-                Your Trusted Healthcare Partner
-            </h2>
-            <p class="text-md md:text-xl text-gray-600 leading-relaxed">
-                Delivering excellence through innovation, quality, and commitment across East Africa
-            </p>
-        </div>
-
-        <!-- Feature 1 - Comprehensive Portfolio -->
-        <div class="grid md:grid-cols-2 gap-16 items-center mb-32">
-            <div>
-                <div class="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-6">COMPREHENSIVE PORTFOLIO</div>
-                <h3 class="text-3xl font-bold text-gray-700 mb-6 leading-tight">
-                    One-stop shop for all healthcare needs
-                </h3>
-                <p class="text-lg text-gray-600 leading-relaxed mb-8">
-                    One-stop shop for all healthcare needs across four specialized business divisions
-                </p>
-                <ul class="space-y-4">
-                    <li class="flex items-start">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                        <span class="text-gray-700">BioSciences & Laboratory Solutions</span>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                        <span class="text-gray-700">MedTech Solutions & Equipment</span>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                        <span class="text-gray-700">Health Systems Planning & Advisory</span>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                        <span class="text-gray-700">Metrology & Calibration Services</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="relative h-64 md:h-[500px] rounded overflow-hidden">
-                <img src="{{ asset('images/2.jpeg') }}" 
-                     alt="Comprehensive Healthcare Solutions" 
-                     class="w-full h-full object-cover">
-            </div>
-        </div>
-
-        <!-- Feature 2 - Technical Expertise -->
-        <div class="grid md:grid-cols-2 gap-16 items-center mb-32">
-            <div class="relative h-96 md:h-[600px] rounded overflow-hidden order-2 md:order-1">
-                <img src="{{ asset('images/1.jpeg') }}" 
-                     alt="Expert Team" 
-                     class="w-full h-full object-cover">
-            </div>
-            <div class="order-1 md:order-2">
-                <div class="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-6">TECHNICAL EXPERTISE</div>
-                <h3 class="text-3xl md:text-4xl font-bold text-gray-700 mb-6 leading-tight">
-                    50+ qualified professionals
-                </h3>
-                <p class="text-lg text-gray-600 leading-relaxed mb-8">
-                    50+ qualified engineers, scientists, and IT professionals with extensive industry experience
-                </p>
-                <div class="grid grid-cols-2 gap-8">
-                    <div>
-                        <div class="text-4xl font-bold text-blue-600 mb-2">50+</div>
-                        <div class="text-sm text-gray-600 uppercase tracking-wider">Skilled Professionals</div>
-                    </div>
-                    <div>
-                        <div class="text-4xl font-bold text-blue-600 mb-2">8+</div>
-                        <div class="text-sm text-gray-600 uppercase tracking-wider">Years Experience</div>
-                    </div>
-                    <div>
-                        <div class="text-4xl font-bold text-blue-600 mb-2">6</div>
-                        <div class="text-sm text-gray-600 uppercase tracking-wider">Countries Served</div>
-                    </div>
-                    <div>
-                        <div class="text-4xl font-bold text-blue-600 mb-2">50+</div>
-                        <div class="text-sm text-gray-600 uppercase tracking-wider">Healthcare Facilities</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Feature 3 - Quality Assurance -->
-        <div class="grid md:grid-cols-2 gap-16 items-center mb-32">
-            <div>
-                <div class="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-6">QUALITY ASSURANCE</div>
-                <h3 class="text-3xl md:text-4xl font-bold text-gray-700 mb-6 leading-tight">
-                    ISO-certified processes ensuring excellence
-                </h3>
-                <p class="text-lg text-gray-600 leading-relaxed mb-8">
-                    ISO-certified processes ensuring consistent quality in products and services
-                </p>
-                <div class="space-y-6">
-                    <div class="flex items-start">
-                        <div class="w-12 h-12 bg-blue-100 rounded flex items-center justify-center flex-shrink-0 mr-4">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-gray-700 mb-1">ISO 9001:2015</h4>
-                            <p class="text-gray-600">Quality Management System certification</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="w-12 h-12 bg-blue-100 rounded flex items-center justify-center flex-shrink-0 mr-4">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-gray-700 mb-1">ISO/IEC 17025:2017</h4>
-                            <p class="text-gray-600">Calibration laboratory accreditation</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="w-12 h-12 bg-blue-100 rounded flex items-center justify-center flex-shrink-0 mr-4">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-gray-700 mb-1">ISO 13485:2016</h4>
-                            <p class="text-gray-600">Medical devices quality management</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="relative h-64 md:h-[500px] rounded overflow-hidden">
-                <img src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-                     alt="Quality Assurance" 
-                     class="w-full h-full object-cover">
-            </div>
-        </div>
-
-        <!-- Feature 4 - Rapid Response & Support -->
-        <div class="grid md:grid-cols-2 gap-16 items-center mb-32">
-            <div class="relative h-64 md:h-[500px] rounded overflow-hidden order-2 md:order-1">
-                <img src="https://images.pexels.com/photos/6129043/pexels-photo-6129043.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-                     alt="24/7 Support" 
-                     class="w-full h-full object-cover">
-            </div>
-            <div class="order-1 md:order-2">
-                <div class="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-6">RAPID RESPONSE</div>
-                <h3 class="text-3xl md:text-4xl font-bold text-gray-700 mb-6 leading-tight">
-                    24/7 technical support hotline
-                </h3>
-                <p class="text-lg text-gray-600 leading-relaxed mb-8">
-                    24/7 technical support hotline with guaranteed response times for critical equipment
-                </p>
-                <div class="mb-8">
-                    <div class="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-4">NATIONWIDE COVERAGE</div>
-                    <p class="text-lg text-gray-600 leading-relaxed">
-                        Comprehensive user training, technical documentation, and ongoing application support
-                    </p>
-                </div>
-                <div class="space-y-3">
-                    <div class="flex items-center">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4"></div>
-                        <span class="text-gray-700">Guaranteed response times</span>
-                    </div>
-                    <div class="flex items-center">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4"></div>
-                        <span class="text-gray-700">Comprehensive user training</span>
-                    </div>
-                    <div class="flex items-center">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4"></div>
-                        <span class="text-gray-700">Technical documentation</span>
-                    </div>
-                    <div class="flex items-center">
-                        <div class="w-2 h-2 bg-blue-600 rounded-full mr-4"></div>
-                        <span class="text-gray-700">Ongoing application support</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Feature 5 - Accredited Calibration -->
-        <div class="grid md:grid-cols-2 gap-16 items-center mb-32">
-            <div>
-                <div class="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-6">ACCREDITED CALIBRATION</div>
-                <h3 class="text-3xl md:text-4xl font-bold text-gray-700 mb-6 leading-tight">
-                    ISO/IEC 17025 accredited laboratory
-                </h3>
-                <p class="text-lg text-gray-600 leading-relaxed mb-8">
-                    ISO/IEC 17025 accredited calibration laboratory with NIST/UKAS traceable standards
-                </p>
-                <div class="bg-white p-8 rounded-lg border border-gray-200">
-                    <div class="grid grid-cols-2 gap-6">
-                        <div>
-                            <div class="text-sm text-gray-500 mb-2">Calibration Standards</div>
-                            <div class="font-bold text-gray-700">NIST/UKAS Traceable</div>
-                        </div>
-                        <div>
-                            <div class="text-sm text-gray-500 mb-2">Accreditation</div>
-                            <div class="font-bold text-gray-700">ISO/IEC 17025:2017</div>
-                        </div>
-                        <div>
-                            <div class="text-sm text-gray-500 mb-2">Calibration Types</div>
-                            <div class="font-bold text-gray-700">Temperature, Pressure, Volume, Mass</div>
-                        </div>
-                        <div>
-                            <div class="text-sm text-gray-500 mb-2">Service Coverage</div>
-                            <div class="font-bold text-gray-700">East Africa Wide</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="relative h-64 md:h-[500px] rounded overflow-hidden">
-                <img src="https://images.pexels.com/photos/4225880/pexels-photo-4225880.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-                     alt="Calibration Services" 
-                     class="w-full h-full object-cover">
-            </div>
-        </div>
-
-        <!-- More Reasons -->
-        <div class="mb-32">
-            <h3 class="text-3xl font-bold text-gray-700 mb-12">More Reasons to Choose Genyra</h3>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                <!-- Card 1: Value for Money -->
-                <div class="bg-white overflow-hidden group cursor-pointer flex flex-col hover:shadow-md transition-shadow duration-300">
-                    <div class="relative h-64 md:h-48 overflow-hidden">
-                        <img src="https://images.pexels.com/photos/6129237/pexels-photo-6129237.jpeg?auto=compress&cs=tinysrgb&w=600" 
-                             alt="Value for Money" 
-                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h4 class="text-xl font-bold text-gray-700 mb-3">Value for Money</h4>
-                        <p class="text-sm text-gray-600 leading-relaxed flex-grow">
-                            Competitive pricing with flexible payment terms, leasing options, and trade-in programs
-                        </p>
-                        <div class="flex justify-end mt-4">
-                            <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2: Long-term Partnership -->
-                <div class="bg-white overflow-hidden group cursor-pointer flex flex-col hover:shadow-md transition-shadow duration-300">
-                    <div class="relative h-64 md:h-48 overflow-hidden">
-                        <img src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=600" 
-                             alt="Long-term Partnership" 
-                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h4 class="text-xl font-bold text-gray-700 mb-3">Long-term Partnership</h4>
-                        <p class="text-sm text-gray-600 leading-relaxed flex-grow">
-                            Average client retention rate >85% with many 10+ year relationships
-                        </p>
-                        <div class="flex justify-end mt-4">
-                            <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3: Innovation Focus -->
-                <div class="bg-white overflow-hidden group cursor-pointer flex flex-col hover:shadow-md transition-shadow duration-300">
-                    <div class="relative h-64 md:h-48 overflow-hidden">
-                        <img src="https://images.pexels.com/photos/7089401/pexels-photo-7089401.jpeg?auto=compress&cs=tinysrgb&w=600" 
-                             alt="Innovation Focus" 
-                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h4 class="text-xl font-bold text-gray-700 mb-3">Innovation Focus</h4>
-                        <p class="text-sm text-gray-600 leading-relaxed flex-grow">
-                            Continuous investment in new technologies and solutions to meet evolving needs
-                        </p>
-                        <div class="flex justify-end mt-4">
-                            <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 4: Local Presence, Global Standards -->
-                <div class="bg-white overflow-hidden group cursor-pointer flex flex-col hover:shadow-md transition-shadow duration-300">
-                    <div class="relative h-64 md:h-48 overflow-hidden">
-                        <img src="https://images.pexels.com/photos/8460157/pexels-photo-8460157.jpeg?auto=compress&cs=tinysrgb&w=600" 
-                             alt="Local Presence Global Standards" 
-                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h4 class="text-xl font-bold text-gray-700 mb-3">Local Presence, Global Standards</h4>
-                        <p class="text-sm text-gray-600 leading-relaxed flex-grow">
-                            International quality standards with understanding of local context and requirements
-                        </p>
-                        <div class="flex justify-end mt-4">
-                            <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-</section>
-
-
-<!-- Our Clients Section -->
-<section id="our-clients" class="py-12 px-4 sm:px-6 lg:px-8 bg-white">
-    <div class="max-w-7xl mx-auto">
-
-        <!-- Section Header -->
-        <div class="max-w-3xl mb-20">
-            <div class="text-xs font-semibold uppercase tracking-widest text-[#1BA0D8] mb-4">OUR CLIENTS</div>
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-700 mb-6 leading-tight">
-                Trusted by Leading Healthcare Institutions
-            </h2>
-            <p class="text-xl text-gray-600 leading-relaxed">
-                Partnering with hospitals, research institutions, laboratories & healthcare facilities across East Africa and Beyond
-            </p>
-        </div>
-
-        <!-- Zeiss Style Image Cards Grid -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-2 mb-20" id="clientsGrid">
-
-            <!-- Card 1: National & County Hospitals - Hospital building/ward -->
-            <div class="client-card relative h-[420px] overflow-hidden group cursor-pointer">
-                <img src="https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=800"
-                     alt="National and County Referral Hospitals"
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/10 group-hover:from-black/90 group-hover:via-black/60 transition-all duration-500"></div>
-                <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
-                    <span class="text-xs font-semibold uppercase tracking-widest text-[#1BA0D8] mb-2" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">CLIENT CATEGORY</span>
-                    <h3 class="text-2xl font-bold leading-tight mb-3" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
-                        National & County Referral Hospitals
-                    </h3>
-                    <p class="text-sm text-gray-200 leading-relaxed" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">
-                        Leading referral hospitals and county healthcare facilities across Kenya and East Africa
-                    </p>
-                </div>
-            </div>
-
-            <!-- Card 2: Private Healthcare - Modern private hospital interior -->
-            <div class="client-card relative h-[420px] overflow-hidden group cursor-pointer">
-                <img src="https://images.pexels.com/photos/668300/pexels-photo-668300.jpeg?auto=compress&cs=tinysrgb&w=800"
-                     alt="Private Healthcare Facilities"
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/10 group-hover:from-black/90 group-hover:via-black/60 transition-all duration-500"></div>
-                <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
-                    <span class="text-xs font-semibold uppercase tracking-widest text-[#1BA0D8] mb-2" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">CLIENT CATEGORY</span>
-                    <h3 class="text-2xl font-bold leading-tight mb-3" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
-                        Private Healthcare Facilities
-                    </h3>
-                    <div class="space-y-1">
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
-                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Aga Khan University Hospital</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
-                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Nairobi Hospital</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
-                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">MP Shah Hospital</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
-                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Gertrude's Children's Hospital</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3: Research Institutions - Scientists in research lab -->
-            <div class="client-card relative h-[420px] overflow-hidden group cursor-pointer">
-                <img src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=800"
-                     alt="Research Institutions"
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/10 group-hover:from-black/90 group-hover:via-black/60 transition-all duration-500"></div>
-                <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
-                    <span class="text-xs font-semibold uppercase tracking-widest text-[#1BA0D8] mb-2" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">CLIENT CATEGORY</span>
-                    <h3 class="text-2xl font-bold leading-tight mb-3" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
-                        Research Institutions
-                    </h3>
-                    <div class="space-y-1">
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
-                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">KEMRI</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
-                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">ILRI</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
-                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">ICRAF</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
-                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Universities & Research Centers</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 4: Diagnostic Laboratories - Lab technician with diagnostic equipment -->
-            <div class="client-card relative h-[420px] overflow-hidden group cursor-pointer">
-                <img src="https://images.pexels.com/photos/954585/pexels-photo-954585.jpeg?auto=compress&cs=tinysrgb&w=800"
-                     alt="Diagnostic Laboratories"
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/10 group-hover:from-black/90 group-hover:via-black/60 transition-all duration-500"></div>
-                <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
-                    <span class="text-xs font-semibold uppercase tracking-widest text-[#1BA0D8] mb-2" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">CLIENT CATEGORY</span>
-                    <h3 class="text-2xl font-bold leading-tight mb-3" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
-                        Diagnostic Laboratories
-                    </h3>
-                    <div class="space-y-1">
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
-                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Lancet Kenya</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
-                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Pathologists Lancet</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
-                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Independent Laboratories</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
-                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Hospital Laboratories</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 5: Pharmaceutical Companies - Pharma manufacturing/pills -->
-            <div class="client-card relative h-[420px] overflow-hidden group cursor-pointer">
-                <img src="https://images.pexels.com/photos/360622/pexels-photo-360622.jpeg?auto=compress&cs=tinysrgb&w=800"
-                     alt="Pharmaceutical Companies"
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/10 group-hover:from-black/90 group-hover:via-black/60 transition-all duration-500"></div>
-                <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
-                    <span class="text-xs font-semibold uppercase tracking-widest text-[#1BA0D8] mb-2" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">CLIENT CATEGORY</span>
-                    <h3 class="text-2xl font-bold leading-tight mb-3" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
-                        Pharmaceutical Companies
-                    </h3>
-                    <div class="space-y-1">
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
-                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Manufacturing Facilities</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
-                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Quality Control Laboratories</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
-                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">R&D Centers</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 6: Blood & Academic - Blood donation/transfusion -->
-            <div class="client-card relative h-[420px] overflow-hidden group cursor-pointer">
-                <img src="https://images.pexels.com/photos/6823561/pexels-photo-6823561.jpeg?auto=compress&cs=tinysrgb&w=800"
-                     alt="Blood Transfusion and Academic Institutions"
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/10 group-hover:from-black/90 group-hover:via-black/60 transition-all duration-500"></div>
-                <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
-                    <span class="text-xs font-semibold uppercase tracking-widest text-[#1BA0D8] mb-2" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">CLIENT CATEGORY</span>
-                    <h3 class="text-2xl font-bold leading-tight mb-3" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
-                        Blood & Academic Institutions
-                    </h3>
-                    <div class="space-y-1">
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
-                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Kenya National Blood Transfusion Service</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
-                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Regional Blood Banks</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
-                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">University Teaching Hospitals</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 bg-[#1BA0D8] rounded-full mr-2 flex-shrink-0"></div>
-                            <span class="text-sm text-gray-200" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Medical Schools & Training Institutions</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Bottom Stats Bar -->
-        <div class="grid md:grid-cols-4 gap-0 border border-gray-200">
-            <div class="p-10 text-center border-r border-gray-200">
-                <div class="text-5xl font-bold text-[#2B3E7E] mb-2">50+</div>
-                <div class="text-sm uppercase tracking-widest text-gray-500">Healthcare Facilities</div>
-            </div>
-            <div class="p-10 text-center border-r border-gray-200">
-                <div class="text-5xl font-bold text-[#1BA0D8] mb-2">6</div>
-                <div class="text-sm uppercase tracking-widest text-gray-500">Countries Served</div>
-            </div>
-            <div class="p-10 text-center border-r border-gray-200">
-                <div class="text-5xl font-bold text-[#2B3E7E] mb-2">85%+</div>
-                <div class="text-sm uppercase tracking-widest text-gray-500">Client Retention Rate</div>
-            </div>
-            <div class="p-10 text-center">
-                <div class="text-5xl font-bold text-[#1BA0D8] mb-2">9+</div>
-                <div class="text-sm uppercase tracking-widest text-gray-500">Year Relationships</div>
-            </div>
-        </div>
-
     </div>
 </section>
 
@@ -1724,6 +632,26 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<section class="px-4 sm:px-6 lg:px-8 py-10 bg-white" aria-labelledby="partner-logos-title">
+    <div class="max-w-7xl mx-auto">
+        <div class="max-w-3xl mb-6 md:mb-8">
+            <h2 id="partner-logos-title" class="text-3xl md:text-4xl font-bold text-[#22235a] mb-4">Our Partners</h2>
+            <p class="text-md md:text-xl text-gray-600 leading-relaxed">Organisations we work with to deliver healthcare solutions across East Africa.</p>
+        </div>
+    </div>
+    <div class="partner-logos">
+        @foreach ($partnerLogos as $logo)
+            @php
+                $logoName = preg_replace('/\.(jpe?g|png|svg|webp)$/i', '', pathinfo($logo, PATHINFO_FILENAME));
+                $logoName = trim(preg_replace('/\s*logo\s*$/i', '', $logoName));
+            @endphp
+            <div class="partner-logos__item">
+                <img src="{{ asset($logo) }}" alt="{{ $logoName }}">
+            </div>
+        @endforeach
     </div>
 </section>
 

@@ -26,6 +26,12 @@ Route::get('/vission-mission',[WebController::class,'vissionMission'])->name( 'v
 Route::get('/values',[WebController::class,'values'])->name( 'values');
 // strategic direction
 Route::get('/strategic-direction',[WebController::class,'strategicDirection'])->name( 'strategic-direction');
+// what we do
+Route::get('/what-we-do',[WebController::class,'whatWeDo'])->name( 'what-we-do');
+Route::get('/what-we-do/medical-supplies',[WebController::class,'medicalSupplies'])->name('department.medical-supplies');
+Route::get('/what-we-do/medical-technologies',[WebController::class,'medicalTechnologies'])->name('department.medical-technologies');
+Route::get('/what-we-do/strategic-planning',[WebController::class,'strategicPlanning'])->name('department.strategic-planning');
+Route::get('/what-we-do/metrology',[WebController::class,'metrology'])->name('department.metrology');
 // directors
 Route::get('/directors',[WebController::class,'directors'])->name( 'directors');
 // management

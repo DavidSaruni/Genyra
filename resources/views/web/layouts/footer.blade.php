@@ -13,10 +13,10 @@
                 <div>
                     <h4 class="font-bold mb-4">Solutions</h4>
                     <ul class="space-y-2 text-gray-600 font-light text-sm mb-8">
-                        <li><a href="#" class="hover:text-gray-700 transition">BioSciences</a></li>
-                        <li><a href="#" class="hover:text-gray-700 transition">MedTech Solutions</a></li>
-                        <li><a href="#" class="hover:text-gray-700 transition">Health Systems Advisory</a></li>
-                        <li><a href="#" class="hover:text-gray-700 transition">Metrology & Calibration</a></li>
+                        <li><a href="{{ route('department.medical-supplies') }}" class="hover:text-gray-700 transition">Medical Supplies</a></li>
+                        <li><a href="{{ route('department.medical-technologies') }}" class="hover:text-gray-700 transition">Medical Technologies</a></li>
+                        <li><a href="{{ route('department.strategic-planning') }}" class="hover:text-gray-700 transition">Strategic Planning & QMS</a></li>
+                        <li><a href="{{ route('department.metrology') }}" class="hover:text-gray-700 transition">Metrology, Calibration & Preventive Maintenance</a></li>
                     </ul>
                 </div>
                 

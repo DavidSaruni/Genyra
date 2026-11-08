@@ -90,7 +90,7 @@ $functionalManagersForModal = array_map(function ($manager) {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  body, * { font-family: 'Inter', sans-serif !important; }
+  body, * { font-family: 'Montserrat', sans-serif !important; }
   .team-card { transition: all 0.25s ease; }
   .team-card:hover { box-shadow: 0 8px 28px rgba(30,58,110,0.13); transform: translateY(-2px); }
   #director-modal { transition: opacity 0.2s ease; }

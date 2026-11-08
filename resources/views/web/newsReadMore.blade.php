@@ -36,7 +36,7 @@
 
 <style>
   .ql-editor {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.125rem;
     line-height: 1.7;
     color: #374151;

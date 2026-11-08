@@ -86,9 +86,102 @@ $boardMembersForModal = array_map(function ($director) {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  body, * { font-family: 'Inter', sans-serif !important; }
-  .team-card { transition: all 0.25s ease; }
-  .team-card:hover { box-shadow: 0 8px 28px rgba(30,58,110,0.13); transform: translateY(-2px); }
+  body, * { font-family: 'Montserrat', sans-serif !important; }
+  .director-flip { perspective: 1400px; }
+  .director-flip__inner {
+    position: relative;
+    aspect-ratio: 3 / 3.7;
+    transform-style: preserve-3d;
+    transition: transform 0.7s cubic-bezier(.4, .2, .2, 1);
+  }
+  .director-flip:hover .director-flip__inner,
+  .director-flip:focus-within .director-flip__inner,
+  .director-flip.is-flipped .director-flip__inner { transform: rotateY(180deg); }
+  .director-flip__face {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background: #1c1c1c;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  .director-flip__back { transform: rotateY(180deg); }
+  .director-flip__face img,
+  .director-flip__placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 18%;
+  }
+  .director-flip__placeholder { background: #d5dde6; }
+  .director-flip__caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 4.5rem 1.15rem 1.15rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.42) 48%, rgba(0,0,0,0) 100%);
+    color: #fff;
+  }
+  .director-flip__caption h3,
+  .director-flip__shade h3 {
+    margin: 0 0 0.3rem;
+    color: #fff;
+    font-size: 0.98rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.25;
+    text-transform: uppercase;
+  }
+  .director-flip__caption p,
+  .director-flip__role {
+    margin: 0;
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 400;
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .director-flip__shade {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1.6rem 1.25rem 1.25rem;
+    background: rgba(18, 18, 18, 0.72);
+    color: #fff;
+  }
+  .director-flip__bio {
+    margin: 0.95rem 0 1.1rem;
+    color: #fff;
+    font-size: 0.86rem;
+    line-height: 1.45;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .director-flip__more {
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .director-flip__more:hover { color: #b3e8f5; }
+  @media (prefers-reduced-motion: reduce) {
+    .director-flip__inner { transition: none; }
+  }
   #director-modal { transition: opacity 0.2s ease; }
   #director-modal.director-modal-open { opacity: 1; pointer-events: auto; }
   #director-modal.director-modal-open #director-modal-panel { transform: scale(1); opacity: 1; }
@@ -124,43 +217,9 @@ $boardMembersForModal = array_map(function ($director) {
     <div class="bg-[#1e3a6e] rounded-t px-6 py-4 border-b-4 border-[#00a0c6]">
       <h2 class="text-white font-bold text-[0.95rem] tracking-wider uppercase m-0">Executive Board</h2>
     </div>
-    <div class="flex flex-wrap justify-center gap-5 pt-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-6">
       @foreach($executiveDirectors as $director)
-      <div class="w-full max-w-sm">
-        <div class="team-card bg-white rounded shadow-[0_1px_6px_rgba(0,0,0,0.08)] overflow-hidden flex flex-col h-full">
-          <div class="h-1.5 bg-[#1e3a6e]"></div>
-          <div class="h-75 bg-[#f1f5f9] flex-shrink-0 overflow-hidden">
-            @if($director['photo'])
-              <img src="{{ asset($director['photo']) }}" alt="{{ $director['name'] }}" class="w-full h-full object-cover object-top">
-            @else
-            <div class="w-full h-full flex flex-col items-center justify-center gap-2">
-              <div class="w-16 h-16 rounded-full bg-[#dde6f0] flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#1e3a6e" viewBox="0 0 16 16">
-                  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-                </svg>
-              </div>
-              <p class="text-[0.65rem] text-[#94a3b8] tracking-wide">Photo</p>
-            </div>
-            @endif
-          </div>
-          <div class="px-5 py-5 flex flex-col flex-1">
-            <p class="text-[0.62rem] font-semibold tracking-widest uppercase text-[#00a0c6] mb-1">{{ $director['role'] }}</p>
-            <h3 class="font-bold text-[#1e3a6e] text-[0.95rem] leading-tight">{{ $director['name'] }}</h3>
-            @if($director['credentials'])
-              <p class="text-[0.72rem] text-[#6b7280] italic mt-1 mb-4 line-clamp-2">{{ $director['credentials'] }}</p>
-            @else
-              <div class="mb-4"></div>
-            @endif
-            <button type="button"
-              class="view-director-profile mt-auto inline-flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-[#1e3a6e] text-white text-[0.8rem] font-semibold rounded hover:bg-[#00a0c6] transition-colors"
-              data-director-group="executive"
-              data-director-index="{{ $loop->index }}">
-              View Profile
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
-            </button>
-          </div>
-        </div>
-      </div>
+        @include('web.partials.director-flip-card', ['director' => $director, 'group' => 'executive', 'index' => $loop->index])
       @endforeach
     </div>
   </div>
@@ -170,41 +229,9 @@ $boardMembersForModal = array_map(function ($director) {
     <div class="bg-[#1e3a6e] rounded-t px-6 py-4 border-b-4 border-[#00a0c6]">
       <h2 class="text-white font-bold text-[0.95rem] tracking-wider uppercase m-0">Board Members</h2>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 pt-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-6">
       @foreach($boardMembers as $director)
-      <div class="team-card bg-white rounded shadow-[0_1px_6px_rgba(0,0,0,0.08)] overflow-hidden flex flex-col">
-        <div class="h-1.5 bg-[#1e3a6e]"></div>
-        <div class="h-75 bg-[#f1f5f9] flex-shrink-0 overflow-hidden">
-          @if($director['photo'])
-            <img src="{{ asset($director['photo']) }}" alt="{{ $director['name'] }}" class="w-full h-full object-cover object-top">
-          @else
-          <div class="w-full h-full flex flex-col items-center justify-center gap-2">
-            <div class="w-16 h-75 min-h-75 rounded-full bg-[#dde6f0] flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#1e3a6e" viewBox="0 0 16 16">
-                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-              </svg>
-            </div>
-            <p class="text-[0.65rem] text-[#94a3b8] tracking-wide">Photo</p>
-          </div>
-          @endif
-        </div>
-        <div class="px-5 py-5 flex flex-col flex-1">
-          <p class="text-[0.62rem] font-semibold tracking-widest uppercase text-[#00a0c6] mb-1">{{ $director['role'] }}</p>
-          <h3 class="font-bold text-[#1e3a6e] text-[0.95rem] leading-tight">{{ $director['name'] }}</h3>
-          @if($director['credentials'])
-            <p class="text-[0.72rem] text-[#6b7280] italic mt-1 mb-4 line-clamp-2">{{ $director['credentials'] }}</p>
-          @else
-            <div class="mb-4"></div>
-          @endif
-          <button type="button"
-            class="view-director-profile mt-auto inline-flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-[#1e3a6e] text-white text-[0.8rem] font-semibold rounded hover:bg-[#00a0c6] transition-colors"
-            data-director-group="board"
-            data-director-index="{{ $loop->index }}">
-            View Profile
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
-          </button>
-        </div>
-      </div>
+        @include('web.partials.director-flip-card', ['director' => $director, 'group' => 'board', 'index' => $loop->index])
       @endforeach
     </div>
   </div>
@@ -313,12 +340,22 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   document.querySelectorAll('.view-director-profile').forEach(function (btn) {
-    btn.addEventListener('click', function () {
+    btn.addEventListener('click', function (event) {
+      event.stopPropagation();
       const group = btn.getAttribute('data-director-group');
       const index = parseInt(btn.getAttribute('data-director-index'), 10);
       const profiles = profileGroups[group];
       if (profiles && profiles[index] !== undefined) {
         openDirectorModal(profiles[index]);
+      }
+    });
+  });
+
+  document.querySelectorAll('.director-flip').forEach(function (card) {
+    card.addEventListener('click', function (event) {
+      if (event.target.closest('.view-director-profile')) return;
+      if (window.matchMedia('(hover: none)').matches) {
+        card.classList.toggle('is-flipped');
       }
     });
   });
