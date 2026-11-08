@@ -537,8 +537,9 @@
     }
 
     .partner-logos {
-        display: grid;
-        grid-template-columns: repeat(5, minmax(0, 1fr));
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: stretch;
         gap: 18px;
         max-width: 80rem;
         margin: 0 auto;
@@ -549,8 +550,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex: 1 1 0;
+        min-width: 0;
         height: 108px;
-        padding: 18px 22px;
+        padding: 18px 16px;
         background: #fff;
         border-radius: 10px;
         box-shadow: 0 1px 4px rgba(16, 24, 40, 0.06);
@@ -564,9 +567,19 @@
         object-fit: contain;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 700px) {
         .partner-logos {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+            padding: 0 0.75rem;
+        }
+
+        .partner-logos__item {
+            height: 72px;
+            padding: 10px 8px;
+        }
+
+        .partner-logos__item img {
+            max-height: 40px;
         }
     }
 
