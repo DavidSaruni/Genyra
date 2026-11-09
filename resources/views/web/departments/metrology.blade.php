@@ -49,14 +49,6 @@
         </div>
         <img src="https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Engineer servicing technical equipment">
       </li>
-      <li>
-        <span>03</span>
-        <div>
-          <h3>The record</h3>
-          <p>The chain from the instrument back to the reference used to check it.</p>
-        </div>
-        <img src="https://images.pexels.com/photos/5726794/pexels-photo-5726794.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Precision measurement equipment">
-      </li>
     </ol>
   </div>
 </section>

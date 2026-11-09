@@ -118,6 +118,9 @@
     @yield('body')
 </div>
 
+@unless(request()->routeIs('home'))
+    @include('web.partials.partners')
+@endunless
 
 <!-- footer -->
 @include('web.layouts.footer')

@@ -1,7 +1,7 @@
 @extends('web.app')
 
 @section('title', 'Strategic Planning & QMS - genyra Group')
-@section('meta_description', 'Strategic planning and quality management systems from genyra Group, including the planning workflow and the NQCL Strategic Plan.')
+@section('meta_description', 'Strategic planning and quality management systems from genyra Group, including the planning workflow.')
 
 @push('structured_data')
 @include('web.partials.seo.breadcrumb-structured-data', [
@@ -43,14 +43,6 @@
       </li>
       <li>
         <span>02</span>
-        <div>
-          <h3>NQCL Strategic Plan</h3>
-          <p>Written on that same workflow.</p>
-        </div>
-        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600" alt="A team reviewing a plan">
-      </li>
-      <li>
-        <span>03</span>
         <div>
           <h3>Quality management systems</h3>
           <p>Processes, responsibilities, and records.</p>

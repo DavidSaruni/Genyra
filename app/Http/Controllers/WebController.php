@@ -33,13 +33,7 @@ class WebController extends Controller
             ->get()
             ->values();
 
-        $partnerLogos = collect(glob(public_path('images/logo/*')) ?: [])
-            ->filter(fn ($path) => preg_match('/\.(png|jpe?g|svg|webp)$/i', $path))
-            ->sort()
-            ->map(fn ($path) => 'images/logo/' . basename($path))
-            ->values();
-
-        return view('web.index', compact('poster', 'latestNews', 'latestFour', 'partnerLogos'));
+        return view('web.index', compact('poster', 'latestNews', 'latestFour'));
     }
 
     public function contactPost(Request $request)
