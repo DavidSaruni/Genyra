@@ -39,7 +39,7 @@
           <h3>Calibration</h3>
           <p>Checked against a known reference, adjusted if it has drifted, and recorded.</p>
         </div>
-        <img src="https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Technician working with laboratory instruments">
+        <img src="{{ asset('images/calibration.jpeg') }}" alt="Calibration instruments">
       </li>
       <li>
         <span>02</span>

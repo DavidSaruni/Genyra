@@ -11,7 +11,7 @@
             @endif
             <div class="director-flip__caption">
                 <h3>{{ $director['name'] }}</h3>
-                <p>{{ $subtitle }}</p>
+                <p>{{ $director['role'] }}</p>
             </div>
         </div>
         <div class="director-flip__face director-flip__back">
