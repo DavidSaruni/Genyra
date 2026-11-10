@@ -284,7 +284,7 @@
                     </h3>
 
                     <p class="mt-4 text-sm leading-7 text-slate-600 sm:text-base">
-                        Genyra Group is East Africa's leading provider of healthcare solutions, specializing in
+                        genyra Group is East Africa's leading provider of healthcare solutions, specializing in
                         laboratory equipment &amp; consumables, general medical supplies, healthcare strategic
                         planning &amp; systems development, and calibration services. We serve hospitals, research
                         institutions, diagnostic laboratories, pharmaceutical companies and healthcare facilities
@@ -292,7 +292,7 @@
                     </p>
                     <p class="mt-4 text-sm leading-7 text-slate-600 sm:text-base">
                         With a proven track record of successful implementations and a commitment to quality,
-                        Genyra Group is a trusted partner for organizations seeking to enhance patient care,
+                        genyra Group is a trusted partner for organizations seeking to enhance patient care,
                         improve operational efficiency and achieve regulatory compliance.
                     </p>
 
