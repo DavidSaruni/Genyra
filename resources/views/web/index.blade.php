@@ -240,7 +240,7 @@
                 <span>
                     <span class="block text-base font-semibold text-[#1b2a6b]">Our Story</span>
                     <span class="mt-1 block text-sm leading-relaxed text-slate-600">
-                        How Genyra Group grew into a trusted healthcare partner across East Africa.
+                        How genyra Group grew into a trusted healthcare partner across East Africa.
                     </span>
                 </span>
             </a>
