@@ -2072,3 +2072,152 @@
         .split__copy, .meter__row div { padding: 32px 24px 40px; }
     }
 
+    /* Genyra Institute course strip — spacing matches About / Contact (py-12) */
+    .institute-band {
+        background: #fff;
+        padding: 3rem 1rem;
+    }
+    .institute-band__wrap {
+        max-width: 80rem;
+        margin: 0 auto;
+    }
+    .institute-band__kicker {
+        margin: 0 0 1rem;
+        color: #00a0c6;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+    }
+    .institute-band h2 {
+        margin: 0 0 1.5rem;
+        max-width: 16em;
+        color: #2b3340;
+        font-size: clamp(1.875rem, 3vw, 2.25rem);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+    }
+    .institute-carousel__viewport {
+        overflow: hidden;
+        width: 100%;
+    }
+    .institute-carousel__track {
+        display: flex;
+        width: 100%;
+        gap: 18px;
+        transition: transform 0.55s cubic-bezier(.4, .2, .2, 1);
+        will-change: transform;
+    }
+    .institute-card {
+        position: relative;
+        box-sizing: border-box;
+        flex: 0 0 calc(75% - 4.5px);
+        width: calc(75% - 4.5px);
+        max-width: calc(75% - 4.5px);
+        min-width: 0;
+        min-height: 420px;
+        border-radius: 10px;
+        overflow: hidden;
+        color: #fff;
+        isolation: isolate;
+    }
+    .institute-card img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+        transition: transform 0.65s ease;
+    }
+    .institute-card:hover img { transform: scale(1.06); }
+    .institute-card__shade {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(180deg, rgba(10, 18, 36, 0.05) 35%, rgba(10, 18, 36, 0.88) 100%);
+    }
+    .institute-card__body {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+        padding: 28px 24px 24px;
+    }
+    .institute-card h3 {
+        margin: 0 0 8px;
+        font-size: clamp(1.25rem, 2vw, 1.55rem);
+        font-weight: 650;
+        line-height: 1.25;
+        color: #fff;
+    }
+    .institute-card p {
+        margin: 0 0 18px;
+        max-width: 34rem;
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    .institute-card__cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        align-self: flex-start;
+        min-height: 42px;
+        padding: 0 18px;
+        border-radius: 999px;
+        background: #00a0c6;
+        color: #fff;
+        font-size: 0.92rem;
+        font-weight: 650;
+        text-decoration: none;
+        transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+    }
+    .institute-card__cta span {
+        font-size: 0.95rem;
+        transition: transform 0.25s ease;
+    }
+    .institute-card__cta:hover {
+        background: #fff;
+        color: #1e3a6e;
+    }
+    .institute-card__cta:hover span { transform: translateX(3px); }
+    .institute-carousel__dots {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 1.5rem;
+    }
+    .institute-carousel__dots button {
+        width: 9px;
+        height: 9px;
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        background: #c9d2dc;
+        cursor: pointer;
+        transition: background 0.25s ease, transform 0.25s ease;
+    }
+    .institute-carousel__dots button.is-active {
+        background: #00a0c6;
+        transform: scale(1.15);
+    }
+
+    @media (min-width: 640px) {
+        .institute-band { padding-left: 1.5rem; padding-right: 1.5rem; }
+    }
+    @media (min-width: 1024px) {
+        .institute-band { padding-left: 2rem; padding-right: 2rem; }
+    }
+    @media (max-width: 768px) {
+        .institute-card {
+            flex-basis: 100%;
+            width: 100%;
+            max-width: 100%;
+            min-height: 360px;
+        }
+    }
+

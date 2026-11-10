@@ -159,98 +159,349 @@
 
 
 <!-- About Section -->
-<section id="about" class="py-12 px-4 sm:px-6 lg:px-8 bg-white">
-    <div class="max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-16 items-stretch">
-            <div class="flex flex-col">
-                <div class="category-label mb-4">ABOUT GENYRA GROUP</div>
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-700">
-                    Leading Healthcare Solutions Provider in East Africa
-                </h2>
-                <p class="text-md text-gray-600 mb-6 leading-relaxed">
-                    genyra Group is East Africa's leading provider of healthcare solutions, specializing in laboratory equipment & consumables, general medical supplies, healthcare strategic planning & systems development and calibration services. Established with a vision to transform healthcare delivery through innovation and excellence, we serve hospitals, research institutions, diagnostic laboratories, pharmaceutical companies, and healthcare facilities across the region.
-                </p>
-                <p class="text-md text-gray-600 mb-8 leading-relaxed">
-                    With a proven track record of successful implementations and a commitment to quality, genyra Group has positioned itself as a trusted partner for healthcare organizations seeking to enhance patient care, improve operational efficiency, and achieve regulatory compliance.
-                </p>
-                <a href="#contact" class="btn-primary w-64 text-center">
-                    Get in Touch
-                </a>
-            </div>
-            
-            <!-- Image with Overlay -->
-<div class="relative h-full min-h-[500px] rounded-2xl overflow-hidden group shadow-2xl">
+{{-- 
+    About Section
+    Logo colours used (swap if you want to fine-tune):
+      Navy  #1b2a6b
+      Cyan  #19a7e0
+--}}
+<section id="about" class="bg-white">
 
-    {{-- Photo --}}
-    <img src="{{ asset('images/about.jpeg') }}"
-         alt="Laboratory"
-         class="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105"
-         onerror="this.src='https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=1200'">
+    {{-- ============ 1. Vision / Mission / Our Story cards ============ --}}
+    <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid gap-6 md:grid-cols-3">
 
-    {{-- Layered gradient: subtle top-to-transparent, heavy navy at bottom --}}
-    <div class="absolute inset-0 bg-gradient-to-t from-[#0f1f45] via-[#0f1f45]/60 to-transparent"></div>
+            {{-- Vision --}}
+            <a href="{{ route('vission-mission') }}"  
+               class="group relative flex items-start gap-4 px-4 pt-4 pb-7 focus:outline-none">
 
-    {{-- Divider line that slides up on hover --}}
-    <div class="absolute bottom-[200px] left-8 right-8 h-px bg-white/20
-                translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100
-                transition-all duration-500"></div>
+                {{-- Hover line --}}
+                <span class="pointer-events-none absolute bottom-0 left-0 h-1 w-full origin-left scale-x-0 bg-[#19a7e0]
+                             transition-transform duration-300 ease-out
+                             group-hover:scale-x-100 group-focus-visible:scale-x-100"></span>
 
-    {{-- Overlay content --}}
-    <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
-
-        {{-- Vision --}}
-        <div class="mb-5 translate-y-2 opacity-90 group-hover:translate-y-0 group-hover:opacity-100
-                    transition-all duration-500 delay-75">
-            <div class="flex items-start gap-4">
-                <div class="w-10 h-10 flex-shrink-0 rounded-xl bg-cyan-500/20 border border-cyan-400/30
-                            flex items-center justify-center backdrop-blur-sm mt-0.5">
-                    <svg class="w-5 h-5 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                <span class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full
+                             bg-[#19a7e0]/10 text-[#1b2a6b] transition-colors group-hover:bg-[#19a7e0] group-hover:text-white">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
                               d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7
-                                 -1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
                     </svg>
-                </div>
-                <div>
-                    <p class="text-cyan-300 text-[10px] font-bold tracking-[0.15em] uppercase mb-1">Our Vision</p>
-                    <p class="text-white font-semibold text-base leading-snug">
-                        To be the most trusted and preferred partner for healthcare solutions in Africa
-                    </p>
-                </div>
-            </div>
-        </div>
+                </span>
+                <span>
+                    <span class="block text-base font-semibold text-[#1b2a6b]">Our Vision</span>
+                    <span class="mt-1 block text-sm leading-relaxed text-slate-600">
+                        To be the most trusted and preferred partner for healthcare solutions in Africa.
+                    </span>
+                </span>
+            </a>
 
-        {{-- Thin separator --}}
-        <div class="border-t border-white/10 mb-5"></div>
+            {{-- Mission --}}
+            <a href="{{ route('vission-mission') }}" 
+               class="group relative flex items-start gap-4 px-4 pt-4 pb-7 focus:outline-none">
 
-        {{-- Mission --}}
-        <div class="translate-y-2 opacity-90 group-hover:translate-y-0 group-hover:opacity-100
-                    transition-all duration-500 delay-150">
-            <div class="flex items-start gap-4">
-                <div class="w-10 h-10 flex-shrink-0 rounded-xl bg-cyan-500/20 border border-cyan-400/30
-                            flex items-center justify-center backdrop-blur-sm mt-0.5">
-                    <svg class="w-5 h-5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                {{-- Hover line --}}
+                <span class="pointer-events-none absolute bottom-0 left-0 h-1 w-full origin-left scale-x-0 bg-[#19a7e0]
+                             transition-transform duration-300 ease-out
+                             group-hover:scale-x-100 group-focus-visible:scale-x-100"></span>
+
+                <span class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full
+                             bg-[#19a7e0]/10 text-[#1b2a6b] transition-colors group-hover:bg-[#19a7e0] group-hover:text-white">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
                               d="M13 10V3L4 14h7v7l9-11h-7z"/>
                     </svg>
+                </span>
+                <span>
+                    <span class="block text-base font-semibold text-[#1b2a6b]">Our Mission</span>
+                    <span class="mt-1 block text-sm leading-relaxed text-slate-600">
+                        Delivering innovative, reliable and world-class healthcare solutions that improve patient outcomes.
+                    </span>
+                </span>
+            </a>
+
+            {{-- Our Story --}}
+            <a href="{{ route('our-story') }}"  
+               class="group relative flex items-start gap-4 px-4 pt-4 pb-7 focus:outline-none">
+
+                {{-- Hover line --}}
+                <span class="pointer-events-none absolute bottom-0 left-0 h-1 w-full origin-left scale-x-0 bg-[#19a7e0]
+                             transition-transform duration-300 ease-out
+                             group-hover:scale-x-100 group-focus-visible:scale-x-100"></span>
+
+                <span class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full
+                             bg-[#19a7e0]/10 text-[#1b2a6b] transition-colors group-hover:bg-[#19a7e0] group-hover:text-white">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                              d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                    </svg>
+                </span>
+                <span>
+                    <span class="block text-base font-semibold text-[#1b2a6b]">Our Story</span>
+                    <span class="mt-1 block text-sm leading-relaxed text-slate-600">
+                        How Genyra Group grew into a trusted healthcare partner across East Africa.
+                    </span>
+                </span>
+            </a>
+
+        </div>
+    </div>
+
+    {{-- ============ 2. Dark image band + overlapping About card ============ --}}
+    <div class="relative">
+
+        {{-- Dark band (your small black section image) --}}
+        <div class="relative h-56 sm:h-64 lg:h-72 w-full bg-[#0f1733] bg-cover bg-center"
+             style="background-image: url('{{ asset('images/striped.png') }}');">
+            {{-- Navy tint so the band always reads dark, even if the image is light --}}
+            <div class="absolute inset-0 bg-[#1b2a6b]/50"></div>
+        </div>
+
+        {{-- Card that sits on top of the band --}}
+        <div class="relative z-10 mx-auto -mt-28 max-w-7xl px-4 pb-16 sm:-mt-32 sm:px-6 lg:-mt-36 lg:px-8">
+            <div class="grid overflow-hidden bg-white shadow-2xl shadow-[#1b2a6b]/20 md:grid-cols-2">
+
+                {{-- Image --}}
+                <div class="relative min-h-[280px] md:min-h-[520px]">
+                    <img src="{{ asset('images/about.jpeg') }}"
+                         alt="Genyra Group laboratory"
+                         class="absolute inset-0 h-full w-full object-cover"
+                         onerror="this.src='https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=1200'">
+                    {{-- Cyan accent edge, picks up the logo --}}
+                    <div class="absolute inset-y-0 left-0 w-1.5 bg-[#19a7e0]"></div>
                 </div>
-                <div>
-                    <p class="text-cyan-300 text-[10px] font-bold tracking-[0.15em] uppercase mb-1">Our Mission</p>
-                    <p class="text-white/90 font-medium text-sm leading-relaxed">
-                        Delivering innovative, reliable, and world-class healthcare solutions that improve
-                        patient outcomes and enhance operational efficiency
+
+                {{-- Text --}}
+                <div class="flex flex-col justify-center p-8 sm:p-10 lg:p-14">
+                    <h2 class="text-3xl font-bold uppercase tracking-tight text-[#1b2a6b] md:text-4xl">
+                        About Genyra Group
+                    </h2>
+                    <div class="mt-4 h-1 w-14 bg-[#19a7e0]"></div>
+
+                    <h3 class="mt-6 text-lg font-semibold text-slate-800">
+                        Leading Healthcare Solutions Provider in East Africa
+                    </h3>
+
+                    <p class="mt-4 text-sm leading-7 text-slate-600 sm:text-base">
+                        Genyra Group is East Africa's leading provider of healthcare solutions, specializing in
+                        laboratory equipment &amp; consumables, general medical supplies, healthcare strategic
+                        planning &amp; systems development, and calibration services. We serve hospitals, research
+                        institutions, diagnostic laboratories, pharmaceutical companies and healthcare facilities
+                        across the region.
                     </p>
+                    <p class="mt-4 text-sm leading-7 text-slate-600 sm:text-base">
+                        With a proven track record of successful implementations and a commitment to quality,
+                        Genyra Group is a trusted partner for organizations seeking to enhance patient care,
+                        improve operational efficiency and achieve regulatory compliance.
+                    </p>
+
+                    <div class="mt-8">
+                        <a href="#contact"
+                           class="inline-flex items-center justify-center bg-[#1b2a6b] px-8 py-3 text-sm font-semibold text-white
+                                  transition-colors hover:bg-[#19a7e0] focus:outline-none focus-visible:ring-2
+                                  focus-visible:ring-[#19a7e0] focus-visible:ring-offset-2">
+                            Get in Touch
+                        </a>
+                    </div>
                 </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+@php
+$instituteCourses = [
+    [
+        'title' => 'Biosafety & Biosecurity: Laboratory and Field Practice',
+        'text' => 'Biological risk levels, containment, protective equipment and emergency protocols for BSL 1–3 work.',
+        'image' => 'https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'alt' => 'Scientist in protective gear working safely in a laboratory',
+        'url' => 'https://academy.genyragroup.com/course/view.php?id=2',
+    ],
+    [
+        'title' => 'Applied Molecular Diagnostics',
+        'text' => 'DNA and RNA extraction, PCR and qPCR, sequencing and assay validation for clinical settings.',
+        'image' => 'https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'alt' => 'Scientist working with molecular laboratory equipment',
+        'url' => 'https://academy.genyragroup.com/course/view.php?id=4',
+    ],
+    [
+        'title' => 'Antimicrobial Resistance Surveillance & Stewardship',
+        'text' => 'Design AMR surveillance programmes and apply stewardship principles in clinical practice.',
+        'image' => 'https://images.pexels.com/photos/3938022/pexels-photo-3938022.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'alt' => 'Laboratory instruments used in microbiology work',
+        'url' => 'https://academy.genyragroup.com/course/view.php?id=10',
+    ],
+    [
+        'title' => 'Vaccine Development, Handling & Cold Chain Management',
+        'text' => 'From vaccine development to storage, cold chain monitoring and last-mile delivery.',
+        'image' => 'https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'alt' => 'Healthcare worker preparing a vaccine dose',
+        'url' => 'https://academy.genyragroup.com/course/view.php?id=11',
+    ],
+];
+@endphp
+
+<section id="institute-courses" class="bg-[#f4f4f4] py-10 font-sans " aria-labelledby="institute-courses-title">
+    <div class="mx-auto max-w-[1400px] px-4 md:px-[88px]">
+        <p class="text-sm font-semibold text-[#0098c8]">Genyra Institute</p>
+        <h2 id="institute-courses-title" class="mt-1 text-2xl font-semibold text-[#181858] md:text-3xl">
+            Practical courses ready for your teams.
+        </h2>
+    </div>
+
+    <div class="mt-8" data-institute-carousel>
+        {{-- Viewport: full width so the next card peeks in from the right edge --}}
+        <div class="overflow-hidden" data-viewport>
+            <div
+                data-track
+                class="relative flex gap-8 pl-4 transition-transform duration-500 ease-out will-change-transform md:pl-[88px]"
+            >
+                @foreach ($instituteCourses as $course)
+                    <article
+                        data-card
+                        class="relative h-[400px] w-[calc(100%-3rem)] shrink-0 overflow-hidden rounded bg-[#101040] md:w-[58%]"
+                    >
+                        <img
+                            src="{{ $course['image'] }}"
+                            alt="{{ $course['alt'] }}"
+                            loading="lazy"
+                            class="absolute inset-0 h-full w-full object-cover"
+                        >
+
+                        {{-- Fade to black at the bottom --}}
+                        <div
+                            class="absolute inset-x-0 bottom-0 h-[65%] bg-gradient-to-t from-[#101040] via-[#101040]/85 to-transparent"
+                            aria-hidden="true"
+                        ></div>
+
+                        <div class="absolute inset-x-0 bottom-0 p-6 text-white md:px-8 md:pb-8">
+                            <h3 class="text-2xl font-semibold leading-tight">{{ $course['title'] }}</h3>
+                            <p class="mt-2 max-w-[560px] text-base leading-snug md:text-lg">{{ $course['text'] }}</p>
+
+                            <a
+                                href="{{ $course['url'] }}"
+                                target="_blank" rel="noopener"
+                                class="mt-5 inline-flex items-center gap-2 rounded-full bg-[#0098c8] px-4 py-2.5 text-xs font-bold text-white transition-colors hover:bg-[#007fa8] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#101040]"
+                            >
+                                Enrol now
+                                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                @endforeach
             </div>
         </div>
 
-    </div>
-</div>
+        {{-- Dots --}}
+        <div class="mt-12 flex items-center justify-center gap-2.5" role="tablist" aria-label="Course slides" data-dots>
+            @foreach ($instituteCourses as $i => $course)
+                <button
+                    type="button"
+                    role="tab"
+                    aria-label="Show course {{ $i + 1 }}"
+                    data-dot
+                    class="h-2 w-2 rounded-full bg-[#a8a8b8] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0098c8] focus-visible:ring-offset-2"
+                ></button>
+            @endforeach
         </div>
     </div>
 </section>
 
+<script>
+(() => {
+    const root = document.querySelector('[data-institute-carousel]');
+    if (!root) return;
+
+    const viewport = root.querySelector('[data-viewport]');
+    const track = root.querySelector('[data-track]');
+    const cards = Array.from(root.querySelectorAll('[data-card]'));
+    const dots = Array.from(root.querySelectorAll('[data-dot]'));
+    if (!viewport || !track || !cards.length) return;
+
+    const AUTOPLAY_MS = 5000;
+    // Set to true if you want autoplay disabled for users with "reduce motion" turned on
+    const RESPECT_REDUCED_MOTION = false;
+    const reducedMotion = RESPECT_REDUCED_MOTION &&
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    let page = 0;
+    let timer = null;
+    let hovering = false;
+
+    const render = () => {
+        let offset = 0;
+        if (page > 0) {
+            const card = cards[page];
+            offset = card.offsetLeft - (viewport.clientWidth - card.offsetWidth) / 2;
+        }
+        track.style.transform = `translateX(${-offset}px)`;
+
+        dots.forEach((dot, i) => {
+            const active = i === page;
+            dot.classList.toggle('bg-[#0098c8]', active);
+            dot.classList.toggle('bg-[#a8a8b8]', !active);
+            dot.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+    };
+
+    const go = (i) => {
+        page = Math.max(0, Math.min(i, cards.length - 1));
+        render();
+    };
+
+    const next = () => go(page >= cards.length - 1 ? 0 : page + 1);
+
+    const stop = () => {
+        clearInterval(timer);
+        timer = null;
+    };
+
+    const start = () => {
+        stop();
+        if (reducedMotion || cards.length < 2 || hovering || document.hidden) return;
+        timer = setInterval(next, AUTOPLAY_MS);
+    };
+
+    dots.forEach((dot, i) => dot.addEventListener('click', () => { go(i); start(); }));
+
+    // Pause only while a mouse is over the cards (not the dots area below)
+    viewport.addEventListener('mouseenter', () => { hovering = true; stop(); });
+    viewport.addEventListener('mouseleave', () => { hovering = false; start(); });
+
+    // Pause for keyboard focus only (clicking a dot shouldn't freeze autoplay)
+    root.addEventListener('focusin', (e) => {
+        if (e.target.matches(':focus-visible')) stop();
+    });
+    root.addEventListener('focusout', start);
+
+    document.addEventListener('visibilitychange', start);
+
+    // Touch swipe
+    let startX = null;
+    viewport.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        stop();
+    }, { passive: true });
+    viewport.addEventListener('touchend', (e) => {
+        if (startX !== null) {
+            const dx = e.changedTouches[0].clientX - startX;
+            if (Math.abs(dx) > 50) go(page + (dx < 0 ? 1 : -1));
+            startX = null;
+        }
+        start();
+    });
+
+    window.addEventListener('resize', render);
+    render();
+    start();
+})();
+</script>
 
   <!-- News & Updates and Notice Board -->
 <section id="news-notices" class="relative pt-6 md:pt-8 pb-14 md:pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden"
