@@ -27,16 +27,12 @@
 
 @section('body')
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 <!-- Quill CSS for proper content rendering -->
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 
 <style>
   .ql-editor {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.125rem;
     line-height: 1.7;
     color: #374151;
@@ -109,10 +105,6 @@
 </script>
 
 <style>
-  body, * {
-    font-family: 'Inter', sans-serif !important;
-  }
-
   /* Smooth scroll for anchor links */
   html {
     scroll-behavior: smooth;
