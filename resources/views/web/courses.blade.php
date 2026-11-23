@@ -21,7 +21,7 @@
   // To use your own, e.g. asset('images/hero-lab-students.jpg')
   $heroImage = 'https://images.pexels.com/photos/6208728/pexels-photo-6208728.jpeg?auto=compress&cs=tinysrgb&w=1920';
 
-  // Hanging announcement card (set 'enabled' => false to hide it)
+  // Hanging 3D announcement bag (set 'enabled' => false to hide it)
   $announcement = [
     'enabled' => true,
     'label'   => 'Announcement',
@@ -33,7 +33,7 @@
   ];
 @endphp
 
-{{-- ══════════════ HERO (redesigned) ══════════════ --}}
+{{-- ══════════════ HERO ══════════════ --}}
 <header class="relative mt-28 overflow-hidden bg-[#0a1a3a] min-h-[560px] lg:min-h-[640px] flex items-center">
 
   {{-- Photo (right side on desktop, full-bleed behind text on mobile) --}}
@@ -47,10 +47,11 @@
     <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#0a1a3a]/70 to-transparent"></div>
   </div>
 
-  {{-- ── Hanging announcement bag (desktop only) ── --}}
+  {{-- ── Hanging 3D announcement bag (desktop only) ── --}}
   @if($announcement['enabled'])
   <aside aria-label="Announcement" data-announcement
-         class="absolute right-6 top-3 z-20 hidden w-56 lg:right-20 lg:block">
+         class="absolute right-6 top-3 z-20 hidden w-[224px] lg:right-24 lg:block"
+         style="perspective: 1000px; perspective-origin: 50% 20%;">
 
     {{-- Hook / pin the bag hangs from --}}
     <span class="absolute left-1/2 top-0 z-30 flex h-4 w-4 -translate-x-1/2 -translate-y-1/2 items-start justify-start rounded-full bg-gradient-to-br from-slate-200 to-slate-500 shadow-[0_3px_6px_rgba(0,0,0,0.45)] ring-1 ring-black/30">
@@ -58,60 +59,85 @@
     </span>
 
     {{-- Swinging assembly: pivots from the hook --}}
-    <div data-swing class="relative origin-top">
+    <div data-swing class="relative origin-top pt-[84px]" style="transform-style: preserve-3d;">
 
-      {{-- Rope handle (arch that loops over the hook, ends tie into the bag's eyelets) --}}
-      <span class="absolute left-1/2 top-0 -ml-12 h-[76px] w-24 rounded-t-full border-[3px] border-b-0 border-amber-200"></span>
+      {{-- The bag is a real box: front, back and a right gusset --}}
+      <div class="relative" style="transform-style: preserve-3d; transform: rotateY(-24deg) rotateX(2deg);">
 
-      {{-- Bag --}}
-      <div class="relative mt-16 overflow-hidden rounded-b-xl rounded-t-sm bg-gradient-to-b from-[#00A0C6] to-[#0077a0] shadow-[0_22px_36px_-14px_rgba(0,0,0,0.6)] ring-1 ring-black/10">
+        {{-- Back rope handle (behind the bag) --}}
+        <span class="absolute -top-[80px] left-[26%] h-[80px] w-[48%] rounded-t-full border-[3px] border-b-0 border-amber-300/70"
+              style="transform: translateZ(-28px);"></span>
 
-        {{-- Folded top lip with eyelets --}}
-        <div class="relative h-6 bg-black/15 shadow-[inset_0_-2px_3px_rgba(0,0,0,0.18)]">
-          <span class="absolute left-[58px] top-[6px] h-3 w-3 rounded-full bg-[#0a1a3a] ring-2 ring-slate-300"></span>
-          <span class="absolute left-[154px] top-[6px] h-3 w-3 rounded-full bg-[#0a1a3a] ring-2 ring-slate-300"></span>
+        {{-- Back face --}}
+        <div class="absolute inset-0 rounded-b-xl bg-[#005f80]" style="transform: translateZ(-28px);"></div>
+
+        {{-- Right gusset (side panel) with centre fold --}}
+        <div class="absolute inset-y-0 -right-[28px] w-[56px] overflow-hidden rounded-b-lg"
+             style="transform: rotateY(90deg); background:
+               linear-gradient(90deg, rgba(0,0,0,.28) 0%, rgba(0,0,0,.05) 46%, rgba(0,0,0,.38) 50%, rgba(0,0,0,.08) 54%, rgba(0,0,0,.3) 100%),
+               #006d8f;">
+          <div class="h-6 bg-black/25"></div>
         </div>
 
-        {{-- Paper shading: side gusset + left highlight --}}
-        <span class="pointer-events-none absolute inset-y-6 right-0 w-5 bg-gradient-to-l from-black/25 to-transparent"></span>
-        <span class="pointer-events-none absolute inset-y-6 left-0 w-3 bg-gradient-to-r from-white/15 to-transparent"></span>
+        {{-- Front face --}}
+        <div class="relative overflow-hidden rounded-b-xl rounded-t-sm bg-gradient-to-b from-[#00A0C6] to-[#0077a0] ring-1 ring-black/10"
+             style="transform: translateZ(28px);">
 
-        {{-- Printed content --}}
-        <div class="relative px-5 pb-5 pt-4 text-white">
-
-          <div class="flex items-center justify-between gap-2">
-            <span class="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.16em]">
-              <span class="relative flex h-1.5 w-1.5">
-                <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-70"></span>
-                <span class="relative inline-flex h-1.5 w-1.5 rounded-full bg-white"></span>
-              </span>
-              {{ $announcement['label'] }}
-            </span>
-
-            <button type="button" data-announcement-close aria-label="Dismiss announcement"
-                    class="flex h-6 w-6 items-center justify-center rounded-full text-white/70 transition hover:bg-white/20 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
-              <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18"/>
-              </svg>
-            </button>
+          {{-- Folded top lip with eyelets --}}
+          <div class="relative h-6 bg-black/15 shadow-[inset_0_-2px_3px_rgba(0,0,0,0.18)]">
+            <span class="absolute left-[26%] top-[6px] h-3 w-3 -translate-x-1/2 rounded-full bg-[#0a1a3a] ring-2 ring-slate-300"></span>
+            <span class="absolute left-[74%] top-[6px] h-3 w-3 -translate-x-1/2 rounded-full bg-[#0a1a3a] ring-2 ring-slate-300"></span>
           </div>
 
-          <h3 class="mt-3 text-[17px] font-semibold leading-snug">{{ $announcement['title'] }}</h3>
-          <p class="mt-1.5 text-[12.5px] leading-relaxed text-white/85">{{ $announcement['text'] }}</p>
+          {{-- Paper shading + diagonal sheen --}}
+          <span class="pointer-events-none absolute inset-y-6 right-0 w-5 bg-gradient-to-l from-black/25 to-transparent"></span>
+          <span class="pointer-events-none absolute inset-y-6 left-0 w-3 bg-gradient-to-r from-white/15 to-transparent"></span>
+          <span class="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-black/10"></span>
 
-          <a href="{{ $announcement['url'] }}" target="_blank" rel="noopener"
-             class="group mt-4 flex w-full items-center justify-center gap-1.5 rounded-full bg-white px-4 py-2.5 text-[12.5px] font-semibold text-[#1E3A6E] transition-colors hover:bg-[#f0ece4] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0088ad]">
-            {{ $announcement['cta'] }}
-            <svg class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/>
-            </svg>
-          </a>
+          {{-- Printed content --}}
+          <div class="relative px-5 pb-5 pt-4 text-white">
 
-          <p class="mt-3 border-t border-white/20 pt-3 text-center text-[10.5px] tracking-wide text-white/75">
-            genyra Institute · {{ $announcement['footer'] }}
-          </p>
+            <div class="flex items-center justify-between gap-2">
+              <span class="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.16em]">
+                <span class="relative flex h-1.5 w-1.5">
+                  <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-70"></span>
+                  <span class="relative inline-flex h-1.5 w-1.5 rounded-full bg-white"></span>
+                </span>
+                {{ $announcement['label'] }}
+              </span>
+
+              <button type="button" data-announcement-close aria-label="Dismiss announcement"
+                      class="flex h-6 w-6 items-center justify-center rounded-full text-white/70 transition hover:bg-white/20 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
+                <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18"/>
+                </svg>
+              </button>
+            </div>
+
+            <h3 class="mt-3 text-[17px] font-semibold leading-snug">{{ $announcement['title'] }}</h3>
+            <p class="mt-1.5 text-[12.5px] leading-relaxed text-white/85">{{ $announcement['text'] }}</p>
+
+            <a href="{{ $announcement['url'] }}" target="_blank" rel="noopener"
+               class="group mt-4 flex w-full items-center justify-center gap-1.5 rounded-full bg-white px-4 py-2.5 text-[12.5px] font-semibold text-[#1E3A6E] transition-colors hover:bg-[#f0ece4] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0088ad]">
+              {{ $announcement['cta'] }}
+              <svg class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/>
+              </svg>
+            </a>
+
+            <p class="mt-3 border-t border-white/20 pt-3 text-center text-[10.5px] tracking-wide text-white/75">
+              genyra Institute · {{ $announcement['footer'] }}
+            </p>
+          </div>
         </div>
+
+        {{-- Front rope handle (in front of the bag, ties into the eyelets) --}}
+        <span class="pointer-events-none absolute -top-[80px] left-[26%] h-[86px] w-[48%] rounded-t-full border-[3px] border-b-0 border-amber-200"
+              style="transform: translateZ(28px);"></span>
       </div>
+
+      {{-- Soft contact shadow under the bag --}}
+      <span class="pointer-events-none absolute -bottom-6 left-1/2 -z-10 h-5 w-40 -translate-x-1/2 rounded-full bg-black/45 blur-xl"></span>
     </div>
   </aside>
   @endif
@@ -225,23 +251,6 @@
   </div>
 </div>
 {{-- ══════════════ END HERO ══════════════ --}}
-
-{{-- ── INTRO + STATS ── --}}
-{{-- <section class="relative z-[5] grid grid-cols-1 items-center gap-8 border-b-2 border-black/10 bg-white px-6 py-12 lg:grid-cols-2 lg:gap-16 lg:px-20">
-  <div>
-    <p class="text-base leading-relaxed text-gray-900 md:text-lg">
-      Genyra Group's training programmes are designed for working professionals seeking to deepen expertise, earn recognised competencies, or stay current in rapidly evolving fields. Our short courses are practical, evidence-based, and tightly aligned with industry standards and regulatory frameworks delivered by seasoned practitioners across our four business pillars.
-    </p>
-  </div>
-  <div class="grid grid-cols-2 gap-5 lg:grid-cols-4">
-    @foreach([['20','Courses'],['4','Pillars'],['CPD','Credited'],['∞','Impact']] as [$n,$l])
-    <div class="rounded-lg border border-black/15 px-3 py-5 text-center">
-      <span class="block text-[2.375rem] leading-none text-[#1a1510]">{{ $n }}</span>
-      <span class="mt-1.5 block text-[9px] uppercase tracking-[0.2em] text-[#6b5f52]">{{ $l }}</span>
-    </div>
-    @endforeach
-  </div>
-</section> --}}
 
 {{-- ── FILTER ── --}}
 <div class="relative z-[5] flex flex-wrap items-center gap-3 border-b border-black/10 bg-[#f0ede8] px-6 py-5 lg:px-20">
@@ -415,53 +424,22 @@
 
 </main>
 
-{{-- ── CTA ── --}}
-<section class="relative z-[5] grid grid-cols-1 items-center gap-12 bg-[#1E3A6E] px-6 py-16 lg:grid-cols-[1fr_auto] lg:px-20">
-  <div>
-    <h2 class="mb-4 text-5xl font-bold leading-tight text-[#f0ece4] lg:text-6xl">
-      Ready to Build<br><em class="italic text-[#00A0C6]">Expert Capacity</em>?
-    </h2>
-    <p class="mb-7 max-w-[520px] text-[14.5px] leading-[1.8] text-white/70">
-      All Genyra short courses can be delivered in-person, on-site at your organisation, or in a blended format. We also offer customised training programmes tailored to your specific institutional needs, regulatory context, and workforce profile. Contact us to discuss scheduling, group enrolment, and CPD certification options.
-    </p>
-    <a href="https://academy.genyragroup.com/" target="_blank" rel="noopener"
-       class="inline-flex items-center gap-2 rounded-md bg-[#00A0C6] px-7 py-3 text-[0.85rem] font-semibold tracking-[0.04em] text-white no-underline shadow-[0_4px_15px_rgba(0,160,198,0.4)] transition duration-150 hover:-translate-y-px hover:bg-[#0090b5] focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
-      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
-      Browse All Courses on genyra Institute
-    </a>
-  </div>
-  <div class="flex min-w-[220px] flex-col gap-4">
-    <div class="rounded-lg border border-white/10 bg-white/[0.04] px-6 py-4">
-      <strong class="mb-1 block text-sm font-semibold tracking-wide text-[#f0ece4]">In-Person &amp; On-Site</strong>
-      <span class="text-[11px] tracking-wide text-white/45">Nairobi · Available nationwide</span>
-    </div>
-    <div class="rounded-lg border border-white/10 bg-white/[0.04] px-6 py-4">
-      <strong class="mb-1 block text-sm font-semibold tracking-wide text-[#f0ece4]">Group &amp; Institutional Bookings</strong>
-      <span class="text-[11px] tracking-wide text-white/45">Custom programmes available</span>
-    </div>
-    <div class="rounded-lg border border-white/10 bg-white/[0.04] px-6 py-4">
-      <strong class="mb-1 block text-sm font-semibold tracking-wide text-[#f0ece4]">CPD-Credited</strong>
-      <span class="text-[11px] tracking-wide text-white/45">Certificates of completion issued</span>
-    </div>
-    <div class="rounded-lg border border-[#00A0C6]/40 bg-[#00A0C6]/[0.08] px-6 py-4">
-      <strong class="mb-1 block text-sm font-semibold tracking-wide text-[#00A0C6]">training@genyragroup.com</strong>
-      <span class="text-[11px] tracking-wide text-white/60">Enquire about any course</span>
-    </div>
-  </div>
-</section>
-
 </div>
 
 <script>
   // Smooth anchor scrolling (better placed once on <html class="scroll-smooth"> in your layout)
   document.documentElement.classList.add('scroll-smooth');
 
-  // Announcement bag: gentle swing from the hook (skipped if the visitor prefers reduced motion)
+  // 3D announcement bag: gentle swing + slight Y-wobble from the hook
+  // (skipped if the visitor prefers reduced motion)
   const swing = document.querySelector('[data-swing]');
   const noteBox = document.querySelector('[data-announcement]');
   if (swing && noteBox && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const sway = swing.animate(
-      [{ transform: 'rotate(-3deg)' }, { transform: 'rotate(3deg)' }],
+      [
+        { transform: 'rotate(-3deg) rotateY(-8deg)' },
+        { transform: 'rotate(3deg) rotateY(8deg)' }
+      ],
       { duration: 4200, direction: 'alternate', iterations: Infinity, easing: 'ease-in-out' }
     );
     const slow = () => sway.updatePlaybackRate(0.2);
