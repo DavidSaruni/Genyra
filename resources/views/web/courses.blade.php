@@ -14,444 +14,254 @@
 
 @section('body')
 
-<style>
-  :root {
-    --navy:   #1E3A6E;
-    --cyan:   #00A0C6;
-    --cream:  #f0ece4;
-    --sand:   #f7f5f1;
-    --muted:  #f0ede8;
-    --ink:    #1a1510;
-    --warm:   #6b5f52;
-  }
+<div class="font-['DM_Sans',sans-serif]">
 
-  * { font-family: 'DM Sans', sans-serif !important; }
-  .{ font-family: 'Cormorant Garamond', serif !important; }
-  .     { font-family: 'DM Mono', monospace !important; }
-  html { scroll-behavior: smooth; }
+@php
+  // Hero photo: students working in a science lab (Pexels, free licence).
+  // To use your own, e.g. asset('images/hero-lab-students.jpg')
+  $heroImage = 'https://images.pexels.com/photos/6208728/pexels-photo-6208728.jpeg?auto=compress&cs=tinysrgb&w=1920';
 
-  /* ── CARD CORE ── */
-  .course-card {
-    position: relative;
-    background: #fff;
-    border-radius: 12px;
-    border: 1px solid rgba(0,0,0,0.09);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s cubic-bezier(.22,1,.36,1), box-shadow 0.3s cubic-bezier(.22,1,.36,1);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  }
-  .course-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(30,58,110,0.14);
-  }
+  // Hanging announcement card (set 'enabled' => false to hide it)
+  $announcement = [
+    'enabled' => true,
+    'label'   => 'Announcement',
+    'title'   => 'Enrolment is open',
+    'text'    => 'Start any of our 20 CPD-credited short courses today and learn at your own pace.',
+    'cta'     => 'Enrol now',
+    'url'     => 'https://academy.genyragroup.com/',
+    'footer'  => 'CPD credited · Self-paced',
+  ];
+@endphp
 
-  /* ── CARD HEADER BAND ── */
-  .card-band {
-    position: relative;
-    padding: 1.4rem 1.5rem 1.1rem;
-    overflow: hidden;
-  }
-  .card-band::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    opacity: 0.06;
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  }
-  .card-band-icon {
-    position: absolute;
-    right: 1.25rem;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0.12;
-  }
+{{-- ══════════════ HERO (redesigned) ══════════════ --}}
+<header class="relative mt-28 overflow-hidden bg-[#0a1a3a] min-h-[560px] lg:min-h-[640px] flex items-center">
 
-  /* ── CARD CODE PILL ── */
-  .code-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-    padding: 0.2rem 0.6rem;
-    border-radius: 4px;
-    font-family: 'DM Mono', monospace !important;
-    font-size: 0.68rem;
-    font-weight: 400;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    border: 1px solid currentColor;
-    opacity: 0.9;
-    width: fit-content;
-    margin-bottom: 0.65rem;
-  }
-
-  /* ── CARD BODY ── */
-  .card-body {
-    padding: 1.25rem 1.5rem 1rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .card-title {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: var(--ink);
-    line-height: 1.35;
-    margin: 0;
-  }
-
-
-  /* ── CARD FOOTER ── */
-  .card-footer {
-    padding: 1rem 1.5rem 1.25rem;
-    border-top: 1px solid #f0f0f0;
-    background: #fafafa;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-  .who-label text-blue-500 {
-    font-family: 'DM Mono', monospace !important;
-    font-size: 0.6rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--warm);
-    margin-bottom: 0.25rem;
-    opacity: 0.75;
-  }
-  .who-text text-gray-700 {
-    font-size: 0.72rem;
-    line-height: 1.55;
-    color: var(--ink);
-  }
-
-  /* ── TAGS ROW ── */
-  .tags-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.3rem;
-  }
-  .tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.2rem;
-    padding: 0.22rem 0.55rem;
-    border-radius: 99px;
-    font-size: 0.62rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-  }
-
-  /* ── ENROL BUTTON ── */
-  .enrol-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.45rem;
-    width: 100%;
-    padding: 0.6rem 1rem;
-    border-radius: 7px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-decoration: none;
-    transition: all 0.2s cubic-bezier(.22,1,.36,1);
-    border: none;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-  }
-  .enrol-btn::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(255,255,255,0);
-    transition: background 0.2s;
-  }
-  .enrol-btn:hover::after { background: rgba(255,255,255,0.12); }
-  .enrol-btn svg { transition: transform 0.2s; }
-  .enrol-btn:hover svg { transform: translateX(2px); }
-
-  /* ── FILTER BAR ── */
-  .filter-btn {
-    padding: 0.45rem 1.1rem;
-    border-radius: 99px;
-    border: 1.5px solid rgba(0,0,0,0.15);
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: var(--warm);
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.15s;
-    white-space: nowrap;
-    letter-spacing: 0.02em;
-  }
-  .filter-btn:hover  { border-color: var(--navy); color: var(--navy); background: rgba(30,58,110,0.04); }
-  .filter-btn.active { background: var(--navy); color: #fff; border-color: var(--navy); }
-
-  /* ── PILLAR DIVIDER ── */
-  .pillar-header {
-    display: flex;
-    align-items: flex-end;
-    gap: 1.5rem;
-    padding-bottom: 1rem;
-    margin-bottom: 1.5rem;
-    position: relative;
-  }
-  .pillar-header::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent-color) 0%, transparent 100%);
-  }
-
-  /* ── CARD ENTER ANIMATION ── */
-  @keyframes cardIn {
-    from { opacity:0; transform: translateY(20px); }
-    to   { opacity:1; transform: translateY(0); }
-  }
-  .course-card { animation: cardIn 0.4s ease both; }
-  .course-card:nth-child(2) { animation-delay: 0.06s; }
-  .course-card:nth-child(3) { animation-delay: 0.12s; }
-  .course-card:nth-child(4) { animation-delay: 0.18s; }
-  .course-card:nth-child(5) { animation-delay: 0.24s; }
-
-  .pillar-section.hidden { display: none; }
-</style>
-
-{{-- ── HERO ── --}}
-<header class="relative mt-28 overflow-hidden flex items-center" style="min-height: 450px !important;">
-
-  {{-- Background photo --}}
-  <div class="absolute inset-0 z-0">
-    <img src="https://images.pexels.com/photos/8617742/pexels-photo-8617742.jpeg?auto=compress&cs=tinysrgb&w=1920"
-         alt="genyra Institute" class="w-full h-full object-cover">
-    <div class="absolute inset-0" style="background: linear-gradient(105deg, #0a1628 0%, #0d1f3c 45%, rgba(13,31,60,0.65) 100%);"></div>
+  {{-- Photo (right side on desktop, full-bleed behind text on mobile) --}}
+  <div class="absolute inset-y-0 right-0 w-full lg:w-[64%]">
+    <img src="{{ $heroImage }}"
+         alt="Students conducting experiments in a science laboratory"
+         class="h-full w-full object-cover object-center"
+         fetchpriority="high">
+    <div class="absolute inset-0 bg-gradient-to-r from-[#0a1a3a] via-[#0a1a3a]/55 to-transparent hidden lg:block"></div>
+    <div class="absolute inset-0 bg-[#0a1a3a]/80 lg:bg-transparent"></div>
+    <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#0a1a3a]/70 to-transparent"></div>
   </div>
 
-  {{-- Cyan glow orb --}}
-  <div class="absolute top-[-60px] right-[8%] w-[400px] h-[400px] rounded-full opacity-10 blur-[90px] z-0 pointer-events-none"
-       style="background: radial-gradient(circle, #00A0C6, transparent 70%);"></div>
+  {{-- ── Hanging announcement bag (desktop only) ── --}}
+  @if($announcement['enabled'])
+  <aside aria-label="Announcement" data-announcement
+         class="absolute right-6 top-3 z-20 hidden w-56 lg:right-20 lg:block">
 
-  <div class="relative z-10 w-full px-6 lg:px-20 py-14">
+    {{-- Hook / pin the bag hangs from --}}
+    <span class="absolute left-1/2 top-0 z-30 flex h-4 w-4 -translate-x-1/2 -translate-y-1/2 items-start justify-start rounded-full bg-gradient-to-br from-slate-200 to-slate-500 shadow-[0_3px_6px_rgba(0,0,0,0.45)] ring-1 ring-black/30">
+      <span class="ml-[3px] mt-[3px] h-1.5 w-1.5 rounded-full bg-white/70"></span>
+    </span>
 
-    {{-- Wordmark --}}
-    <div class="flex items-center gap-3 mb-10">
-      <div class="h-px w-7 bg-[#00A0C6]"></div>
-      <span class="text-[1.4rem] tracking-[0.12em] text-white/90">
-        gen<span class="text-[#00A0C6]">y</span>ra <em class="italic">Institute</em>
-      </span>
-      <div class="h-px w-10" style="background: linear-gradient(to right, rgba(0,160,198,0.4), transparent);"></div>
-      <span class="text-[10px] tracking-[0.3em] text-white uppercase hidden md:block">
-        Continuing Education Catalogue · 2025
-      </span>
-    </div>
+    {{-- Swinging assembly: pivots from the hook --}}
+    <div data-swing class="relative origin-top">
 
-    {{-- Two-column layout --}}
-    <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-10 lg:gap-16 items-center">
+      {{-- Rope handle (arch that loops over the hook, ends tie into the bag's eyelets) --}}
+      <span class="absolute left-1/2 top-0 -ml-12 h-[76px] w-24 rounded-t-full border-[3px] border-b-0 border-amber-200"></span>
 
-      {{-- LEFT: Headline --}}
-      <div>
-        <h1 class="text-[2.6rem] lg:text-[3.4rem] text-white font-bold leading-[1.08] mb-5">
-          Learn from<br>
-          <span class="italic text-[#00A0C6]">Africa's</span> Leading<br>
-          Healthcare Experts
-        </h1>
-        <p class="text-white/50 text-[14px] leading-relaxed max-w-[400px] mb-7">
-          Practical, accredited programmes built for working health professionals delivered entirely online.
-        </p>
-        <a href="https://academy.genyragroup.com/" target="_blank"
-           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white transition-all duration-200"
-           style="background: #00A0C6; box-shadow: 0 6px 20px rgba(0,160,198,0.35);"
-           onmouseover="this.style.boxShadow='0 10px 28px rgba(0,160,198,0.5)'; this.style.transform='translateY(-1px)'"
-           onmouseout="this.style.boxShadow='0 6px 20px rgba(0,160,198,0.35)'; this.style.transform='none'">
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-          </svg>
-          Visit genyra Institute Platform
-        </a>
-      </div>
+      {{-- Bag --}}
+      <div class="relative mt-16 overflow-hidden rounded-b-xl rounded-t-sm bg-gradient-to-b from-[#00A0C6] to-[#0077a0] shadow-[0_22px_36px_-14px_rgba(0,0,0,0.6)] ring-1 ring-black/10">
 
-      {{-- RIGHT: Category cards --}}
-      <div class="flex flex-col gap-2.5">
-
-        <p class="text-[10px] tracking-[0.28em] text-white uppercase mb-2">
-          Choose a category
-        </p>
-
-        {{-- Card 1 Professional Short Courses --}}
-        <a href="#section-biosciences"
-           class="group relative flex items-center gap-4 px-5 py-4 rounded-xl no-underline overflow-hidden transition-all duration-250 hover:-translate-y-px"
-           style="background: rgba(0,160,198,0.1); border: 1px solid rgba(0,160,198,0.25);"
-           onmouseover="this.style.background='rgba(0,160,198,0.2)'; this.style.borderColor='rgba(0,160,198,0.5)'; this.style.boxShadow='0 16px 40px rgba(0,160,198,0.15)'"
-           onmouseout="this.style.background='rgba(0,160,198,0.1)'; this.style.borderColor='rgba(0,160,198,0.25)'; this.style.boxShadow='none'">
-
-          {{-- Left accent bar --}}
-          <div class="absolute left-0 top-0 bottom-0 w-[3px] rounded-l-xl" style="background: #00A0C6;"></div>
-
-          {{-- Icon --}}
-          <div class="flex-shrink-0 w-11 h-11 rounded-lg flex items-center justify-center"
-               style="background: rgba(0,160,198,0.18); border: 1px solid rgba(0,160,198,0.3);">
-            <svg class="w-5 h-5" style="color:#00A0C6;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13
-                       C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477
-                       14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477
-                       18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-            </svg>
-          </div>
-
-          {{-- Content --}}
-          <div class="flex-1 min-w-0">
-            <div class="flex items-center gap-2 mb-0.5">
-              <span class="text-white font-bold text-[14.5px]">Professional Short Courses</span>
-              <span class="text-[7.5px] tracking-[0.15em] uppercase px-2 py-0.5 rounded-full flex-shrink-0"
-                    style="color:#00A0C6; background:rgba(0,160,198,0.15); border:1px solid rgba(0,160,198,0.3);">Online</span>
-            </div>
-            <p class="text-white/45 text-[12px] leading-snug">
-              CPD-credited · 4 business pillars · 20 courses · Self-paced
-            </p>
-          </div>
-
-          {{-- Arrow --}}
-          <svg class="w-4 h-4 flex-shrink-0 transition-all duration-200 group-hover:translate-x-0.5"
-               style="color:rgba(0,160,198,0.5);"
-               fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-          </svg>
-        </a>
-
-        {{-- Card 2 Certificates & Diplomas --}}
-        <a href="#section-certificates"
-           class="group relative flex items-center gap-4 px-5 py-4 rounded-xl no-underline overflow-hidden transition-all duration-250 hover:-translate-y-px"
-           style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);"
-           onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.borderColor='rgba(255,255,255,0.22)'; this.style.boxShadow='0 16px 40px rgba(0,0,0,0.18)'"
-           onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.1)'; this.style.boxShadow='none'">
-
-          <div class="absolute left-0 top-0 bottom-0 w-[3px] rounded-l-xl" style="background: rgba(255,255,255,0.2);"></div>
-
-          <div class="flex-shrink-0 w-11 h-11 rounded-lg flex items-center justify-center"
-               style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);">
-            <svg class="w-5 h-5 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0
-                       3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946
-                       3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138
-                       3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806
-                       3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438
-                       3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
-            </svg>
-          </div>
-
-          <div class="flex-1 min-w-0">
-            <div class="flex items-center gap-2 mb-0.5">
-              <span class="text-white font-bold text-[14.5px]">Certificates &amp; Diplomas</span>
-              <span class="text-[7.5px] tracking-[0.15em] uppercase px-2 py-0.5 rounded-full flex-shrink-0"
-                    style="color:rgba(255,255,255,0.5); background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.13);">Online</span>
-            </div>
-            <p class="text-white/45 text-[12px] leading-snug">
-              Health · Information Sciences · Business · Humanities &amp; Social Sciences
-            </p>
-          </div>
-
-          <svg class="w-4 h-4 flex-shrink-0 transition-all duration-200 group-hover:translate-x-0.5"
-               style="color:rgba(255,255,255,0.25);"
-               fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-          </svg>
-        </a>
-
-        {{-- Card 3 Webinars --}}
-        <a href="#section-webinars"
-           class="group relative flex items-center gap-4 px-5 py-4 rounded-xl no-underline overflow-hidden transition-all duration-250 hover:-translate-y-px"
-           style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);"
-           onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.borderColor='rgba(255,255,255,0.22)'; this.style.boxShadow='0 16px 40px rgba(0,0,0,0.18)'"
-           onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.1)'; this.style.boxShadow='none'">
-
-          <div class="absolute left-0 top-0 bottom-0 w-[3px] rounded-l-xl" style="background: rgba(255,255,255,0.2);"></div>
-
-          <div class="flex-shrink-0 w-11 h-11 rounded-lg flex items-center justify-center"
-               style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);">
-            <svg class="w-5 h-5 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                    d="M15 10l4.553-2.069A1 1 0 0121 8.845v6.31a1 1 0 01-1.447.894L15 14
-                       M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
-            </svg>
-          </div>
-
-          <div class="flex-1 min-w-0">
-            <div class="flex items-center gap-2 mb-0.5">
-              <span class="text-white font-bold text-[14.5px]">Webinars</span>
-              <span class="text-[7.5px] tracking-[0.15em] uppercase px-2 py-0.5 rounded-full flex-shrink-0"
-                    style="color:rgba(255,255,255,0.5); background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.13);">On-demand</span>
-            </div>
-            <p class="text-white/45 text-[12px] leading-snug">
-              Pre-recorded expert sessions · Watch anytime · No schedule required
-            </p>
-          </div>
-
-          <svg class="w-4 h-4 flex-shrink-0 transition-all duration-200 group-hover:translate-x-0.5"
-               style="color:rgba(255,255,255,0.25);"
-               fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-          </svg>
-        </a>
-
-        {{-- Trust row --}}
-        <div class="flex items-center gap-6 pt-4 mt-1" style="border-top: 1px solid rgba(255,255,255,0.07);">
-          @foreach([
-            ['M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z', 'CPD Credited'],
-            ['M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064', '6 Countries'],
-            ['M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', 'Self-paced'],
-          ] as [$path, $label])
-          <div class="flex items-center gap-1.5">
-            <svg class="w-3.5 h-3.5 text-[#00A0C6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="{{ $path }}"/>
-            </svg>
-            <span class="text-[9px] tracking-[0.12em] text-white uppercase">{{ $label }}</span>
-          </div>
-          @endforeach
+        {{-- Folded top lip with eyelets --}}
+        <div class="relative h-6 bg-black/15 shadow-[inset_0_-2px_3px_rgba(0,0,0,0.18)]">
+          <span class="absolute left-[58px] top-[6px] h-3 w-3 rounded-full bg-[#0a1a3a] ring-2 ring-slate-300"></span>
+          <span class="absolute left-[154px] top-[6px] h-3 w-3 rounded-full bg-[#0a1a3a] ring-2 ring-slate-300"></span>
         </div>
 
+        {{-- Paper shading: side gusset + left highlight --}}
+        <span class="pointer-events-none absolute inset-y-6 right-0 w-5 bg-gradient-to-l from-black/25 to-transparent"></span>
+        <span class="pointer-events-none absolute inset-y-6 left-0 w-3 bg-gradient-to-r from-white/15 to-transparent"></span>
+
+        {{-- Printed content --}}
+        <div class="relative px-5 pb-5 pt-4 text-white">
+
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.16em]">
+              <span class="relative flex h-1.5 w-1.5">
+                <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-70"></span>
+                <span class="relative inline-flex h-1.5 w-1.5 rounded-full bg-white"></span>
+              </span>
+              {{ $announcement['label'] }}
+            </span>
+
+            <button type="button" data-announcement-close aria-label="Dismiss announcement"
+                    class="flex h-6 w-6 items-center justify-center rounded-full text-white/70 transition hover:bg-white/20 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
+              <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18"/>
+              </svg>
+            </button>
+          </div>
+
+          <h3 class="mt-3 text-[17px] font-semibold leading-snug">{{ $announcement['title'] }}</h3>
+          <p class="mt-1.5 text-[12.5px] leading-relaxed text-white/85">{{ $announcement['text'] }}</p>
+
+          <a href="{{ $announcement['url'] }}" target="_blank" rel="noopener"
+             class="group mt-4 flex w-full items-center justify-center gap-1.5 rounded-full bg-white px-4 py-2.5 text-[12.5px] font-semibold text-[#1E3A6E] transition-colors hover:bg-[#f0ece4] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0088ad]">
+            {{ $announcement['cta'] }}
+            <svg class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/>
+            </svg>
+          </a>
+
+          <p class="mt-3 border-t border-white/20 pt-3 text-center text-[10.5px] tracking-wide text-white/75">
+            genyra Institute · {{ $announcement['footer'] }}
+          </p>
+        </div>
       </div>
+    </div>
+  </aside>
+  @endif
+
+  {{-- Soft brand glow --}}
+  <div class="pointer-events-none absolute -left-24 top-1/3 h-[420px] w-[420px] rounded-full bg-[#00A0C6]/10 blur-[110px]"></div>
+
+  {{-- Content --}}
+  <div class="relative z-10 w-full px-6 lg:px-20 pt-16 pb-36 lg:pb-40">
+    <div class="max-w-[560px]">
+
+      <h1 class="text-[2.5rem] sm:text-5xl lg:text-[3.5rem] font-semibold leading-[1.08] tracking-tight text-white">
+        Learn from
+        <span class="text-[#00A0C6]">Africa's</span>
+        leading healthcare experts
+      </h1>
+
+      <p class="mt-6 max-w-[470px] text-[15px] leading-relaxed text-white/75">
+        Practical, CPD-credited programmes built for working health professionals,
+        delivered entirely online and at your own pace.
+      </p>
+
+      <div class="mt-9 flex flex-wrap items-center gap-4">
+        <a href="#section-biosciences"
+           class="group inline-flex items-center gap-2 rounded-full bg-[#00A0C6] px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-[#0092b5] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a1a3a]">
+          Explore courses
+          <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/>
+          </svg>
+        </a>
+
+        <a href="https://academy.genyragroup.com/" target="_blank" rel="noopener"
+           class="group inline-flex items-center gap-3 rounded-full py-1.5 pl-1.5 pr-4 text-sm font-medium text-white transition hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
+          <span class="flex h-11 w-11 items-center justify-center rounded-full bg-white text-[#1E3A6E] shadow-lg transition group-hover:scale-105">
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+            </svg>
+          </span>
+          <span class="leading-tight text-left">
+            Visit the platform
+            <span class="block text-[11px] font-normal text-white/55">academy.genyragroup.com</span>
+          </span>
+        </a>
+      </div>
+
+      <ul class="mt-10 flex flex-wrap gap-x-7 gap-y-3 border-t border-white/10 pt-6 text-[12.5px] text-white/80">
+        @foreach([
+          ['M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z', 'CPD credited'],
+          ['M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0z', 'Self-paced'],
+          ['M3.055 11H5a2 2 0 0 1 2 2v1a2 2 0 0 0 2 2 2 2 0 0 1 2 2v2.945M8 3.935V5.5A2.5 2.5 0 0 0 10.5 8h.5a2 2 0 0 1 2 2 2 2 0 1 0 4 0 2 2 0 0 1 2-2h1.064M15 20.488V18a2 2 0 0 1 2-2h3.064', 'Learners in 6 countries'],
+        ] as [$path, $label])
+        <li class="flex items-center gap-2">
+          <svg class="h-4 w-4 text-[#00A0C6]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="{{ $path }}"/>
+          </svg>
+          {{ $label }}
+        </li>
+        @endforeach
+      </ul>
     </div>
   </div>
 </header>
 
+{{-- ── CATEGORY PANELS (overlap the bottom edge of the hero) ── --}}
+<div class="relative z-[6] -mt-24 px-6 lg:px-20 pb-12">
+  {{-- Light backdrop that starts below the overlap --}}
+  <div class="absolute inset-x-0 bottom-0 top-24 -z-10 bg-[#f3f7fd]"></div>
+  <div class="mx-auto grid max-w-[1200px] grid-cols-1 gap-5 md:grid-cols-3">
+
+    @foreach([
+      [
+        '#section-biosciences', '_self', 'Professional Short Courses', 'Online',
+        'CPD-credited · 4 business pillars · 20 courses · Self-paced',
+        'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253',
+      ],
+      [
+        'https://academy.genyragroup.com/', '_blank', 'Certificates & Diplomas', 'Online',
+        'Health · Information Sciences · Business · Humanities & Social Sciences',
+        'M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 0 0 1.946-.806 3.42 3.42 0 0 1 4.438 0 3.42 3.42 0 0 0 1.946.806 3.42 3.42 0 0 1 3.138 3.138 3.42 3.42 0 0 0 .806 1.946 3.42 3.42 0 0 1 0 4.438 3.42 3.42 0 0 0-.806 1.946 3.42 3.42 0 0 1-3.138 3.138 3.42 3.42 0 0 0-1.946.806 3.42 3.42 0 0 1-4.438 0 3.42 3.42 0 0 0-1.946-.806 3.42 3.42 0 0 1-3.138-3.138 3.42 3.42 0 0 0-.806-1.946 3.42 3.42 0 0 1 0-4.438 3.42 3.42 0 0 0 .806-1.946 3.42 3.42 0 0 1 3.138-3.138z',
+      ],
+      [
+        'https://academy.genyragroup.com/', '_blank', 'Webinars', 'On-demand',
+        'Pre-recorded expert sessions · Watch anytime · No schedule required',
+        'M15 10l4.553-2.069A1 1 0 0 1 21 8.845v6.31a1 1 0 0 1-1.447.894L15 14M5 18h8a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2z',
+      ],
+    ] as [$href, $target, $name, $badge, $meta, $icon])
+    <a href="{{ $href }}" target="{{ $target }}" @if($target === '_blank') rel="noopener" @endif
+       class="group flex h-full flex-col overflow-hidden rounded-2xl shadow-[0_30px_60px_-20px_rgba(10,26,58,0.45)] ring-1 ring-black/5 transition-transform duration-200 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A0C6]">
+
+      {{-- Row 1: cyan band --}}
+      <div class="flex items-center gap-3 bg-[#00A0C6] px-5 py-4 text-white">
+        <svg class="h-5 w-5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="{{ $icon }}"/>
+        </svg>
+        <span class="text-[15px] font-semibold">{{ $name }}</span>
+        <span class="ml-auto shrink-0 rounded-full bg-white/20 px-2.5 py-0.5 text-[10px] font-medium tracking-wide uppercase">{{ $badge }}</span>
+      </div>
+
+      {{-- Row 2: navy band --}}
+      <div class="flex flex-1 items-center justify-between gap-5 bg-[#1E3A6E] px-5 py-5 text-white transition-colors group-hover:bg-[#1a3566]">
+        <span class="text-[13px] leading-snug text-white/90">{{ $meta }}</span>
+        <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#00A0C6] transition-transform group-hover:translate-x-1">
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/>
+          </svg>
+        </span>
+      </div>
+    </a>
+    @endforeach
+
+  </div>
+</div>
+{{-- ══════════════ END HERO ══════════════ --}}
+
 {{-- ── INTRO + STATS ── --}}
-<section class="relative z-[5] bg-white px-6 lg:px-20 py-12 border-b-2 border-black/10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+{{-- <section class="relative z-[5] grid grid-cols-1 items-center gap-8 border-b-2 border-black/10 bg-white px-6 py-12 lg:grid-cols-2 lg:gap-16 lg:px-20">
   <div>
-    <p class="text-md md:text-lg text-gray-900 leading-relaxed">
+    <p class="text-base leading-relaxed text-gray-900 md:text-lg">
       Genyra Group's training programmes are designed for working professionals seeking to deepen expertise, earn recognised competencies, or stay current in rapidly evolving fields. Our short courses are practical, evidence-based, and tightly aligned with industry standards and regulatory frameworks delivered by seasoned practitioners across our four business pillars.
     </p>
   </div>
-  <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
+  <div class="grid grid-cols-2 gap-5 lg:grid-cols-4">
     @foreach([['20','Courses'],['4','Pillars'],['CPD','Credited'],['∞','Impact']] as [$n,$l])
-    <div class="text-center px-3 py-5 border border-black/15 rounded-lg">
-      <span class="text-[2.375rem] text-[#1a1510] leading-none block">{{ $n }}</span>
-      <span class="text-[9px] tracking-[0.2em] text-[#6b5f52] uppercase block mt-1.5">{{ $l }}</span>
+    <div class="rounded-lg border border-black/15 px-3 py-5 text-center">
+      <span class="block text-[2.375rem] leading-none text-[#1a1510]">{{ $n }}</span>
+      <span class="mt-1.5 block text-[9px] uppercase tracking-[0.2em] text-[#6b5f52]">{{ $l }}</span>
     </div>
     @endforeach
   </div>
-</section>
+</section> --}}
 
 {{-- ── FILTER ── --}}
-<div class="relative z-[5] bg-[#f0ede8] px-6 lg:px-20 py-5 border-b border-black/10 flex items-center gap-3 flex-wrap">
-  <span class="text-[9px] tracking-[0.3em] text-[#6b5f52] uppercase mr-2 whitespace-nowrap">Filter by pillar</span>
-  <button class="filter-btn active" data-filter="all">All Courses</button>
-  <button class="filter-btn" data-filter="biosciences">BioSciences</button>
-  <button class="filter-btn" data-filter="medtech">MedTech</button>
-  <button class="filter-btn" data-filter="health-systems">Health Systems</button>
-  <button class="filter-btn" data-filter="metrology">Metrology &amp; Calibration</button>
+<div class="relative z-[5] flex flex-wrap items-center gap-3 border-b border-black/10 bg-[#f0ede8] px-6 py-5 lg:px-20">
+  <span class="mr-2 whitespace-nowrap text-[9px] uppercase tracking-[0.3em] text-[#6b5f52]">Filter by pillar</span>
+  @foreach([
+    ['all', 'All Courses'],
+    ['biosciences', 'BioSciences'],
+    ['medtech', 'MedTech'],
+    ['health-systems', 'Health Systems'],
+    ['metrology', 'Metrology & Calibration'],
+  ] as [$key, $label])
+  <button type="button" data-filter="{{ $key }}" data-active="{{ $key === 'all' ? 'true' : 'false' }}" aria-pressed="{{ $key === 'all' ? 'true' : 'false' }}"
+          class="cursor-pointer whitespace-nowrap rounded-full border-[1.5px] border-black/15 bg-transparent px-[1.1rem] py-[0.45rem] text-xs font-medium tracking-[0.02em] text-[#6b5f52] transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1E3A6E] data-[active=false]:hover:border-[#1E3A6E] data-[active=false]:hover:bg-[#1E3A6E]/[0.04] data-[active=false]:hover:text-[#1E3A6E] data-[active=true]:border-[#1E3A6E] data-[active=true]:bg-[#1E3A6E] data-[active=true]:text-white">
+    {{ $label }}
+  </button>
+  @endforeach
 </div>
 
 {{-- ── CATALOGUE ── --}}
-<main class="relative z-[5] bg-[#f7f5f1] px-6 lg:px-20 py-16 pb-24">
+<main class="relative z-[5] bg-[#f7f5f1] px-6 py-16 pb-24 lg:px-20">
 
   @php
   /* Shared SVG icons per pillar */
@@ -461,324 +271,222 @@
     'hs'  => '<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" fill="currentColor" viewBox="0 0 16 16"><path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>',
     'met' => '<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" fill="currentColor" viewBox="0 0 16 16"><path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/></svg>',
   ];
-  $enrol_svg = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>';
-  @endphp
+  $enrol_svg = '<svg class="transition-transform group-hover:translate-x-0.5" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>';
 
-  {{-- ════ PILLAR 1: BIOSCIENCES ════ --}}
-  <div class="pillar-section mb-16" id="section-biosciences" style="--accent-color:#00A0C6;">
-    <div class="pillar-header" style="--accent-color:#00A0C6;">
-      <div class="flex-1">
-        <h2 class="text-2xl font-bold text-gray-700">BioSciences</h2>
-        <span class="text-[9.5px] tracking-[0.3em] text-[#00A0C6] uppercase block mt-1">Life Sciences · Applied Biology · Research Methods</span>
-      </div>
-      <span class="text-[11px] text-[#6b5f52] tracking-wider">5 courses</span>
-    </div>
+  /* Pillars: theme classes are written out in full so Tailwind can detect them */
+  $pillars = [
 
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-
-      @php $bio = [
+    [
+      'id'       => 'biosciences',
+      'title'    => 'BioSciences',
+      'subtitle' => 'Life Sciences · Applied Biology · Research Methods',
+      'icon'     => 'bio',
+      'accent'   => 'text-[#00A0C6]',
+      'line'     => 'from-[#00A0C6]',
+      'band'     => 'bg-gradient-to-br from-[#00A0C6] to-[#0077a0]',
+      'tag'      => 'bg-[#e0f4fb] text-[#006a85] border-[#b3e8f5]',
+      'btn'      => 'bg-gradient-to-br from-[#00A0C6] to-[#0077a0] shadow-[0_3px_12px_rgba(0,160,198,0.35)]',
+      'courses'  => [
         ['GBS-101','Fundamentals of Medical Microbiology for Health Professionals','A rigorous introduction to clinical and diagnostic microbiology covering bacteria, fungi, viruses, and parasites in the context of human health. Participants learn infection pathways, specimen handling, laboratory safety, and the interpretation of microbiological reports in clinical decision-making.','Nurses, clinical officers, medical laboratory technicians, public health officers, and healthcare workers seeking foundational microbiology literacy.',['8 Weeks','Beginner','Lab + Theory'],'https://academy.genyragroup.com//course/view.php?id=3'],
         ['GBS-102','Biosafety & Biosecurity in Laboratory and Field Settings','Equips participants with practical knowledge of biological risk levels, containment strategies, personal protective measures, and emergency protocols. The course draws on WHO biosafety guidelines and real-world case scenarios, preparing learners to work safely in BSL 1–3 environments.','Laboratory scientists, research assistants, environmental health officers, hospital infection control staff, and biosafety officers.',['8 Weeks','All Levels','Practical'],'https://academy.genyragroup.com//course/view.php?id=2'],
         ['GBS-103','Introduction to Genomics & Molecular Diagnostics','Demystifies genomic science for non-specialists and intermediate practitioners. Topics include DNA/RNA structure, PCR and qPCR techniques, next-generation sequencing concepts, and the application of molecular diagnostics in infectious disease, oncology, and rare disease screening.','Laboratory scientists, clinicians, public health specialists, and researchers with at least a basic science background interested in molecular tools.',['8 Weeks','Intermediate','Theory + Demo'],'https://academy.genyragroup.com//course/view.php?id=4'],
         ['GBS-104','Scientific Research Design & Data Integrity','A hands-on course covering the end-to-end research process from formulating a research question and choosing study designs, to collecting data ethically and ensuring analytical rigour. Special emphasis is placed on Good Research Practice (GRP), research ethics, and documentation standards in health and life sciences.','Health researchers, postgraduate students, clinical trials staff, programme evaluators, and anyone initiating or managing scientific studies.',['8 Weeks','Intermediate','Workshops'],'https://academy.genyragroup.com/'],
         ['GBS-105','One Health: Linking Human, Animal & Environmental Health','A transdisciplinary course exploring the interconnected nature of human, animal, and ecosystem health. Drawing on real-world zoonotic outbreaks, antimicrobial resistance trends, and environmental surveillance, participants develop an integrated lens for understanding and responding to complex health threats.','Public health officers, veterinarians, environmental scientists, epidemiologists, and policymakers in health, agriculture, and environment sectors.',['8 Weeks','All Levels','Multi-Sector'],'https://academy.genyragroup.com/'],
-      ]; @endphp
+      ],
+    ],
 
-      @foreach($bio as [$code,$title,$desc,$who,$tags,$url])
-      <div class="course-card">
-        <div class="card-band" style="background:linear-gradient(135deg, #00A0C6 0%, #0077a0 100%); color:#fff;">
-          {!! $icons['bio'] !!}
-          <div class="code-pill" style="color:#fff; border-color:rgba(255,255,255,0.5);">{{ $code }}</div>
-          <p class="text-sm md:text-md text-gray-700 font-bold" style="line-height:1.3; margin:0; color:#fff; position:relative; z-index:1; padding-right:3rem;">{{ $title }}</p>
-        </div>
-        <div class="card-body">
-          <p class="text-sm md:text-md text-gray-700">{{ $desc }}</p>
-        </div>
-        <div class="card-footer">
-          <div>
-            <p class="who-label text-blue-500">Who should attend</p>
-            <p class="who-text text-gray-700">{{ $who }}</p>
-          </div>
-          <div class="tags-row">
-            @foreach($tags as $tag)
-            <span class="tag" style="background:#e0f4fb; color:#006a85; border:1px solid #b3e8f5;">{{ $tag }}</span>
-            @endforeach
-          </div>
-          <a href="{{ $url }}" target="_blank" class="enrol-btn"
-             style="background:linear-gradient(135deg,#00A0C6,#0077a0); color:#fff; box-shadow:0 3px 12px rgba(0,160,198,0.35);">
-            {!! $enrol_svg !!} Enrol on genyra Institute
-          </a>
-        </div>
-      </div>
-      @endforeach
-
-    </div>
-  </div>
-
-  {{-- ════ PILLAR 2: MEDTECH ════ --}}
-  <div class="pillar-section mb-16" id="section-medtech" style="--accent-color:#1E3A6E;">
-    <div class="pillar-header" style="--accent-color:#1E3A6E;">
-      <div class="flex-1">
-        <h2 class="text-2xl font-bold text-gray-700">MedTech Solutions</h2>
-        <span class="text-[9.5px] tracking-[0.3em] text-[#1E3A6E] uppercase block mt-1">Medical Technology · Device Management · Clinical Engineering</span>
-      </div>
-      <span class="text-[11px] text-[#6b5f52] tracking-wider">5 courses</span>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-
-      @php $med = [
+    [
+      'id'       => 'medtech',
+      'title'    => 'MedTech Solutions',
+      'subtitle' => 'Medical Technology · Device Management · Clinical Engineering',
+      'icon'     => 'med',
+      'accent'   => 'text-[#1E3A6E]',
+      'line'     => 'from-[#1E3A6E]',
+      'band'     => 'bg-gradient-to-br from-[#1E3A6E] to-[#152a52]',
+      'tag'      => 'bg-[#eef0f8] text-[#1E3A6E] border-[#c8d0e8]',
+      'btn'      => 'bg-gradient-to-br from-[#1E3A6E] to-[#152a52] shadow-[0_3px_12px_rgba(30,58,110,0.3)]',
+      'courses'  => [
         ['GMT-101','Healthcare Technology Management Essentials','An essential primer for anyone responsible for managing medical equipment in health facilities. Covers the full equipment lifecycle from needs assessment and procurement through to acceptance testing, preventive maintenance planning, and decommissioning with practical tools and checklists.','Biomedical engineers, hospital administrators, health facility managers, procurement officers, and clinical engineers at all career levels.',['8 Weeks','Foundational','Practical Tools'],'https://academy.genyragroup.com//course/view.php?id=5'],
         ['GMT-102','Medical Device Regulation & Market Authorisation','Navigates the complex landscape of medical device regulatory frameworks covering national regulatory pathways, CE marking, WHO prequalification, post-market surveillance obligations, and adverse event reporting. Participants gain the knowledge to achieve and maintain market authorisation for medical devices.','Regulatory affairs professionals, device manufacturers, procurement specialists, quality assurance staff, and health technology assessors.',['8 Weeks','Intermediate','Regulatory'],'https://academy.genyragroup.com/'],
         ['GMT-103','Health Technology Assessment (HTA): Evidence-Based Procurement','Introduces participants to HTA methodologies used to inform purchasing decisions for medical technologies. The course covers cost-effectiveness analysis, clinical evidence evaluation, burden of disease considerations, and stakeholder analysis empowering procurement teams to invest wisely in medical technology.','Hospital procurement teams, health economists, clinical engineers, health ministry officials, and insurance/reimbursement professionals.',['8 Weeks','Intermediate','Decision-Making'],'https://academy.genyragroup.com/'],
         ['GMT-104','Digital Health & Emerging Medical Technologies','A forward-looking survey of transformative technologies reshaping healthcare delivery from AI-assisted diagnostics and electronic health records to telehealth platforms, wearables, and point-of-care technologies. Participants explore both the promise and governance challenges of digital health in resource-variable settings.','Clinicians, health informaticians, hospital managers, policymakers, and technology enthusiasts in health and life sciences.',['8 Weeks','All Levels','Strategic'],'https://academy.genyragroup.com/'],
         ['GMT-105','Electro-Medical Equipment Safety & User Competency','Focused on the safe and effective use of electrical medical equipment in clinical environments. Covers electrical safety standards, user responsibilities, operator-level maintenance, alarm management, and incident reporting. Includes hands-on familiarisation with common clinical equipment types.','Nurses, clinical officers, ICU/theatre technicians, ward managers, and any clinical staff who regularly operate electromedical equipment.',['8 Weeks','Practical','Patient Safety'],'https://academy.genyragroup.com/'],
-      ]; @endphp
+      ],
+    ],
 
-      @foreach($med as [$code,$title,$desc,$who,$tags,$url])
-      <div class="course-card">
-        <div class="card-band" style="background:linear-gradient(135deg, #1E3A6E 0%, #152a52 100%); color:#fff;">
-          {!! $icons['med'] !!}
-          <div class="code-pill" style="color:#fff; border-color:rgba(255,255,255,0.5);">{{ $code }}</div>
-          <p style="font-size:0.85rem; font-weight:700; line-height:1.3; margin:0; color:#fff; position:relative; z-index:1; padding-right:3rem;">{{ $title }}</p>
-        </div>
-        <div class="card-body">
-          <p class="text-sm md:text-md text-gray-700">{{ $desc }}</p>
-        </div>
-        <div class="card-footer">
-          <div>
-            <p class="who-label text-blue-500">Who should attend</p>
-            <p class="who-text text-gray-700">{{ $who }}</p>
-          </div>
-          <div class="tags-row">
-            @foreach($tags as $tag)
-            <span class="tag" style="background:#eef0f8; color:#1E3A6E; border:1px solid #c8d0e8;">{{ $tag }}</span>
-            @endforeach
-          </div>
-          <a href="{{ $url }}" target="_blank" class="enrol-btn"
-             style="background:linear-gradient(135deg,#1E3A6E,#152a52); color:#fff; box-shadow:0 3px 12px rgba(30,58,110,0.3);">
-            {!! $enrol_svg !!} Enrol on genyra Institute
-          </a>
-        </div>
-      </div>
-      @endforeach
-
-    </div>
-  </div>
-
-  {{-- ════ PILLAR 3: HEALTH SYSTEMS ════ --}}
-  <div class="pillar-section mb-16" id="section-health-systems" style="--accent-color:#0077B6;">
-    <div class="pillar-header" style="--accent-color:#0077B6;">
-      <div class="flex-1">
-        <h2 class="text-2xl font-bold text-gray-700">Health Systems Planning &amp; Advisory</h2>
-        <span class="text-[9.5px] tracking-[0.3em] text-[#0077B6] uppercase block mt-1">Strategic Planning · Quality Management · Governance</span>
-      </div>
-      <span class="text-[11px] text-[#6b5f52] tracking-wider">5 courses</span>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-
-      @php $hs = [
+    [
+      'id'       => 'health-systems',
+      'title'    => 'Health Systems Planning & Advisory',
+      'subtitle' => 'Strategic Planning · Quality Management · Governance',
+      'icon'     => 'hs',
+      'accent'   => 'text-[#0077B6]',
+      'line'     => 'from-[#0077B6]',
+      'band'     => 'bg-gradient-to-br from-[#0077B6] to-[#005a8a]',
+      'tag'      => 'bg-[#e8f4fc] text-[#005a8a] border-[#b3d8ef]',
+      'btn'      => 'bg-gradient-to-br from-[#0077B6] to-[#005a8a] shadow-[0_3px_12px_rgba(0,119,182,0.3)]',
+      'courses'  => [
         ['GHS-101','Strategic Planning for Health Institutions','Equips health leaders with the tools to develop, implement, and monitor strategic plans for hospitals, health programmes, and government health units. The course covers situational analysis, stakeholder mapping, theory of change, balanced scorecards, and results-based frameworks with real-plan case studies throughout.','Senior health managers, medical superintendents, department heads, public health directors, NGO programme leads, and county/district health officers.',['8 Weeks','Leadership','Facilitated'],'https://academy.genyragroup.com/'],
         ['GHS-102','Quality Management Systems (QMS) Design & Implementation','A comprehensive course on building, deploying, and sustaining a QMS in health and laboratory settings. Grounded in ISO 9001 and ISO 15189 principles, the course walks participants through process documentation, risk-based thinking, internal auditing, corrective action management, and management review processes.','Quality managers, laboratory managers, hospital quality teams, health facility administrators, and compliance officers.',['8 Weeks','ISO-Aligned','Intermediate'],'https://academy.genyragroup.com/'],
         ['GHS-103','Internal Audit Skills for Health & Laboratory Settings','Develops practical internal audit competencies in participants from audit planning and checklist development to conducting interviews, writing non-conformity reports, and following up on corrective actions. Taught within a health and laboratory quality systems context, fully aligned with ISO audit requirements.','Quality officers, laboratory supervisors, compliance managers, and staff designated as internal auditors in health or laboratory facilities.',['8 Weeks','Practical','ISO 19011'],'https://academy.genyragroup.com/'],
         ['GHS-104','Patient Safety & Clinical Risk Management','Focuses on building a culture of safety in health facilities. Covers root cause analysis of adverse events, near-miss reporting systems, failure mode and effects analysis (FMEA), and the design of safety checklists and clinical protocols. Draws on WHO Patient Safety Curriculum frameworks.','Clinical officers, nurses, hospital quality teams, risk managers, patient safety champions, and clinical governance staff.',['8 Weeks','WHO-Aligned','All Clinicals'],'https://academy.genyragroup.com/'],
         ['GHS-105','Health Systems Strengthening: Frameworks & Practice','An applied course on diagnosing and improving the six WHO health system building blocks: service delivery, health workforce, information, medical products, financing, and leadership/governance. Participants develop evidence-based recommendations for real or simulated health system challenges.','Public health practitioners, health ministry officials, development partners, NGO health programme staff, and health system researchers.',['8 Weeks','WHO Framework','Applied'],'https://academy.genyragroup.com/'],
-      ]; @endphp
+      ],
+    ],
 
-      @foreach($hs as [$code,$title,$desc,$who,$tags,$url])
-      <div class="course-card">
-        <div class="card-band" style="background:linear-gradient(135deg, #0077B6 0%, #005a8a 100%); color:#fff;">
-          {!! $icons['hs'] !!}
-          <div class="code-pill" style="color:#fff; border-color:rgba(255,255,255,0.5);">{{ $code }}</div>
-          <p style="font-size:0.85rem; font-weight:700; line-height:1.3; margin:0; color:#fff; position:relative; z-index:1; padding-right:3rem;">{{ $title }}</p>
-        </div>
-        <div class="card-body">
-          <p class="text-sm md:text-md text-gray-700">{{ $desc }}</p>
-        </div>
-        <div class="card-footer">
-          <div>
-            <p class="who-label text-blue-500">Who should attend</p>
-            <p class="who-text text-gray-700">{{ $who }}</p>
-          </div>
-          <div class="tags-row">
-            @foreach($tags as $tag)
-            <span class="tag" style="background:#e8f4fc; color:#005a8a; border:1px solid #b3d8ef;">{{ $tag }}</span>
-            @endforeach
-          </div>
-          <a href="{{ $url }}" target="_blank" class="enrol-btn"
-             style="background:linear-gradient(135deg,#0077B6,#005a8a); color:#fff; box-shadow:0 3px 12px rgba(0,119,182,0.3);">
-            {!! $enrol_svg !!} Enrol on genyra Institute
-          </a>
-        </div>
-      </div>
-      @endforeach
-
-    </div>
-  </div>
-
-  {{-- ════ PILLAR 4: METROLOGY ════ --}}
-  <div class="pillar-section mb-16" id="section-metrology" style="--accent-color:#008BA3;">
-    <div class="pillar-header" style="--accent-color:#008BA3;">
-      <div class="flex-1">
-        <h2 class="text-2xl font-bold text-gray-700">Metrology &amp; Calibration Services</h2>
-        <span class="text-[9.5px] tracking-[0.3em] text-[#008BA3] uppercase block mt-1">Precision Measurement · Instrument Assurance · Standards Compliance</span>
-      </div>
-      <span class="text-[11px] text-[#6b5f52] tracking-wider">5 courses</span>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-
-      @php $met = [
+    [
+      'id'       => 'metrology',
+      'title'    => 'Metrology & Calibration Services',
+      'subtitle' => 'Precision Measurement · Instrument Assurance · Standards Compliance',
+      'icon'     => 'met',
+      'accent'   => 'text-[#008BA3]',
+      'line'     => 'from-[#008BA3]',
+      'band'     => 'bg-gradient-to-br from-[#008BA3] to-[#00687c]',
+      'tag'      => 'bg-[#e5f6f9] text-[#00687c] border-[#aadfea]',
+      'btn'      => 'bg-gradient-to-br from-[#008BA3] to-[#00687c] shadow-[0_3px_12px_rgba(0,139,163,0.3)]',
+      'courses'  => [
         ['GMC-101','Fundamentals of Metrology & Measurement Science','Introduces the science of measurement covering measurement units (SI system), measurement uncertainty, traceability, accuracy vs. precision, and the principles underpinning reliable metrology. Participants gain a conceptual and practical foundation applicable to clinical, laboratory, and industrial measurement contexts.','Laboratory technicians, clinical engineers, quality officers, biomedical staff, and technicians encountering measurement and calibration tasks in their roles.',['8 Weeks','Foundational','Theory + Practice'],'https://academy.genyragroup.com/'],
         ['GMC-102','Medical Instrument Calibration: Principles & Practice','A practical course on calibrating the most common medical instruments including thermometers, sphygmomanometers, weighing scales, infusion pumps, and patient monitors. Covers calibration procedures, reference standards, tolerance limits, and documentation requirements in line with ISO 17025 and regulatory norms.','Biomedical engineers, clinical engineers, technical staff in medical device departments, and quality assurance personnel in healthcare facilities.',['8 Weeks','Hands-On','ISO 17025'],'https://academy.genyragroup.com/'],
         ['GMC-103','Laboratory Instrument Verification & Performance Qualification','Covers Installation Qualification (IQ), Operational Qualification (OQ), and Performance Qualification (PQ) protocols for laboratory instruments including balances, pipettes, centrifuges, incubators, and spectrophotometers. Participants develop and execute validation plans and prepare compliant documentation packages.','Laboratory scientists, quality managers in pharmaceutical or clinical labs, regulatory compliance staff, and validation engineers.',['8 Weeks','Intermediate','IQ/OQ/PQ'],'https://academy.genyragroup.com/'],
         ['GMC-104','Measurement Uncertainty Estimation & Reporting','Provides a thorough grounding in the GUM (Guide to the Expression of Uncertainty in Measurement) framework. Participants learn to identify uncertainty sources, construct uncertainty budgets, and correctly report expanded uncertainty in calibration certificates and test reports a critical skill for ISO 17025 compliance.','Calibration laboratory staff, metrologists, quality assurance professionals, and technical managers preparing for ISO 17025 accreditation.',['8 Weeks','GUM Framework','Advanced'],'https://academy.genyragroup.com/'],
         ['GMC-105','ISO 17025 Compliance: Establishing & Sustaining a Calibration Lab','A comprehensive course preparing calibration and testing laboratories for ISO/IEC 17025 accreditation. Covers the standard\'s management and technical requirements, document control, method validation, proficiency testing, and readiness for external assessment. Includes gap analysis tools and a sample QMS document suite.','Laboratory managers, technical managers, quality managers, and staff of calibration, testing, or measurement laboratories pursuing or maintaining ISO 17025 accreditation.',['8 Weeks','ISO 17025','Accreditation'],'https://academy.genyragroup.com/'],
-      ]; @endphp
+      ],
+    ],
 
-      @foreach($met as [$code,$title,$desc,$who,$tags,$url])
-      <div class="course-card">
-        <div class="card-band" style="background:linear-gradient(135deg, #008BA3 0%, #00687c 100%); color:#fff;">
-          {!! $icons['met'] !!}
-          <div class="code-pill" style="color:#fff; border-color:rgba(255,255,255,0.5);">{{ $code }}</div>
-          <p style="font-size:0.85rem; font-weight:700; line-height:1.3; margin:0; color:#fff; position:relative; z-index:1; padding-right:3rem;">{{ $title }}</p>
+    /* Technology & AI pillar (parked): to enable, add another entry above with
+         'id' => 'tech', 'title' => 'Technology, Data & Artificial Intelligence',
+         'subtitle' => 'Data Analytics · Artificial Intelligence · Digital Innovation',
+         'icon' => 'met', the same teal theme classes as Metrology, and this course:
+         ['GTC-201','Introduction to Data Analytics','Provides a foundational understanding of data analytics including data collection, cleaning, analysis, and visualization. Participants learn how organizations use data to make strategic decisions and gain exposure to tools such as Excel, SQL, and Python for basic analytics workflows.','Students, business professionals, researchers, and beginners interested in understanding how data is analyzed to support decision making.',['8 Weeks','Beginner','Data Fundamentals'],'courses.readmore'] */
+
+  ];
+  @endphp
+
+  @foreach($pillars as $p)
+  {{-- ════ PILLAR ════ --}}
+  <section class="mb-16" id="section-{{ $p['id'] }}" data-pillar="{{ $p['id'] }}">
+
+    <div class="relative mb-6 flex items-end gap-6 pb-4">
+      <div class="flex-1">
+        <h2 class="text-2xl font-bold text-gray-700">{{ $p['title'] }}</h2>
+        <span class="mt-1 block text-[9.5px] uppercase tracking-[0.3em] {{ $p['accent'] }}">{{ $p['subtitle'] }}</span>
+      </div>
+      <span class="text-[11px] tracking-wider text-[#6b5f52]">{{ count($p['courses']) }} courses</span>
+      <span class="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r {{ $p['line'] }} to-transparent"></span>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+
+      @foreach($p['courses'] as [$code, $title, $desc, $who, $tags, $url])
+      <article class="relative flex flex-col overflow-hidden rounded-xl border border-black/[0.09] bg-white shadow-[0_2px_8px_rgba(0,0,0,0.06)] transition duration-300 ease-out hover:-translate-y-[5px] hover:shadow-[0_20px_50px_rgba(30,58,110,0.14)]">
+
+        <div class="relative overflow-hidden px-6 pb-[1.1rem] pt-[1.4rem] text-white {{ $p['band'] }}">
+          {!! $icons[$p['icon']] !!}
+          <div class="mb-[0.65rem] inline-flex w-fit items-center gap-[0.3rem] rounded border border-white/50 px-[0.6rem] py-[0.2rem] font-['DM_Mono',monospace] text-[0.68rem] font-normal uppercase tracking-[0.12em] text-white opacity-90">{{ $code }}</div>
+          <p class="relative z-[1] m-0 pr-12 text-[0.85rem] font-bold leading-[1.3] text-white">{{ $title }}</p>
         </div>
-        <div class="card-body">
-          <p class="text-sm md:text-md text-gray-700">{{ $desc }}</p>
+
+        <div class="flex flex-1 flex-col gap-2 px-6 pb-4 pt-5">
+          <p class="text-sm text-gray-700">{{ $desc }}</p>
         </div>
-        <div class="card-footer">
+
+        <div class="flex flex-col gap-3 border-t border-[#f0f0f0] bg-[#fafafa] px-6 pb-5 pt-4">
           <div>
-            <p class="who-label text-blue-500">Who should attend</p>
-            <p class="who-text text-gray-700">{{ $who }}</p>
+            <p class="text-blue-500">Who should attend</p>
+            <p class="text-gray-700">{{ $who }}</p>
           </div>
-          <div class="tags-row">
+
+          <div class="flex flex-wrap gap-[0.3rem]">
             @foreach($tags as $tag)
-            <span class="tag" style="background:#e5f6f9; color:#00687c; border:1px solid #aadfea;">{{ $tag }}</span>
+            <span class="inline-flex items-center gap-[0.2rem] rounded-full border px-[0.55rem] py-[0.22rem] text-[0.62rem] font-semibold uppercase tracking-[0.06em] {{ $p['tag'] }}">{{ $tag }}</span>
             @endforeach
           </div>
-          <a href="{{ $url }}" target="_blank" class="enrol-btn"
-             style="background:linear-gradient(135deg,#008BA3,#00687c); color:#fff; box-shadow:0 3px 12px rgba(0,139,163,0.3);">
+
+          <a href="{{ $url }}" target="_blank" rel="noopener"
+             class="group relative flex w-full items-center justify-center gap-[0.45rem] overflow-hidden rounded-[7px] px-4 py-[0.6rem] text-xs font-semibold tracking-[0.05em] text-white no-underline transition duration-200 hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A0C6] focus-visible:ring-offset-2 {{ $p['btn'] }}">
             {!! $enrol_svg !!} Enrol on genyra Institute
           </a>
         </div>
-      </div>
+      </article>
       @endforeach
 
     </div>
-  </div>
-
-  {{-- ════ Technology & AI Courses ════ --}}
-<!-- <div class="pillar-section mb-16" id="section-tech" style="--accent-color:#008BA3;">
-  <div class="pillar-header" style="--accent-color:#008BA3;">
-    <div class="flex-1">
-      <h2 class="text-2xl font-bold text-gray-700">Technology, Data & Artificial Intelligence</h2>
-      <span class="text-[9.5px] tracking-[0.3em] text-[#008BA3] uppercase block mt-1">
-        Data Analytics · Artificial Intelligence · Digital Innovation
-      </span>
-    </div>
-    <span class="text-[11px] text-[#6b5f52] tracking-wider">10 courses</span>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-
-    @php
-    $tech = [
-    ['GTC-201','Introduction to Data Analytics','Provides a foundational understanding of data analytics including data collection, cleaning, analysis, and visualization. Participants learn how organizations use data to make strategic decisions and gain exposure to tools such as Excel, SQL, and Python for basic analytics workflows.','Students, business professionals, researchers, and beginners interested in understanding how data is analyzed to support decision making.',['8 Weeks','Beginner','Data Fundamentals'],'courses.readmore'],
-
-    ];
-    @endphp
-
-
-    @foreach($tech as [$code,$title,$desc,$who,$tags,$url])
-    <div class="course-card">
-      <div class="card-band" style="background:linear-gradient(135deg, #008BA3 0%, #00687c 100%); color:#fff;">
-        {!! $icons['met'] !!}
-        <div class="code-pill" style="color:#fff; border-color:rgba(255,255,255,0.5);">{{ $code }}</div>
-        <p style="font-size:0.85rem; font-weight:700; line-height:1.3; margin:0; color:#fff; position:relative; z-index:1; padding-right:3rem;">
-          {{ $title }}
-        </p>
-      </div>
-
-      <div class="card-body">
-        <p class="text-sm md:text-md text-gray-700">{{ $desc }}</p>
-      </div>
-
-      <div class="card-footer">
-        <div>
-          <p class="who-label text-blue-500">Who should attend</p>
-          <p class="who-text text-gray-700">{{ $who }}</p>
-        </div>
-
-        <div class="tags-row">
-          @foreach($tags as $tag)
-          <span class="tag" style="background:#e5f6f9; color:#00687c; border:1px solid #aadfea;">
-            {{ $tag }}
-          </span>
-          @endforeach
-        </div>
-
-        <a href="{{ route('courses.readmore') }}" target="_blank" class="enrol-btn"
-           style="background:linear-gradient(135deg,#008BA3,#00687c); color:#fff; box-shadow:0 3px 12px rgba(0,139,163,0.3);">
-           Read More
-        </a>
-      </div>
-    </div>
-    @endforeach
-
-  </div>
-</div> -->
+  </section>
+  @endforeach
 
 </main>
 
 {{-- ── CTA ── --}}
-<section class="relative z-[5] bg-[#1E3A6E] px-6 lg:px-20 py-16 grid grid-cols-1 lg:grid-cols-[1fr_auto] items-center gap-12">
+<section class="relative z-[5] grid grid-cols-1 items-center gap-12 bg-[#1E3A6E] px-6 py-16 lg:grid-cols-[1fr_auto] lg:px-20">
   <div>
-    <h2 class="text-5xl lg:text-6xl font-bold text-[#f0ece4] leading-tight mb-4">
+    <h2 class="mb-4 text-5xl font-bold leading-tight text-[#f0ece4] lg:text-6xl">
       Ready to Build<br><em class="italic text-[#00A0C6]">Expert Capacity</em>?
     </h2>
-    <p class="text-[14.5px] leading-[1.8] text-white/70 max-w-[520px] mb-7">
+    <p class="mb-7 max-w-[520px] text-[14.5px] leading-[1.8] text-white/70">
       All Genyra short courses can be delivered in-person, on-site at your organisation, or in a blended format. We also offer customised training programmes tailored to your specific institutional needs, regulatory context, and workforce profile. Contact us to discuss scheduling, group enrolment, and CPD certification options.
     </p>
-    <a href="https://academy.genyragroup.com/" target="_blank"
-       style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.75rem 1.75rem; background:#00A0C6; color:#fff; border-radius:6px; font-size:0.85rem; font-weight:600; text-decoration:none; letter-spacing:0.04em; transition:all 0.15s; box-shadow:0 4px 15px rgba(0,160,198,0.4);"
-       onmouseover="this.style.background='#0090b5'; this.style.transform='translateY(-1px)'" onmouseout="this.style.background='#00A0C6'; this.style.transform='none'">
+    <a href="https://academy.genyragroup.com/" target="_blank" rel="noopener"
+       class="inline-flex items-center gap-2 rounded-md bg-[#00A0C6] px-7 py-3 text-[0.85rem] font-semibold tracking-[0.04em] text-white no-underline shadow-[0_4px_15px_rgba(0,160,198,0.4)] transition duration-150 hover:-translate-y-px hover:bg-[#0090b5] focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
       <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
       Browse All Courses on genyra Institute
     </a>
   </div>
-  <div class="flex flex-col gap-4 min-w-[220px]">
-    <div class="px-6 py-4 border border-white/10 rounded-lg bg-white/4">
-      <strong class="block text-sm text-[#f0ece4] font-semibold mb-1 tracking-wide">In-Person & On-Site</strong>
-      <span class="text-[11px] text-white/45 tracking-wide">Nairobi · Available nationwide</span>
+  <div class="flex min-w-[220px] flex-col gap-4">
+    <div class="rounded-lg border border-white/10 bg-white/[0.04] px-6 py-4">
+      <strong class="mb-1 block text-sm font-semibold tracking-wide text-[#f0ece4]">In-Person &amp; On-Site</strong>
+      <span class="text-[11px] tracking-wide text-white/45">Nairobi · Available nationwide</span>
     </div>
-    <div class="px-6 py-4 border border-white/10 rounded-lg bg-white/4">
-      <strong class="block text-sm text-[#f0ece4] font-semibold mb-1 tracking-wide">Group & Institutional Bookings</strong>
-      <span class="text-[11px] text-white/45 tracking-wide">Custom programmes available</span>
+    <div class="rounded-lg border border-white/10 bg-white/[0.04] px-6 py-4">
+      <strong class="mb-1 block text-sm font-semibold tracking-wide text-[#f0ece4]">Group &amp; Institutional Bookings</strong>
+      <span class="text-[11px] tracking-wide text-white/45">Custom programmes available</span>
     </div>
-    <div class="px-6 py-4 border border-white/10 rounded-lg bg-white/4">
-      <strong class="block text-sm text-[#f0ece4] font-semibold mb-1 tracking-wide">CPD-Credited</strong>
-      <span class="text-[11px] text-white/45 tracking-wide">Certificates of completion issued</span>
+    <div class="rounded-lg border border-white/10 bg-white/[0.04] px-6 py-4">
+      <strong class="mb-1 block text-sm font-semibold tracking-wide text-[#f0ece4]">CPD-Credited</strong>
+      <span class="text-[11px] tracking-wide text-white/45">Certificates of completion issued</span>
     </div>
-    <div class="px-6 py-4 border border-[#00A0C6]/40 rounded-lg" style="background:rgba(0,160,198,0.08);">
-      <strong class="block text-sm text-[#00A0C6] font-semibold mb-1 tracking-wide">training@genyragroup.com</strong>
-      <span class="text-[11px] text-white/60 tracking-wide">Enquire about any course</span>
+    <div class="rounded-lg border border-[#00A0C6]/40 bg-[#00A0C6]/[0.08] px-6 py-4">
+      <strong class="mb-1 block text-sm font-semibold tracking-wide text-[#00A0C6]">training@genyragroup.com</strong>
+      <span class="text-[11px] tracking-wide text-white/60">Enquire about any course</span>
     </div>
   </div>
 </section>
 
+</div>
+
 <script>
-  const buttons  = document.querySelectorAll('.filter-btn');
-  const sections = document.querySelectorAll('.pillar-section');
+  // Smooth anchor scrolling (better placed once on <html class="scroll-smooth"> in your layout)
+  document.documentElement.classList.add('scroll-smooth');
+
+  // Announcement bag: gentle swing from the hook (skipped if the visitor prefers reduced motion)
+  const swing = document.querySelector('[data-swing]');
+  const noteBox = document.querySelector('[data-announcement]');
+  if (swing && noteBox && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const sway = swing.animate(
+      [{ transform: 'rotate(-3deg)' }, { transform: 'rotate(3deg)' }],
+      { duration: 4200, direction: 'alternate', iterations: Infinity, easing: 'ease-in-out' }
+    );
+    const slow = () => sway.updatePlaybackRate(0.2);
+    const normal = () => sway.updatePlaybackRate(1);
+    noteBox.addEventListener('mouseenter', slow);
+    noteBox.addEventListener('mouseleave', normal);
+    noteBox.addEventListener('focusin', slow);
+    noteBox.addEventListener('focusout', normal);
+  }
+  document.querySelector('[data-announcement-close]')?.addEventListener('click', () => noteBox?.remove());
+
+  const buttons  = document.querySelectorAll('[data-filter]');
+  const sections = document.querySelectorAll('[data-pillar]');
 
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
-      buttons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const f = btn.dataset.filter;
-      sections.forEach(s => {
-        (f === 'all' || s.id.includes(f)) ? s.classList.remove('hidden') : s.classList.add('hidden');
+      buttons.forEach(b => {
+        b.dataset.active = 'false';
+        b.setAttribute('aria-pressed', 'false');
       });
+      btn.dataset.active = 'true';
+      btn.setAttribute('aria-pressed', 'true');
+
+      const f = btn.dataset.filter;
+      sections.forEach(s => s.classList.toggle('hidden', !(f === 'all' || s.dataset.pillar === f)));
     });
   });
 </script>
