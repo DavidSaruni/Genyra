@@ -105,7 +105,7 @@
                   <div class="wwd-card__body">
                       <div class="wwd-card__copy">
                           <span class="wwd-card__tag">Department 1</span>
-                          <h3 class="wwd-card__title">Medical <br> Supplies</h3>
+                          <h3 class="wwd-card__title">Medical Supplies</h3>
                       </div>
                       <span class="wwd-card__cta">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                   </div>
@@ -118,7 +118,7 @@
                   <div class="wwd-card__body">
                       <div class="wwd-card__copy">
                           <span class="wwd-card__tag">Department 2</span>
-                          <h3 class="wwd-card__title">Medical <br> Technologies</h3>
+                          <h3 class="wwd-card__title">Medical Technologies</h3>
                       </div>
                       <span class="wwd-card__cta">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                   </div>
