@@ -77,7 +77,7 @@
     <h2 class="text-3xl font-extrabold tracking-tight text-[#1e3a6e] sm:text-4xl">What guides us</h2>
     <span class="mt-2 block h-1.5 w-full rounded-full bg-gradient-to-r from-[#1e3a6e] via-[#00a0c6] to-[#00a0c6]/10"></span>
     <p class="mt-5 max-w-3xl text-lg font-medium leading-relaxed text-[#0a1a3a]">
-      Our values are the foundation of everything we do at Genyra Group guiding how we work with clients, partners, and each other every single day.
+      Our values are the foundation of everything we do at genyra Group guiding how we work with clients, partners, and each other every single day.
     </p>
   </section>
 
@@ -108,7 +108,7 @@
     <p class="mt-4 text-xl font-semibold leading-relaxed text-[#0a1a3a] sm:text-2xl">
       "We value the confidence our clients place in us to support their medical and healthcare needs. Our commitment is to provide reliable solutions that meet the highest standards of quality and performance."
     </p>
-    <p class="mt-5 text-sm font-bold text-[#1e3a6e]">Genyra Group</p>
+    <p class="mt-5 text-sm font-bold text-[#1e3a6e]">genyra Group</p>
   </section>
 
 </div>

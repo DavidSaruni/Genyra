@@ -54,6 +54,11 @@
   {{-- Paper texture --}}
   <img src="{{ $paperImage }}" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover" aria-hidden="true">
 
+  {{-- Countries we serve: Kenya, Uganda, Tanzania, Rwanda, South Sudan, Ethiopia.
+       Decorative map beside the timeline (desktop only). Save at public/images/story-map.png --}}
+  <img src="{{ asset('images/story-map.png') }}" alt="" aria-hidden="true"
+       class="pointer-events-none absolute bottom-12 right-6 -z-10 hidden w-[420px] opacity-90 lg:block xl:right-14 xl:w-[500px]">
+
 <div class="mx-auto max-w-7xl space-y-16">
 
   {{-- Intro --}}
@@ -78,17 +83,17 @@
 
       <div class="space-y-5 lg:col-span-3">
         <p class="text-lg font-medium leading-relaxed text-slate-800">
-          Genyra Group is East Africa's leading provider of comprehensive healthcare solutions, specializing in laboratory equipment, medical devices, health information systems, and metrology services. Established with a vision to transform healthcare delivery through innovation and excellence, we serve hospitals, research institutions, diagnostic laboratories, pharmaceutical companies, and healthcare facilities across the region.
+          genyra Group is East Africa's leading provider of comprehensive healthcare solutions, specializing in laboratory equipment, medical devices, health information systems, and metrology services. Established with a vision to transform healthcare delivery through innovation and excellence, we serve hospitals, research institutions, diagnostic laboratories, pharmaceutical companies, and healthcare facilities across the region.
         </p>
         <p class="text-[15px] leading-relaxed text-slate-700">
-          With a proven track record of successful implementations and a commitment to quality, Genyra Group has positioned itself as a trusted partner for healthcare organizations seeking to enhance patient care, improve operational efficiency, and achieve regulatory compliance.
+          With a proven track record of successful implementations and a commitment to quality, genyra Group has positioned itself as a trusted partner for healthcare organizations seeking to enhance patient care, improve operational efficiency, and achieve regulatory compliance.
         </p>
       </div>
     </div>
   </section>
 
   {{-- Stats --}}
-  <section aria-label="Genyra Group at a glance" class="grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-4 lg:gap-x-0 lg:divide-x lg:divide-[#1e3a6e]/20">
+  <section aria-label="genyra Group at a glance" class="grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-4 lg:gap-x-0 lg:divide-x lg:divide-[#1e3a6e]/20">
     @foreach($stats as [$num, $suffix, $label, $animate])
     <div class="lg:px-8 lg:first:pl-0">
       <p class="text-5xl font-extrabold leading-none tracking-tight text-[#1e3a6e] tabular-nums sm:text-6xl">
